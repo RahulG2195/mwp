@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+.vendor-banner-heading h1{
+    text-align: center;
+    padding-top: 55px;
+    color: #fff;
+    z-index: 11;
+    position: relative;
+    font-size: 25px; 
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.vendor_details{
+   margin-top: 55px;
+}
+
+
+.vendor-detail-heading h1{
+  color: #FD4251;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.vendor-detail-heading p{
+  color: #000;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+
+.vrating ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+.vrating ul li p{
+   margin: 6px;
+}
+
+.vendor-detail-tab ul li a{
+  color: #000;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+.vendor-detail-tab ul li a{
+    position:relative;
+}
+.vendor-detail-tab ul li .about-tab:after{
+    content: '';
+  width: 0;
+  height: 45%;
+  position: absolute;
+  border: 1px solid black;
+  top: 11px;
+  left: 130px;
+}
+
+.vendor-detail-tab ul li .service-offered:after{
+    content: '';
+  width: 0;
+  height: 45%;
+  position: absolute;
+  border: 1px solid black;
+  top: 11px;
+  left: 230px;
+}
+
+
+.vendor-get-started h6{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 6px;
+}
+/*.vendor-get-started h2{
+    font-family: 'Montserrat', sans-serif;
+}*/
+.vendor-get-started p{
+    font-family: 'Montserrat', sans-serif;
+    font-size:30px;
+    font-weight:400;
+   
+}
+.vendor-detail-tab #vendor_tabs{
+  box-shadow: 0px 2px 2px 0px #00000029!important;
+}
+.vendor-get-started button{
+   margin-top:20px; 
+}
+
+.common_vendor_detail{
+  box-shadow: 0px 0px 5px 1px #00000029!important;
+}
+
+
+.bridal_sec{
+      margin-top: -60px;
+}

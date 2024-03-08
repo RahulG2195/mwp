@@ -1,0 +1,211 @@
+#newHeaderSection {
+  background-color: #f5001e;
+  z-index: 9;
+    position: relative;
+}
+.modal{
+    overflow: scroll !important;
+}
+/*.modal {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    z-index: 1050;*/
+/*    display: none;*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*    overflow: scroll;*/
+/*    outline: 0;*/
+/*}*/
+#newHeaderSection .top-header {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+#newHeaderSection .top-header .mobileTagline {
+  display: none;
+  color: white;
+  text-align: center;
+  font-size: calc(13px + 0.2vw);
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 767px) {
+  #newHeaderSection .top-header .mobileTagline {
+    display: block;
+  }
+}
+#newHeaderSection .top-header .innerTopHeader {
+  padding: 10px;
+}
+#newHeaderSection .top-header .innerTopHeader .left {
+  gap: 10px;
+}
+#newHeaderSection .top-header .innerTopHeader .left .desktopTagline {
+  color: white;
+  text-align: center;
+  font-size: calc(13px + 0.2vw);
+  font-weight: 600;
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 767px) {
+  #newHeaderSection .top-header .innerTopHeader .left .desktopTagline {
+    display: none;
+  }
+}
+#newHeaderSection .top-header .innerTopHeader .left .selectCitySection form select {
+  padding: 6px;
+  border: 1px solid rgb(228, 228, 228);
+  border-radius: 50px;
+  color: #303030;
+  outline: none;
+  font-family: "Montserrat";
+  font-size: calc(13px + 0.2vw);
+  text-transform: capitalize;
+  width: 150px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media screen and (max-width: 350px) {
+  #newHeaderSection .top-header .innerTopHeader .left .selectCitySection form select {
+    width: 120px;
+  }
+}
+#newHeaderSection .top-header .innerTopHeader .right {
+  gap: 10px;
+}
+#newHeaderSection .top-header .innerTopHeader .right .bookNowButton {
+  background-color: #f9969f;
+  color: white;
+  border: none;
+  padding: 7px 30px;
+  border-radius: 50px;
+  font-family: "Montserrat";
+  font-size: calc(13px + 0.2vw);
+  font-weight: 600;
+  transition: 0.2s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  outline: none;
+}
+@media screen and (max-width: 475px) {
+  #newHeaderSection .top-header .innerTopHeader .right .bookNowButton {
+    padding: 7px 20px;
+  }
+}
+#newHeaderSection .top-header .innerTopHeader .right .bookNowButton:hover {
+  background-color: white;
+  color: #f5001e;
+}
+#newHeaderSection .top-header .innerTopHeader .right .vendorLoginButton {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 7px 30px;
+  border-radius: 50px;
+  outline: none;
+  transition: 0.2s;
+}
+#newHeaderSection .top-header .innerTopHeader .right .vendorLoginButton img {
+  width: 25px;
+}
+@media screen and (max-width: 475px) {
+  #newHeaderSection .top-header .innerTopHeader .right .vendorLoginButton img {
+    width: 20px;
+  }
+}
+#newHeaderSection .top-header .innerTopHeader .right .vendorLoginButton .desktopTagline {
+  font-family: "Montserrat";
+  font-size: calc(13px + 0.2vw);
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  #newHeaderSection .top-header .innerTopHeader .right .vendorLoginButton .desktopTagline {
+    display: none;
+  }
+}
+#newHeaderSection .top-header .innerTopHeader .right .vendorLoginButton:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 475px) {
+  #newHeaderSection .top-header .innerTopHeader .right .vendorLoginButton {
+    padding: 7px 20px;
+  }
+}
+#newHeaderSection .bottom-header {
+  background-color: #ed404c;
+}
+#newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-brand .mobileLogo {
+  width: 70px;
+  display: none;
+}
+@media screen and (max-width: 400px) {
+  #newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-brand .mobileLogo {
+           display: none;
+       }
+  #newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-brand .desktopLogo {
+           width: 300px;
+      }
+}
+#newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-brand .desktopLogo {
+           width: 300px;
+    }
+@media screen and (max-width: 400px) {
+    #newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-brand .desktopLogo {
+      display: block;
+    }
+
+    #newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-brand .desktopLogo {
+          width: 260px;
+    }
+
+    #newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-toggler{
+        padding: 0px 1px;
+    }
+}
+#newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-toggler {
+  border: 1px solid white;
+  padding: 3px 5px;
+}
+#newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-toggler span {
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+#newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+  margin: 10px !important;
+  font-size: calc(12px + 0.2vw);
+  font-family: "Montserrat";
+}
+#newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-collapse .navbar-nav .nav-item .nav-link i {
+  font-size: calc(12px + 0.2vw);
+}
+@media screen and (max-width: 1199px) {
+  #newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+    font-size: calc(15px + 0.2vw);
+  }
+}
+#newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
+  margin-top: 0px;
+}
+#newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item {
+  gap: 5px;
+  padding: 8px 20px 8px 15px;
+}
+#newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item span {
+  font-size: calc(12px + 0.2vw);
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 1199px) {
+  #newHeaderSection .bottom-header .innerBotttomHeader .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-menu .dropdown-item span {
+    font-size: calc(15px + 0.2vw);
+  }
+}
+
+.dropdown-item.active, .dropdown-item:active{
+	background-color: #f9969f !important;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  background-color: #ed404c;
+}

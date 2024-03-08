@@ -1,0 +1,927 @@
+.start_row {
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+
+.get_start {
+  background: #fff;
+  padding: 7px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ee182b;
+}
+.get_start:hover {
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  margin-top: 20px;
+}
+.filter_list {
+  border-bottom: 1px solid lightgray;
+}
+.first_filter {
+  border-right: 1px solid lightgray;
+}
+.first_filter h5 {
+  font-weight: 600;
+  padding-top: 10px;
+  font-size: 16px;
+}
+.first_filter p {
+  padding: 15px 0;
+  font-size: 14px;
+}
+.first_filter div {
+  padding: 2px 0;
+}
+
+.cat_lists label {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.cat_lists {
+  overflow-y: auto;
+  height: 280px;
+}
+
+.cat_lists::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: lightgray; /* Change the color on hover */
+}
+
+.btn-clear {
+  color: #000;
+  font-weight: 600;
+  font-size: 15px;
+  background: #eaebed;
+  border-radius: 25px;
+  padding: 8px 21px;
+}
+
+.btn-submit {
+  color: #fff;
+  font-weight: 600;
+  background: red;
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 8px 21px;
+  margin-left: 17px;
+}
+
+.filter_div {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 30%;
+  left: 0;
+  right: 0;
+  padding: 0 45px;
+}
+
+.filter_button {
+  border: none;
+  padding: 7px 12px;
+  border-radius: 25px;
+  font-size: 14px;
+  background-color: #ed404c;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+.filter_button p {
+  color: #fff;
+  font-weight: 600;
+}
+.filter_button p i {
+  margin: 0 0 0 10px;
+  font-size: 22px;
+  color: #fff;
+  margin: 0 5px;
+  padding: 0 2px;
+}
+
+.filter_button select {
+  border: none !important;
+  font-weight: 600;
+  height: 100%;
+}
+
+.filter_button select:focus-visible {
+  border: none !important;
+}
+
+.top_header {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.top_header select {
+  border: 1px solid lightgray;
+  /* box-shadow: 0 0 15px 1px rgba(0,0,0,0.4); */
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+#popupContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 101;
+  height: auto;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2);
+  max-height: 500px;
+  height: 100%;
+}
+
+#popupContent {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+#popupContainer button {
+  cursor: pointer;
+}
+
+#closePopup {
+  margin-top: 20px;
+}
+
+.city_main {
+  position: absolute;
+  bottom: 32%;
+}
+
+.filter_city {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px 0;
+}
+
+.filter_city img {
+  height: 90px;
+}
+
+.filter_div {
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+/* vendor detail  */
+.vendor_img img {
+  border-radius: 28px;
+  max-height: 425px;
+}
+.vbadge {
+  position: absolute;
+  color: #ffff;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: var(--primary-color);
+  padding: 6px 13px;
+  border-radius: 0 25px 25px 0;
+  font-size: 14px;
+  display: flex;
+}
+
+.vbadge i {
+  color: #fff;
+  margin: 0 3px 0 0;
+}
+
+.vl_img {
+  position: relative;
+}
+
+.vendor-banner-heading h1 {
+  text-align: center;
+  padding-top: 55px;
+  color: #fff;
+  z-index: 11;
+  position: relative;
+  font-size: 25px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+
+.vendor_details {
+  margin-top: 55px;
+}
+
+.vendor-detail-heading h1 {
+  color: #fd4251;
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.vendor-detail-heading p {
+  color: #000;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.vrating ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+.vrating ul li p {
+  margin: 6px;
+}
+
+.vendor-detail-tab ul li a {
+  color: #000;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  position: relative;
+}
+
+.vendor-detail-tab ul li .about-tab:after {
+  content: "";
+  width: 0;
+  height: 45%;
+  position: absolute;
+  border: 1px solid black;
+  top: 11px;
+  left: 130px;
+}
+
+.vendor-detail-tab ul li .service-offered:after {
+  content: "";
+  width: 0;
+  height: 45%;
+  position: absolute;
+  border: 1px solid black;
+  top: 11px;
+  left: 230px;
+}
+
+.vendor-get-started h6 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 6px;
+}
+/*.vendor-get-started h2{
+    font-family: 'Montserrat', sans-serif;
+}*/
+.vendor-get-started p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+.vendor-detail-tab #vendor_tabs {
+  box-shadow: 0px 2px 2px 0px #00000029 !important;
+}
+.vendor-get-started button {
+  margin-top: 20px;
+}
+
+.common_vendor_detail {
+  box-shadow: 0px 0px 5px 1px #00000029 !important;
+}
+
+.bridal_sec {
+  /* margin-top: -60px; */
+}
+
+.vendor_tabs {
+  margin: 25px 0;
+}
+
+/* .common_vendor_detail {
+    color: #000;
+    box-shadow: none;
+    border: 2px solid var(--primary-color);
+    padding: 36px 20px;
+    border-radius: 10px;
+    position: relative;
+    margin: 15px 0;
+} */
+
+.detail_badge {
+  position: absolute;
+  background: red;
+  width: 40px;
+  height: 20px;
+  left: 0;
+  top: 40px;
+}
+.common_vendor_detail h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-left: 27px;
+}
+
+.detail_price {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.common_vendor_detail {
+  color: #000;
+  box-shadow: none;
+  border: 2px solid var(--primary-color);
+  padding: 36px 20px;
+  border-radius: 10px;
+  position: relative;
+  margin: 15px 0;
+}
+.price_option {
+  /* box-shadow: 0 0 5px 1px rgba(0,0,0,0.4); */
+  border-radius: 6px;
+  padding: 4px 6px;
+  text-align: center;
+  width: 100%;
+  border: none;
+  margin: 10px;
+}
+.price_option img {
+  height: 60px;
+  width: 60px;
+}
+.price_option p {
+  margin: auto;
+  font-size: 13px;
+}
+.price_option h6 {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.payment_opt ul li {
+  padding: 7px 0;
+}
+.payment_opt img {
+  height: 28px;
+}
+.vendor_feature_list ul li {
+  padding: 6px 0;
+  list-style: none;
+}
+.vendor_feature_list i {
+  color: var(--primary-color);
+  font-size: 17px;
+  margin: 0 4px 0 0;
+}
+.vendor_price {
+  text-align: center;
+  padding: 15px 26px;
+  border: 1px solid var(--primary-color);
+  border-radius: 28px;
+}
+
+.vendor_price_drop {
+  border: none;
+  font-size: 35px;
+  color: red;
+  font-weight: 900;
+}
+.price_drop_down p {
+  /* padding: 10px 0; */
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+.vendor_price hr {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin: 2px 0;
+}
+.vendor_time {
+  display: grid;
+}
+.vendor_time .bhr {
+  font-size: 18px;
+  padding: 3px 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.vendor_time .vtime {
+  font-size: 16px;
+  padding: 5px 0;
+  justify-content: space-between;
+  display: flex;
+}
+.vtime {
+  /* color: red; */
+  text-align: left;
+  font-weight: 600;
+}
+.social_work span {
+  font-size: 18px;
+  padding: 5px 0;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.social_work .slinks {
+  justify-content: center;
+}
+.vendor_share {
+  padding: 3px 0 5px 0;
+}
+
+.vendor_share button {
+  background: #fff;
+  border: none;
+  /* box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2); */
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 18px;
+  padding: 5px 21px;
+}
+.vendor_cview {
+  justify-content: space-around;
+}
+.vendor_cview button {
+  color: #fff;
+  background: #fff;
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.social_work .slinks a img {
+  height: 38px;
+  margin: 5px 10px;
+}
+.vendor_price hr {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+  margin: 2px 0;
+}
+.bridal_sec .card .card-body {
+  padding: 1rem 1rem;
+}
+.filter_list {
+    border-bottom: 1px solid lightgray;
+}
+.mobile_area {
+    display: none;
+}
+.desktop_area {
+    display: block;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .mobile_area {
+        display: none;
+    }
+    .desktop_area {
+        display: block;
+    }
+    p{
+        font-size: 17px;
+    }
+    .vrating ul li p{
+        font-size: 14px;
+    }
+    .vendor_price_drop{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 991px) {
+    #popupContainer {
+        max-height: 100%;
+        overflow-y: auto;
+    }
+    .top_header {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .top_header p {
+        display: none;
+    }
+    .top_header select {
+        padding: 5px 5px;
+    }
+    .top_header select {
+        width: 40%;
+    }
+    .vendor_share {
+        padding: 3px 0 10px 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    .vendor_cview button {
+        padding: 6px 11px;
+        font-size: 15px;
+        margin: 0 4px;
+    }
+    .vendor_tabs .nav-tabs .nav-link {
+        font-size: 15px;
+    }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+    p{
+        font-size: 16px;
+    }
+    .mobile_area {
+        display: block;
+    }
+    .desktop_area {
+        display: none;
+    }
+    .first_filter h5 {
+        font-size: 20px;
+    }
+    .cat_lists label {
+        font-size: 16px;
+    }
+    /* .vendor-col .card .view img {
+        height: 320px;
+    } */
+    .price_drop_down p, .vendor_time .bhr, .vendor_time .vtime, .common_vendor_detail p, .payment_opt ul li, .card-title p, .elegant-color .lead{
+        font-size: 19px;
+    }
+    /* .elegant-color .view-category {
+        margin-top: -29px;
+        font-size: 18px;
+    } */
+    .vendor-get-started p {
+        font-size: 26px;
+    }
+    .vendor_share {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .vendor_cview button, .vendor_share button, .vendor-detail-tab ul li a, .vendor_technique h6 {
+        font-size: 19px;
+    }
+
+    .banner-section-heading h1 {
+        font-size: 65px;
+    }
+   
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile_area {
+        display: block;
+    }
+    .desktop_area {
+        display: none;
+    }
+    .filter_div{
+        display: flow;
+    }
+    .filter_button {
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+        max-width: 240px;
+        width: auto;
+        padding: 10px;
+    }
+    .vendor_price hr {
+        width: 100%;
+    }
+    .vendor_share {
+        display: flex;
+        justify-content: space-around;
+    }
+    .vendor_cview {
+        display: flex;
+    }
+    .detail_price {
+        overflow-x: auto;
+    }
+    #popupContainer {
+        max-height: 100%;
+        overflow-y: auto;
+    }
+    .top_header {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .top_header p {
+        display: none;
+    }
+    .top_header select {
+        padding: 5px 5px;
+    }
+    .top_header select {
+        width: 40%;
+    }
+    .vendor_share {
+        padding: 3px 0 10px 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    .vendor_cview button {
+        padding: 6px 11px;
+        font-size: 15px;
+        margin: 0 4px;
+    }
+    .vendor_tabs .nav-tabs .nav-link {
+        font-size: 15px;
+    }
+}
+
+
+
+@media (min-width: 601px) and (max-width: 768px) {
+    p{
+        font-size: 16px;
+    }
+    .vrating ul li p{
+        font-size: 14px !important;
+    }
+    .filter_div{
+        bottom: 39%;
+    }
+    
+    .vendor-col .card .view img {
+        height: 320px;
+    }
+    .price_drop_down p, .vendor_time .bhr, .vendor_time .vtime, .common_vendor_detail p, .payment_opt ul li, .card-title p, .elegant-color .lead{
+        font-size: 19px;
+    }
+    .elegant-color .view-category {
+        margin-top: -29px;
+        font-size: 18px;
+    }
+    .vendor-get-started p {
+        font-size: 26px;
+    }
+    .banner-secion-common {
+        height: 45vh;
+    }
+    .banner-section-heading h1{
+        font-size: 50px;
+    }
+    .vendor-catalogue-heading h2 {
+        font-size: 26px;
+    }
+}
+@media (min-width: 481px) and (max-width: 600px) {
+    p{
+        font-size: 21px;
+    }
+    .filter_div {
+        display: flow;
+        bottom: 42%;
+        padding: 0 4px;
+    }
+    .vrating p {
+        font-size: 14px !important;
+    }
+    .price_drop_down p {
+        font-size: 18px;
+    }
+    .vendor_time .bhr {
+        font-size: 21px;
+    }
+    .vendor_time .vtime {
+        font-size: 21px;
+    }
+    .price_option p {
+        font-size: 17px;
+    }
+    .price_option h6{
+        font-size: 17px;
+    }
+    .vendor-get-started h6 {
+        font-size: 22px;
+    }
+    .vendor-col .card .view img {
+        height: 320px;
+    }
+
+    .elegant-color .view-category {
+        margin-top: -22px;
+        font-size: 18px;
+    }
+
+    .category-text {
+        font-size: 19px;
+    }
+    .elegant-color .lead {
+        font-size: 18px;
+    }
+    .checked {
+        font-size: 18px;
+    }
+    .payment_opt ul li {
+        font-size: 18px;
+    }
+    .banner-secion-common{
+        height: 40vh;
+    }
+    .banner-section-heading h1{
+        font-size: 40px;
+    }
+    .vendor-catalogue-heading h2{
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    p{
+        font-size: 17px;
+    }
+  .vendor-catalogue-heading h2 {
+    margin: 0 0 4px 0;
+  }
+  .elegant-color .card-title {
+    font-size: 20px;
+}
+.category-text {
+    font-size: 17px;
+}
+.elegant-color p{
+    font-size: 18px;
+}
+.elegant-color .view-category {
+    margin-top: -30px;  
+}
+.cat_lists {
+    height: auto;
+}
+.vendor-detail-heading h1 {
+    font-size: 28px;
+}
+.vrating ul {
+    flex-wrap: wrap;
+}
+#popupContainer {
+    max-height: 100%;
+    overflow-y: auto;
+}
+.top_header {
+    width: 100%;
+    margin-left: 0px;
+}
+.top_header p {
+    display: none;
+}
+.top_header select {
+    padding: 5px 5px;
+}
+.top_header select {
+    width: 40%;
+}
+.vendor_share {
+    padding: 3px 0 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.vendor_cview button {
+    padding: 6px 11px;
+    font-size: 15px;
+    margin: 0 4px;
+}
+.vendor_tabs .nav-tabs .nav-link {
+    font-size: 15px;
+}
+/* .vrating p{
+    font-size: 13px;
+} */
+.vendor_price {
+    padding: 19px 18px;
+}
+.vendor_price_drop {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.price_drop_down p{
+    font-size: 22px;
+}
+.common_vendor_detail h4 {
+    margin-left: 35px;
+}
+.detail_price {
+    overflow-x: auto;
+}
+.follow_section img {
+    height: 70px;
+}
+.vendor_price hr {
+    width: 100%;
+}
+.vendor_cview {
+    justify-content: space-around;
+    display: flex;
+}
+.heading {
+    padding: 0 0 12px 0;
+}
+.vendor_share button {
+    padding: 5px 14px;
+}
+}
+@media (min-width: 361px) and (max-width: 480px) {
+    .vendor_time .vtime {
+        font-size: 19px;
+    }
+    .vendor-get-started p {
+        font-size: 20px;
+    }
+    .vendor-get-started h6 {
+        font-size: 24px;
+    }
+    .vrating p {
+        font-size: 18px;
+    }
+    .banner-secion-common {
+        height: 35vh;
+    }
+    .filter_div {
+        display: flow;
+        bottom: 47%;
+        padding: 0 5px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .filter_div {
+        display: flow;
+        position: relative;
+        top: 4pc;
+        padding: 0 5px;
+    }
+    .filter_button {
+        display: inline-block;
+        vertical-align: top;
+        white-space: normal;
+        max-width: 230px;
+        width: auto;
+        padding: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .filter_button p {
+        color: #fff;
+        font-weight: 600;
+        margin: -5px 0 0 0;
+        font-size: 20px;
+
+    }
+    #popupContainer {
+        max-height: 100%;
+        overflow-y: auto;
+    }
+    .top_header {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .top_header p {
+        display: none;
+    }
+    .top_header select {
+        padding: 5px 5px;
+    }
+    .top_header select {
+        width: 40%;
+    }
+    .vendor_share {
+        padding: 3px 0 10px 0;
+        display: flex;
+        justify-content: space-around;
+    }
+    .vendor_cview button {
+        padding: 6px 11px;
+        font-size: 15px;
+        margin: 0 4px;
+    }
+    .vendor_tabs .nav-tabs .nav-link {
+        font-size: 14px;
+    }
+    /* .common_vendor_detail {
+        padding: 20px 13px;
+    } */
+    /* .price_option {
+        margin: 0;
+    } */
+    .price_option {
+        margin: 5px;
+    }
+    .price_option p {
+        font-size: 14px;
+        text-wrap: nowrap;
+    }
+    /* .price_option h6, p {
+        font-size: 17px;
+    } */
+    .vendor-get-started p {
+        font-size: 16px;
+    }
+    .vrating ul li p {
+        font-size: 16px;
+      }
+}

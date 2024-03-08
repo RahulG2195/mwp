@@ -1,0 +1,314 @@
+.contact-us-main-section{
+  margin:0 auto;
+  padding-top: 40px;
+}
+
+.banner-section-heading{
+   text-align: center; 
+}
+.desktop_area{
+  display: block;
+}
+
+.mobile_area{
+  display: none;
+}
+
+.banner-section-heading h1{
+    padding-top: 145px;
+    color: #ffffff8c;
+    font-size: 80px;
+    font-weight: 800!important;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+}
+
+.contact-us-main-head h2{
+    text-align: center;
+    font-size: 40px;	
+    font-family: 'Montserrat';
+    font-weight: 800;
+    position: relative;
+}
+
+.news-letter-content p{
+    font-family: 'Montserrat';
+    margin-top:10px;
+    font-size:16px;
+    text-align:justify;
+}
+.contact-us-main-head{
+	position: relative;
+}
+
+.contact-input-style {
+    box-shadow: inset 0 0 3px 3px #00000029;
+    background: #fff;
+    border-radius: 9px;
+    height: 50px;
+}
+
+.contact-us-main-head:after{
+  content:url('../image/contact/contact-heading-border.png'); 
+  position: absolute;
+     left: 0;
+     right: 0;
+     text-align: center;
+    top: 45px;
+}
+
+
+.contact-us-sub-heading{
+	 margin-top: 30px;
+}
+.contact-us-sub-heading h4{
+    color: #FD152A;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+
+.contact-us-sub-heading p{
+    text-align: center;
+    font-size: 20px;
+    color: #4D4D4D;
+    font-family: 'Montserrat';
+    font-style: italic;
+}
+
+
+/*Contact form*/
+
+.contact-form-section{
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+
+.form-heading h6{
+  font-size: 25px;
+  font-weight: 800;
+  font-family: 'Montserrat';
+}
+
+.submit-contact{
+    background-color: #FD4251;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 15px;
+}
+.submit-contact:hover{
+    background-color: #ffffff;
+    color: #FD4251;
+    border: 1px solid #FD4251;
+}
+
+.contact-ul:before{
+    content: '';
+    width: 0px;
+    height: 90%;
+    position: absolute;
+
+    left: 15px;
+    top: 25px;
+    border: 1.5px solid #FD152A;
+}
+
+.getin-touch-ul ul li h5{
+	font-size: 20px;
+    color: #FD152A;
+    font-weight: 800;
+    font-family: 'Montserrat';
+}
+
+
+.contact-ul-small-para{
+   color: #FD152A;
+   margin-top: -15px;
+}
+
+.getin-touch-ul ul{
+   list-style-type: none;
+}
+
+
+/* Contact Detail Section*/
+.contact-detail-section{
+   margin: 0 auto;
+   padding-top: 40px;
+}
+
+.contact-detail-content{
+    border: 1px solid #707070;
+    padding: 20px 25px 20px 25px;
+    height: 160px;
+    text-align: justify;
+    display: inline-flex;
+}
+
+.contact-detail-icon img{
+   width: 80px;
+}
+.contact-detail-content h6{
+	color: #FD152A;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    margin-left: 15px;
+}
+
+.contact-detail-li{
+   text-align: justify;
+   list-style-type: none;
+   margin-left: 17px;
+}
+
+.contact-detail-content p{
+   font-size: 16px;
+   margin-left: 15px;
+}
+
+.contact-detail-list-h6{
+    margin-top: -10px;
+}
+
+
+.contact-detail-list-h6 a{
+    color: #FD152A;
+    font-size: 15px;	
+}
+
+
+
+/* Contact news letter section */
+
+
+.contact-news-letter-section{
+   margin:0 auto;
+   padding-top: 40px;
+} 
+
+.news-letter-content{
+  margin-top: 130px;
+}
+
+.news-letter-image img{
+  /* width: 580px;*/
+  margin-left: -78pc;
+}
+
+.news-letter-input-grp-contact{
+     width: 75%;
+}
+
+.submit-news-btn{
+   background-color: #FD4251;
+    color: #fff;
+}
+
+.submit-news-btn:hover{
+    background-color: #ffffff!important;
+    color: #FD4251!important;
+    border: 1px solid #FD4251!important;
+}
+.news-letter-content h6{
+    font-size: 22px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    margin-bottom: 10px;
+}
+
+.news-letter-content-btn{
+   margin-top: 30px;
+}
+.submit-wedding{
+    background-color: #FD4251;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+.submit-register{
+    border: 1px solid #707070;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #4D4D4D;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+#alertbox{
+ box-shadow: 0 0 5pt 0.5pt #D3D3D3; 
+}
+
+.news-letter-image{
+	position: relative;
+}
+
+
+
+.contact-service-head{
+	position: relative;
+}
+
+.contact-social-service{
+   font-size: 25px!important;
+}
+
+.contact-social-ul{
+  margin-top: 20px!important;
+}
+
+.social-contact{
+	position: relative;
+}
+.social-contact:after{
+  content:url('../image/contact/character-1.png'); 
+  position: absolute;
+  left: 0%;
+  top: 18px;
+}
+
+
+.social-contact:before{
+  content:url('../image/contact/character-2.png'); 
+  position: absolute;
+  left: 88%;
+  top: 15px;
+}
+
+#g-captcha{
+    margin-left: -30px!important; 
+}
+
+@media only screen and (min-width:1201px) and (max-width:1401px){
+.contact-ul:before {
+  content: '';
+  width: 0px;
+  height: 557px;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  border: 1.5px solid #FD152A;
+}
+
+.contact-detail-li {
+  margin-left: 0;
+  padding: 0 0 0 15px;
+}
+
+.contact-news-letter-section .form-control {
+  margin:  0;
+}
+}

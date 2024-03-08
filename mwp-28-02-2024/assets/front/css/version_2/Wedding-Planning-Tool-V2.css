@@ -1,0 +1,199 @@
+
+#weedingPlanningToolSection {
+  overflow-x: hidden;
+}
+@media screen and (max-width: 475px) {
+  #weedingPlanningToolSection .service_banner .banner-section-heading h1 {
+    font-size: calc(35px + 0.2vw) !important;
+  }
+}
+#weedingPlanningToolSection .planning-tool-section .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlanningToolSection .planning-tool-section .container .wedding-experience-content {
+    margin-left: 0px;
+  }
+  
+  .start-planning-tool-tablet{
+	width: 245px !important;
+   }
+}
+#weedingPlanningToolSection .budget-calculator-section {
+  margin: 3rem 0px;
+}
+#weedingPlanningToolSection .budget-calculator-section .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 475px) {
+  #weedingPlanningToolSection .budget-calculator-section .container {
+    padding: 0px !important;
+  }
+}
+#weedingPlanningToolSection .budget-calculator-section .container .wedding-budget-content {
+  padding: 20px;
+}
+#weedingPlanningToolSection .budget-calculator-section .container .wedding-budget-content .wedding-budget-heading {
+  gap: 10px;
+  padding-left: 0px !important;
+}
+#weedingPlanningToolSection .budget-calculator-section .container .wedding-budget-content .wedding-budget-heading::before {
+  display: none;
+}
+#weedingPlanningToolSection .budget-calculator-section .container .wedding-budget-content .wedding-budget-heading .icon img {
+  width: 50px;
+}
+#weedingPlanningToolSection .budget-calculator-section .container .wedding-budget-content .wedding-budget-para {
+  margin: 0px !important;
+}
+#weedingPlanningToolSection .budget-calculator-section .container .wedding-budget-content .wedding-budget-btn {
+  text-align: start;
+  margin: 0px;
+}
+#weedingPlanningToolSection .budget-calculator-section .container .wedding-budget-content .wedding-budget-btn a {
+  margin-top: 5px !important;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#weedingPlanningToolSection .weddingPlanningSection {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .left {
+  border-left: 5px solid #880814;
+}
+@media screen and (max-width: 1200px) {
+  #weedingPlanningToolSection .weddingPlanningSection .inner-body .left {
+    border: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  #weedingPlanningToolSection .weddingPlanningSection .inner-body .left .top {
+    flex-direction: column;
+  }
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .left .top .image img {
+  width: 100px;
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .left .top .content span {
+  font-family: "Montserrat";
+  font-size: calc(16px + 0.2vw);
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .left .top .content h3 {
+  font-family: "Montserrat";
+  font-size: calc(35px + 0.2vw);
+  font-weight: 700;
+  color: #f5001e;
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .left .top .content h5 {
+  font-family: "Montserrat";
+  font-size: calc(20px + 0.2vw);
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .left .bottom {
+  margin-top: 10px;
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .left .bottom p {
+  font-family: "Montserrat";
+  font-size: calc(15px + 0.2vw) !important;
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .left .button {
+  gap: 10px;
+  margin-top: 1rem;
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .left .button a {
+  background-color: rgb(253, 66, 81);
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  font-size: calc(15px + 0.2vw) !important;
+  border: 1px solid rgb(253, 66, 81);
+  transition: 0.2s;
+  border-radius: 5px;
+}
+@media screen and (max-width: 425px) {
+  #weedingPlanningToolSection .weddingPlanningSection .inner-body .left .button a {
+    width: 100%;
+  }
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .left .button a:hover {
+  color: rgb(253, 66, 81);
+  background-color: white;
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .right img {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlanningToolSection .weddingPlanningSection .inner-body .right img {
+    width: 60%;
+  }
+  .start-planning-tool-tablet{
+	width: 245px !important;
+   }
+}
+@media screen and (max-width: 550px) {
+  #weedingPlanningToolSection .weddingPlanningSection .inner-body .right img {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlanningToolSection .weddingPlanningSection .inner-body .right img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 425px) {
+  #weedingPlanningToolSection .weddingPlanningSection .inner-body .right img {
+    width: 100%;
+  }
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .right .desktop {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlanningToolSection .weddingPlanningSection .inner-body .right .desktop {
+    display: none;
+  }
+}
+#weedingPlanningToolSection .weddingPlanningSection .inner-body .right .mobile {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlanningToolSection .weddingPlanningSection .inner-body .right .mobile {
+    display: block;
+  }
+}
+#weedingPlanningToolSection .vendor-categories .container {
+  width: 100%;
+  max-width: 1200px !important;
+  margin: auto;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlanningToolSection .vendor-categories .container .row .header .desktop_area {
+    display: none;
+  }
+}
+#weedingPlanningToolSection .vendor-categories .container .row .view-category {
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+#weedingPlanningToolSection .vendor-categories .container .row .footer {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlanningToolSection .vendor-categories .container .row .footer {
+    display: flex;
+  }
+}
+#weedingPlanningToolSection .vendor-categories .container .row .footer .vendor-btn-col {
+  justify-content: center !important;
+}/*# sourceMappingURL=umesh-style.css.map */

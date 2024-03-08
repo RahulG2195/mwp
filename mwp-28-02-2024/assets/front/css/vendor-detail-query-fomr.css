@@ -1,0 +1,26 @@
+.query-form-section{
+	  margin-top: 22px;
+}
+
+
+.query-form-title{
+    text-align: left;
+}
+
+.query-form-label{
+   text-align: left;
+}
+
+
+.query-form-input{
+    outline: 0;
+    border-width: 0 0 1.5px;
+    border-color: #FD4251!important;
+    border-radius: 0px;
+}
+
+.query-form-input:focus {
+  border-color: 1px solid #ee182b!important;
+  box-shadow: none!important;
+ /* outline: 1px dotted #000*/
+}

@@ -1,0 +1,815 @@
+#weedingPlannerPage .hero-section {
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #weedingPlannerPage .hero-section {
+    height: 40vh;
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .hero-section {
+    height: 35vh;
+  }
+}
+@media screen and (max-width: 375px) {
+  #weedingPlannerPage .hero-section {
+    height: 30vh;
+  }
+}
+#weedingPlannerPage .hero-section h1 {
+  color: white;
+  font-size: calc(70px + 0.2vw);
+  opacity: 0.5;
+  font-weight: 800;
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 768px) {
+  #weedingPlannerPage .hero-section h1 {
+    font-size: calc(60px + 0.2vw);
+  }
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .hero-section h1 {
+    font-size: calc(50px + 0.2vw);
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .hero-section h1 {
+    font-size: calc(40px + 0.2vw);
+  }
+}
+@media screen and (max-width: 375px) {
+  #weedingPlannerPage .hero-section h1 {
+    font-size: calc(35px + 0.2vw);
+  }
+}
+#weedingPlannerPage .intoduction {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+#weedingPlannerPage .intoduction .inner-content {
+  margin-top: 3rem;
+  padding: 10px;
+}
+#weedingPlannerPage .intoduction .inner-content .top h2 {
+  font-size: calc(45px + 0.2vw);
+  font-family: "Montserrat";
+}
+#weedingPlannerPage .intoduction .inner-content .top h2 .active {
+  color: #f5001e;
+}
+@media screen and (max-width: 768px) {
+  #weedingPlannerPage .intoduction .inner-content .top h2 {
+    font-size: calc(35px + 0.2vw);
+  }
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .intoduction .inner-content .top h2 {
+    font-size: calc(32px + 0.2vw);
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .intoduction .inner-content .top h2 {
+    font-size: calc(28px + 0.2vw);
+  }
+}
+@media screen and (max-width: 375px) {
+  #weedingPlannerPage .intoduction .inner-content .top h2 {
+    font-size: calc(25px + 0.2vw);
+  }
+}
+@media screen and (max-width: 320px) {
+  #weedingPlannerPage .intoduction .inner-content .top h2 {
+    font-size: calc(22px + 0.2vw);
+  }
+}
+#weedingPlannerPage .intoduction .inner-content .top h3 {
+  font-size: calc(28px + 0.2vw);
+  font-family: "Montserrat";
+}
+#weedingPlannerPage .intoduction .inner-content .top h3 .active {
+  color: #f5001e;
+}
+@media screen and (max-width: 768px) {
+  #weedingPlannerPage .intoduction .inner-content .top h3 {
+    font-size: calc(21px + 0.2vw);
+  }
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .intoduction .inner-content .top h3 {
+    font-size: calc(19px + 0.2vw);
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .intoduction .inner-content .top h3 {
+    font-size: calc(17px + 0.2vw);
+  }
+}
+@media screen and (max-width: 375px) {
+  #weedingPlannerPage .intoduction .inner-content .top h3 {
+    font-size: calc(16px + 0.2vw);
+  }
+}
+@media screen and (max-width: 320px) {
+  #weedingPlannerPage .intoduction .inner-content .top h3 {
+    font-size: calc(15px + 0.2vw);
+  }
+}
+#weedingPlannerPage .intoduction .inner-content .top img {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#weedingPlannerPage .intoduction .inner-content .top p {
+  font-size: calc(14px + 0.2vw) !important;
+  font-family: "Montserrat";
+  text-align: center;
+}
+#weedingPlannerPage .intoduction .inner-content .top p .active {
+  color: #f5001e;
+  font-weight: 600;
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .intoduction .inner-content .top p {
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 375px) {
+  #weedingPlannerPage .intoduction .inner-content .top p {
+    font-size: calc(13px + 0.2vw) !important;
+  }
+}
+#weedingPlannerPage .intoduction .inner-content .bottom {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+#weedingPlannerPage .intoduction .inner-content .bottom .header h2 {
+  font-size: calc(28px + 0.2vw);
+  font-family: "Montserrat";
+}
+#weedingPlannerPage .intoduction .inner-content .bottom .header h2 .active {
+  color: #f5001e;
+}
+@media screen and (max-width: 768px) {
+  #weedingPlannerPage .intoduction .inner-content .bottom .header h2 {
+    font-size: calc(21px + 0.2vw);
+  }
+}
+#weedingPlannerPage .intoduction .inner-content .bottom .inner-content {
+  padding: 10px;
+}
+#weedingPlannerPage .intoduction .inner-content .bottom .inner-content img {
+  width: 100%;
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .intoduction .inner-content .bottom .inner-content .desktop {
+    display: none;
+  }
+}
+#weedingPlannerPage .intoduction .inner-content .bottom .inner-content .mobile {
+  display: none;
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .intoduction .inner-content .bottom .inner-content .mobile {
+    display: block;
+  }
+}
+#weedingPlannerPage .plans .inner-content {
+  padding: 10px;
+}
+#weedingPlannerPage .plans .inner-content .header {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+#weedingPlannerPage .plans .inner-content .header h2 {
+  font-size: calc(28px + 0.2vw);
+  font-family: "Montserrat";
+}
+#weedingPlannerPage .plans .inner-content .header h2 .active {
+  color: #f5001e;
+}
+@media screen and (max-width: 768px) {
+  #weedingPlannerPage .plans .inner-content .header h2 {
+    font-size: calc(21px + 0.2vw);
+  }
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .plans .inner-content .header h2 {
+    font-size: calc(19px + 0.2vw);
+  }
+}
+#weedingPlannerPage .plans .inner-content .header img {
+  width: 100%;
+}
+#weedingPlannerPage .plans .inner-content .header p {
+  font-size: calc(14px + 0.2vw) !important;
+  font-family: "Montserrat";
+  text-align: center;
+}
+#weedingPlannerPage .plans .inner-content .header p .active {
+  color: #f5001e;
+  font-weight: 600;
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .plans .inner-content .header p {
+    text-align: justify;
+  }
+}
+@media screen and (max-width: 375px) {
+  #weedingPlannerPage .plans .inner-content .header p {
+    font-size: calc(13px + 0.2vw) !important;
+  }
+}
+#weedingPlannerPage .plans .inner-content .body {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+#weedingPlannerPage .plans .inner-content .body .inner-body .box {
+  margin: 10px 0px;
+  padding: 10px;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+#weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box {
+  border: 1px solid #fd647c;
+  position: relative;
+  padding-top: 2rem;
+  border-radius: 25px;
+  height: 100%;
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box {
+    height: 300px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box {
+    height: 350px;
+    overflow: hidden;
+  }
+}
+#weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box .icon,
+#weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box h4,
+#weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box p {
+  padding: 0 10px;
+}
+#weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box .icon {
+  width: 100px;
+}
+#weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box h4 {
+  font-size: calc(25px + 0.2vw);
+  color: #f5001e;
+}
+#weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box p {
+  text-align: center;
+  font-size: calc(14px + 0.2vw) !important;
+}
+#weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box a {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  background-color: #f5001e;
+  border-radius: 50px;
+  padding: 10px 50px;
+  color: #fff;
+  font-size: calc(15px + 0.2vw);
+  transition: 0.2s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box a:hover {
+  background-color: #fff;
+  color: #f5001e;
+}
+#weedingPlannerPage .plans .inner-content .body .inner-body .box .inner-box .bottom-bg {
+  width: 100%;
+  border-radius: 0 0 25px 25px;
+}
+#weedingPlannerPage .explorePackagePlans .header {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  gap: 10px;
+}
+#weedingPlannerPage .explorePackagePlans .header span {
+  font-size: calc(18px + 0.2vw);
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+#weedingPlannerPage .explorePackagePlans .header img {
+  width: 100%;
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .explorePackagePlans .header .desktop {
+    display: none;
+  }
+}
+#weedingPlannerPage .explorePackagePlans .header .mobile {
+  display: none;
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .explorePackagePlans .header .mobile {
+    display: block;
+  }
+}
+#weedingPlannerPage .explorePackagePlans .body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#weedingPlannerPage .explorePackagePlans .body .inner-body {
+  padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  height: 400px;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 50px 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body .left {
+    text-align: center;
+  }
+}
+#weedingPlannerPage .explorePackagePlans .body .inner-body .left img {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body .left img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body .left img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body .right {
+    align-items: center;
+  }
+}
+#weedingPlannerPage .explorePackagePlans .body .inner-body .right h4 {
+  font-size: calc(30px + 0.2vw);
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body .right h4 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body .right h4 {
+    font-size: calc(25px + 0.2vw);
+  }
+}
+@media screen and (max-width: 375px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body .right h4 {
+    font-size: calc(22px + 0.2vw);
+  }
+}
+#weedingPlannerPage .explorePackagePlans .body .inner-body .right p {
+  font-size: calc(18px + 0.2vw) !important;
+  color: white;
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body .right p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body .right p {
+    font-size: calc(15px + 0.2vw);
+  }
+}
+@media screen and (max-width: 375px) {
+  #weedingPlannerPage .explorePackagePlans .body .inner-body .right p {
+    font-size: calc(14px + 0.2vw);
+  }
+}
+#weedingPlannerPage .explorePackagePlans .body .inner-body .right a {
+  background-color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #f5001e;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Montserrat";
+  font-size: calc(15px + 0.2vw);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.2s;
+}
+#weedingPlannerPage .explorePackagePlans .body .inner-body .right a:hover {
+  background-color: #fce3e3;
+}
+#weedingPlannerPage .reachOut {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 10rem;
+  padding: 10px;
+}
+#weedingPlannerPage .reachOut .inner-content {
+  border: 2px solid #f5001e;
+  border-radius: 12px;
+  position: relative;
+}
+#weedingPlannerPage .reachOut .inner-content .top {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  position: absolute;
+  top: -50px;
+  width: 70%;
+}
+@media screen and (max-width: 650px) {
+  #weedingPlannerPage .reachOut .inner-content .top {
+    position: relative;
+    top: 0px;
+    width: 100%;
+  }
+}
+#weedingPlannerPage .reachOut .inner-content .top .blockSection {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+}
+@media screen and (max-width: 650px) {
+  #weedingPlannerPage .reachOut .inner-content .top .blockSection {
+    position: absolute;
+    top: -100px;
+    width: 80%;
+    padding-bottom: 30px;
+  }
+}
+#weedingPlannerPage .reachOut .inner-content .top p {
+  font-family: "Montserrat";
+  font-size: calc(14px + 0.2vw) !important;
+  margin-bottom: 10px !important;
+}
+#weedingPlannerPage .reachOut .inner-content .top h2,
+#weedingPlannerPage .reachOut .inner-content .top h3 {
+  font-size: calc(30px + 0.2vw);
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .reachOut .inner-content .top h2,
+  #weedingPlannerPage .reachOut .inner-content .top h3 {
+    font-size: calc(20px + 0.2vw);
+  }
+}
+@media screen and (max-width: 650px) {
+  #weedingPlannerPage .reachOut .inner-content .top h2,
+  #weedingPlannerPage .reachOut .inner-content .top h3 {
+    font-size: calc(30px + 0.2vw);
+  }
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .reachOut .inner-content .top h2,
+  #weedingPlannerPage .reachOut .inner-content .top h3 {
+    font-size: calc(25px + 0.2vw);
+  }
+}
+@media screen and (max-width: 425px) {
+  #weedingPlannerPage .reachOut .inner-content .top h2,
+  #weedingPlannerPage .reachOut .inner-content .top h3 {
+    font-size: calc(20px + 0.2vw);
+  }
+}
+#weedingPlannerPage .reachOut .inner-content .top h2.active {
+  color: #f5001e;
+}
+#weedingPlannerPage .reachOut .inner-content .top .mobile-image {
+  display: none;
+}
+@media screen and (max-width: 650px) {
+  #weedingPlannerPage .reachOut .inner-content .top .mobile-image {
+    display: block;
+    padding: 30px 0;
+    width: 80%;
+  }
+}
+#weedingPlannerPage .reachOut .inner-content .top a {
+  font-size: calc(16px + 0.2vw);
+  font-family: "Montserrat";
+  padding: 10px 20px;
+  background-color: #f5001e;
+  color: white;
+  border-radius: 8px;
+  transition: 0.2s;
+  border: 1px solid #f5001e;
+}
+#weedingPlannerPage .reachOut .inner-content .top a:hover {
+  background-color: white;
+  color: #f5001e;
+  border: 1px solid #f5001e;
+}
+@media screen and (max-width: 650px) {
+  #weedingPlannerPage .reachOut .inner-content .top a {
+    margin: 10px;
+  }
+}
+#weedingPlannerPage .reachOut .inner-content .bottom {
+  display: flex;
+}
+@media screen and (max-width: 650px) {
+  #weedingPlannerPage .reachOut .inner-content .bottom {
+    display: none;
+  }
+}
+#weedingPlannerPage .reachOut .inner-content .bottom img {
+  width: 300px;
+}
+#weedingPlannerPage .reachOut .inner-content .bottom .left {
+  border-radius: 10px 0 0 10px;
+}
+#weedingPlannerPage .reachOut .inner-content .bottom .right {
+  border-radius: 0 10px 10px 0;
+}
+#weedingPlannerPage .ctaSection {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+  }
+}
+#weedingPlannerPage .ctaSection .header .mobile {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .header .mobile {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 10px;
+  }
+  #weedingPlannerPage .ctaSection .header .mobile h2 {
+    color: #f5001e;
+    font-size: calc(35px + 0.2vw);
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 550px) {
+  #weedingPlannerPage .ctaSection .header .mobile h2 {
+    font-size: calc(30px + 0.2vw);
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 475px) {
+  #weedingPlannerPage .ctaSection .header .mobile h2 {
+    font-size: calc(28px + 0.2vw);
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 375px) {
+  #weedingPlannerPage .ctaSection .header .mobile h2 {
+    font-size: calc(26px + 0.2vw);
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 320px) {
+  #weedingPlannerPage .ctaSection .header .mobile h2 {
+    font-size: calc(25px + 0.2vw);
+  }
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .header .mobile h3 {
+    font-size: calc(25px + 0.2vw);
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 550px) {
+  #weedingPlannerPage .ctaSection .header .mobile h3 {
+    font-size: calc(22px + 0.2vw);
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 475px) {
+  #weedingPlannerPage .ctaSection .header .mobile h3 {
+    font-size: calc(20px + 0.2vw);
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 375px) {
+  #weedingPlannerPage .ctaSection .header .mobile h3 {
+    font-size: calc(18px + 0.2vw);
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 320px) {
+  #weedingPlannerPage .ctaSection .header .mobile h3 {
+    font-size: calc(17px + 0.2vw);
+  }
+}
+#weedingPlannerPage .ctaSection .body .inner-body {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .body .inner-body {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+#weedingPlannerPage .ctaSection .body .inner-body .left {
+  height: 100%;
+  margin-top: -40px;
+}
+@media screen and (max-width: 890px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .left {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .left {
+    justify-content: center;
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .left {
+    padding: 0px;
+  }
+}
+#weedingPlannerPage .ctaSection .body .inner-body .left img {
+  height: 110%;
+}
+@media screen and (max-width: 890px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .left img {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .left img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .left img {
+    width: 100%;
+  }
+}
+#weedingPlannerPage .ctaSection .body .inner-body .right {
+  height: 100%;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right {
+    margin-top: 2rem;
+  }
+}
+#weedingPlannerPage .ctaSection .body .inner-body .right p {
+  font-size: calc(14px + 0.2vw) !important;
+  font-family: "Montserrat";
+  margin: 0px !important;
+}
+@media screen and (max-width: 900px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right p {
+    font-size: calc(13px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right p {
+    display: none;
+  }
+}
+#weedingPlannerPage .ctaSection .body .inner-body .right h3 {
+  font-size: calc(25px + 0.2vw);
+}
+@media screen and (max-width: 1200px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h3 {
+    font-size: calc(22px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h3 {
+    font-size: calc(18px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h3 {
+    font-size: calc(25px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h3 {
+    font-size: calc(22px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h3 {
+    font-size: calc(21px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h3 {
+    font-size: calc(20px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h3 {
+    font-size: calc(18px + 0.2vw) !important;
+  }
+}
+#weedingPlannerPage .ctaSection .body .inner-body .right h2 {
+  color: #f5001e;
+  font-size: calc(35px + 0.2vw);
+}
+@media screen and (max-width: 1200px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h2 {
+    font-size: calc(30px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h2 {
+    font-size: calc(20px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h2 {
+    font-size: calc(30px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h2 {
+    font-size: calc(28px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 475px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h2 {
+    font-size: calc(26px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h2 {
+    font-size: calc(24px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right h2 {
+    font-size: calc(22px + 0.2vw) !important;
+  }
+}
+#weedingPlannerPage .ctaSection .body .inner-body .right .mobile {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right .mobile {
+    display: block;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 550px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right .mobile {
+    width: 100%;
+  }
+}
+#weedingPlannerPage .ctaSection .body .inner-body .right .socials {
+  gap: 10px;
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right .socials {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  #weedingPlannerPage .ctaSection .body .inner-body .right .socials {
+    padding-bottom: 2rem;
+  }
+}
+#weedingPlannerPage .ctaSection .body .inner-body .right .socials a {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 50px;
+  width: 45px;
+  height: 45px;
+}
+#weedingPlannerPage .ctaSection .body .inner-body .right .socials a img {
+  width: 100%;
+}/*# sourceMappingURL=umesh-style.css.map */
