@@ -91,10 +91,10 @@
     <script>
     $(document).ready(function() {
         $(".vendor_slider").owlCarousel({
-            items: 1, // Number of items to display
-            loop: false, // Infinite loop
+            // items: 1, // Number of items to display
+            loop: true, // Infinite loop
             margin: 10, // Margin between items
-            autoplay: false, // Autoplay
+            autoplay: true, // Autoplay
             autoplayTimeout: 4000, // Autoplay interval in milliseconds
             responsive: {
                 0: {

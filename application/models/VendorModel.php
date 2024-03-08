@@ -162,7 +162,7 @@ class VendorModel extends CI_Model {
               $city_name = $this->session->userdata('selectedCity');
               $this->db->where('master_city.name', $city_name);
             }
-          $this->db->limit(3);
+          $this->db->limit(10);
           $this->db->order_by('rating','DESC');
           $result = $this->db->get()->result_array();
           return array(

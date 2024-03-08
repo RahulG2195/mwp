@@ -42,6 +42,7 @@ $features = explode(',', $single_data[0]["features"]);
 $features = array_merge($features, array($single_data[0]['no_of_yrs']));
 
 $category = $single_data[0]['category'];
+// pr( $single_data, '');
 ?>
 <section class="vendor_details common_section  mb-5">
     <div class="container ved_container">
@@ -313,6 +314,7 @@ $category = $single_data[0]['category'];
                             <!-- facality  -->
                             <?php
                             if ($category == 1) {
+                                $function_size = explode(',', $single_data[0]['fn_size_allow']);
                             ?>
                                 <div class="service_vendor common_vendor_detail">
                                     <span class="detail_badge"></span>
@@ -361,7 +363,12 @@ $category = $single_data[0]['category'];
                                         <div class="price_option">
                                             <img src="<?php echo base_url() . VENDOR_ICON . 'general_cap.png' ?>" class="img-fluid" alt="">
                                             <p>Function Size Allowed</p>
-                                            <h6><?php echo isset($single_data[0]['fn_size_allow']) ?  $single_data[0]['fn_size_allow'] : 'Information Not Avaialble' ?></h6>
+                                            <?php 
+                                            foreach($function_size as $size){
+                                                echo "<h6>".$size."</h6>";
+                                            }
+                                            ?>
+                                            
                                         </div>
                                     </div>
                                 </div>
