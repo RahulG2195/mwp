@@ -70,8 +70,15 @@
         <?php
         $vendor_name = $this->uri->segment(2);
         $city_name = !empty($this->session->userdata('selectedCity')) ? $this->session->userdata('selectedCity') : 'City';
+        // echo $Get_Vendor_cat['cat_seo_url'];
+        $ven_seo = array();
+        foreach ($Get_Vendor_cat as $cat) {
+            $ven_seo[] = $cat['cat_seo_url'];
+        }
+        // pr($ven_seo, '');exit;
+            // echo  $ven_seo[0];exit;
+        if ($ven_seo[0] == $vendor_name) {
 
-        if ($vendor_name == 'Venues') {
             echo '<div class="filter_button showPopup">
                 <p>'.str_replace('-',' ',$vendor_name).' <i class="fa fa-sort-desc"></i></p>
                 </div>
@@ -90,7 +97,7 @@
                 <div class="filter_button showPopup">
                     <p>Sort <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Bridal-Wear') {
+        } elseif ($ven_seo[1] == $vendor_name) {
             echo '<div class="filter_button showPopup">
                     <p>'.str_replace('-',' ',$vendor_name).' <i class="fa fa-sort-desc"></i></p>
                 </div>
@@ -106,7 +113,7 @@
                 <div class="filter_button showPopup">
                     <p>Sort <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Groom-Wear') {
+        } elseif ($ven_seo[2] == $vendor_name) {
             echo '<div class="filter_button showPopup">
             <p>'. str_replace('-',' ',$vendor_name) .' <i class="fa fa-sort-desc"></i></p>
             </div>
@@ -122,7 +129,7 @@
                 <div class="filter_button showPopup">
                     <p>Sort <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Photographers') {
+        } elseif ($ven_seo[3] == $vendor_name) {
             echo '<div class="filter_button showPopup">
             <p>'.str_replace('-',' ',$vendor_name).' <i class="fa fa-sort-desc"></i></p>
             </div>
@@ -141,7 +148,7 @@
         <div class="filter_button showPopup">
             <p>Sort <i class="fa fa-sort-desc"></i></p>
         </div>';
-        } elseif ($vendor_name == 'Make-Up-Artists') {
+        } elseif ($ven_seo[4] == $vendor_name) {
             echo '<div class="filter_button showPopup">
                 <p>'.str_replace('-',' ',$vendor_name).' <i class="fa fa-sort-desc"></i></p>
                 </div>
@@ -160,7 +167,7 @@
                 <div class="filter_button showPopup">
                     <p>Sort <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Mehendi-Artists') {
+        } elseif ($ven_seo[5] == $vendor_name) {
             echo '<div class="filter_button showPopup">
                 <p>'.str_replace('-',' ',$vendor_name).' <i class="fa fa-sort-desc"></i></p>
                 </div>
@@ -179,7 +186,7 @@
                 <div class="filter_button showPopup">
                     <p>Sort <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Bridal-Jewellery') {
+        } elseif ($ven_seo[6] == $vendor_name) {
             echo '<div class="filter_button showPopup">
                 <p>'.str_replace('-',' ',$vendor_name).' <i class="fa fa-sort-desc"></i></p>
                 </div>
@@ -195,7 +202,7 @@
                 <div class="filter_button showPopup">
                     <p>Sort <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Decoration') {
+        } elseif ($ven_seo[7] == $vendor_name) {
             echo '<div class="filter_button showPopup">
             <p>'.str_replace('-',' ',$vendor_name).' <i class="fa fa-sort-desc"></i></p>
             </div>
@@ -208,7 +215,7 @@
                 <div class="filter_button showPopup">
                     <p>Sort <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Gifts') {
+        } elseif ($ven_seo[8] == $vendor_name) {
             echo '<div class="filter_button showPopup">
                 <p>'.str_replace('-',' ',$vendor_name).' <i class="fa fa-sort-desc"></i></p>
                 </div>
@@ -227,7 +234,7 @@
                 <div class="filter_button showPopup">
                     <p>Sort <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Catering') {
+        } elseif ($ven_seo[9] == $vendor_name) {
             echo '<div class="filter_button showPopup">
             <p>'.str_replace('-',' ',$vendor_name).' <i class="fa fa-sort-desc"></i></p>
             </div>
@@ -243,7 +250,7 @@
             <div class="filter_button showPopup">
                 <p>Relevance <i class="fa fa-sort-desc"></i></p>
             </div>';
-        } elseif ($vendor_name == 'Invitations') {
+        } elseif ($ven_seo[10] == $vendor_name) {
             echo '<div class="filter_button showPopup">
             <p>'.str_replace('-',' ',$vendor_name).' <i class="fa fa-sort-desc"></i></p>
             </div>
@@ -317,7 +324,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
             <div class="filter_list">
                 <div class="row">
                     <?php
-                    if ($vendor_name == 'Venues') {
+                    if ($ven_seo[0] == $vendor_name) {
                     ?>
                     <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">
@@ -413,7 +420,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
                         </div>
                     </div>
                     <?php
-                    } elseif ($vendor_name == 'Bridal-Wear') {
+                    } elseif ($ven_seo[1] == $vendor_name) {
                     ?>
                     <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">
@@ -472,7 +479,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
                     </div>
                     
                     <?php
-                    } elseif ($vendor_name == 'Groom-Wear') {
+                    } elseif ($ven_seo[2] == $vendor_name) {
                     ?>
                     <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">
@@ -541,7 +548,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
                         </div>
                     </div>
                     <?php
-                    } elseif ($vendor_name == 'Photographers') {
+                    } elseif ($ven_seo[3] == $vendor_name) {
                     ?>
                     <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">
@@ -642,7 +649,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
                     </div>
                     
                     <?php
-                    } elseif ($vendor_name == 'Make-Up-Artists') {
+                    } elseif ($ven_seo[4] == $vendor_name) {
                     ?>
                      <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">
@@ -715,7 +722,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
                         </div>
                     </div>
                     <?php
-                    } elseif ($vendor_name == 'Mehendi-Artists') {
+                    } elseif ($ven_seo[5] == $vendor_name) {
                     ?>
                     <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">
@@ -815,7 +822,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
                         </div>
                     </div>
                     <?php
-                    } elseif ($vendor_name == 'Bridal-Jewellery') {
+                    } elseif ($ven_seo[6] == $vendor_name) {
                     ?>
                     <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">
@@ -875,7 +882,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
                         </div>
                     </div>
                     <?php
-                    } elseif ($vendor_name == 'Decoration') {
+                    } elseif ($ven_seo[7] == $vendor_name) {
                     ?>
                     <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">
@@ -897,7 +904,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
                         </div>
                     </div>
                     <?php
-                    } elseif ($vendor_name == 'Gifts') {
+                    } elseif ($ven_seo[8] == $vendor_name) {
                     ?>
                      <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">
@@ -977,7 +984,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
                         </div>
                     </div>
                     <?php
-                    } elseif ($vendor_name == 'Catering') {
+                    } elseif ($ven_seo[9] == $vendor_name) {
                     ?>
                     <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">
@@ -1042,7 +1049,7 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
                         </div>
                     </div>
                     <?php
-                    } elseif ($vendor_name == 'Invitations') {
+                    } elseif ($ven_seo[10] == $vendor_name) {
                     ?>
                     <div class="col-12 col-sm-6 col-lg">
                         <div class="first_filter">

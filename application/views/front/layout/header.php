@@ -148,11 +148,11 @@
             
             ?>
 
-            <!--<li class="nav-item">-->
-            <!--  <a class="nav-link" href="#search">-->
-            <!--    <img src="<?php echo base_url() ?>assets/front/image/icon/search.png" alt="">-->
-            <!--  </a>-->
-            <!--</li>-->
+            <li class="nav-item">
+             <a class="nav-link" href="#search">
+               <img src="<?php echo base_url() ?>assets/front/image/icon/search.png" alt="">
+             </a>
+            </li>
 
           </ul>
         </div>

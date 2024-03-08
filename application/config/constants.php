@@ -99,3 +99,4 @@ define('VENDOR', 'assets/front/image/vendor/');
 define('VENDOR_ICON', 'assets/front/image/icon/vdetail_icon/');
 define('GALLERY', 'assets/front/image/gallery/');
 define('IMAGES', 'assets/front/image/');
+define('LOGO', 'assets/front/image/logo/');

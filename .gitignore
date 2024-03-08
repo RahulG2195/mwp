@@ -14,3 +14,7 @@
 uploads/
 assets/bulk/
 assets/front/image
+
+
+config/config.php
+config/database.php

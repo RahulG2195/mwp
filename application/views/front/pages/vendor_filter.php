@@ -27,8 +27,13 @@
 
         $sort =  isset($get['sort']) ? $get['sort'] : 'Sort';
         $vendor_exp = isset($get['vendor_exp']) ? $get['vendor_exp'][0] . '...' : 'Experience';
+
+        $ven_seo = array();
+        foreach ($Get_Vendor_cat as $cat) {
+            $ven_seo[] = $cat['cat_seo_url'];
+        }
         
-        if ($vendor_name == 'Venues') {
+        if ($ven_seo[0] == $vendor_name) {
             $event_spaces = isset($get['event_spaces']) ? $get['event_spaces'][0] . '...' : 'Type of Venue';
             $price_plate = isset($get['price_plate']) ? $get['price_plate'][0] . '...' : 'Per Plate budget';
             echo '<div class="filter_button showPopup">
@@ -49,7 +54,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Bridal-Wear') {
+        } elseif ($ven_seo[1] == $vendor_name) {
             $prod_type = isset($get['prod_type']) ? $get['prod_type'][0] . '...' : 'Dress Type';
             echo '<div class="filter_button showPopup">
                     <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -66,7 +71,7 @@
                 <div class="filter_button showPopup">
                     <p>'. $sort . ' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Groom-Wear') {
+        } elseif ($ven_seo[2] == $vendor_name) {
             $prod_type = isset($get['prod_type']) ? $get['prod_type'][0] . '...' : 'Dress Type';
             echo '<div class="filter_button showPopup">
             <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -83,7 +88,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Photographers') {
+        } elseif ($ven_seo[3] == $vendor_name) {
             $ppackage_range2 = isset($get['ppackage_range2']) ? $get['ppackage_range2'][0] . '...' : 'Per day budget';
             echo '<div class="filter_button showPopup">
             <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -103,7 +108,7 @@
             <div class="filter_button showPopup">
                 <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
             </div>';
-        } elseif ($vendor_name == 'Make-Up-Artists') {
+        } elseif ($ven_seo[4] == $vendor_name) {
             $make_techs = isset($get['make_techs']) ? $get['make_techs'][0] . '...' : 'Make Up Types';
             $make_feature = isset($get['make_feature']) ? $get['make_feature'][0] . '...' : 'Service Location';
             echo '<div class="filter_button showPopup">
@@ -124,7 +129,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Mehendi-Artists') {
+        } elseif ($ven_seo[5] == $vendor_name) {
             $max_people = isset($get['max_people']) ? $get['max_people'][0] . '...' : 'Guest count to be attended';
             echo '<div class="filter_button showPopup">
                 <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -144,7 +149,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Bridal-Jewellery') {
+        } elseif ($ven_seo[6] == $vendor_name) {
             $jew_type = isset($get['jew_type']) ? $get['jew_type'][0] . '...' : 'Jewellery Type';
             echo '<div class="filter_button showPopup">
                 <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -161,7 +166,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>>';
-        } elseif ($vendor_name == 'Decoration') {
+        } elseif ($ven_seo[7] == $vendor_name) {
             echo '<div class="filter_button showPopup">
             <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
             </div>
@@ -174,7 +179,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Gifts') {
+        } elseif ($ven_seo[8] == $vendor_name) {
             $gift_types = isset($get['gift_types']) ? $get['gift_types'][0] . '...' : 'Gift Type ';
             $moq_ranger = isset($get['moq_ranger']) ? $get['moq_ranger'][0] . '...' : 'Minimum Order Quantit';
             echo '<div class="filter_button showPopup">
@@ -195,7 +200,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Catering') {
+        } elseif ($ven_seo[9] == $vendor_name) {
             $menu_opt = isset($get['menu_opt']) ? $get['menu_opt'][0] . '...' : 'Food Options';
             echo '<div class="filter_button showPopup">
             <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -212,7 +217,7 @@
             <div class="filter_button showPopup">
                 <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
             </div>';
-        } elseif ($vendor_name == 'Invitations') {
+        } elseif ($ven_seo[10] == $vendor_name) {
             $type_avail = isset($get['type_avail']) ? $get['type_avail'][0] . '...' : 'Product Types';
             $paper_style_avail = isset($get['paper_style_avail']) ? $get['paper_style_avail'][0] . '...' : 'Paper Styles';
             echo '<div class="filter_button showPopup">
@@ -292,7 +297,7 @@ $get = $this->input->get();
             <div class="filter_list">
                 <div class="row">
                     <?php
-                    if ($vendor_name == 'Venues') {
+                    if ($ven_seo[0] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -370,7 +375,7 @@ $get = $this->input->get();
                         </div>
 
                     <?php
-                    } elseif ($vendor_name == 'Bridal-Wear') {
+                    } elseif ($ven_seo[1] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -410,7 +415,7 @@ $get = $this->input->get();
                         </div>
 
                     <?php
-                    } elseif ($vendor_name == 'Groom-Wear') {
+                    } elseif ($ven_seo[2] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -460,7 +465,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Photographers') {
+                    } elseif ($ven_seo[3] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -542,7 +547,7 @@ $get = $this->input->get();
                         </div>
 
                     <?php
-                    } elseif ($vendor_name == 'Make-Up-Artists') {
+                    } elseif ($ven_seo[4] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -595,7 +600,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Mehendi-Artists') {
+                    } elseif ($ven_seo[5] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -675,7 +680,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Bridal-Jewellery') {
+                    } elseif ($ven_seo[6] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -715,7 +720,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Decoration') {
+                    } elseif ($ven_seo[7] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -737,7 +742,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Gifts') {
+                    } elseif ($ven_seo[8] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -798,7 +803,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Catering') {
+                    } elseif ($ven_seo[9] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -843,7 +848,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Invitations') {
+                    } elseif ($ven_seo[10] == $vendor_name) {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -901,7 +906,7 @@ $get = $this->input->get();
                     <?php
                     }
 
-                    if ($vendor_name !== 'Decoration') {
+                    if ($ven_seo[7] !== $vendor_name) {
                     ?>
 
                         <div class="col-lg">
