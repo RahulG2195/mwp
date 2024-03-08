@@ -1,0 +1,1686 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    margin: 0 16px 0 11px !important;
+    }
+    
+    /*.footer-services-1{*/
+    /*    margin:0 0 0 0  !Important;*/
+    /*    display:inline-flex;*/
+    /*}*/
+/* hero section  */
+p{
+  font-family: 'Montserrat'!important;
+  font-size: 14px!important;
+}
+.hero-full-screen {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  
+   background: url("./../image/background-image/home-page-banner.jpg") center center no-repeat; 
+  background-size: cover; 
+
+}
+
+.hero-full-screen .middle-content-section {
+  text-align: center;
+  color: #fefefe;
+  margin-top: 30%;
+
+}
+
+.hero-full-screen .top-content-section {
+  width: 100%;
+}
+
+.hero-full-screen .bottom-content-section {
+  padding: 1rem;
+}
+
+.hero-full-screen .bottom-content-section svg {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fefefe;
+}
+
+.hero-full-screen .top-bar {
+  background: transparent;
+}
+
+.hero-full-screen .top-bar .menu {
+  background: transparent;
+}
+
+.hero-full-screen .top-bar .menu-text {
+  color: #fefefe;
+}
+
+.hero-full-screen .top-bar .menu li {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-full-screen .top-bar .menu a {
+  color: #fefefe;
+  font-weight: bold;
+}
+
+
+.hero-section-heading{
+  font-size: 50px;
+  font-weight: 500!important;
+  font-family: 'Montserrat';
+}
+
+.hero-section-sub-heading{
+  font-family: 'Montserrat';
+}
+.custom{
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+}
+
+.middle-content-section .input-group{
+  display: inline-flex;
+  flex-wrap: nowrap;
+  width: 955px;
+  height: 45px;
+}
+
+.select{
+  border-left:1px solid grey!important;
+  width: 100%!important;
+  color: grey;
+  /*margin-left: 20px; */
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.btn-search-location{
+  background-color: #AA4D4F;
+  height: 45px;
+  border: none;
+  width: 200px;
+  color: #fff;
+  border-radius: inherit;
+  font-family: 'Montserrat';
+  border-radius: 10px;
+  padding-top:10px;
+  font-weight: 500;
+}
+
+
+.btn-search-location:hover{
+  color: #ee182b!important;
+  background-color: #fff;
+}
+
+.vendor-select{
+   border-radius: 10px!important;
+}
+
+
+
+/*Category Area*/
+
+
+
+.category-slider{
+   margin: 0 auto;
+}
+#recipeCarousel .carousel-item{
+   width: 70%;
+}
+
+
+#recipeCarousel .card{
+    width: 250px;
+    height: 154px!important;
+    background-color:#AA4D4F;
+} 
+
+
+#recipeCarousel img{
+  width:70px!important;
+  height: 70px!important;
+}
+
+
+
+#recipeCarousel .category-box-content span{
+  margin-top: -15px;
+  color: #fff;
+}
+
+.category-box-content h2{
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Montserrat';
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+#recipeCarousel .carousel-control-next{
+  right:-45px;
+}
+#recipeCarousel  .carousel-control-prev{
+      left: -20px;
+}
+
+
+.category-img-box.img-1{
+    background: url("../image/home-icon/MWP-VENUE.png") center center no-repeat; 
+    height: 300px; 
+    background-size: contain;  
+}
+
+.category-box-content span h6{
+  color: #fff;
+
+}
+.category-card-1{
+  cursor: pointer!important;
+}
+
+/* hover of cat-1*/
+.category-card-1:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-1:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-1:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-1:hover .img-1{
+  background-image: url("../image/home-icon/MWP-VENUE-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+
+
+.category-img-box.img-2{
+  background: url("../image/home-icon/MWP-BRIDAL-WEAR.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+/* hover of cat-2*/
+
+.category-card-2:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-2:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-2:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-2:hover .img-2{
+  background-image: url("../image/home-icon/MWP-BRIDAL-WEAR-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+.category-img-box.img-3{
+  background: url("../image/home-icon/MWP-GROOM-WEAR.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-3*/
+
+.category-card-3:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-3:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-3:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-3:hover .img-3{
+  background-image: url("../image/home-icon/MWP-GROOM-WEAR-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+.category-img-box.img-4{
+  background: url("../image/home-icon/MWP-PHOTOGRAPHER.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-4*/
+.category-card-4:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-4:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-4:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-4:hover .img-4{
+  background-image: url("../image/home-icon/MWP-PHOTOGRAPHER-PINK.png"); /*when parent is hovered*/
+}
+
+
+.category-img-box.img-5{
+  background: url("../image/home-icon/MWP-MUA.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-5*/
+.category-card-5:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-5:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-5:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-5:hover .img-5{
+  background-image: url("../image/home-icon/MWP-MUA-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+.category-img-box.img-6{
+  background: url("../image/home-icon/MWP-MEHENDI-ARTIST.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-6*/
+.category-card-6:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-6:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-6:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-6:hover .img-6{
+  background-image: url("../image/home-icon/MWP-MEHENDI-ARTIST-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+.category-img-box.img-7{
+  background: url("../image/home-icon/MWP-BRIDAL-JEWELLERY.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-7*/
+
+.category-card-7:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-7:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-7:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-7:hover .img-7{
+  background-image: url("../image/home-icon/MWP-BRIDAL-JEWELLERY-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+
+.category-img-box.img-8{
+  background: url("../image/home-icon/MWP-DECORATION.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+
+/* hover of cat-8*/
+
+.category-card-8:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-8:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-8:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-8:hover .img-8{
+  background-image: url("../image/home-icon/MWP-DECORATION-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+.category-img-box.img-9{
+  background: url("../image/home-icon/MWP-GIFTS.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-9*/
+.category-card-9:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-9:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-9:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-9:hover .img-9{
+  background-image: url("../image/home-icon/MWP-GIFTS-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+.category-img-box.img-10{
+  background: url("../image/home-icon/MWP-CATERING.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-10*/
+.category-card-10:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-10:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-10:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-10:hover .img-10{
+  background-image: url("../image/home-icon/MWP-CATERING-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+
+.category-img-box.img-11{
+  background: url("../image/home-icon/MWP-INVITATION.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+
+/* hover of cat-11*/
+.category-card-11:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-11:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-11:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-11:hover .img-11{
+  background-image: url("../image/home-icon/MWP-INVITATION-PINK.png"); /*when parent is hovered*/
+}
+
+.button-li{
+     display:inline-flex;
+     }
+/*.category-img-box.img-12{
+  background: url("../image/icon/Others.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}*/
+
+
+
+/* hover of cat-12*/
+/*.category-card-12:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-12:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-12:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-12:hover .img-12{
+  background-image: url("../image/icon/Others_pink.png"); 
+}
+*/
+
+
+
+
+
+/*.category-img-box.img-1:hover{
+    background: url("../image/icon/garland-1.png") center center no-repeat; 
+}*/
+/*@media (max-width: 768px) {*/
+
+  
+
+/*    .carousel-inner .carousel-item > div {*/
+/*        display: none;*/
+/*    }*/
+/*    .carousel-inner .carousel-item > div:first-child {*/
+/*        display: block;*/
+/*    }*/
+/*}*/
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+/*@media (min-width: 768px) {*/
+
+/*  .hero-full-screen {*/
+/*    max-height: 74vh !important;*/
+/*  }*/
+    
+/*    .carousel-inner .carousel-item-right.active,*/
+/*    .carousel-inner .carousel-item-next {*/
+/*      transform: translateX(33.333%);*/
+/*    }*/
+    
+/*    .carousel-inner .carousel-item-left.active, */
+/*    .carousel-inner .carousel-item-prev {*/
+/*      transform: translateX(-33.333%);*/
+/*    }*/
+/*}*/
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+
+/*Intro  section 3*/
+
+.intro-content-small-text h3{
+    font-size: 16px!important;
+    letter-spacing: 6px!important;
+    margin-bottom: 20px!important;
+}
+
+.intro-content-heading-2 h1{
+  font-size: 35px;
+  font-weight: 600;
+}
+.intro-content-heading-2 h2{
+    color: #FD152A;
+    font-weight: 600;
+    font-size: 34px;
+}
+
+.intro-content-para{
+    padding-top: 33px;
+    text-align: justify;
+    margin-bottom: 85px;
+    
+    
+}
+.intro-part-1{
+  margin-top: 110px;
+}
+
+
+.intro-column{
+   border: 2px solid #eee;
+    /* text-align: center; */
+    padding: 20px;
+}
+
+.intro-icon-1{
+   text-align: center;
+}
+
+.intro-icon-1 img{
+  width: 128px;
+  height: 128px;
+}
+
+.intro-content{
+  font-family: 'Montserrat';
+}
+
+.intro-part-content-1{
+   font-family: 'Montserrat';
+}
+
+
+/*.know-more-para-1{
+        margin-top: -20px!important;
+}
+.know-more-para-2{
+   margin-top: -20px!important; 
+}*/
+.explore-more-btn{
+    background: #FF142A;
+    padding: 13px 10px;
+    color: #fff!important;
+    border-radius: 3px;
+    font-family: 'Montserrat';
+    text-decoration: none!important;
+    text-align: center;
+    margin-top: -42px;
+    font-weight:800;
+
+}
+
+.who-are-we:hover{
+  border:2px solid #FF142A!important;  
+  color:#FF142A!important;
+  background-color:#fff;
+}
+/*.explore-more-btn:hover{
+  color: #fff;
+}
+.explore-more-btn :hover{
+  color: #fff!important;
+}*/
+.know-more-btn{
+    color: #FF142A;
+    font-size: 16px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    text-decoration: none!important;
+}
+
+.know-more-btn:hover{
+   color: #FF142A;
+}
+
+.intro-sub-heading{
+  position: relative;
+}
+.intro-sub-heading h6{
+  color: #AA4D4F;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+
+/*.intro-sub-heading:before{
+    position: absolute;
+    content: "";
+    top: 18px;
+    display: block;
+    width: 52px;
+    height: 4px;
+    background: #e02845;
+    left: 0;
+    z-index: -1;
+    border-radius: 0 0 5px 5px;
+}*/
+
+.text-1{
+  margin-top: -5px;
+  text-align: left;
+  width: 200px;
+  font-size: 20px;
+}
+
+
+
+
+/*Approach section*/
+
+
+/*.approach-content{
+  padding: 20px;
+}*/
+.app_cart_up{
+  display: none;
+}
+.our-approach-section{
+  margin-top: 70px;
+}
+
+.approach-content-img{
+  /* display: inline-flex; */
+}
+
+.approach-content-img h3{
+  margin-top: 20px;
+  margin-left: 16px;
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-weight: 700;
+}
+
+.approach-content-para p{
+    margin-top: 20px;
+    width: 250px;
+    font-size: 14px!important;
+    color: #fff;
+    text-align:justify;
+}
+
+.approach-content-img img{
+    width: 69px;
+    height: 69px;
+    margin-top: 12px;
+}
+
+.approach-heading h2{
+
+  font-size: 34px;
+  color: #fff;
+  font-family: 'Montserrat';
+} 
+ .personalization-para{
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+
+.approach-heading{
+  padding: 20px 20px 20px 20px;
+}
+.approach-row{
+  padding: 15px 15px 15px 15px;
+  margin-top: -40px;
+}
+
+
+
+.read-more button{
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.read-more button:focus {
+    /*outline: 1px dotted;*/
+    outline: 5px auto #fff;
+}
+#readapproach-1{
+  margin-top: 38px!important; 
+}
+
+
+/*Services section*/
+.wedding-services{
+  margin-top: 70px;
+}
+
+.service-heading-small h3{
+   font-family: 'Montserrat';
+   text-align: center;
+   font-size: 20px;
+   letter-spacing: 8px;
+
+}
+
+.service-heading-main h2{
+  font-family: 'Montserrat';
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+
+}
+
+.service-para p{
+  text-align: center;
+  font-family: 'Montserrat'!important;
+}
+
+.service-content{
+   cursor: pointer;
+}
+.service-content{
+  background-color:#AA4D4F;
+  padding: 10px;
+  height: 293px;
+  border-radius: 4px;
+  margin: auto;
+}
+
+
+.service-content:hover{
+  background-color:#FD152A24!important;
+  transition: 0.2 s ease-in-out;
+}
+
+
+.service-content-img{
+  display: inline-flex;
+}
+
+
+.service-content-img h3{
+  margin-top: 26px;
+  margin-left: 80px;
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Montserrat'!important;
+  font-weight: 600;
+}
+.service-content-img img{
+  width:32px;
+  height: 32px;
+}
+
+
+.service-content-para p{
+  margin-top: 33px;
+}
+
+
+.category-image-1{
+  background-image: url(../image/home-icon/Complete-Wedding-Planning-Services.png)!important;
+  height: 70px;
+  background-size: contain!important;
+  margin-left: -10px;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+
+/*category image 1*/
+
+.service-1:hover .category-image-1 h3{
+  color:#fd152a!important;
+}
+
+.service-1:hover .service-content-1 p{
+  color:#000000!important;
+}
+
+.service-1:hover .service-btn{
+  background-color: #FD152A;
+  color: #fff;
+  text-decoration: none;
+}
+.service-1:hover .category-image-1{
+  background-image: url(../image/home-icon/Complete-Wedding-Planning-Service-Red.png)!important;
+  background-position: top left;
+  background-repeat: no-repeat;
+
+}
+
+.money-symbol{
+    color: #FF142A;
+}
+
+
+.category-image-2{
+  background: url(../image/home-icon/Design-and-Decor.png)!important;
+  height: 70px;
+  background-size: contain!important;
+  margin-left: -10px;
+  background-position: top left!important;
+  background-repeat: no-repeat!important;
+}
+
+/*category image 2*/
+
+
+.service-2:hover .category-image-2 h3{
+  color:#fd152a!important;
+}
+
+.service-2:hover .service-content-2 p{
+  color:#000000!important;
+}
+
+.service-2:hover .service-btn{
+   background-color: #FD152A;
+  color: #fff;
+  text-decoration: none;
+}
+.service-2:hover .category-image-2{
+  background-image: url(../image/home-icon/Design-and-Decor-Red.png)!important;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+
+
+.category-image-3{
+  background: url(../image/home-icon/Vendor-Recommendation.png)!important;
+  height: 70px;
+  background-size: contain!important;
+  margin-left: -10px;
+  background-position: top left!important;
+  background-repeat: no-repeat!important;
+}
+
+/*category image 3*/
+
+.service-3:hover .category-image-3 h3{
+  color:#fd152a!important;
+}
+
+.service-3:hover .service-content-3 p{
+  color:#000000!important;
+}
+
+.service-3:hover .service-btn{
+   background-color: #FD152A;
+  color: #fff;
+  text-decoration: none;
+}
+.service-3:hover .category-image-3{
+  background-image: url(../image/home-icon/Vendor-Recommendation-Red.png)!important;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+.category-image-4{
+  background: url(../image/home-icon/Wedding-Planning-Tools.png) top left no-repeat;
+  height: 70px;
+  background-size: contain;
+  margin-left: -10px;
+}
+
+/*category image 4*/
+.service-4:hover .category-image-4 h3{
+  color:#fd152a!important;
+}
+
+.service-4:hover .service-content-4 p{
+  color:#000000!important;
+}
+
+.service-4:hover .service-btn{
+  background-color: #FD152A;
+  color: #fff;
+  text-decoration: none;
+}
+.service-4:hover .category-image-4{
+  background-image: url(../image/home-icon/Wedding-Planning-Tools-Red.png)!important;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+
+
+.category-image-5{
+  background: url(../image/home-icon/Destination-Wedding.png) top left no-repeat;
+  height: 70px;
+  background-size: contain;
+  margin-left: -10px;
+}
+
+/*category image 5*/
+.service-5:hover .category-image-5 h3{
+ color:#fd152a!important;
+}
+
+.service-5:hover .service-content-5 p{
+  color:#000000!important;
+}
+
+.service-5:hover .service-btn{
+   background-color: #FD152A;
+  color: #fff;
+  text-decoration: none;
+}
+.service-5:hover .category-image-5{
+  background-image: url(../image/home-icon/Destination-Wedding-Red.png)!important;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+.category-image-6{
+  background: url(../image/home-icon/Customised-Add-Ons.png) top left no-repeat;
+  height: 70px;
+  background-size: contain;
+  margin-left: -10px;
+}
+
+/*category image 5*/
+.service-6:hover .category-image-6 h3{
+  color:#fd152a!important;
+}
+
+.service-6:hover .service-content-6 p{
+  color:#000000!important;
+}
+
+.service-6:hover .service-btn{
+   background-color: #FD152A;
+  color: #fff;
+  text-decoration: none;
+}
+.service-6:hover .category-image-6{
+  background-image: url(../image/home-icon/Customised-Add-Ons-Red.png)!important;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+
+
+.service-content-para p{
+  font-size: 15px;
+  color: #fff;
+  /*margin-left: 18px;*/
+  text-align: justify;
+}
+
+.service-btn{
+    font-size: 16px;
+    background-color: #ffffff4d;
+    padding: 10px;
+    color: #fff;
+    border-radius: 3px;
+    margin-left: 65px;
+    width: 200px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+service-btn:hover{
+  
+  color:#fff!important; 
+}
+.wedding-services-section{
+  margin-top: 10px;
+  margin-right: -18px;
+}
+
+
+/*testimonial section*/
+
+.testimonial-section{
+   /*overflow-x: hidden;*/
+   margin-top: 70px;
+   background-color: #FF142A;
+   height: 385px;
+}
+.testimonial{
+   
+    padding: 95px 0 19px 390px;
+    position: relative;
+}
+
+.testimonial-heading{
+   margin-top: 50px;
+}
+
+.testimonial-heading h2{
+  font-size: 34px;
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+#testimonial-slider{
+  margin-top: -80px;
+}
+.testimonial:before,
+.testimonial:after{
+    content: "";
+    width: 320px;
+    height: 55px;
+    
+    position: absolute;
+    left: 0;
+}
+
+.testimonial .pic{
+    
+    position: absolute;
+    top: 98px;
+    left: 70px;
+}
+.testimonial .pic img{
+    width: 57%;
+    height: auto;
+}
+.testimonial .description{
+    font-size: 14px;
+    color: #fff;
+    line-height: 27px;
+    position: relative;
+    font-family: 'Montserrat';
+    text-align:justify;
+}
+
+.testimonial .testimonial-title{
+    font-size: 22px;
+    font-weight:800;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Montserrat';
+}
+.testimonial .post{
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color :#fff;
+    margin-top: 10px;
+    font-family: 'Montserrat';
+}
+.checked {
+  color: orange;
+}
+.owl-theme .owl-controls{
+    text-align: left;
+    margin-top: -190px;
+    width: 0%;
+}
+.owl-theme .owl-controls .owl-buttons div{
+    background: transparent;
+    border-radius: 0;
+    opacity: 1;
+    padding: 5px 10px;
+    border:1px solid #fff;
+}
+.owl-prev:before,
+.owl-next:before{
+    content: "\f053";
+    font-family: "Font Awesome 5 Free"; font-weight: 900;
+    color: #fff;
+}
+.testimonial-slider .owl-next:before{
+    content: "\f054";
+}
+@media only screen and (max-width: 990px){
+    .testimonial{
+        padding: 80px 0 80px 265px;
+    }
+}
+/*@media only screen and (max-width: 767px){*/
+/*    .testimonial{*/
+/*        padding: 0;*/
+/*        border: none;*/
+/*    }*/
+/*    .testimonial:before,*/
+/*    .testimonial:after{*/
+/*        border: none;*/
+/*    }*/
+/*    .testimonial .pic{*/
+/*        position: relative;*/
+/*        top: 0;*/
+/*        left: 0;*/
+/*    }*/
+/*    .testimonial .description{*/
+/*        margin-top: 15px;*/
+/*    }*/
+/*    .testimonial .description:before{*/
+/*        content: "";*/
+/*    }*/
+/*}*/
+
+
+/* Vendor Categories  */
+
+.vendor-categories{
+  margin-top: 70px;
+}
+
+.vendor-small-text h6{
+   font-family: 'Montserrat';
+   letter-spacing: 5px;
+   color: #4D4D4D;
+}
+
+.vendor-main-text h2{
+   font-family: 'Montserrat';
+   font-size: 34px;
+   font-weight: 700;
+   margin-bottom: 20px; 
+   color: #383838;
+}
+
+.vendor-btn-col{
+  display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.vendor-btn{
+   
+    border: 1px solid #c2c6cb;
+    color: #FF142A;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Montserrat';
+}
+
+.vendor-btn:hover{
+  background-color: #FF142A;
+  color: #fff!important;
+  text-decoration:none;
+}
+
+.view-category{
+    border: 1px solid #707070;
+    border-radius: 5px;
+    width: auto;
+    float: right;
+    padding: 3px 10px 3px 10px;
+    height: 29px;
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: #707070;
+    font-family: 'Montserrat';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%FD4251'/%3E%3C/svg%3E");
+}
+
+.view-category:hover{
+  color: #707070;
+  text-decoration: none;
+}
+.card-img-top{
+  padding: 10px;
+}
+.category-text{
+  font-family: 'Montserrat';
+  font-size: 15px;
+}
+
+.vendor-categories .card-title{
+   color: #FF142A;
+   font-family: 'Montserrat';
+   font-size: 20px;
+   font-weight: 900;
+}
+
+
+
+/*City slider*/
+
+.home-logo-slider{
+  margin-top: 70px;
+}
+
+ .hr-cities{
+    height: 2px;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 1200px;
+}
+
+
+.happening-city-heading h2{
+  font-family: 'Montserrat';
+  font-size: 34px;
+  font-weight: 700;
+
+}
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+   /* height: 100%;*/
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-dots {
+    bottom: -45px;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+
+}
+.slick-dots, .slick-next, .slick-prev {
+    position: absolute;
+    display: block;
+    padding: 0;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #FF142A;
+}
+
+
+.slick-dots li button:before {
+    font-size: 25px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•'!important;
+    text-align: center;
+    opacity: .25;
+    color: #000;
+}
+
+.city-text{
+    text-align: center;
+    margin-top: -5px;
+    color: #FF142A;
+    font-weight: 700;
+    font-family: 'Montserrat';
+}
+
+
+.news-letter{
+  margin-top: 90px;
+  background: url("../image/background-image/MWP-bg-Banner.jpg") center center no-repeat;
+  background-size: cover;
+ 
+  
+}
+
+.newsletter-small-heading h6{
+  text-align: center;
+  letter-spacing: 6px;
+  color: #fff;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+}
+
+.newsletter-main-heading h2{
+   text-align: center;
+   color: #fff;
+   font-size: 35px;
+   font-family: 'Montserrat';
+
+}
+
+.news-letter-content{
+      padding: 100px;
+}
+
+
+.newsletter-btn{
+   text-align: center;
+   margin-top: 20px;
+}
+
+.newsletter-button{
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px 10px 20px;
+  border-radius: 6px;
+  font-weight: 400;
+  font-family: 'Montserrat';
+}
+
+.newsletter-button:hover{
+  text-decoration: none;
+  color: #fff!important;
+  background-color: #FF142A;
+}
+
+/*Inspiration Highlights*/
+
+.inspiration-highlights{
+   margin-top: 70px;
+}
+
+.inspiration-heading{
+  margin-bottom: 20px;
+}
+.inspiration-heading h2{
+  text-align: center;
+  font-size: 34px;
+  font-family: 'Montserrat';
+}
+#inspirationCarousel .card-title{
+  font-family: 'Montserrat';
+  font-size: 15px;
+  color: #6c757d !important;
+  font-weight: 600;
+}
+#inspirationCarousel .card-text{
+  font-family: 'Montserrat';
+  font-size: 13px;
+}
+
+#inspirationCarousel span{
+  font-size: 12px;
+  font-family: 'Montserrat';
+}
+
+#inspirationCarousel .carousel-control-prev{
+   left: -10px;
+}
+
+#inspirationCarousel .carousel-control-prev{
+   left: -10px;
+}
+
+#inspirationCarousel .carousel-control-next
+{
+      right: -10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+    .happening-city-heading h2 {
+    padding-left: 18px;
+}
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+
+
+/*Social share section*/
+.social-share-section{
+  margin-top: 35px;
+  margin-bottom: 40px;
+  
+}
+
+.social-share{
+  background: url("../image/background-image/mwp-hompage-follow-us-bg-banner.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 50px;
+}
+
+.social-share-small-heading h6{
+  color: #131313;
+  letter-spacing: 6px;
+  font-family: 'Montserrat';
+}
+   
+.social-share-main-heading h2{
+  color: #FF142A;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  font-size: 30px;
+}
+
+
+.social-share-sub-heading h5{
+   color: #212529;
+   font-size: 22px;
+   font-family: 'Montserrat';
+   font-weight: 400;
+}
+
+.social-share-btn{
+  margin-top: 30px;
+} 
+
+.social-share-btn a{
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px 10px 20px;
+  border-radius: 6px;
+  font-weight: 400;
+ font-family: 'Montserrat', sans-serif;
+}
+
+
+.social-share-btn a:hover{
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background-color: #FF142A;
+}
+
+
+.social-share-icon{
+  margin-left: -50px;
+  display: inline-flex;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.social-share-icon li a{
+    background-color: #fff;
+    padding:9px;
+    border-radius: 50%;
+    width: 30px;
+    display: inline-flex;
+    height: 30px;
+    margin-left: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size:14px;
+}
+
+.social-share-icon li a i{
+  color: #FC3465;
+}
+
+.mobile-logo{
+   display:none!important; 
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+.happening-city-heading h2 {
+    padding-left: 31px;
+}
+    
+}
+@media only screen and (max-width: 480px){
+    .newsletter-main-heading h2 {
+    font-size: 21px;
+}
+.inspiration-heading h2 {
+    font-size: 29px;
+}
+.social-share-main-heading h2, .social-share-main-heading h2 {
+    font-size: 22px;
+}
+.footer-logo-para {
+    padding:0;
+}
+.site-map-col, .service-col{
+    margin:0;
+}
+}

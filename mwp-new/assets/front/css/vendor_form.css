@@ -1,0 +1,151 @@
+
+.vendor_form_section .card .row{
+padding: 0 20px;
+}
+.check_tagline{
+    display: flex;
+    float: right;
+    justify-content: end;
+}
+
+label span{
+    padding: 0 6px;
+}
+.check_tagline strong{
+    padding:  0 0 0 20px;
+}
+.card-header{
+    background: transparent;
+    font-weight: 600;
+}
+.card label {
+    font-weight: 600;
+    margin: 0;
+    padding: 10px 0 0px 0;
+    font-size: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.vendor_cat_inputs{
+    display: none;
+}
+
+/* #prod_div{
+    display: none;
+}
+#paper_div{
+    display: none;
+} */
+.busin_row{
+    align-items: center;
+}
+
+.business_hr{
+    text-align: center;
+    padding: 22px  12px 12px 12px;
+    /*margin: 0 15px;*/
+}
+.business_hr select{
+    padding: 8px;
+    border-radius: 8px;
+    color: #495057;
+    border:1px solid #ced4da;
+}
+
+.add_div{
+    text-align: left;
+}
+
+.add_div .fa-plus{
+    background: #EE182B;
+    color: #fff;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.day_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.day_div .fa-minus{
+    background: #EE182B;
+    color: #fff;
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.primary-form-heading{
+    color: #FD152B;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-header{
+    border-bottom:1px solid #ee182b!important;
+}
+
+.vendor-btn-submit{
+    background: #EE182B!important;
+    color: #fff;
+}
+
+.vendor-btn-submit:hover{
+    color: #EE182B;
+    background: #fff !important;
+    border:1px solid #EE182B;
+}
+
+.vendor-form-image{
+   padding-bottom:5px!important; 
+}
+
+.tech_data{
+    display: flex;
+    margin-top: 40px;
+}
+.tech_data .input-group{
+    padding: 0 8px;
+}
+.tech_data .input-group .form-control{
+    margin: 0;
+}
+
+.tech_data .delete_btn{
+    cursor: pointer;
+}
+
+.gift_typs{
+    display: flex;
+    margin-top: 40px;
+}
+.gift_typs .input-group{
+    padding: 0 8px;
+}
+.gift_typs .input-group .form-control{
+    margin: 0;
+}
+
+.gift_typs .delete_btn{
+    cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+    .vendor_form_section .card .row{
+        padding:0;
+    }
+.day_div {
+    gap: 33px;
+    padding: 20px 0px;
+}
+}
+/*.vendor-form-label{
+    color: #ee182b!important;
+}
+*/

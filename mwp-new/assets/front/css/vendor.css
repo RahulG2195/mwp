@@ -1,0 +1,505 @@
+.vendor-catalogue-section{
+   margin: 0 auto;
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+
+
+.vendor-catalogue-heading h2{
+    font-size: 22px;
+    color: #FD152A;
+    margin-left: -1px;
+    font-weight: 700;
+    font-family: 'Montserrat'!important;
+}
+
+.vendor-catalogue-sub-heading h6{
+    color: #4D4D4D;
+    font-weight: 800;
+    font-size: 14px;
+    font-family: 'Montserrat'!important;
+    margin-left: 0px;
+}
+.vendor-catalogue-content h2{
+    font-size: 30px;
+    color: #FD152A;
+    font-family: 'Montserrat';
+} 
+
+.vendor-catalogue-para p{
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+.vendor-catalogue-section img{
+   padding: 10px;
+   height: 220px;
+}
+.vendor-category-slider{
+  margin-bottom: 40px;
+}
+
+.view-vendor-detail{
+    border: 1px solid #707070;
+    border-radius: 5px;
+    width: 20%;
+    float: right;
+    padding: 3px 10px 3px 10px;
+    height: 29px;
+    font-size: 14px;
+    text-align: center;
+    color: #707070;
+    font-family: 'Montserrat';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%FD4251'/%3E%3C/svg%3E");
+    text-decoration: none!important;
+    margin-top: -45px;
+}
+
+.view-vendor-detail span:hover{
+	 color: #707070!important;
+}
+
+
+.vendor-col h6{
+   font-size: 16px!important;	
+   font-family: 'Montserrat';
+   margin-top: -20px;
+}
+
+.vendor-col h5 a{
+   color: #FD4251!important;
+   font-size: 20px!important;	
+   font-family: 'Montserrat'!important;
+   margin-top: -20px;
+}
+
+.lead{
+  color: #4D4D4D;
+  margin-top: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 70%;
+}
+
+.lead strong i{
+  padding: 0 5px 0 0;
+}
+
+.vendor-tag{
+    background-color: #FF6E7A;
+    padding: 5px 10px 5px 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 3;
+    position: absolute;
+    color: #fff;
+    font-family: 'Montserrat'!important;
+    font-size: 14px;
+    border-radius: 10px 0;
+}
+
+
+.vendor-col{
+  margin-top: 10px;
+}
+
+.vendor-col .card{
+  border-radius: 10px;
+}
+.vendor-hr{
+  margin-top: 0.5rem !important;
+}
+
+.vendor-tag-premium{
+    background-color: #810C15;
+    padding: 5px 10px 5px 20px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 3;
+    position: absolute;
+    color: #fff;
+    font-family: 'Montserrat'!important;
+    font-size: 14px;
+}
+
+/*Category Area*/
+
+
+.category-slider{
+   margin: 40px auto;
+}
+/*#recipeCarousel .carousel-item{
+   width: 70%!important;
+}*/
+
+
+.vendor-category-slider .card{
+    width: 195px!important;
+    height: 154px!important;
+    background-color:#AA4D4F;
+}  
+
+
+#recipeCarousel img{
+  width:70px!important;
+  height: 70px!important;
+}
+
+
+
+#recipeCarousel .category-box-content span{
+  margin-top: -15px;
+  color: #fff;
+}
+
+.category-box-content h2{
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Montserrat';
+    margin-top: 5px;
+}
+
+#recipeCarousel .carousel-control-next{
+  right:-45px;
+  display:none;
+}
+#recipeCarousel  .carousel-control-prev{
+      left: -20px;
+      display:none;
+}
+
+
+.category-img-box.img-1{
+    background: url("../image/home-icon/MWP-VENUE.png") center center no-repeat; 
+    height: 300px; 
+    background-size: contain;  
+}
+
+.category-box-content span h6{
+  color: #fff;
+
+}
+.category-card-1{
+  cursor: pointer!important;
+}
+
+/* hover of cat-1*/
+.category-card-1:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-1:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-1:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-1:hover .img-1{
+  background-image: url("../image/home-icon/MWP-VENUE-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+
+
+.category-img-box.img-2{
+  background: url("../image/home-icon/MWP-BRIDAL-WEAR.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+/* hover of cat-2*/
+
+.category-card-2:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-2:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-2:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-2:hover .img-2{
+  background-image: url("../image/home-icon/MWP-BRIDAL-WEAR-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+.category-img-box.img-3{
+  background: url("../image/home-icon/MWP-GROOM-WEAR.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-3*/
+
+.category-card-3:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-3:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-3:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-3:hover .img-3{
+  background-image: url("../image/home-icon/MWP-GROOM-WEAR-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+.category-img-box.img-4{
+  background: url("../image/home-icon/MWP-PHOTOGRAPHER.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-4*/
+.category-card-4:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-4:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-4:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-4:hover .img-4{
+  background-image: url("../image/home-icon/MWP-PHOTOGRAPHER-PINK.png"); /*when parent is hovered*/
+}
+
+
+.category-img-box.img-5{
+  background: url("../image/home-icon/MWP-MUA.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-5*/
+.category-card-5:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-5:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-5:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-5:hover .img-5{
+  background-image: url("../image/home-icon/MWP-MUA-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+.category-img-box.img-6{
+  background: url("../image/home-icon/MWP-MEHENDI-ARTIST.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-6*/
+.category-card-6:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-6:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-6:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-6:hover .img-6{
+  background-image: url("../image/home-icon/MWP-MEHENDI-ARTIST-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+.category-img-box.img-7{
+  background: url("../image/home-icon/MWP-BRIDAL-JEWELLERY.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-7*/
+
+.category-card-7:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-7:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-7:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-7:hover .img-7{
+  background-image: url("../image/home-icon/MWP-BRIDAL-JEWELLERY-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+
+.category-img-box.img-8{
+  background: url("../image/home-icon/MWP-DECORATION.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+
+/* hover of cat-8*/
+
+.category-card-8:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-8:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-8:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-8:hover .img-8{
+  background-image: url("../image/home-icon/MWP-DECORATION-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+.category-img-box.img-9{
+  background: url("../image/home-icon/MWP-GIFTS.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-9*/
+.category-card-9:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-9:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-9:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-9:hover .img-9{
+  background-image: url("../image/home-icon/MWP-GIFTS-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+.category-img-box.img-10{
+  background: url("../image/home-icon/MWP-CATERING.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-10*/
+.category-card-10:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-10:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-10:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-10:hover .img-10{
+  background-image: url("../image/home-icon/MWP-CATERING-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+
+.category-img-box.img-11{
+  background: url("../image/home-icon/MWP-INVITATION.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+
+/* hover of cat-11*/
+.category-card-11:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-11:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-11:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-11:hover .img-11{
+  background-image: url("../image/home-icon/MWP-INVITATION-PINK.png"); /*when parent is hovered*/
+}
+
+
+.banner-section-heading h1 {
+    color: #ffffff8c;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    margin: auto;
+}
+
+
+/*.category-img-box.img-1:hover{
+    background: url("../image/icon/garland-1.png") center center no-repeat; 
+}*/
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+    
+    .carousel-inner .carousel-item-left.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+
+

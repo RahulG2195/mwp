@@ -59,7 +59,6 @@ class Vendor extends CI_Controller {
     function Get_vendor_By_Cat($vendor_seo) {
        
         $data['vendors'] = $this->VendorModel->Get_Vendor_By_Cat_Model($vendor_seo);
-        $data['Get_Vendor_cat'] = $this->VendorModel->Get_Vendor_cat();
         $this->load->view('front/pages/cat_vendor', $data);
     }
 
@@ -839,7 +838,8 @@ class Vendor extends CI_Controller {
         $this->load->view('front/pages/vendor-pricing-plan');
     }
    
-    public function seedpaper() {
+    
+         public function seedpaper() {
         $this->load->view('front/pages/seedpaper');
     }
     public function blessings_by_trupti() {
@@ -924,3 +924,6 @@ class Vendor extends CI_Controller {
      
     
 }
+
+    
+?>

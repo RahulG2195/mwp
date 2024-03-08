@@ -1,0 +1,1418 @@
+/*Insta feed section*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;300;600;700&display=swap");
+:root {
+  --primary-color: #f5001e;
+  --secondary-color: #fe4251;
+  --btn-color: #fd4251;
+  --option-color: #ff9da3;
+  --bg-color: #ffd7db;
+  --white: #fff;
+  --font-family: "Montserrat", sans-serif;
+}
+
+/*Instagram feed section*/
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+.fa-star {
+  color: #ffc400;
+}
+
+/* Add some basic styling for the loading state */
+.loading-button {
+  position: relative;
+}
+.loading-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1em;
+  height: 1em;
+  border: 3px solid #ffffff;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.insta-feed-section {
+  margin: 0 auto;
+  padding-top: 50px;
+  position: relative;
+}
+.insta-feed-section #overlay {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: rgb(0 0 0 / 36%);
+  z-index: 2;
+}
+
+
+.insta-row{
+  background: url("../image/about/MWP-ap-Social-media.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 40vh;
+}
+.rating_star{
+  padding: 0;
+  margin: 0;
+}
+
+.insta-content{
+    text-align: center;
+    /* padding: 70px; */
+    z-index: 3;
+    position: relative;
+    height: 30vh;
+}
+
+.insta-content h6{
+  color: #fff;
+    font-size: 16px;
+    letter-spacing: 6px;
+    font-weight: 400; 
+    font-family: 'Montserrat';
+    padding-top: 45px;
+}
+
+.insta-content h3{
+  font-size: 25px;
+    color: #fff;
+     font-weight: 200; 
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.insta-feed{
+   display: inline-flex;
+}
+.insta-content h4{
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  margin-left: 10px;
+  margin-top: -4px;
+}
+
+.insta-btn{
+  text-align: -webkit-center;
+  padding-top: 20px;
+}
+
+.insta-btn a{
+  background-color: #fff;
+  width: 120px;
+  display: block;
+  padding: 5px;
+  border-radius: 4px;
+  color: #FD152A;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px; 
+  font-family: 'Montserrat';
+}
+
+
+.social-div{
+  text-align: center;
+  margin-top: 15px;
+}
+
+
+.about-social{
+  margin-left: -25px;
+}
+.social-heading{
+  display: inline-flex;
+}
+
+.social-heading h6{
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.social-div ul{
+  display: inline-flex;
+  list-style-type: none;
+}
+.social-div ul li{
+  padding: 5px 0px;
+}
+.social-div ul li a{
+    background-color: #973838;
+    padding: 6px;
+    border-radius: 4px;
+    width: 25px;
+    display: inline-flex;
+    height: 25px;
+    margin-left: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+.social-div ul li a i{
+  color: #fff;
+}
+
+.insta-btn a:hover{
+	 background-color: #FF142A;
+    color: #fff!important;
+    text-decoration: none;
+}
+
+.card-title{
+  overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+/*Banner Image*/
+.banner-secion-common{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #ffffff8c;
+}
+
+.grid{
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  columns: 4;
+  column-gap: 20px;
+}
+.grid .grid-item {
+ width: 100%;
+ margin-bottom: 20px;
+ break-inside: avoid;
+}
+.grid-item img{
+ max-width: 100%;
+ border-radius: 15px;
+}
+
+@media (max-width: 1200px){
+  .grid{
+  columns: 3;
+  }
+}
+@media (max-width: 768px){
+  .grid{
+  columns: 2;
+  column-gap: 10px;
+ margin-bottom: 10px;
+  }
+}
+
+
+/*Vendor category slider home page*/
+
+/*Category Area*/
+
+
+.category-slider{
+   margin: 40px auto;
+}
+/*#recipeCarousel .carousel-item{
+   width: 70%!important;
+}*/
+
+
+.vendor-category-slider .card{
+    width: 195px!important;
+    height: 154px!important;
+    background-color:#AA4D4F;
+}  
+
+
+#recipeCarousel img{
+  width:70px!important;
+  height: 70px!important;
+}
+
+
+
+#recipeCarousel .category-box-content span{
+  margin-top: -15px;
+  color: #fff;
+}
+
+.category-box-content h2{
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Montserrat';
+    margin-top: 5px;
+}
+
+#recipeCarousel .carousel-control-next{
+  right:-45px;
+  display:none;
+}
+#recipeCarousel  .carousel-control-prev{
+      left: -20px;
+      display:none;
+}
+
+
+.category-img-box.img-1{
+    background: url("../image/home-icon/MWP-VENUE.png") center center no-repeat; 
+    height: 300px; 
+    background-size: contain;  
+}
+
+.category-box-content span h6{
+  color: #fff;
+
+}
+.category-card-1{
+  cursor: pointer!important;
+}
+
+/* hover of cat-1*/
+.category-card-1:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-1:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-1:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-1:hover .img-1{
+  background-image: url("../image/home-icon/MWP-VENUE-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+
+
+
+.category-img-box.img-2{
+  background: url("../image/home-icon/MWP-BRIDAL-WEAR.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+/* hover of cat-2*/
+
+.category-card-2:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-2:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-2:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-2:hover .img-2{
+  background-image: url("../image/home-icon/MWP-BRIDAL-WEAR-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+.category-img-box.img-3{
+  background: url("../image/home-icon/MWP-GROOM-WEAR.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-3*/
+
+.category-card-3:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-3:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-3:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-3:hover .img-3{
+  background-image: url("../image/home-icon/MWP-GROOM-WEAR-PINK.png"); /*when parent is hovered*/
+}
+
+
+
+.category-img-box.img-4{
+  background: url("../image/home-icon/MWP-PHOTOGRAPHER.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-4*/
+.category-card-4:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-4:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-4:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-4:hover .img-4{
+  background-image: url("../image/home-icon/MWP-PHOTOGRAPHER-PINK.png"); /*when parent is hovered*/
+}
+
+
+.category-img-box.img-5{
+  background: url("../image/home-icon/MWP-MUA.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-5*/
+.category-card-5:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-5:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-5:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-5:hover .img-5{
+  background-image: url("../image/home-icon/MWP-MUA-PINK.png"); /*when parent is hovered*/
+}
+
+.category-img-box.img-6{
+  background: url("../image/home-icon/MWP-MEHENDI-ARTIST.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-6*/
+.category-card-6:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-6:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-6:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-6:hover .img-6{
+  background-image: url("../image/home-icon/MWP-MEHENDI-ARTIST-PINK.png"); /*when parent is hovered*/
+}
+
+.category-img-box.img-7{
+  background: url("../image/home-icon/MWP-BRIDAL-JEWELLERY.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-7*/
+
+.category-card-7:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-7:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-7:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-7:hover .img-7{
+  background-image: url("../image/home-icon/MWP-BRIDAL-JEWELLERY-PINK.png"); /*when parent is hovered*/
+}
+
+.category-img-box.img-8{
+  background: url("../image/home-icon/MWP-DECORATION.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+
+/* hover of cat-8*/
+
+.category-card-8:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-8:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-8:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-8:hover .img-8{
+  background-image: url("../image/home-icon/MWP-DECORATION-PINK.png"); /*when parent is hovered*/
+}
+
+.category-img-box.img-9{
+  background: url("../image/home-icon/MWP-GIFTS.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-9*/
+.category-card-9:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-9:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-9:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-9:hover .img-9{
+  background-image: url("../image/home-icon/MWP-GIFTS-PINK.png"); /*when parent is hovered*/
+}
+
+.category-img-box.img-10{
+  background: url("../image/home-icon/MWP-CATERING.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+/* hover of cat-10*/
+.category-card-10:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-10:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-10:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-10:hover .img-10{
+  background-image: url("../image/home-icon/MWP-CATERING-PINK.png"); /*when parent is hovered*/
+}
+
+.category-img-box.img-11{
+  background: url("../image/home-icon/MWP-INVITATION.png") center center no-repeat; 
+  height: 300px; 
+  background-size: contain;
+}
+
+
+/* hover of cat-11*/
+.category-card-11:hover{
+  background-color: #FD152A24!important;
+}
+
+.category-card-11:hover .category-box-content span h6{
+  color:#FD152A!important; 
+}
+.category-card-11:hover .category-box-content h2{
+  color:#FD152A!important; 
+}
+
+.category-card-11:hover .img-11{
+  background-image: url("../image/home-icon/MWP-INVITATION-PINK.png"); /*when parent is hovered*/
+}
+.banner-section-heading h1 {
+    color: #ffffff8c;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    margin: auto;
+}
+
+
+
+/*Testimonial Slider*/
+
+.testimonial-section{
+   margin-top: 70px;
+   background-color: #FF142A;
+   height: 385px;
+}
+.testimonial{
+   
+    padding: 95px 0 19px 390px;
+    position: relative;
+}
+
+.testimonial-heading{
+   margin-top: 50px;
+}
+
+.testimonial-heading h2{
+  font-size: 34px;
+  color: #fff;
+  font-family: 'Montserrat';
+}
+
+#testimonial-slider{
+  margin-top: -80px;
+}
+.testimonial:before,
+.testimonial:after{
+    content: "";
+    width: 320px;
+    height: 55px;
+    
+    position: absolute;
+    left: 0;
+}
+
+.testimonial .pic{
+    
+    position: absolute;
+    top: 98px;
+    left: 70px;
+}
+.testimonial .pic img{
+    width: 57%;
+    height: auto;
+}
+.testimonial .description{
+    font-size: 14px;
+    color: #fff;
+    line-height: 27px;
+    position: relative;
+    font-family: 'Montserrat';
+    text-align:justify;
+}
+
+.testimonial .testimonial-title{
+    font-size: 22px;
+    font-weight:800;
+    color: #fff;
+    text-transform: capitalize;
+    font-family: 'Montserrat';
+}
+.testimonial .post{
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color :#fff;
+    margin-top: 10px;
+    font-family: 'Montserrat';
+}
+.checked {
+  color: orange;
+}
+.owl-theme .owl-controls{
+    text-align: left;
+    margin-top: -190px;
+    width: 0%;
+}
+.owl-theme .owl-controls .owl-buttons div{
+    background: transparent;
+    border-radius: 0;
+    opacity: 1;
+    padding: 5px 10px;
+    border:1px solid #fff;
+}
+.owl-prev:before,
+.owl-next:before{
+    content: "\f053";
+    font-family: "Font Awesome 5 Free"; font-weight: 900;
+    color: #fff;
+}
+.testimonial-slider .owl-next:before{
+    content: "\f054";
+}
+@media only screen and (max-width: 990px){
+    .testimonial{
+        padding: 80px 0 80px 265px;
+    }
+}
+
+
+
+/*Trusted vednor css*/
+
+/* Vendor Categories  */
+
+.vendor-categories{
+  margin-top: 70px;
+}
+
+.vendor-small-text h6{
+   font-family: 'Montserrat';
+   letter-spacing: 5px;
+   color: #4D4D4D;
+}
+
+.vendor-main-text h2{
+   font-family: 'Montserrat';
+   font-size: 34px;
+   font-weight: 700;
+   margin-bottom: 20px; 
+   color: #383838;
+}
+
+.vendor-btn-col{
+  display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.vendor-btn{
+   
+    border: 1px solid #c2c6cb;
+    color: #FF142A;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Montserrat';
+}
+
+.vendor-btn:hover{
+  background-color: #FF142A;
+  color: #fff!important;
+  text-decoration:none;
+}
+
+/* RG211223S */
+.vendor-col .vendor-tag {
+  background-color: #ff6e7a;
+  padding: 5px 10px 5px 20px;
+  z-index: 3;
+  position: absolute;
+  color: #fff;
+  font-family: "Montserrat" !important;
+  font-size: 14px;
+  border-radius: 10px 0;
+}
+.vendor-col .card {
+  border-radius: 10px;
+}
+
+.vendor-col .card .view img {
+  padding: 10px;
+  height: 220px;
+}
+
+/* RG211223E */
+.vendor-catalogue-section {
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.vendor-catalogue-heading h2 {
+  font-size: 22px;
+  color: #fd152a;
+  margin-left: -1px;
+  font-weight: 700;
+  font-family: "Montserrat" !important;
+}
+.view-category {
+  border: 1px solid #707070;
+  border-radius: 5px;
+  width: auto;
+  float: right;
+  padding: 3px 10px 3px 10px;
+  height: 29px;
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #707070;
+  font-family: "Montserrat";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%FD4251'/%3E%3C/svg%3E");
+}
+
+.view-category:hover{
+  color: #707070;
+  text-decoration: none;
+}
+.card-img-top{
+  padding: 10px;
+}
+.category-text{
+  font-family: 'Montserrat';
+  font-size: 15px;
+}
+
+.vendor-categories .card-title{
+   color: #FF142A;
+   font-family: 'Montserrat';
+   font-size: 20px;
+   font-weight: 900;
+}
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.elegant-color .card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.elegant-color .money-symbol {
+  color: #ff142a;
+}
+.hr-light hr {
+  margin: 0.5rem 0;
+}
+
+.elegant-color .lead {
+  color: #4d4d4d;
+  margin-top: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 70%;
+  font-size: 14px;
+  font-weight: 400;
+}
+.elegant-color .view-category {
+  border: 1px solid #707070;
+  border-radius: 5px;
+  width: auto;
+  float: right;
+  padding: 3px 10px;
+  height: 29px;
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+  color: #707070;
+}
+/*City slider*/
+
+.home-logo-slider{
+  margin-top: 70px;
+}
+
+ .hr-cities{
+    height: 2px;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 1200px;
+}
+
+
+.happening-city-heading h2{
+  font-family: 'Montserrat';
+  font-size: 34px;
+  font-weight: 700;
+
+}
+
+.slick-slide {
+    margin: 0px 12px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+   /* height: 100%;*/
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-dots {
+    bottom: -45px;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+
+}
+.slick-dots, .slick-next, .slick-prev {
+    position: absolute;
+    display: block;
+    padding: 0;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #FF142A;
+}
+
+
+.slick-dots li button:before {
+    font-size: 25px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•'!important;
+    text-align: center;
+    opacity: .25;
+    color: #000;
+}
+
+.city-text{
+    text-align: center;
+    margin-top: -5px;
+    color: #FF142A;
+    font-weight: 700;
+    font-family: 'Montserrat';
+}
+
+
+/*Social share section*/
+.social-share-section{
+  margin-top: 35px;
+  margin-bottom: 40px;
+  
+}
+
+.social-share{
+  background: url("../image/background-image/mwp-hompage-follow-us-bg-banner.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 50px;
+}
+
+.social-share-small-heading h6{
+  color: #131313;
+  letter-spacing: 6px;
+  font-family: 'Montserrat';
+}
+   
+.social-share-main-heading h2{
+  color: #FF142A;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  font-size: 30px;
+}
+
+
+.social-share-sub-heading h5{
+   color: #212529;
+   font-size: 22px;
+   font-family: 'Montserrat';
+   font-weight: 400;
+}
+
+.social-share-btn{
+  margin-top: 30px;
+} 
+
+.social-share-btn a{
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px 10px 20px;
+  border-radius: 6px;
+  font-weight: 400;
+ font-family: 'Montserrat', sans-serif;
+}
+
+
+.social-share-btn a:hover{
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background-color: #FF142A;
+}
+
+
+.social-share-icon{
+  margin-left: -50px;
+  display: inline-flex;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.social-share-icon li a{
+    background-color: #fff;
+    padding:9px;
+    border-radius: 50%;
+    width: 30px;
+    display: inline-flex;
+    height: 30px;
+    margin-left: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size:14px;
+}
+
+.social-share-icon li a i{
+  color: #FC3465;
+}
+
+
+@media only screen and (min-width:1201px) and (max-width:1401px){
+  .hero-full-screen{
+      height: 90vh;
+  }
+  .hero-full-screen .middle-content-section {
+      margin-top: 28%;
+  }
+  .intro-content-heading-2 h2 {
+      font-size: 32px;
+  }
+  .approach-content-img {
+      display: flex;
+      align-items: center;
+  }
+  .vendor-btn-col {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #inspirationCarousel .card{
+      height: 395px;
+  }
+  .adress span, .contact span, .social span {
+      font-size: 17px;
+  }
+  .hr-cities {
+      width: auto;
+  }
+
+  .introduction-content:before {
+      left: 0%;
+  }
+  .introduction-content::after {
+      left: 93;
+  }
+
+  .gallery_slider_sec .owl-prev:before, .owl-next:before {
+      display: none;
+  }
+  .owl-nav button.owl-prev {
+      left: -3%;
+      top: 12%;
+  }
+  .owl-nav button.owl-next {
+      right: -3%;
+      top: 12%;
+  }
+
+  
+}
+
+.banner-logo-edit{
+  position: absolute;
+ 
+  justify-content: center;
+  width: 250px;
+  padding: 10px 10px 0 0;
+}
+
+.mwp-logo{
+  display: flex;
+  justify-content: center;
+  margin:auto;
+  
+}
+.header-logo-amrit{
+  width: 403px;
+  height: auto;
+  padding: 0 0 0 83px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: white;
+}
+
+
+
+/*Social share section*/
+.social-share-section{
+  margin-top: 35px;
+  margin-bottom: 40px;
+  
+}
+
+.social-share{
+  background: url("../image/background-image/mwp-hompage-follow-us-bg-banner.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 50px;
+}
+
+.social-share-small-heading h6{
+  color: #131313;
+  letter-spacing: 6px;
+  font-family: 'Montserrat';
+}
+   
+.social-share-main-heading h2{
+  color: #FF142A;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  font-size: 30px;
+}
+
+
+.social-share-sub-heading h5{
+   color: #212529;
+   font-size: 22px;
+   font-family: 'Montserrat';
+   font-weight: 400;
+}
+
+.social-share-btn{
+  margin-top: 30px;
+} 
+
+.social-share-btn a{
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px 10px 20px;
+  border-radius: 6px;
+  font-weight: 400;
+ font-family: 'Montserrat', sans-serif;
+}
+
+
+.social-share-btn a:hover{
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  background-color: #FF142A;
+}
+
+
+.social-share-icon{
+  margin-left: 1px;
+  display: inline-flex;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.social-share-icon li a{
+    background-color: #fff;
+    padding:9px;
+    border-radius: 50%;
+    width: 30px;
+    display: inline-flex;
+    height: 30px;
+    margin-left: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size:14px;
+}
+
+.social-share-icon li a i{
+  color: #FC3465;
+}
+
+
+@media only screen and (min-width:1201px) and (max-width:1401px){
+  .hero-full-screen{
+      height: 90vh;
+  }
+  .hero-full-screen .middle-content-section {
+      margin-top: 28%;
+  }
+  .intro-content-heading-2 h2 {
+      font-size: 32px;
+  }
+  .approach-content-img {
+      display: flex;
+      align-items: center;
+  }
+  .vendor-btn-col {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #inspirationCarousel .card{
+      height: 395px;
+  }
+  .adress span, .contact span, .social span {
+      font-size: 17px;
+  }
+  .hr-cities {
+      width: auto;
+  }
+
+  .introduction-content:before {
+      left: 0%;
+  }
+  .introduction-content::after {
+      left: 93;
+  }
+
+  .gallery_slider_sec .owl-prev:before, .owl-next:before {
+      display: none;
+  }
+  .owl-nav button.owl-prev {
+      left: -3%;
+      top: 12%;
+  }
+  .owl-nav button.owl-next {
+      right: -3%;
+      top: 12%;
+  }
+
+  
+}
+
+.banner-logo-edit{
+  position: absolute;
+ 
+  justify-content: center;
+  width: 250px;
+  padding: 10px 10px 0 0;
+}
+
+.mwp-logo{
+  display: flex;
+  justify-content: center;
+  margin:auto;
+  
+}
+.header-logo-amrit{
+  width: 403px;
+  height: auto;
+  padding: 0 0 0 83px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: white;
+}
+
+/*Social button*/
+
+.social-service-3{
+   margin-top:30px; 
+}
+
+
+.service-3-plan-btn button{
+    color: #000;
+    font-size: 16px;
+    background-color: #fff;
+    width: 135px;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-left: 40px;
+    border:none;
+}
+
+.start_sec {
+  margin-top: 60px;
+  background-image: url(../image/service/Group1484.png);
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.heading {
+  padding: 0 0 40px 0;
+}
+
+.follow_section img {
+  height: 95px;
+}
+
+.follow_section {
+  padding: 30px 0;
+}
+.payment_div {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .slick-slide {
+    margin: 0px 28px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .banner-section-heading {
+    align-items: center !important;
+    display: flex !important;
+  }
+  .banner-section-heading h1 {
+    padding-top: 0 !important;
+    font-size: 40px !important;
+    margin: auto !important;
+    color: #ffffff8c;
+  }
+  .vendor-catalogue-heading h2{
+    margin:0 0 4px 0;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .banner-secion-common {
+    height: 30vh !important;
+  }
+  .banner-section-heading {
+    height: 30vh !important;
+  }
+}

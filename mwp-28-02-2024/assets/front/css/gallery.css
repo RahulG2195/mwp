@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+.gallery_slider_sec{
+   margin-top: -40px;
+}
+
+
+.gallery-heading h2{
+    font-size: 25px;
+    color: #FD4251;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.banner-section-heading {
+   height: 48vh;
+   align-items: center;
+   display: flex;
+}
+.banner-section-heading h1 {
+   color: #ffffff8c;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+   margin: auto;
+}
+
+
+.gallery-heading h6{
+   color: #414141;
+   font-weight: 300;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.banner-section-heading{
+   text-align: center; 
+}
+
+/* .gallery_sec{
+  margin-top: -85px;   
+} */
+
+
+.gallery_slider_sec .card-img-top{
+   padding: 0px;
+}
+
+.gallery-photo-head{
+  font-size: 18px;
+  color: #3D3D3D;
+  font-weight: 300;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.gallery-photo-head:hover{
+   color: #D90707;
+    font-weight: 400;
+}
+
+/* .gallery_sec{
+	    margin-top: 30px;
+} */
+.gallery_sec .card-img-top{
+  padding: 0px;
+}
+
+.insta-feed-section #overlay{
+	top: 0;
+}
+
+
+.insta-feed{
+	margin-top: 6px;
+}
+
+.desktop_area{
+   display: inline-flex;
+}
+
+.mobile_area{
+   display: none !important;
+}
+.view-more-btn{
+	text-align: center;
+    margin-top: 30px;
+}
+
+.view-more-btn a{
+   background-color: #FC3465;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    /* width: 116px; */
+    /* display: block; */
+    text-align: center;
+     font-weight: 300;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.vendor-categories{
+margin-top: 15px;	
+}
+
+/* .follow_section{
+      margin-top: -80px; 
+}  */
+
+.follow-column{
+   margin-top: -20px;
+}
+
+
+.gallery-detail-insta-feed{
+   padding-top: 0px;
+} 
+
+@media only screen and (min-width:1201px) and (max-width:1401px){
+   .gallery_sec{
+      margin-top: 0;
+      margin-bottom: 35px;
+   }
+
+   .gallery_sec .card{
+      box-shadow: 0px 2px 4px #0000004C;
+   }
+
+   .view-more-btn a {
+      padding: 10px 50px;
+  }
+}
