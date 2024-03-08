@@ -1,0 +1,16 @@
+# Ignore all image files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+*.ico
+*.webp
+*.zip
+*.xlsx
+
+
+uploads/
+assets/bulk/
+assets/front/image

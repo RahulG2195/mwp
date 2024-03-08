@@ -1,0 +1,748 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+.coming-soon-section{
+   margin: 0 auto !important;
+   padding-top: 40px !important;
+}
+
+.banner-section-heading {
+    text-align: center !important;
+}
+
+
+
+.banner-section-heading h1 {
+    padding-top:30px !important;
+    color: #ffffff8c !important;
+    font-size: 80px !important;
+    font-weight: 800 !important;
+    font-family: 'Montserrat' !important;
+    text-transform: uppercase !important;
+}
+.coming-soon-heading{
+  text-align: center !important;
+  margin-top: -50px !important;
+  position: relative !important;
+}
+.coming-soon-image{
+  width:450px !important;
+}
+
+.coming-soon-heading:before{
+  content:url('../../image/service-2/coming-arrow-left.png') !important; /* with class ModalCarrot ??*/
+  position: absolute !important;
+  left: 27% !important;
+  top: 95px !important;
+}
+.coming-soon-heading:after{
+  content:url('../../image/service-2/arrow-coming-right.png') !important; /* with class ModalCarrot ??*/
+  position: absolute !important;
+  left: 58% !important;
+  top: 95px !important;
+}
+.coming-soon-heading h1{
+  text-align: center !important;
+  font-family: 'Montserrat' !important;
+  font-size: 40px !important;
+}
+
+.customized-content{
+   text-align: center !important;
+   margin-top: -35px !important;
+}
+
+
+.elevate-heading{
+  color: #F5273F !important;
+  font-family: 'Montserrat' !important;
+  font-size: 34px !important;
+  font-weight: 900 !important;
+}
+
+.add-on-heading{
+    color: #4D4D4D !important;
+    font-family: 'Montserrat' !important;
+    font-size: 30px !important;
+    font-weight: 600 !important;
+}
+
+.customized-content-para{
+   text-align: center !important;
+   margin-top: 15px !important;
+   font-size: 16px !important;
+   font-family: 'Montserrat' !important;
+   color: #4D4D4D !important; 
+}
+
+.insta-btn{
+  margin-top: -22px !important;
+}
+/*Why choose section*/
+
+
+.why-choose-us{
+   margin:0 auto !important;
+   padding-top: 40px !important;
+   padding-bottom: 50px !important;
+}
+
+.why-choose-content{
+  text-align: center !important;
+  margin-bottom: 120px !important;
+}
+
+.why-choose-content h4{
+    font-family: 'Montserrat' !important;
+    font-size: 25px !important;
+    color: #262626 !important;
+}
+
+.why-choose-content h2{
+	font-family: 'Montserrat' !important;
+    color: #F6152A !important;
+    font-size: 34px !important;
+    font-weight: 600 !important;
+
+}
+
+.why-choose-image{
+  text-align: center !important;
+  margin-top: 30px !important;
+}
+
+.why-choose-column-content{
+   text-align: center !important;
+   padding: 0px 30px 0px 30px !important;
+}
+
+.why-choose-column-img img{
+	width: 80px !important;
+}
+
+.why-choose-col-1{
+	position: relative !important;
+}
+.why-choose-column-heading{
+      margin-top: 10px !important;
+}
+.why-choose-column-heading h6{
+    color: #F6152A !important;
+    font-size: 19px !important;
+    font-weight: 700 !important;
+    font-family: 'Montserrat' !important;
+}
+.why-choose-column-para p{
+  font-family: 'Montserrat' !important;
+  font-size: 16px !important;
+}
+.why-choose-col-1:before{
+  content:url('../../image/service-2/Shape-With-Shadows.png') !important; 
+  position: absolute !important;
+  left: -17% !important;
+  top: -90px !important;
+}
+
+.timeline_sec
+{
+    padding: 25px 0!important;
+}
+
+.timeline_sec h2{
+    font-family: 'Montserrat' !important;
+}
+/*Dream wedding section*/
+
+.dream-wedding-section{
+	margin:0 auto !important;
+	padding-top: 40px !important;
+	background: url("../../image/background-image/MWP-bg-Banner.jpg") center center no-repeat !important;
+    background-size: cover !important;
+    height: 350px !important;
+}
+
+.dream-wedding-content{
+    text-align: center !important;
+    padding: 50px !important;
+    margin-top: 30px !important;
+}
+
+.dream-wedding-content p{
+   color: #fff !important;
+   font-family: 'Montserrat' !important;
+   font-size: 18px !important;
+   font-weight:400 !important;
+}
+
+.dream-wedding-content h2{
+   color: #fff !important;
+   font-family: 'Montserrat' !important;
+   font-size: 34px !important;
+   font-weight: 700 !important;
+   margin-top: 0px !important;
+}
+
+.waitlist-section{
+  margin:0 auto !important;
+  padding-top: 50px !important;
+}
+
+.wailist-content{
+	text-align: center !important;
+    padding: 40px !important;
+    background: url(../../image/background-image/wait-list-background.png) center center no-repeat !important;
+    background-size: contain !important;
+    height: 250px !important;
+    /* width: 80%;*/
+    position: relative !important;
+}
+.wailist-content:after{
+  content:url('../../image/service-2/waitlist-after.png') !important; /* with class ModalCarrot ??*/
+  position: absolute !important;
+  left: 13% !important;
+  top: -7px !important;
+}
+
+.wailist-content h2{
+	font-size: 34px !important;
+	color: #fff !important;
+	font-family: 'Montserrat' !important;
+	font-weight: 800 !important;
+	margin-left:-11% !important;
+}
+.wailist-content p{
+	width: 50%;
+    margin-left: 30%;
+    text-align: justify !important;
+    font-family: 'Montserrat' !important;
+    font-size: 16px !important;
+    color: #fff !important;
+}
+
+/* instfeed section*/
+.insta-feed-service-2{
+  margin-top: -30px !important;
+}
+
+
+/*Social icon section*/
+
+.social-service-2-head h5{
+   font-size: 30px !important;
+   font-family: 'Montserrat' !important;
+   font-weight: 800 !important;
+}
+.social-service-2-ul{
+  text-align: center !important;
+  display: inline-flex !important;
+  list-style-type:none !important; 
+}
+
+.social-service-2-content{
+  text-align: center !important;
+}
+
+.social-icon-img{
+  width: 80px !important;
+} 
+
+.getstarted-btn{
+    width: 30% !important;
+    margin-left: 30% !important;
+    margin-top: -3px !important;
+}
+.getstarted-btn a{
+  background-color: #fff !important;
+    padding: 8px !important;
+    color: #070707 !important;
+    font-weight: 600 !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+   
+    text-align: center !important;
+    text-decoration: none !important;
+    font-family: 'Montserrat' !important;
+    margin-left: -160px !important;
+}
+
+.elevate_sec h2{
+    font-family: 'Montserrat' !important;
+}
+
+.news-letter-input-grp{
+     width: 30%!important;
+}
+
+.submit-news-btn{
+   background-color: #FD4251 !important;
+    color: #fff !important;
+}
+
+.service-btn-input{
+    height: 39px !important;
+    margin-top: 10px !important;
+}
+.service-btn-input{
+   color: #ee182b!important;
+    background-color: #ff9da2 !important;
+    border: none !important;
+    border-radius: 2px !important; 
+}
+
+.service-btn-input:hover{
+    background-color: #BA7072 !important;
+    color:#fff!important;
+}
+.submit-news-btn:hover{
+  background-color:#ff9da2 !important;
+    color:#FD4251 !important;
+}
+
+
+.contact-us-customized-add-on{
+    color: #fff !important;
+    background: #F5001E !important;
+    margin-top: 25px !important;
+    padding: 8px 29px !important;
+    font-family: 'Montserrat' !important;
+}
+
+.contact-us-customized-add-on:hover{
+    color: #ee182b!important;
+    background-color: #fff !important;
+  /*  color: #F5001E;
+    background: transparent;
+    border: 1px solid #F5001E;
+     font-family: 'Montserrat';*/
+}
+
+.why_chooose_btn{
+    margin-top: 20px !important;
+}
+
+.why_chooose_btn a{
+    background-color: #F5001E !important;
+    color: #fff !important;
+    padding: 10px !important;
+    border-radius: 4px !important;
+}
+
+.banner-secion-common{
+    height: 60vh !important;
+}
+
+@media screen and (max-width: 1440px){
+   .banner-secion-common{
+      height: 80vh !important;
+   }
+
+}
+
+
+@media screen and (max-width: 1200px){
+
+ 
+
+ }
+
+@media screen and (max-width: 1024px){
+     .insta-feed-section{
+        padding-top: 85px !important;
+     }
+     .insta-row{
+        height: 35vh !important; 
+     }
+     .wailist-content:after{
+         left: 9% !important;
+         top: -4px !important;
+     }
+
+     .wailist-content h2{
+        margin-left: -4% !important;
+     }
+     .coming-soon-heading:before{
+         left: 24% !important;
+     }
+     .coming-soon-heading:after{
+         left: 59% !important;
+     }
+ }
+
+@media  screen and (max-width: 992px){
+
+  }
+
+@media  screen and (max-width: 768px){
+       .coming-soon-heading:before{
+          left: 13% !important;
+          top: 95px !important;
+       }
+       .coming-soon-heading:after{
+          left: 63% !important;
+          top: 95px !important;
+       }
+       .why-choose-content{
+         margin-bottom: 50px !important;
+       }
+       .why-choose-col-1:before{
+           display: none !important;
+       }
+       .dream-wedding-content{
+          margin-top: -15px !important;
+       }
+       .wailist-content h2{
+          margin-left: -1% !important;
+       }
+
+       .wailist-content p{
+          width: 65%;
+       }
+
+       .wailist-content h2{
+          font-size: 28px !important;
+       }
+
+       .wailist-content{
+          background-size: cover !important;
+          border-radius: 42px 42px 42px 42px;
+          padding: 15px !important;
+          height: 275px !important;
+       }
+       .wailist-content:after{
+          left: -1% !important;
+          top: 25px !important;
+       }
+
+       .getstarted-btn{
+           width: 55% !important;
+           margin-left: 30% !important;
+           margin-top: 30px !important;
+       }
+
+       .input-group-append{
+           margin-top: -1px !important;
+       }
+
+       .insta-content h6{
+           padding-top: 12px !important; 
+       }
+
+
+  }
+
+/*@media  screen and (max-width: 765px){
+
+   .coming-soon-heading:before{
+       left: 2% !important;
+   }
+   .coming-soon-heading:after{
+       left: 67% !important;
+   }
+
+   .dream-wedding-content {
+         margin-top: -81px !important;
+    }
+   
+   .dream-wedding-content h2{
+       margin-top: -13px !important; 
+   }
+
+}*/
+@media screen and (max-width: 550px){
+     .coming-soon-heading:before {
+         left: 4% !important;
+         top: 95px !important;
+      }
+      .coming-soon-heading:after {
+          left: 66% !important;
+          top: 95px !important;
+      }
+      .dream-wedding-content p{
+         margin-top: -57px 
+      }
+
+      .contact-us-customized-add-on{
+         margin-top: 13px !important;
+      }
+      .wailist-content:after{
+           left: -6% !important;
+           top: 27px !important;
+      }
+      .getstarted-btn{
+         width: 100% !important;
+         margin-left: 0 !important;
+         margin-top: -12px !important;
+      }
+      .input-group-append{
+          margin-top: 0px !important;
+      }
+      /*.wailist-content h2{
+          margin-left: 9% !important;
+      }*/
+      
+      .banner-secion-common {
+    height: 30vh !important;
+}
+.wailist-content:after{
+    display:none;
+}
+.wailist-content p {
+    width: 100%;
+    margin-left: 0 !important;
+}
+}
+
+@media screen and (max-width: 476px){
+
+   .banner-section-heading h1{
+      font-size: 55px !important;
+   }
+   .coming-soon-heading:before{
+        left: -2% !important;
+        top: 76px !important;
+   }
+   .coming-soon-heading:after{
+      left: 70% !important;
+      top: 76px !important;
+   }
+
+   .dream-wedding-section{
+      height: 370px !important;
+   }
+   .dream-wedding-content h2{
+     margin-top: 5px !important;
+   }
+
+   .wailist-content{
+      height: 335px !important;
+   } 
+
+   .wailist-content:after{
+      top: 87px !important;
+   }
+   
+   .wailist-content h2{
+       margin-top: 20% !important;
+       margin-top: 55px !important;
+       
+   }
+   .getstarted-btn{
+      margin-left: 0 !important;
+   }
+   .input-group-append{
+      margin-top: -1px !important;
+   }
+
+   .coming-soon-heading:before{
+      left: -3% !important;
+      top: 74px !important;
+   } 
+   .getstarted-btn .input-group{
+	 margin-top: 20px !important;
+   }
+}
+
+@media  screen  and (max-width: 426px){
+     .coming-soon-image{
+        width: 313px !important;
+     }
+     .coming-soon-heading:before {
+         left: 0% !important;
+         top: 62px !important;
+    }
+     .coming-soon-heading:after{
+         left: 65% !important;
+         top: 59px !important;
+     }
+
+     .elevate-heading{
+        font-size: 33px !important;
+     }
+     
+     .add-on-heading{
+         font-size: 28px !important;
+     }
+
+     .why-choose-content h2{
+         font-size: 30px !important;
+     }
+     .dream-wedding-content h2{
+        font-size: 29px !important;
+     }
+     .dream-wedding-content h2{
+        margin-top: 3px !important;
+     }
+     .wailist-content {
+         height: 370px !important;
+      }
+      .wailist-content:after{
+         top: 141px !important;
+      }
+      .insta-btn{
+         margin-top: -24px;
+      }
+}
+
+@media  screen and (max-width: 376px){
+     .banner-section-heading h1{
+          font-size: 47px !important;
+     }
+
+     .coming-soon-heading:before{
+       display: none !important;
+     }
+     .coming-soon-heading:after{
+        display: none !important;
+     }
+     .coming-soon-image {
+           width: 380px !important;
+      }
+      .elevate-heading {
+         font-size: 25px !important;
+      }
+      .add-on-heading {
+          font-size: 22px !important;
+      }
+      .customized-content-para{
+         padding: 0px 20px !important; 
+      }
+
+      .customized-content-para p{
+         text-align: justify !important;
+      }
+
+      .why-choose-us{
+         padding-top: 15px !important;
+      }
+
+      .why-choose-content h2 {
+         font-size: 25px !important;
+      }
+
+      .dream-wedding-content {
+          margin-top: 25px !important;
+      }
+      .dream-wedding-content{
+         padding: 10px !important;
+      }
+      .wailist-content:after{
+          display: none !important;
+      }
+      .wailist-content {
+           height: 330px !important;
+      }
+      .wailist-content h2{
+	        margin-top: 13px !important;
+      }
+      /*.wailist-content h2 {
+          margin-left: 0% !important;
+      }*/
+      .wailist-content p {
+          width: 75% !important;
+      }
+      /*.wailist-content p{
+         margin-left: 12%;
+      }*/
+      
+      .wailist-content p {
+            width: 95% !important;
+            margin-left: 5% !important;
+       }
+
+      .getstarted-btn {
+         margin-left: 12% !important;
+      }
+      .getstarted-btn{
+         width: 80% !important;
+      }
+      .input-group-append {
+            margin-top: -1px !important;
+      }
+}
+
+@media  screen and (max-width: 360px){
+     .banner-section-heading h1{
+          font-size: 47px !important;
+     }
+
+     .coming-soon-heading:before{
+       display: none !important;
+     }
+     .coming-soon-heading:after{
+        display: none !important;
+     }
+     .coming-soon-image {
+           width: 380px !important;
+      }
+      .elevate-heading {
+         font-size: 25px !important;
+      }
+      .add-on-heading {
+          font-size: 22px !important;
+      }
+      .customized-content-para{
+         padding: 0px 20px !important; 
+      }
+
+      .customized-content-para p{
+         text-align: justify !important;
+      }
+
+      .why-choose-us{
+         padding-top: 15px !important;
+      }
+
+      .why-choose-content h2 {
+         font-size: 25px !important;
+      }
+
+      .dream-wedding-content {
+          margin-top: 25px !important;
+      }
+      .dream-wedding-content{
+         padding: 10px !important;
+      }
+      .wailist-content:after{
+          display: none !important;
+      }
+      .wailist-content {
+           height: 330px !important;
+      }
+      .wailist-content h2 {
+          margin-left: 0% !important;
+      }
+      .wailist-content p {
+          width: 95% !important;
+          
+      }
+      .wailist-content p{
+         margin-left: 7% !important;
+      }
+
+      .getstarted-btn {
+         margin-left: 8% !important;
+      }
+      .getstarted-btn{
+         width: 80% !important;
+      }
+      .input-group-append {
+            margin-top: -1px !important;
+      }
+}
+
+@media screen and (max-width: 320px){
+     .coming-soon-image {
+          width: 313px !important;
+    }
+    .dream-wedding-content h2 {
+        font-size: 18px !important;
+    }
+    .wailist-content {
+        height: 365px !important;
+     }
+     .wailist-content h2 {
+       font-size: 24px !important;
+    }
+
+    .social-icon-img {
+      width: 70px !important;
+    }
+}

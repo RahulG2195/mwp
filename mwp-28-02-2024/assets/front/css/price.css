@@ -1,0 +1,203 @@
+
+.banner-section-heading {
+    text-align: center;
+}
+.banner-section-heading h1 {
+    padding-top: 145px;
+    color: #ffffff8c;
+    font-size: 80px;
+    font-weight: 800;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    margin-top: -10%;
+}
+
+.price_list .heading h1 {
+    font: normal normal bold 64px/60px Montserrat;
+    color: #FD152A;
+}
+.price_list .heading p{
+    margin-top: 20px;
+}
+.snip1255 {
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    margin: 50px 10px 10px 0px;
+}
+
+.snip1255 .plan {
+  margin: 0;
+    width: 33.33%;
+    /* height: 100%; */
+    position: relative;
+    float: left;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    height: 796px;
+}
+
+.snip1255 .plan:hover i,
+.snip1255 .plan.hover i {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.snip1255 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
+.snip1255 header {
+    position: relative;
+    background-color: #fff;
+    color: #000000;
+    padding: 20px 20px;
+}
+
+.snip1255 header i {
+    font-size: 56px;
+    margin: 8px 0;
+    color: #c0392b;
+    display: inline-block;
+}
+
+.snip1255 .plan-title {
+    top: 0;
+    font-weight: 500;
+    margin: 8px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.snip1255 .plan-cost {
+    margin: 8px 0;
+    color: #000000;
+}
+
+.snip1255 .plan-price {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1.3em;
+    /* color: #ffffff; */
+}
+
+.snip1255 .plan-type {
+    opacity: 0.8;
+    /* color: #ffffff; */
+    font-size: 0.7em;
+    text-transform: uppercase;
+}
+
+.snip1255 .plan-features {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    list-style: outside none none;
+    font-size: 0.8em;
+}
+
+.snip1255 .plan-features li {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 5%;
+    font-weight: 500;
+    display:flex;
+}
+
+/* .snip1255 .plan-features li:nth-child(even) {
+background: rgba(0, 0, 0, 0.08);
+} */
+.snip1255 .plan-features i {
+    margin-right: 8px;
+    opacity: 0.4;
+}
+
+.snip1255 .plan-select {
+    background-color: #FD152A;
+    width: fit-content;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.plan ul li .fa-check{
+    color: #FD152A;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 0 5px 0 0;
+}
+
+.snip1255 .plan-select a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+    /* width: fit-content; */
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* .snip1255 .featured {
+    margin-top: -10px;
+    background-color: #262626;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+} */
+.plan-select:hover{
+    background-color: #FFF0F0;
+}
+.snip1255 .plan:hover{
+    margin-top: -10px;
+    background-color: #FFDEDE;
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.snip1255 .plan:hover header{
+    background-color: #FFDEDE;
+}
+
+.snip1255 .plan:hover .plan-select{
+    background-color: #FFF0F0;
+}
+.snip1255 .plan:hover .plan-select a{
+    color: #000;
+}
+.snip1255 .featured .plan-select a {
+    padding: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+    .snip1255 .plan {
+        width: 50%;
+    }
+
+    .snip1255 .plan-title,
+    .snip1255 .plan-select a {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .snip1255 .plan-select a,
+    .snip1255 .featured .plan-select a {
+        padding: 20px;
+    }
+
+    .snip1255 .featured {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    .snip1255 .plan {
+        width: 100%;
+    }
+}

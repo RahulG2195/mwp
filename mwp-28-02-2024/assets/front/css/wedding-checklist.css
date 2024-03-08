@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+body{
+   
+     background-color: #FF6A73;	
+}
+
+.checklist-banner-section{
+    background-color: #FF6A73;
+    height: 450px;
+    background-image: url(../image/wedding-checklist/white-flower-border.png)!important;
+} 
+
+
+.checklist-content{
+    text-align: center;
+    padding-top: 145px;
+}
+
+.checklist-content h1{
+    font-size: 50px;
+    color: #973738;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+
+.checklist-content h5{
+    color: #973738;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+
+.checklist-service-1{
+   background-color: #FFAEB3;
+   margin-top: 60px;
+}
+
+.checklist-btn a{
+    padding: 4px;
+    background-color: #973738;
+    width: 310px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: -45px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-left: 40px;
+    text-decoration:none;
+}
+
+
+.chekclist-list ul{
+    list-style-type: none;
+}
+
+.form-check-label{
+	margin-left: 20px!important;
+}
+.form-check-checklist{
+	color: #973738;
+    font-size: 20px;
+    padding-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    display: inline-flex;
+}
+
+.form-check-checklist  img{
+	height: 25px;
+    margin-left: -38px;
+    margin-top: 6px;
+    width: 25px;
+}
+
+.checklist-btn-right a{
+     padding: 4px;
+    background-color: #973738;
+    width: 310px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: -50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-left: 40px;
+    text-decoration:none;
+}
+
+
+.checklist-service-2{
+     background-color: #FFAEB3;
+     margin-top: 70px;
+}
+
+
+.empty-service:before{
+
+    content: url(../image/wedding-checklist/flower-border-left.png);
+    position: absolute;
+    left: -1%;
+    top: -65px;
+}
+
+.empty-service:after{
+
+    content: url(../image/wedding-checklist/flower-border-right.png);
+    position: absolute;
+    left: 77%;
+    top: -85px;
+}
+
+
+.empty-service{
+   background-color: #FF6A73;
+   height: 210px;
+   text-align: center;
+   position: relative;
+}
+
+.empty-service h6{
+    font-family: 'Style Script', cursive;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 800;
+    padding-top: 50px;
+    letter-spacing: 3px;
+}
+
+.checklist-service-4{
+    background-color: #FF9DA2;
+    height: 450px;
+}
+
+.bride-checklist-content{
+    display: inline-flex;
+    width: 1262px;
+    padding: 20px;
+    background-color: pink;
+    margin-left: -75px;
+    list-style-type: none;
+}
+
+
+.checklist-service-5{
+   margin-top: 115px;
+}
+.bride-checklist{
+    background-image: url(../image/wedding-checklist/white-flower-border.png)!important;
+}
+
+
+.bride-checklist-content h6{
+    margin-left: 100px;
+    margin-top: 5px;
+}
+
+
+.bride-checklist-content p{
+	margin-left: 106px;
+}
+
+
+.bride-checklist-1{
+    display: inline-flex;
+    background-color: #FFAEB3;
+    width: 1265px;
+    margin-left: -77px;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    height: 130px;
+
+}
+
+.bride-checklist-image-1{
+    /*background-image: url(../image/wedding-checklist/bridal-makeup.png)!important;*/
+    height: 55px;
+    background-size: contain!important;
+    margin-left: 80px;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+
+.bride-checklist-heading{
+    margin-left: 68px;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 2px;
+    color: #973738;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.bride-checklist-para-1{
+   width: 600px;
+    margin-left: 40px;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+
+.bride-checklist-btn{
+   position: relative;
+}
+
+
+#bride-checklist-btn-right{
+   position: absolute;
+}
+
+
+#bride-checklist-btn-right a{
+    padding: 4px;
+    background-color: #973738;
+    width: 310px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: -40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-left: -60px;
+    text-decoration: none;
+}
+
+
+.bride-checklist-1:before{
+    content: '';
+    width: 0px;
+    height: 710px;
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    border: 1.5px solid #b4a7a8;
+}
+
+
+
+.checklist-input{
+    /*appearance: none;
+    -webkit-appearance: none;*/
+    width: 20px;
+    height: 20px;
+    border: 2px solid #973738;
+    border-radius: 50%;
+    margin-right: -30px;
+    background-color: transparent;
+    position: relative;
+    top: 3px;
+    margin-left: 15px!important;
+    padding: 7px!important;
+}
+
+
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+}
+
+
+
+
+
+.bridal-checklist-img-1{
+	position: relative;
+}
+
+.bridal-checklist-img-2{
+	position: relative;
+}
+.bridal-checklist-img-3{
+	position: relative;
+}
+.bridal-checklist-img-4{
+	position: relative;
+}
+.bridal-checklist-img-5{
+	position: relative;
+}
+
+.bridal-checklist-img-1:before{
+    content: url(../image/wedding-checklist/grey-border.png);
+    position: absolute;
+    left: -14%;
+    top: 20px;
+}
+
+.bridal-checklist-img-2:before{
+    content: url(../image/wedding-checklist/grey-border.png);
+    position: absolute;
+    left: -14%;
+    top: 20px;
+}
+.bridal-checklist-img-3:before{
+    content: url(../image/wedding-checklist/grey-border.png);
+    position: absolute;
+    left: -17%;
+    top: 20px;
+}
+.bridal-checklist-img-4:before{
+    content: url(../image/wedding-checklist/grey-border.png);
+    position: absolute;
+    left: -18%;
+    top: 20px;
+}
+
+.bridal-checklist-img-5:before{
+    content: url(../image/wedding-checklist/grey-border.png);
+    position: absolute;
+    left: -15%;
+    top: 20px;
+}
+
+
+.checklist-col-2{
+    margin-left: 60px;
+}
+
+
+.checklist-service-1{
+	position: relative;
+}
+.checklist-service-1:after{
+    content: '';
+    width: 0px;
+    height: 733px;
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    border: 1.5px solid #973738;
+}
+
+.checklist-service-2{
+    position: relative;
+}
+.checklist-service-2:after{
+    content: '';
+    width: 0px;
+    height: 267px;
+    position: absolute;
+    left: 50%;
+    top: -13px;
+    border: 1.5px solid #973738;
+}
+
+
+.checklist-btn{
+    position: relative;
+}
+
+
+.checklist-btn:after{
+    display: inline-block;
+    content: "";
+    border: 1.5px solid #973738;
+    width: 13rem;
+    left: 64%;
+    top: 45px;
+    transform: translateY(-1rem);
+    position: absolute;
+}
+
+.checklist-btn-right{
+    position: relative;
+}
+.checklist-btn-right:after{
+    display: inline-block;
+    content: "";
+    border: 1.5px solid #973738;
+    width: 13rem;
+    left: 64%;
+    top: 45px;
+    transform: translateY(-1rem);
+    position: absolute;
+}
+
+#two-months-btn{
+    position: relative;
+    padding: 4px;
+    background-color: #973738;
+    width: 310px;
+    text-align: center;
+    border-radius: 10px;
+    /*color:#fff!important;*/
+    display: block;
+    font-size: 35px;
+    margin-top: -50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+
+#two-months-btn:before{
+    display: inline-block;
+    content: "";
+    border: 1.5px solid #973738;
+    width: 4rem;
+    left: -17%;
+    top: 45px;
+    transform: translateY(-1rem);
+    position: absolute;
+}
+
+
+.six-eight-months-btn{
+    position: relative;
+    padding: 4px;
+    background-color: #973738;
+    width: 310px;
+    text-align: center;
+    border-radius: 10px;
+    /*color:#fff!important;*/
+    display: block;
+    font-size: 35px;
+    margin-top: -50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+
+.six-eight-months-btn:before{
+    display: inline-block;
+    content: "";
+    border: 1.5px solid #973738;
+    width: 4rem;
+    left: -17%;
+    top: 45px;
+    transform: translateY(-1rem);
+    position: absolute;
+}
+
+.six-eight-months-btn a{
+   position: relative;
+} 
+
+.six-eight-months-btn a:before{
+    content: url(../image/wedding-checklist/circle-icon-01.png);
+    position: absolute;
+    left: -39%;
+    top: 9px;
+}
+
+#nine-twelve-months-btn a{
+  position: relative;
+}
+
+#nine-twelve-months-btn a:before{
+    content: url(../image/wedding-checklist/circle-icon-01.png);
+    position: absolute;
+    left: 163%;
+    top: 18px;
+}
+
+
+.months-btn-1 a{
+   position: relative;
+}
+
+
+.months-btn-1 a:before{
+    content: url(../image/wedding-checklist/circle-icon-01.png);
+    position: absolute;
+    left: 163%;
+    top: 18px;
+}
+
+
+#two-months-btn a{
+    position: relative;
+}
+
+#two-months-btn a:before{
+    content: url(../image/wedding-checklist/circle-icon-01.png);
+    position: absolute;
+   left: -83%;
+    top: 8px;   
+}
+
+
+#one-month-col{
+  position: relative;
+}
+
+#one-month-col:after{
+   content: url(../image/wedding-checklist/circle-icon-01.png);
+   left: 98%;
+   top: 170px;
+   z-index: 5; 
+   position: absolute;
+}
+
+
+.check-para-1{
+   padding-left: 45px;
+}
+
+
+.check-para-2{
+    padding-left: 130px;
+    margin-top: -15px;
+}
+
+.check-para-3{
+    padding-left: 143px;
+    margin-top: -20px;   
+}
+
+
+.check-para-4{
+  margin-left: -45px!important;
+}
+
+
+.check-head-4{
+   margin-top: 11px;
+}
+
+
+.months-btn-15{
+    position: relative;
+     background-color: #973738;
+    width: 310px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: -50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-left: 40px;
+    text-decoration:none;
+}
+
+
+.months-btn-15:before{
+    display: inline-block;
+    content: "";
+    border: 1.5px solid #973738;
+    width: 4rem;
+    left: -17%;
+    top: 45px;
+    transform: translateY(-1rem);
+    position: absolute;
+}
+
+.months-btn-15 a:before{
+    content: url(../image/wedding-checklist/circle-icon-01.png);
+    position: absolute;
+    left: -21%;
+    top: 15px; 
+}
+
+
+.submitchecklist{
+    position: relative;
+    background-color: #973738;
+    width: 310px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: 70px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-left: 418px;
+    text-decoration: none;
+    border: none;
+}
+
+
+
+

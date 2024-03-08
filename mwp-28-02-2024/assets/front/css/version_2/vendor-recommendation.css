@@ -1,0 +1,493 @@
+
+#vendorRecommendation .vision-mision-section .container .vision-mision-content {
+  position: relative;
+}
+
+.select-btn-style{
+    width: 100%;
+    display: flex;
+    margin-top: 15px; 
+    justify-content: center;
+}
+@media screen and (max-width: 350px) {
+  #vendorRecommendation .vision-mision-section .container .vision-mision-content:after {
+    right: 38px;
+    left: auto !important;
+  }
+}
+#vendorRecommendation .vision-mision-section .container .vision-mision-content .semi-circle {
+  position: absolute;
+  bottom: 0;
+  margin: 0px !important;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#vendorRecommendation .successStorySection {
+  background-color: #f5001e;
+  margin-top: 3rem;
+}
+#vendorRecommendation .successStorySection .innerContent {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 50px 10px;
+}
+#vendorRecommendation .successStorySection .innerContent .header h3 {
+  font-family: "Montserrat";
+  font-size: calc(25px + 0.2vw);
+  font-weight: 600;
+  color: white;
+}
+#vendorRecommendation .successStorySection .innerContent .body {
+  margin-top: 2rem;
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box {
+  cursor: grab;
+}
+@media screen and (max-width: 475px) {
+  #vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box {
+    padding: 0px;
+  }
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .left {
+  padding: 10px;
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .left img {
+  width: 100%;
+  border-radius: 5px;
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .right {
+  gap: 5px;
+  padding: 10px;
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .right h4 {
+  color: white;
+  font-size: calc(25px + 0.2vw);
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+@media screen and (max-width: 475px) {
+  #vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .right h4 {
+    font-size: calc(20px + 0.2vw);
+  }
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .right h5 {
+  color: white;
+  font-size: calc(15px + 0.2vw);
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+@media screen and (max-width: 475px) {
+  #vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .right h5 {
+    font-size: calc(14px + 0.2vw);
+  }
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .right p {
+  color: white;
+  font-size: calc(14px + 0.2vw) !important;
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 475px) {
+  #vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .right p {
+    font-size: calc(13px + 0.2vw) !important;
+    text-align: justify;
+  }
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .right .ratting {
+  gap: 5px;
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .right .ratting p {
+  color: white;
+  font-size: calc(11px + 0.2vw);
+  font-family: "Montserrat";
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .box .inner-box .right .ratting span.checked {
+  color: orange;
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .review .owl-item {
+  border: none;
+}
+#vendorRecommendation .successStorySection .innerContent .body .inner-body .owl-dots {
+  display: none;
+}
+#vendorRecommendation .explorePackagePlans .body {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#vendorRecommendation .explorePackagePlans .body .inner-body {
+  padding: 10px;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  height: 400px;
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 50px 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .left {
+    text-align: center;
+  }
+}
+#vendorRecommendation .explorePackagePlans .body .inner-body .left img {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .left img {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .left img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .right {
+    align-items: center;
+  }
+}
+#vendorRecommendation .explorePackagePlans .body .inner-body .right span {
+  color: white;
+  font-size: calc(15px + 0.2vw);
+  font-weight: 400;
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .right span {
+    text-align: center;
+  }
+}
+#vendorRecommendation .explorePackagePlans .body .inner-body .right h4 {
+  font-size: calc(30px + 0.2vw);
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .right h4 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 475px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .right h4 {
+    font-size: calc(25px + 0.2vw);
+  }
+}
+@media screen and (max-width: 375px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .right h4 {
+    font-size: calc(22px + 0.2vw);
+  }
+}
+#vendorRecommendation .explorePackagePlans .body .inner-body .right p {
+  font-size: calc(22px + 0.2vw) !important;
+  color: white;
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .right p {
+    text-align: center;
+    font-size: calc(20px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 475px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .right p {
+    font-size: calc(17px + 0.2vw) !important;
+  }
+    #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .button a,
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .button button {
+  width: 50%; 
+}
+}
+@media screen and (max-width: 375px) {
+  #vendorRecommendation .explorePackagePlans .body .inner-body .right p {
+    font-size: calc(16px + 0.2vw) !important;
+  }
+}
+#vendorRecommendation .explorePackagePlans .body .inner-body .right a {
+  background-color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #f5001e;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Montserrat";
+  font-size: calc(16px + 0.2vw);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 0.2s;
+  font-weight: 600;
+}
+#vendorRecommendation .explorePackagePlans .body .inner-body .right a:hover {
+  background-color: #fce3e3;
+}
+#vendorRecommendation #choosePerfectPlan {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 5rem;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation #choosePerfectPlan {
+    display: block;
+  }
+}
+#vendorRecommendation #choosePerfectPlan .header h2 {
+  font-family: "Montserrat";
+  font-size: calc(35px + 0.2vw);
+  font-weight: 600;
+}
+#vendorRecommendation #choosePerfectPlan .header h2 span {
+  color: #f5001e;
+}
+#vendorRecommendation #choosePerfectPlan .body {
+  margin-top: 3rem;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box {
+  padding: 5px;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box {
+  background-color: #ff444f;
+  border-radius: 10px;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top {
+  height: 150px;
+  text-align: center;
+  border-bottom: 1px solid #ff9b9b;
+  padding: 20px 15px;
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top h5,
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top h4,
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top h2 {
+  color: white;
+  font-family: "Montserrat";
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top h5,
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top h4,
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top h2 {
+    margin: 0px;
+  }
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top h5 {
+  font-size: calc(15px + 0.2vw) !important;
+  font-weight: 500;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top h4 {
+  font-size: calc(20px + 0.2vw) !important;
+  font-weight: 600;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .top h2 {
+  font-size: calc(35px + 0.2vw) !important;
+  font-weight: 700;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .bottom {
+  padding: 15px 15px;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .bottom ul {
+  padding: 0px !important;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .bottom ul li {
+  list-style: none;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: calc(13px + 0.2vw) !important;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .bottom ul li {
+    font-size: calc(15px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .bottom ul li {
+    font-size: calc(16px + 0.2vw) !important;
+  }
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer {
+  padding: 0px 15px 15px 15px;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer form .additionalCost {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .additionalCost label {
+  color: white;
+  margin: 0px;
+  font-size: calc(13px + 0.2vw) !important;
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .additionalCost label {
+    font-size: calc(15px + 0.2vw) !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .additionalCost label {
+    font-size: calc(16px + 0.2vw) !important;
+  }
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer .additionalCost label .checkInfo {
+  cursor: help;
+  padding: 4px;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .additionalCost label .checkInfo:hover {
+  background-color: #dd5e6a;
+  border-radius: 50px;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .additionalCost .hint {
+  display: none;
+  color: #303030;
+  position: absolute;
+  background-color: white;
+  right: 0px;
+  bottom: 28px;
+  padding: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 6px;
+  font-family: "Montserrat";
+  font-weight: 400;
+  left: 0;
+  text-wrap: balance;
+  font-size: calc(10px + 0.2vw);
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .additionalCost .hint {
+    font-size: calc(12px + 0.2vw);
+  }
+}
+@media screen and (max-width: 375px) {
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .additionalCost .hint {
+    font-size: calc(13px + 0.2vw);
+  }
+    #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .button a,
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .button button {
+  width: 50%; 
+}
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .additionalCost .hint:hover {
+  display: block;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .additionalCost .hint::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: -6px;
+  right: 8px;
+  background: white;
+  -webkit-clip-path: polygon(69% 0, 100% 0, 100% 100%, 34% 0);
+          clip-path: polygon(69% 0, 100% 0, 100% 100%, 34% 0);
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer form .button {
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .button a,
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .button button {
+  color: #303030;
+  background-color: white;
+  border-radius: 50px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .button a:hover,
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .button button:hover {
+  background-color: rgb(235, 235, 235);
+}
+#vendorRecommendation .service-3-price-plan {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .service-3-price-plan {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  #vendorRecommendation .service-3-price-plan .container {
+    width: 100%;
+    max-width: 1200px !important;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  #vendorRecommendation .service-3-price-plan .container .cards2-container {
+    gap: 10px;
+  }
+  
+  #vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .button a,
+#vendorRecommendation #choosePerfectPlan .body .inner-body .content .inner-content .box .inner-box .footer  .button button {
+  width: 50%; 
+}
+}
+@media screen and (max-width: 600px) {
+  #vendorRecommendation .desktop-view-sider {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  #vendorRecommendation .mobile-view-slider {
+    display: block !important;
+  }
+}
+#vendorRecommendation .mobile-view-slider .service-3-plan-heading {
+  top: 0px !important;
+}
+#vendorRecommendation .mobile-view-slider .vendor-service-plan {
+  margin-top: 20px !important;
+}
+#vendorRecommendation .mobile-view-slider .vendor-service-plan .prev-btn {
+  top: 4%;
+  left: auto;
+  right: 70px;
+}
+#vendorRecommendation .mobile-view-slider .vendor-service-plan .next-btn {
+  top: 4%;
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .reach-out-section .reach-out-content {
+    margin: 25px 0 0 0px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .reach-out-section .reach-out-btn {
+    margin: 0px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  #vendorRecommendation .reach-out-section .reach-out-btn {
+    margin-top: 15px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #vendorRecommendation .reach-out-section:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  #vendorRecommendation .reach-out-section .question-mark-image img {
+    width: 100% !important;
+  }
+}
