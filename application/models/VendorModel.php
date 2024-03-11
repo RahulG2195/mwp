@@ -134,8 +134,8 @@ class VendorModel extends CI_Model {
     }
     
     function Similar_Data($seo) {
-
-      $subquery = $this->db->select('category')
+      // echo $seo;
+      $subquery = $this->db->select('category, price_range, city')
       ->from('default_vendor_inp')
       ->where('vendor_seo_url', $seo)
       ->get();
@@ -143,6 +143,9 @@ class VendorModel extends CI_Model {
       if ($subquery->num_rows() > 0) {
           $category_array = $subquery->result_array();
           $categories = array_column($category_array, 'category');
+          $price_range = array_column($category_array, 'price_range');
+          $city = array_column($category_array, 'city');
+          
           // get count of vendor 
           $this->db->select('COUNT(category) as category_count', false); // Count rows per category
           $this->db->where(array('vendor_status' => 1, 'category' => $categories[0]));
@@ -156,15 +159,26 @@ class VendorModel extends CI_Model {
           $this->db->from('default_vendor_inp');
           $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id ', 'left');
           $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
-          $this->db->where(array('default_vendor_inp.vendor_status'=> 1, 'default_vendor_inp.vendor_seo_url!=' => $seo));
-          $this->db->where_in('category', $categories);
+          $this->db->where(
+            array(
+              'default_vendor_inp.vendor_status'=> 1, 
+              'default_vendor_inp.category' => $categories[0], 
+              'default_vendor_inp.price_range' => $price_range[0], 
+              'default_vendor_inp.city' => $city[0], 
+              'default_vendor_inp.vendor_seo_url!=' => $seo
+            ));
+
+          // $this->db->where_in(array());
+          // if global city selected 
            if(!empty($this->session->userdata('selectedCity')) && $this->session->userdata('selectedCity')){
               $city_name = $this->session->userdata('selectedCity');
-              $this->db->where('master_city.name', $city_name);
+              $this->db->where(array('category' => $categories[0], 'price_range' => $price_range[0], 'master_city.name', $city_name));
             }
           $this->db->limit(10);
           $this->db->order_by('rating','DESC');
-          $result = $this->db->get()->result_array();
+          $result = $this->db->get();
+          echo $this->db->last_query();
+          $result = $result->result_array();
           return array(
             'category_count' => $count_query->result_array(),
             'result' => $result
