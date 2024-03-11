@@ -44,6 +44,7 @@ class Login extends CI_Controller
 
                         $this->session->set_userdata('user_name', $result["user"]["user_name"]);
                         $this->session->set_userdata('dv_id', $result["user"]["dv_id"]);
+						$this->session->set_userdata('comp_logo', $result["user"]["comp_logo"]);
                         // $this->session->set_userdata('role', $result["user"]["role"]);
 
                         redirect('vendor-dashboard');

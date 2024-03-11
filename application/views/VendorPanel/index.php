@@ -30,16 +30,16 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3><?php echo $lead_details['lead']; ?></h3>
-
+                <h4><b><?php echo $lead_details['lead']; ?></b></h4>
+                </br>
                 <p>Total Leads</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <?php  if($lead_details['lead'] != '0'){ ?>
+              <?php // if($lead_details['lead'] != '0'){ ?>
               <a href="<?php echo base_url() .'vendor-dashboard/lead/' . $visitor_details['vendor_id']; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-             <?php } ?>
+             <?php //} ?>
             </div>
           </div>
           <!-- ./col -->
@@ -62,16 +62,16 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3><?php echo $visitor_details['visitor']; ?></h3>
-
+                <h4><b><?php echo $visitor_details['visitor']; ?></b></h4>
+                </br>
                 <p>Total Users</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <?php  if($visitor_details['visitor'] != '0'){ ?>
+              <?php  //if($visitor_details['visitor'] != '0'){ ?>
               <a href="<?php echo base_url() .'vendor-dashboard/visitor/' . $visitor_details['vendor_id']; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-              <?php } ?>
+              <?php //} ?>
             </div>
           </div>
           <!-- ./col -->
@@ -79,16 +79,18 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3><?php echo $plan_details['plan_name']." ".$plan_details['plan_type'].""; ?></h3>
-
+                <h4 style="font-size:1.5rem;"><?php echo $plan_details['plan_name'];
+                //  ".$plan_details['plan_type'].""; 
+                 ?></h4>
+                </br>
                 <p>Plan Details</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <?php  if($plan_details['plan_name'] != 'Free'){ ?>
+              <?php  //if($plan_details['plan_name'] != 'Free'){ ?>
                <a href="<?php echo base_url() .'vendor-dashboard/plan/' . $plan_details['vendor_id']; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            <?php } ?>
+            <?php //} ?>
             </div>
           </div>
           <!-- ./col -->

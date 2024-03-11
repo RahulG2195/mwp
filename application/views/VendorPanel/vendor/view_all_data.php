@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="col-md-4 form-group">
                                     <label for="phone_no" class="form-label vendor-form-label">Phone<span class="text text-danger p-0">*</span></label>
-                                    <input type="text" class="form-control" id="phone_no" placeholder="Phone" name="phone_no" value="<?php echo isset($phone_no) ? $phone_no : '' ?>" readonly>
+                                    <input type="text" class="form-control" id="phone_no" placeholder="Phone" name="phone_no" value="<?php echo isset($phone_no) ? $phone_no : '' ?>">
                                 </div>
                                 <!-- <div class="col-md-4 form-group">
                                 <label for="vendor_prof_mobile" class="form-label vendor-form-label">Professional Pnone No</label>
@@ -101,7 +101,7 @@
                             </div> -->
                                 <div class="col-md-4 form-group">
                                     <label for="website" class="form-label vendor-form-label">Website</label>
-                                    <input type="text" class="form-control" id="website" placeholder="Website" name="website" value="<?php echo isset($website) ? $website : '' ?>" readonly>
+                                    <input type="text" class="form-control" id="website" placeholder="Website" name="website" value="<?php echo isset($website) ? $website : '' ?>">
                                 </div>
                                 <div class="col-md-4 form-group">
                                     <label for="user_name" class="form-label vendor-form-label">User Name<span class="text text-danger p-0">*</span></label>
@@ -124,11 +124,11 @@
                                 </div>
                                 <div class="col-md-6 form-group">
                                     <label for="area" class="form-label vendor-form-label">Area<span class="text text-danger p-0">*</span></label>
-                                    <input type="text" class="form-control" id="area" placeholder="Your Area" name="area" value="<?php echo isset($area) ? $area : '' ?>" readonly>
+                                    <input type="text" class="form-control" id="area" placeholder="Your Area" name="area" value="<?php echo isset($area) ? $area : '' ?>">
                                 </div>
                                 <div class="col-12 form-group">
                                     <label for="address" class="form-label vendor-form-label">Full Address<span class="text text-danger p-0">*</span></label>
-                                    <textarea name="address" id="address" class="form-control" cols="30" rows="2" readonly><?php echo isset($address) ? $address : '' ?></textarea>
+                                    <textarea name="address" id="address" class="form-control" cols="30" rows="2"><?php echo isset($address) ? $address : '' ?></textarea>
                                 </div>
 
                                 <!-- <div class="col-md-4 form-group">
@@ -142,7 +142,7 @@
                                 <h4 class="text-uppercase primary-form-heading">CATEGORY</h4>
                             </div>
                             <div class="row">
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-12 form-group">
                                     <label for="category" class="form-label vendor-form-label">Category</label>
                                     <input type="hidden" name="default_cat" id="selected_cat" value="<?php echo isset($category) ? $category : '' ?>">
 
@@ -160,7 +160,7 @@
                                     </select>
 
                                 </div>
-                                <div class="col-md-6 form-group">
+                                <div class="col-md-6 form-group d-none">
                                     <label for="vendor_tag" class="form-label vendor-form-label">Tag</label>
                                     <input type="hidden" name="default_vendor_tag" id="selected_vendor_tag" value="<?php echo isset($vendor_tag) ? $vendor_tag : '' ?>">
 
