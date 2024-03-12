@@ -32,11 +32,11 @@ class VendorModel extends CI_Model {
           $count_query = $this->db->get();
 
         // display data only if admin approve. 
-        $this->db->select('default_vendor_inp.*,  master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
+        $this->db->select('default_vendor_inp.*,  master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
         $this->db->from('default_vendor_inp');
         $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
         $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id', 'left');
-        $this->db->join('master_vendor_tags', 'default_vendor_inp.tag_id = master_vendor_tags.tag_id', 'left');
+        $this->db->join('master_vendor_tags', 'default_vendor_inp.tag_id = master_vendor_tags.tag_id ', 'left');
         $this->db->where(array('default_vendor_inp.vendor_status' => 1, 'default_vendor_inp.category' => $cat_id));
          if(!empty($this->session->userdata('selectedCity')) && $this->session->userdata('selectedCity')){
           $city_name = $this->session->userdata('selectedCity');
@@ -58,67 +58,67 @@ class VendorModel extends CI_Model {
     function get_Single_vendor($tab, $seo) {
 
         if($tab == 'bw'){
-            $this->db->select('bridal_wear.*, default_vendor_inp.*, master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+            $this->db->select('bridal_wear.*, default_vendor_inp.*, master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
             $this->db->from('bridal_wear');
             $this->db->join('default_vendor_inp', 'bridal_wear.vin_id = default_vendor_inp.vendor_uid', 'left');
         
         }elseif($tab == 'bj'){
         
-          $this->db->select('bridal_jewellery.*, default_vendor_inp.*, master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+          $this->db->select('bridal_jewellery.*, default_vendor_inp.*, master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('bridal_jewellery');
           $this->db->join('default_vendor_inp', 'bridal_jewellery.vin_id = default_vendor_inp.vendor_uid', 'left');
         
         }elseif($tab == 'ct'){
         
-          $this->db->select('catering.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+          $this->db->select('catering.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('catering');
           $this->db->join('default_vendor_inp', 'catering.vin_id = default_vendor_inp.vendor_uid', 'left');
         
         }elseif($tab == 'dc'){
         
-          $this->db->select('decorator.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+          $this->db->select('decorator.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_nam, master_vendor_tags.tag_id, master_vendor_tags.tag_namee');
           $this->db->from('decorator');
           $this->db->join('default_vendor_inp', 'decorator.vin_id = default_vendor_inp.vendor_uid', 'left');
         
         }elseif($tab == 'gf'){
         
-          $this->db->select('gift.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+          $this->db->select('gift.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('gift');
           $this->db->join('default_vendor_inp', 'gift.vin_id = default_vendor_inp.vendor_uid', 'left');
         
         }elseif($tab == 'gw'){
           
-          $this->db->select('groom_wear.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+          $this->db->select('groom_wear.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('groom_wear');
           $this->db->join('default_vendor_inp', 'groom_wear.vin_id = default_vendor_inp.vendor_uid', 'left');
         
         }elseif($tab == 'in'){
         
-          $this->db->select('inivitations.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+          $this->db->select('inivitations.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('inivitations');
           $this->db->join('default_vendor_inp', 'inivitations.vin_id = default_vendor_inp.vendor_uid', 'left');
         
         }elseif($tab == 'mu'){
         
-          $this->db->select('make_up.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+          $this->db->select('make_up.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('make_up');
           $this->db->join('default_vendor_inp', 'make_up.vin_id = default_vendor_inp.vendor_uid', 'left');
         
         }elseif($tab == 'me'){
         
-          $this->db->select('mehendi.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+          $this->db->select('mehendi.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('mehendi');
           $this->db->join('default_vendor_inp', 'mehendi.vin_id = default_vendor_inp.vendor_uid', 'left');
         
         }elseif($tab == 'ph'){
         
-          $this->db->select('photography.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+          $this->db->select('photography.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('photography');
           $this->db->join('default_vendor_inp', 'photography.vin_id = default_vendor_inp.vendor_uid', 'left');
         
         }elseif($tab == 've'){
         
-          $this->db->select('venue.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_name');
+          $this->db->select('venue.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('venue');
           $this->db->join('default_vendor_inp', 'venue.vin_id = default_vendor_inp.vendor_uid', 'left');
         
@@ -131,13 +131,13 @@ class VendorModel extends CI_Model {
         
         $result = $this->db->get()->result_array();
         // echo $this->db->last_query();
-        $this->db->last_query();
+        // $this->db->last_query();
         return $result;
     }
     
     function Similar_Data($seo) {
-
-      $subquery = $this->db->select('category')
+      // echo $seo;
+      $subquery = $this->db->select('category, price_range, city')
       ->from('default_vendor_inp')
       ->where('vendor_seo_url', $seo)
       ->get();
@@ -145,6 +145,9 @@ class VendorModel extends CI_Model {
       if ($subquery->num_rows() > 0) {
           $category_array = $subquery->result_array();
           $categories = array_column($category_array, 'category');
+          $price_range = array_column($category_array, 'price_range');
+          $city = array_column($category_array, 'city');
+          
           // get count of vendor 
           $this->db->select('COUNT(category) as category_count', false); // Count rows per category
           $this->db->where(array('vendor_status' => 1, 'category' => $categories[0]));
@@ -154,20 +157,31 @@ class VendorModel extends CI_Model {
 
 
           // get similar data 
-          $this->db->select('default_vendor_inp.*, master_city.city_id, master_city.name AS city_name, master_category.category_id, master_category.name as cat_name, master_vendor_tags.tag_name');
+          $this->db->select('default_vendor_inp.*, master_city.city_id, master_city.name AS city_name, master_category.category_id, master_category.name as cat_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('default_vendor_inp');
           $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id ', 'left');
           $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
           $this->db->join('master_vendor_tags', 'default_vendor_inp.tag_id = master_vendor_tags.tag_id', 'left');
-          $this->db->where(array('default_vendor_inp.vendor_status'=> 1, 'default_vendor_inp.vendor_seo_url!=' => $seo));
-          $this->db->where_in('category', $categories);
+          $this->db->where(
+            array(
+              'default_vendor_inp.vendor_status'=> 1, 
+              'default_vendor_inp.category' => $categories[0], 
+              'default_vendor_inp.price_range' => $price_range[0], 
+              'default_vendor_inp.city' => $city[0], 
+              'default_vendor_inp.vendor_seo_url!=' => $seo
+            ));
+
+          // $this->db->where_in(array());
+          // if global city selected 
            if(!empty($this->session->userdata('selectedCity')) && $this->session->userdata('selectedCity')){
               $city_name = $this->session->userdata('selectedCity');
-              $this->db->where('master_city.name', $city_name);
+              $this->db->where(array('category' => $categories[0], 'price_range' => $price_range[0], 'master_city.name', $city_name));
             }
           $this->db->limit(10);
           $this->db->order_by('rating','DESC');
-          $result = $this->db->get()->result_array();
+          $result = $this->db->get();
+          // echo $this->db->last_query();
+          $result = $result->result_array();
           return array(
             'category_count' => $count_query->result_array(),
             'result' => $result
@@ -203,7 +217,7 @@ class VendorModel extends CI_Model {
 
 
           // get all data vendor wise
-          $this->db->select('default_vendor_inp.*, master_city.city_id, master_city.name AS city_name, master_category.category_id, master_category.name as cat_name, master_vendor_tags.tag_name');
+          $this->db->select('default_vendor_inp.*, master_city.city_id, master_city.name AS city_name, master_category.category_id, master_category.name as cat_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('default_vendor_inp');
           $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id ', 'left');
           $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -215,6 +229,8 @@ class VendorModel extends CI_Model {
           }
           $this->db->where_in('category', $category_array);
           $this->db->order_by('rating','DESC');
+          $this->db->order_by('review','DESC');
+          $this->db->order_by('dv_start_price','ASC');
           $this->db->limit(24, $start);
           
           $result = $this->db->get();
@@ -271,7 +287,7 @@ class VendorModel extends CI_Model {
 
 
         // display data only if admin approve. 
-        $this->db->select('default_vendor_inp.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
+        $this->db->select('default_vendor_inp.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name,master_vendor_tags.tag_id, master_vendor_tags.tag_name');
         $this->db->from('default_vendor_inp');
         $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
         $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id', 'left');
@@ -410,7 +426,7 @@ class VendorModel extends CI_Model {
 
     function Trusted_Vendor($allData = '', $seo='', $start = 0){
       // echo $seo;
-      $this->db->select('default_vendor_inp.*,  master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
+      $this->db->select('default_vendor_inp.*,  master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
       $this->db->from('default_vendor_inp');
       $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
       $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id', 'left');
@@ -429,7 +445,7 @@ class VendorModel extends CI_Model {
         $count_query = $this->db->get();
 
         // display trusted vendor
-        $this->db->select('default_vendor_inp.*,  master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
+        $this->db->select('default_vendor_inp.*,  master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name,  master_vendor_tags.tag_id,  master_vendor_tags.tag_name');
         $this->db->from('default_vendor_inp');
         $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
         $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id', 'left');
