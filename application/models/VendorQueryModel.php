@@ -42,14 +42,15 @@ class VendorQueryModel extends CI_Model
 
     public function getvendorquerydatanew($id)
     {
-        $this->db->select('*');
+        $this->db->select('vendor-query-form-table-new.*,master_category.name as category_name');
         $this->db->from('vendor-query-form-table-new');
+        $this->db->join('master_category', 'vendor-query-form-table-new.cat_id = master_category.category_id', 'left');
         $this->db->where('query_id', $id);
         $query = $this->db->get();
         if ( $query->num_rows() > 0 )
         {
             $row = $query->result_array();
-            return $row;
+            return $row[0];
         }
     }
     
@@ -65,7 +66,10 @@ class VendorQueryModel extends CI_Model
 
     public function getvendorqueryalldatanew()
     {
-        $query = $this->db->get('vendor-query-form-table-new');
+        $this->db->select('vendor-query-form-table-new.*,master_category.name as category_name');
+        $this->db->from('vendor-query-form-table-new');
+        $this->db->join('master_category', 'vendor-query-form-table-new.cat_id = master_category.category_id', 'left');
+        $query = $this->db->get();
         if ( $query->num_rows() > 0 )
         {
             $row = $query->result_array();

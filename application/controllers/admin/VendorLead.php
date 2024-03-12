@@ -28,7 +28,25 @@ class VendorLead extends CI_Controller
         }
         else{
             $data["result"]=$this->VendorQueryModel->getvendorqueryalldatanew();
+            //   echo "<pre>";
+            // print_r($data);
+            // exit;
             $this->load->view('admin/vendor-lead-data/vendor-list-new',$data);
+        }
+    }
+
+    public function viewdetail()
+    {
+        if (!$this->session->userdata('admin_id')) {
+            redirect('admin/AdminLogin');
+        }
+        else{
+            $id=$this->uri->segment(4);
+            $data["result"]=$this->VendorQueryModel->getvendorquerydatanew($id);
+            // echo "<pre>";
+            // print_r($data);
+            // exit;
+            $this->load->view('admin/vendor-lead-data/detail-page-new',$data);
         }
     }
 

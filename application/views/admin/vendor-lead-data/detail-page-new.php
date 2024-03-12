@@ -1,8 +1,8 @@
-<?php $this->load->view('VendorPanel/layout/header'); ?>
-<?php $this->load->view('VendorPanel/layout/sidebar'); ?>
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
+<?php $this->load->view('admin/layout/header'); ?>
+<?php $this->load->view('admin/layout/sidebar'); ?>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+<!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -20,23 +20,22 @@
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+           
+               <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Query Lead</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                    <tbody>
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Query Lead</h3>
-                        </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <table id="example1"
-                                class="table table-bordered table-striped dataTable dtr-inline collapsed">
-                                <tbody>
-
-                                    <?php 
+                                                                           <?php 
                                             if(!empty($result))
                                             { 
                                                     //    echo "<pre>";
@@ -47,6 +46,11 @@
                                                 // }
                                                 // exit;
                                              ?>
+                                                <!-- // Name  [Text Entry] -->
+                                    <tr>
+                                        <td>Category:</td>
+                                        <td><?php echo $result["category_name"]; ?></td>
+                                    </tr>
                                     <?php
                 if($result['is_paid_vendor']){
             //common fields 
@@ -366,22 +370,28 @@
                                                 echo "No records Found";
                                         } 
                                          ?>
-                                </tbody>
-                            </table>
+                                
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer" style="text-align:center;">
+                                <a href="<?php echo base_url() ?>admin/VendorLead" class="btn btn-info">Back</a>
+                            </div>
+                            <!-- /.card-body -->
                         </div>
-                        <div class="card-footer" style="text-align:center;">
-                            <a href="<?php echo base_url() ?>vendor-dashboard/lead" class="btn btn-info">Back</a>
-                        </div>
-                        <!-- /.card-body -->
+
+                               
                     </div>
-
                 </div>
-            </div>
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+            </div><!-- /.container-fluid -->
+        </section>
+               <!-- /.content -->
     </div>
-         <?php $this->load->view('VendorPanel/layout/footer'); ?>
+<?php $this->load->view('admin/layout/footer'); ?>
     </div>
-
-    <?php $this->load->view('VendorPanel/layout/script'); ?>
+<!-- ./wrapper -->
+<?php $this->load->view('admin/layout/script'); ?>
+                   
+            
+            

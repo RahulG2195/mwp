@@ -16,10 +16,10 @@ class VendorQuery extends CI_Controller {
         $category = $this->input->post("category");
 
         $insert_data = array();
+        $insert_data['is_paid_vendor']=$this->input->post("is_paid_vendor");
+        $insert_data['cat_id']=$this->input->post("category");
+        $insert_data['vendor_id']=$this->input->post("vendor_id");
         if($is_paid_vendor){
-             $insert_data['is_paid_vendor']=$this->input->post("is_paid_vendor");
-             $insert_data['cat_id']=$this->input->post("category");
-             $insert_data['vendor_id']=$this->input->post("vendor_id");
             //common fields 
             $insert_data['name']=$this->input->post("name");
             $insert_data['phone_no']=$this->input->post("phone_no");
