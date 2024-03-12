@@ -138,7 +138,8 @@
                     <td><?php echo "INR ".$price.'/-'; ?> </td>
 					<td><?php 
           if($row['plan_type']=="Free"){
-            echo "-";
+            echo "Year";
+            // echo date("d M Y - h:i A", strtotime($row['created_date']));
           }else{
             echo date("d M Y - h:i A", strtotime($row['created_date'])); 
           }

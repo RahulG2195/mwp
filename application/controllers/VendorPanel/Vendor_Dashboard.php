@@ -107,8 +107,8 @@ class Vendor_Dashboard extends CI_Controller {
             
         $data['list']=[]; 
             
-        $id = $this->session->userdata('dv_id'); //$id = 28922;            
-        //$id = 18899;  //temp            
+        $id = $this->session->userdata('dv_id');            
+        // $id = 28922;  //temp 28922 / 18899 / 90           
         //Plan Type
         $this->load->model('VendorPanel/VendorPlanModel');
 
@@ -126,8 +126,8 @@ class Vendor_Dashboard extends CI_Controller {
                             'plan_name' => 'Palette Express',
                             'plan_type' => 'Free',
                             'is_active' => '1',
-                            'created_date' => '',
-							'expire_date' => ''
+                            'created_date' => '2024-01-01 00:00:01',
+							'expire_date' => '2024-12-31 12:59:59'
             );
             if(!empty($plan_data)){
                 $data['list'] = $plan_data;
