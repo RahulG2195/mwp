@@ -110,7 +110,7 @@ class VendorRecommendationModel extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
-     public function getrecommenduserdata($id)
+    public function getrecommenduserdata($id)
     {
         $this->db->select("*");
         $this->db->from("vendor-recommendation-payment-table");
@@ -120,6 +120,18 @@ class VendorRecommendationModel extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+    
+    public function getdetaildata($id)
+    {
+        $this->db->select("*");
+        $this->db->from("vendor-recommendation-payment-table");
+        $this->db->join("vendor-recommendation-table", "vendor-recommendation-payment-table.vendorid=vendor-recommendation-table.vendor_recommend_id","left");
+        $this->db->order_by("vendor-recommendation-payment-table.vendorid", "DESC");
+        $this->db->where('vendor_reccomend_payment_id', $id);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
+
 
 
 
