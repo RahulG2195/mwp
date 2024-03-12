@@ -71,19 +71,19 @@
                   
                   </tbody>
                   <tfoot>
-                  <tr>
-                                          <th>ID</th>
-                    <th>Page Name</th>
-                    <th>Email Address</th>
-                    <th>Phone</th>
-                    <th>Created Date</th>
+                  <!-- <tr> -->
+                                          <!-- <th>ID</th> -->
+                    <!-- <th>Page Name</th> -->
+                    <!-- <th>Email Address</th> -->
+                    <!-- <th>Phone</th> -->
+                    <!-- <th>Created Date</th> -->
                     <!-- <th>Action</th> -->
 <!--                    <th>Rendering engine</th>
                     <th>Browser</th>
                     <th>Platform(s)</th>
                     <th>Engine version</th>
                     <th>CSS grade</th>-->
-                  </tr>
+                  <!-- </tr> -->
                   </tfoot>
                 </table>
               </div>

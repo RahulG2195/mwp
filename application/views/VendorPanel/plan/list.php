@@ -114,14 +114,14 @@
                     <th>Price</th>
                     <th>Created On</th>
 					<th>Exprired On</th>
-          <th>Remaning Days</th>
+          <!-- <th>Remaning Days</th> -->
                   </tr>
                   </thead>
                   <tbody>
                       <?php 
                       $i = 1;
                       foreach ($list as $row) {
-						$active_duration = $active_plan_type;  
+						$active_duration = $row['plan_type']; 
 						if($row['plan_type']=='Q'){
 							$active_duration = 'Billed Quarterly';
 						}else if($row['plan_type']=='A'){
@@ -136,9 +136,22 @@
                     <td><?php echo $active_duration; ?></td>
                     <!-- <td><?php //echo "INR ".$price." (INR ".round($monthly_price)."/mothly)"; ?> </td> -->
                     <td><?php echo "INR ".$price.'/-'; ?> </td>
-					<td><?php echo date("d M Y - h:i A", strtotime($row['created_date'])); ?> </td>
-					<td><?php echo date("d M Y - h:i A", strtotime($row['expire_date'])); ?> </td>
-					<td><?php echo $no_of_days_left_in_expire." Days"; ?> </td>
+					<td><?php 
+          if($row['plan_type']=="Free"){
+            echo "Year";
+            // echo date("d M Y - h:i A", strtotime($row['created_date']));
+          }else{
+            echo date("d M Y - h:i A", strtotime($row['created_date'])); 
+          }
+          ?> </td>
+					<td><?php
+          if($row['plan_type']=="Free"){
+            echo "Year";
+          }else{ 
+            echo date("d M Y - h:i A", strtotime($row['expire_date'])); 
+          }
+          ?> </td>
+					<!-- <td><?php //echo $no_of_days_left_in_expire." Days"; ?> </td> -->
                      <!-- <td>-->
                        <!-- <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;" href="<?php //echo $editlink.''.$row['category_id']; ?>"><i class="fas fa-edit" style="font-size: 14px;">edit</i></a>
                         <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;" href="<?php //echo $deletelink.''.$row['category_id']; ?>"><i class="fas fa-trash-alt" style="font-size: 14px;"> delete</i></a>
@@ -152,20 +165,20 @@
                   
                   </tbody>
                   <tfoot>
-                  <tr>
-                    <th>ID</th>
-                    <th>Plan Name</th>
-                    <th>Plan Type</th>
-                    <th>Price</th>
-                    <th>Created On</th>
-					<th>Exprired On</th>
-          <th>Remaning Days</th>
+                  <!-- <tr> -->
+                    <!-- <th>ID</th> -->
+                    <!-- <th>Plan Name</th> -->
+                    <!-- <th>Plan Type</th> -->
+                    <!-- <th>Price</th> -->
+                    <!-- <th>Created On</th> -->
+					<!-- <th>Exprired On</th> -->
+          <!-- <th>Remaning Days</th> -->
 <!--                    <th>Rendering engine</th>
                     <th>Browser</th>
                     <th>Platform(s)</th>
                     <th>Engine version</th>
                     <th>CSS grade</th>-->
-                  </tr>
+                  <!-- </tr> -->
                   </tfoot>
                 </table>
               </div>

@@ -20,6 +20,11 @@ class VendorQueryModel extends CI_Model
       return $id;
     }
 
+    function InserDataNew($data){
+      $this->db->insert('vendor-query-form-table-new',$data);
+      $id=$this->db->insert_id();
+      return $id;
+    }
 
    
     public function getvendorquerydata($id)
@@ -34,10 +39,37 @@ class VendorQueryModel extends CI_Model
             return $row;
         }
     }
+
+    public function getvendorquerydatanew($id)
+    {
+        $this->db->select('vendor-query-form-table-new.*,master_category.name as category_name');
+        $this->db->from('vendor-query-form-table-new');
+        $this->db->join('master_category', 'vendor-query-form-table-new.cat_id = master_category.category_id', 'left');
+        $this->db->where('query_id', $id);
+        $query = $this->db->get();
+        if ( $query->num_rows() > 0 )
+        {
+            $row = $query->result_array();
+            return $row[0];
+        }
+    }
     
     public function getvendorqueryalldata()
     {
         $query = $this->db->get('vendor-query-form-table');
+        if ( $query->num_rows() > 0 )
+        {
+            $row = $query->result_array();
+            return $row;
+        }   
+    }
+
+    public function getvendorqueryalldatanew()
+    {
+        $this->db->select('vendor-query-form-table-new.*,master_category.name as category_name');
+        $this->db->from('vendor-query-form-table-new');
+        $this->db->join('master_category', 'vendor-query-form-table-new.cat_id = master_category.category_id', 'left');
+        $query = $this->db->get();
         if ( $query->num_rows() > 0 )
         {
             $row = $query->result_array();

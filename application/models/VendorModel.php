@@ -394,6 +394,16 @@ class VendorModel extends CI_Model {
           return $result->row_array();
     }
 
+    // get vendor email & name
+    function Get_Vendor_email_name($id){
+        $this->db->select('vendor_email, vendor_name');
+          $this->db->from('default_vendor_inp');
+          $this->db->where('dv_id', $id);
+          $result = $this->db->get();
+        //   echo $this->db->last_query();
+          return $result->row_array();
+    }
+
     //fetch foe inc by 1 during insert
     function Get_last_Vendor_id() {
       $this->db->select('vendor_uid');
@@ -473,6 +483,13 @@ class VendorModel extends CI_Model {
     public function Get_Vendor_cat(){
         $this->db->where('is_deleted', '0');
       $query = $this->db->get('master_category');
+      return $query->result_array();
+    }
+
+    public function Get_Vendor_payment($vendor_id){
+        $this->db->where('vendor_id', $vendor_id);
+        $this->db->where('is_active', '1');
+      $query = $this->db->get('vendor-payment-table');
       return $query->result_array();
     }
 

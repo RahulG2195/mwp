@@ -1,104 +1,92 @@
 <?php $this->load->view('VendorPanel/layout/header'); ?>
 <?php $this->load->view('VendorPanel/layout/sidebar'); ?>
            
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <!--<h1>DataTables</h1>-->
-            <h1>Master</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>vendor-dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Lead</li>
-            </ol>
-          </div>
+     <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                <h1 class="m-0">Master</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>vendor-dashboard">Home</a></li>
+                    <li class="breadcrumb-item active">Query Leads</li>
+                </ol>
+                </div> 
+                <!-- /.col -->
+            </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
+        <!-- /.content-header -->
+           
+               <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Query Leads data</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table id="example1" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Phone no</th>
+                                    <th>Email</th>
+                                    <th>Date</th>
+                                    <th>Created Date</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-     
-            <!-- /.card -->
+                                <?php 
+                                  if(!empty($result))
+                                  { 
+                                    foreach($result as $row)
+                                    {  
+                                        // echo "<pre>";
+                                        // print_r($result);
+                                ?>
+                                <tr>
+                                    <td><?php echo $row["name"]; ?></td>
+                                    <td><?php echo $row["phone_no"]; ?></td>
+                                    <td><?php echo $row["email"]; ?></td>
+                                    <td><?php echo $row["function_date"]; ?></td>
+                                    <td><?php echo $row["created_date"]; ?></td>
+                                    <!-- <td><?php //echo $row["vendor-query-form-message"]; ?></td> -->
+                                    <td><a href="<?php echo base_url() ?>vendor-dashboard/lead/details/<?php echo $row["query_id"]; ?>" class="btn btn-success">View detail</a></td>
+                                </tr>
+                                <?php   
+                                     }
 
-            <div class="card">
-              <div class="card-header">
-                <!--<h3 class="card-title">DataTable with default features</h3>-->
-                <h3 class="card-title">Lead Data</h3>
-                <!-- <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;float: right;" href="<?php echo $addlink; ?>"><i class="fas fa-plus" style="font-size: 14px;"> Add New</i></a> -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Message</th>
-                    <th>Name</th>
-                    <th>Created Date</th>
-                    <!-- <th>Action</th> -->
-                  </tr>
-                  </thead>
-                  <tbody>
-                      <?php 
-                      $i = 1;
-                      foreach ($list as $row) {
-                          ?>
-                   
-                  <tr>
-                    <td><?php echo $i; ?> </td>
-                    <td><?php echo $row['message']; ?> </td>
-                    <td><?php echo $row['name']; ?></td>
-                    <td><?php echo date("d M Y - h:i A", strtotime($row['created_date'])); ?> </td>
-                    <!-- <td>
-                        <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;" href="<?php //echo $editlink.''.$row['category_id']; ?>"><i class="fas fa-edit" style="font-size: 14px;">edit</i></a>
-                        <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;" href="<?php //echo $deletelink.''.$row['category_id']; ?>"><i class="fas fa-trash-alt" style="font-size: 14px;"> delete</i></a>
-                    </td> -->
-                  </tr>
-                  
-                   <?php
-                   $i++;
-                      }
-                      ?>
-                  
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                                          <th>ID</th>
-                    <th>Message</th>
-                    <th>Name</th>
-                    <th>Created Date</th>
-                    <!-- <th>Action</th> -->
-<!--                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>-->
-                  </tr>
-                  </tfoot>
-                </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+                                  }
+                                  else{
+                                        echo "No records Found";
+                                  }
+                                ?>
+                               
+                                
+                                </tbody>
+                                
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+
+                               
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+               <!-- /.content -->
+    </div>
          <?php $this->load->view('VendorPanel/layout/footer'); ?>
     </div>
 
