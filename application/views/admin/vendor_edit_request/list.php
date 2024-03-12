@@ -46,6 +46,7 @@
                     <th>Email</th>
                     <!-- <th>Rank</th> -->
                     <th>Phone No</th>
+                    <th>Category</th>
                     <th>Edit Request</th>
                     <th>Edit Access</th>
                     <th>Request Date</th>
@@ -63,6 +64,7 @@
                     <td><?php echo $row['vendor_name']; ?> </td>
                     <td><?php echo $row['vendor_email']; ?> </td>
                     <td><?php echo $row['phone_no']; ?> </td>
+                    <td><?php echo $row['category_name']; ?> </td>
                     <td>
                         <?php if($row['edit_request']=='0'){ ?>
                             <span>NO</span>
@@ -90,18 +92,18 @@
                   
                   </tbody>
                   <tfoot>
-                  <tr>
-                    <th>ID</th>
+                  <!-- <tr> -->
+                    <!-- <th>ID</th> -->
                     <!--<th>Category ID</th>-->
-                    <th>Name</th>
-                    <th>Email</th>
+                    <!-- <th>Name</th> -->
+                    <!-- <th>Email</th> -->
                     <!-- <th>Rank</th> -->
-                    <th>Phone No</th>
-                    <th>Edit Request</th>
-                    <th>Edit Access</th>
-                    <th>Request Date</th>
-                    <th>Action</th>
-                  </tr>
+                    <!-- <th>Phone No</th> -->
+                    <!-- <th>Edit Request</th> -->
+                    <!-- <th>Edit Access</th> -->
+                    <!-- <th>Request Date</th> -->
+                    <!-- <th>Action</th> -->
+                  <!-- </tr> -->
                   </tfoot>
                 </table>
               </div>

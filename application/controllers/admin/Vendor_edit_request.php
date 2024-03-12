@@ -21,7 +21,7 @@ class Vendor_edit_request extends CI_Controller {
         // $response['editlink'] = base_url('admin/city/edit_data/');
         $response['approvelink'] = base_url('admin/Vendor_edit_request/approve_request/');
         $response['cancellink'] = base_url('admin/Vendor_edit_request/cancel_request/');
-        $response['list'] = $this->VendorRequestModel->GetList(array('edit_request'=> 1));
+        $response['list'] = $this->VendorRequestModel->GetListWithCat(array('edit_request'=> 1));
         // echo "<pre>";
         // print_r($response);
         // exit;

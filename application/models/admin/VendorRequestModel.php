@@ -23,6 +23,22 @@ class VendorRequestModel extends CI_Model
       return $result;
 
     }
+
+    function GetListWithCat($cond=array()){
+
+      if(!empty($cond)){
+        $this->db->where($cond);
+      }
+
+      $this->db->select('default_vendor_inp.*,master_category.name as category_name');
+      $this->db->from($this->table);
+      $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id ', 'left');
+      $this->db->order_by('edit_request_date_time', 'ASC');
+      $query=$this->db->get();
+      $result=$query->result_array();
+      return $result;
+
+    }
     
     function GetData($cond=array()){
       if(!empty($cond)){
