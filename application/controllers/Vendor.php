@@ -27,9 +27,16 @@ class Vendor extends CI_Controller {
 
     // vendor detail 
     public function Vender_Detail($tab, $seo) {
-        
         $data['single_data'] = $this->VendorModel->get_Single_vendor($tab, $seo);
         $data['similar_data'] = $this->VendorModel->Similar_Data($seo);
+        // $data['single_data'][0]['category']=13; //temp shankar
+        // $vendor_id = '28922'; //90 //temp 
+        $vendor_id = $data['single_data'][0]['dv_id'];
+        $payment_data = $this->VendorModel->Get_Vendor_payment($vendor_id);
+        $data['is_paid_vendor'] = 0;
+        if(count($payment_data) > 0){
+            $data['is_paid_vendor'] = 1;
+        } 
         $this->load->view('front/pages/vendor_detail', $data);
     }
 

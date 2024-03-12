@@ -62,17 +62,25 @@ class Vendor_Dashboard extends CI_Controller {
             
         $data['list']=[];
              
-        $id = $this->session->userdata('dv_id'); $id = 3072;
+        $id = $this->session->userdata('dv_id'); //$id = 3072;
             
         //Total Users
         $this->load->model('VendorPanel/VendorLeadModel');
             
         $lead_data = $this->VendorLeadModel->GetList(array('vendor_id'=>$id));
             if(!empty($lead_data)){
-                $data['list'] = $lead_data;
+                $data['result'] = $lead_data;
             }
         }
         $this->load->view('VendorPanel/lead/list',$data);
+    }
+
+    public function veiwdetail()
+    {
+       $id=$this->uri->segment(4);
+       $this->load->model('VendorPanel/VendorLeadModel');
+       $data["result"]=$this->VendorLeadModel->GetData(array('query_id'=>$id));
+       $this->load->view('VendorPanel/lead/detail-page',$data);
     }
 	
     public function visitor() {

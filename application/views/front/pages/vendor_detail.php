@@ -1924,41 +1924,537 @@ $category = $single_data[0]['category'];
                       <button class="vendorquerysubmitbtn1"> Send Query</button>
                     </div>
                    
+                    <!-- Send Query -->
                     <div class="query-form-section1" style="display: none; margin-top:22px;">
-                        <form name="vendordetail" action="<?php echo base_url() ?>VendorQuery/vendorquerysubmit" method="POST">
-                            <div class="container">
+                      <hr style="color: #ee182b;">
+                        <form name="vendordetail" action="<?php echo base_url() ?>VendorQuery/vendorquerynewsubmit" method="POST">
+                            <div class="container py-3">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <h6 style="color:#ee182b;" class="query-form-title">Personal Information</h6>
                                         <hr style="border-bottom: 1px solid #ee182b;">
                                     </div>
-                                    <hr style="color: #ee182b;">
-
+                                    <!-- <hr style="color: #ee182b;"> -->
+                                  <input type="hidden" id="is_paid_vendor" class="form-control query-form-input desk-name" autofocus  name="is_paid_vendor" value="<?php echo $is_paid_vendor; ?>">
+                                  <input type="hidden" id="category" class="form-control query-form-input desk-name" autofocus  name="category" value="<?php echo $single_data[0]['category']; ?>">
+                                  <input type="hidden" id="vendor_id" class="form-control query-form-input desk-name" autofocus  name="vendor_id" value="<?php echo $single_data[0]['dv_id']; ?>">
+                                  <?php 
+                                        //check is paid
+        if($is_paid_vendor){
+            //common fields 
+            ?>
+<!-- // Name  [Text Entry] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Name</p>
-                                        <input type="text" id="weddingplanningfname" class="form-control query-form-input desk-name" autofocus  name="query-form-name" required>
+                                        <input type="text" id="name" class="form-control query-form-input desk-name" autofocus  name="name" required>
                                     </div>
-
+<!-- // Phone Number  [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Phone Number</p>
-                                        <input type="text" id="weddingplanningphoneno" class="form-control query-form-input" autofocus  name="query-form-phone-no" required>
+                                        <input type="text" id="phone-no" class="form-control query-form-input" autofocus  name="phone_no" required>
                                     </div>
+<!-- // Email Address  [Text Entry] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Email Address</p>
-                                        <input type="text" id="weddingplanningemail" class="form-control query-form-input" autofocus  name="query-form-email" required>
+                                        <input type="email" id="email" class="form-control query-form-input" autofocus  name="email" required>
                                     </div>
+<!-- // Function date [Date Picker] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Function date</p>
-                                        <input type="date" id="query-form-date" class="form-control query-form-input" autofocus  name="query-form-date" required>
+                                        <input type="date" id="function-date" class="form-control query-form-input" autofocus  name="function_date" required>
                                     </div>
+<?php
+            switch ($single_data[0]['category']) {
+            case 1:
+                // echo "Venues";
+                ?>
+<!-- // Type of Venue Space required: [Dropdown: Indoor / Outdoor / Both] -->
                                     <div class="col-md-12">
-                                        <p class="query-form-label">Vendor name</p>
-                                        <input type="hidden" id="weddingplanningemail" class="form-control query-form-input" name="vendor-name" value="<?php echo isset($single_data[0]['vendor_name']) ? $single_data[0]['vendor_name'] : '' ?>">
+                                        <p class="query-form-label">Type of Venue Space required</p>
+                                        <select name="venue_type" class="form-control query-form-input" id="venue-type" required="">
+                                            <option value="">Select</option>
+                                            <option value="Indoor">Indoor</option>
+                                            <option value="Outdoor">Outdoor</option>
+                                            <option value="Both">Both</option>                  
+                                        </select>
                                     </div>
+<!-- // Approximate Guest Count: [Number Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Approximate Guest Count</p>
+                                        <input type="number" id="venue-guest-count" class="form-control query-form-input" autofocus  name="venue_guest_count" required>
+                                    </div>
+<!-- // Budget Range for Venue: [Dropdown: Below 1 Lakh, 1-2 Lakhs, 2-5 Lakhs, 5-10 Lakhs, Above 10 lakhs] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Budget Range for Venue</p>
+                                        <select name="venue_budget_range" class="form-control query-form-input" id="venue-budget-range" required="">
+                                            <option value="">Select</option>
+                                            <option value="Below 1 Lakh">Below 1 Lakh</option>
+                                            <option value="1 Lakh - 2 Lakhs">1 Lakh - 2 Lakhs</option>
+                                            <option value="2 Lakhs - 5 Lakhs">2 Lakhs - 5 Lakhs</option>                  
+                                            <option value="5 Lakhs - 10 Lakhs">5 Lakhs - 10 Lakhs</option>                  
+                                            <option value="Above 10 lakhs">Above 10 lakhs</option>                  
+                                        </select>
+                                    </div>
+            <?php     
+            break;
+            case 2:
+                // echo "Bridal Wear";
+                ?>
+<!-- // Preferred Outfit Style: [Dropdown: Traditional / Contemporary / Fusion/ Designer] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Preferred Outfit Style</p>
+                                        <select name="bridal_outfit_style" class="form-control query-form-input" id="bridal-outfit-style" required="">
+                                            <option value="">Select</option>
+                                            <option value="Traditional">Traditional</option>
+                                            <option value="Contemporary">Contemporary</option>
+                                            <option value="Fusion">Fusion</option>                  
+                                            <option value="Designer">Designer</option>                                    
+                                        </select>
+                                    </div>
+<!-- // Budget Range for Bridal Wear: [Dropdown: Below 5000 / 5000 – 10,000 /10,000-25,000/25,000-50,000/ 50,000- 1 lakh/ Above 1 Lakh] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Budget Range for Bridal Wear</p>
+                                        <select name="bridal_budget_range" class="form-control query-form-input" id="bridal-budget-range" required="">
+                                            <option value="">Select</option>
+                                            <option value="Below 5000">Below 5000</option>
+                                            <option value="5000 - 10,000">5000 - 10,000</option>
+                                            <option value="10,000 - 25,000">10,000 - 25,000</option>                  
+                                            <option value="25,000 - 50,000">25,000 - 50,000</option>                                    
+                                            <option value="50,000 - 1 lakh">50,000 - 1 lakh</option>                                    
+                                            <option value="Above 1 Lakh">Above 1 Lakh</option>                                    
+                                        </select>
+                                    </div>
+            <?php
+            break;
+            case 3:
+                // echo "Groom Wear";
+                ?>
+<!-- // Preferred Outfit Style: [Dropdown: Traditional / Western / Indo-Western] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Preferred Outfit Style</p>
+                                        <select name="groom_outfit_style" class="form-control query-form-input" id="groom-outfit-style" required="">
+                                            <option value="">Select</option>
+                                            <option value="Traditional">Traditional</option>
+                                            <option value="Western">Western</option>
+                                            <option value="Indo-Western">Indo-Western</option>                                                      
+                                        </select>
+                                    </div>
+<!-- // Budget Range for Groom Wear: [Dropdown: Below 50,000 / 5,000 - 10,000 /10,000-25,000/ 25,000 – 50,000/ Above 50,000] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Budget Range for Groom Wear</p>
+                                        <select name="groom_budget_range" class="form-control query-form-input" id="groom-budget-range" required="">
+                                            <option value="">Select</option>
+                                            <option value="Below 5000">Below 5000</option>
+                                            <option value="5000 - 10,000">5000 - 10,000</option>
+                                            <option value="10,000 - 25,000">10,000 - 25,000</option>                  
+                                            <option value="25,000 - 50,000">25,000 - 50,000</option>                                    
+                                            <option value="Above 50,000">Above 50,000</option>                                    
+                                        </select>
+                                    </div>
+            <?php
+            break;
+            case 4:
+                // echo "Photographers";
+                ?>
+<!-- // Type of Event Coverage Needed: [Checkbox: Wedding Ceremony / Pre-Wedding Shoot / Reception / Full Wedding Package] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Type of Event Coverage Needed</p>
+                                        <div class="row py-3">
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="photo_type_of_event[]" id="photo_type_of_event1" value="Wedding Ceremony"> <span> Wedding Ceremony</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="photo_type_of_event[]" id="photo_type_of_event2" value="Pre-Wedding Shoot"><span>Pre-Wedding Shoot</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="photo_type_of_event[]" id="photo_type_of_event3" value="Reception"><span>Reception</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="photo_type_of_event[]" id="photo_type_of_event4" value="Full Wedding Package"><span>Full Wedding Package</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+<!-- // Per day Budget Range for Photography Services: [Dropdown: Below 50,000 / 50,000 - 1,00,000 / Above 1,00,000] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Per day Budget Range for Photography Services</p>
+                                        <select name="photo_day_budget" class="form-control query-form-input" id="photo-day-budget" required="">
+                                            <option value="">Select</option>
+                                            <option value="Below 50,000">Below 50,000</option>
+                                            <option value="50,000 - 1 Lakh">50,000 - 1 Lakh</option>
+                                            <option value="Above 1 Lakh">Above 1 Lakh</option>                                                     
+                                        </select>
+                                    </div>
+<!-- // Expected Number of Guests: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Expected Number of Guests</p>
+                                        <input type="number" id="phpto-number-of-guest" class="form-control query-form-input" autofocus  name="phpto_number_of_guest" required>
+                                    </div>
+<!-- // Location of Event: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Location of Event</p>
+                                        <input type="text" id="photo-event-location" class="form-control query-form-input" autofocus  name="photo_event_location" required>
+                                    </div>
+            <?php
+            break;
+            case 5:
+                // echo "Make Up Artists";
+                ?>
+<!-- // Type of Makeup Services Needed: [Checkbox: Bridal Makeup / Party Makeup / Engagement Makeup / Other] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Type of Makeup Services Needed</p>
+                                        <div class="row py-3">
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="make_up_type[]" id="make_up_type1" value="Bridal Makeup"> <span> Bridal Makeup</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="make_up_type[]" id="make_up_type2" value="Party Makeup"><span>Party Makeup</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="make_up_type[]" id="make_up_type3" value="Engagement Makeup"><span>Engagement Makeup</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="make_up_type[]" id="make_up_type4" value="Others"><span>Others</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+<!-- // Number of People Requiring Makeup: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Number of People Requiring Makeup</p>
+                                        <input type="number" id="make-up-people-requiring" class="form-control query-form-input" autofocus  name="make_up_people_requiring" required>
+                                    </div>
+<!-- // Budget Range for Bridal Makeup Services: [Dropdown: Below 5,000 / 5,000 - 10,000 /10,000-20,000/ Above 20,000] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Budget Range for Bridal Makeup Services</p>
+                                        <select name="make_up_budget_range" class="form-control query-form-input" id="make-up-budget-range" required="">
+                                            <option value="">Select</option>
+                                            <option value="Below 5,000">Below 5,000</option>
+                                            <option value="5,000 - 10,000">5,000 - 10,000</option>
+                                            <option value="10,000 - 20,000">10,000 - 20,000</option>
+                                            <option value="Above 20,000">Above 20,000</option>                                                     
+                                        </select>
+                                    </div>
+<!-- // Brands or Products Requested: [Dropdown: International/ Indian/ Local/ Mix of all] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Brands or Products Requested</p>
+                                        <select name="make_up_brands" class="form-control query-form-dropdown" id="make-up-brands" required="">
+                                            <option value="">Select</option>
+                                            <option value="International">International</option>
+                                            <option value="Indian">Indian</option>
+                                            <option value="Local">Local</option>
+                                            <option value="Mix of all">Mix of all</option>                                                     
+                                        </select>
+                                    </div>
+<!-- // Location for Makeup Session: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Location for Makeup Session</p>
+                                        <input type="text" id="make-up-session-location" class="form-control query-form-input" autofocus  name="make_up_session_location" required>
+                                    </div>
+            <?php
+            break;
+            case 6:
+                // echo "Mehendi Artists";
+                ?>
+<!-- // Number of People Getting Mehendi Applied: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Number of People Getting Mehendi Applied</p>
+                                        <input type="number" id="mehendi-no-of-people" class="form-control query-form-input" autofocus  name="mehendi_no_of_people" required>
+                                    </div>
+<!-- // Budget Range for Mehendi Services: [Dropdown: Below 10,000 / 10,000 - 20,000 / Above 20,000] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Budget Range for Mehendi Services</p>
+                                        <select name="mehendi_budget_range" class="form-control query-form-input" id="mehendi-budget-range" required="">
+                                            <option value="">Select</option>
+                                            <option value="Below 10,000">Below 10,000</option>
+                                            <option value="10,000 - 20,000">10,000 - 20,000</option>
+                                            <option value="Above 20,000">Above 20,000</option>                                                     
+                                        </select>
+                                    </div>
+<!-- // Preferred Mehendi Application Style: [Checkbox: Traditional / Arabic / Bridal / Intricate Designs / Minimalist Designs / Other] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Preferred Mehendi Application Style</p>
+                                        <div class="row py-3">
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="mehendi_style[]" id="mehendi_style1" value="Traditional"> <span> Traditional</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="mehendi_style[]" id="mehendi_style2" value="Arabic"><span>Arabic</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="mehendi_style[]" id="mehendi_style3" value="Bridal"><span>Bridal</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="mehendi_style[]" id="mehendi_style4" value="Intricate Designs"><span>Intricate Designs</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="mehendi_style[]" id="mehendi_style4" value="Minimalist Designs"><span>Minimalist Designs</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="mehendi_style[]" id="mehendi_style5" value="Others"><span>Others</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+<!-- // Location for Mehendi Application: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Location for Mehendi Application</p>
+                                        <input type="text" id="mehendi-location" class="form-control query-form-input" autofocus  name="mehendi_location" required>
+                                    </div>
+            <?php
+            break;
+            case 7:
+                // echo "Bridal Jewellery";
+                ?>
+<!-- // Type of Jewellery Needed: [Checkbox: Bridal Necklace / Earrings / Maang Tikka /Bridal Accessories / Others] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Type of Jewellery Needed</p>
+                                        <div class="row py-3">
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="jewellery_type[]" id="jewellery_type1" value="Bridal Necklace"> <span> Bridal Necklace</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="jewellery_type[]" id="jewellery_type2" value="Earrings"><span>Earrings</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="jewellery_type[]" id="jewellery_type3" value="Maang Tikka"><span>Maang Tikka</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="jewellery_type[]" id="jewellery_type4" value="Bridal Accessories"><span>Bridal Accessories</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="jewellery_type[]" id="jewellery_type5" value="Others"><span>Others</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+<!-- // Budget Range for Jewelry: [Dropdown: Below 30,000 / 30,000 - 50,000 / 50,000- 1 lakh/ 1 lakh – 2 lakh/ Above 2 Lakhs] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Budget Range for Jewelry</p>
+                                        <select name="jewellery_budget_range" class="form-control query-form-input" id="jewellery-budget-range" required="">
+                                            <option value="">Select</option>
+                                            <option value="Below 30,000">Below 30,000</option>
+                                            <option value="30,000 - 50,000">30,000 - 50,000</option>
+                                            <option value="50,000 - 1 lakh">50,000 - 1 lakh</option>                                                     
+                                            <option value="1 lakh - 2 lakhs">1 lakh - 2 lakhs</option>                                                     
+                                            <option value="Above 2 Lakhs">Above 2 Lakhs</option>                                                     
+                                        </select>
+                                    </div>
+
+            <?php
+            break;
+            case 8:
+                // echo "Decoration";
+                ?>
+<!-- // Type of Decoration Services Needed: [Checkbox: Mandap Decoration / Stage Decoration / Venue Entrance / Full Event decoration/ Others] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Type of Decoration Services Needed</p>
+                                        <div class="row py-3">
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="decoration_type[]" id="decoration_type1" value="Mandap Decoration"> <span>Mandap Decoration</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="decoration_type[]" id="decoration_type2" value="Stage Decoration"><span>Stage Decoration</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="decoration_type[]" id="decoration_type3" value="Venue Entrance"><span>Venue Entrance</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="decoration_type[]" id="decoration_type4" value="Full Event decoration"><span>Full Event decoration</span></label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label><input type="checkbox" name="decoration_type[]" id="decoration_type5" value="Others"><span>Others</span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+<!-- // Estimated Guest Count: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Estimated Guest Count</p>
+                                        <input type="number" id="decoration-guest-count" class="form-control query-form-input" autofocus  name="decoration_guest_count" required>
+                                    </div>
+<!-- // Budget Range for Decoration:[Dropdown: Below 50,000 / 50,000 - 1,00,000 / 1-2 Lakhs/ 2-5 lakhs/ Above 5 lakhs] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Budget Range for Decoration</p>
+                                        <select name="decoration_budget_range" class="form-control query-form-input" id="decoration-budget-range" required="">
+                                            <option value="">Select</option>
+                                            <option value="Below 50,000">Below 50,000</option>
+                                            <option value="50,000 - 1 Lakh">50,000 - 1 Lakh</option>
+                                            <option value="1 Lakh - 2 Lakhs">1 Lakh - 2 Lakhs</option>                                                     
+                                            <option value="2 Lakhs - 5 lakhs">2 Lakhs - 5 lakhs</option>                                                     
+                                            <option value="Above 5 lakhs">Above 5 lakhs</option>                                                     
+                                        </select>
+                                    </div>
+<!-- // Preferred Style of Decoration: [Dropdown: Traditional / Contemporary / Fusion / Customised/ Other] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Preferred Style of Decoration</p>
+                                        <select name="decoration_style" class="form-control query-form-input" id="decoration-style" required="">
+                                            <option value="">Select</option>
+                                            <option value="Traditional">Traditional</option>
+                                            <option value="Contemporary">Contemporary</option>
+                                            <option value="Fusion">Fusion</option>
+                                            <option value="Customised">Customised</option>                                                     
+                                            <option value="Other">Other</option>                                                     
+                                        </select>
+                                    </div>
+<!-- // Venue Address for Decoration Setup: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Venue Address for Decoration Setup</p>
+                                        <input type="text" id="decoration-address" class="form-control query-form-input" autofocus  name="decoration_address" required>
+                                    </div>
+            <?php
+            break;
+            case 9:
+                // echo "Gifts";
+                ?>
+<!-- // Type of Gift/favours required [Edible/Non-Edible/Both] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Type of Gift/favours required</p>
+                                        <select name="gift_type" class="form-control query-form-input" id="gift-type" required="">
+                                            <option value="">Select</option>
+                                            <option value="Edible">Edible</option>
+                                            <option value="Non-Edible">Non-Edible</option>
+                                            <option value="Both">Both</option>                                                     
+                                        </select>
+                                    </div>
+<!-- // Minimum number of Gifts required: [Text entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Minimum number of Gifts required</p>
+                                        <input type="number" id="gift-number-of" class="form-control query-form-input" autofocus  name="gift_number_of" required>
+                                    </div>
+<!-- // Per Gift range: [Dropdown: Below Rs. 100/ Rs. 100-250/ Rs. 250-500/ Rs. 500-1000/ Above Rs. 1000 -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Per Gift range</p>
+                                        <select name="gift_price_range" class="form-control query-form-input" id="gift-price-range" required="">
+                                            <option value="">Select</option>
+                                            <option value="Below Rs. 100">Below Rs. 100</option>
+                                            <option value="Rs. 100 - 250">Rs. 100 - 250</option>
+                                            <option value="Rs. 250 - 500">Rs. 250 - 500</option>                                                     
+                                            <option value="Rs. 500 - 1000">Rs. 500 - 1000</option>                                                     
+                                            <option value="Above Rs. 1000">Above Rs. 1000</option>                                                     
+                                        </select>
+                                    </div>
+            <?php
+            break;
+            case 10:
+                // echo "Catering";
+                ?>
+<!-- // Number of People to be served: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Number of People to be served</p>
+                                        <input type="number" id="catering-no-of-people" class="form-control query-form-input" autofocus  name="catering_no_of_people" required>
+                                    </div>
+<!-- // Total number of functions: [Text entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Total number of functions</p>
+                                        <input type="number" id="catering-no-of-function" class="form-control query-form-input" autofocus  name="catering_no_of_function" required>
+                                    </div>
+<!-- // Per Plate budget for reception: [Dropdown: Less than 250/ 250-500/ 500-750/750-1000/ 1000-1500/ 1500-2000/ above 2000] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Per Plate budget for reception</p>
+                                        <select name="catering_per_plate_budget" class="form-control query-form-input" id="catering-per-plate-budget" required="">
+                                            <option value="">Select</option>
+                                            <option value="Less than Rs. 250">Less than Rs. 250</option>
+                                            <option value="Rs. 250 - 500">Rs. 250 - 500</option>
+                                            <option value="Rs. 500 - 750">Rs. 500 - 750</option>                                                     
+                                            <option value="Rs. 750 - 1000">Rs. 750 - 1000</option>                                                     
+                                            <option value="Rs. 1000 - 1500">Rs. 1000 - 1500</option>                                                     
+                                            <option value="Rs. 1500 - 2000">Rs. 1500 - 2000</option>                                                     
+                                            <option value="Above Rs. 2000">Above Rs. 2000</option>                                                     
+                                        </select>
+                                    </div>     
+<!-- // Preferred food type: [Dropdown: Veg/ Non-veg/ Both] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Preferred food type</p>
+                                        <select name="catering_food_type" class="form-control query-form-input" id="catering-food-type" required="">
+                                            <option value="">Select</option>
+                                            <option value="Veg">Veg</option>
+                                            <option value="Non-veg">Non-veg</option>
+                                            <option value="Both">Both</option>                                                     
+                                        </select>
+                                    </div>
+<!-- // Location of event: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Location of event</p>
+                                        <input type="text" id="catering-event-location" class="form-control query-form-input" autofocus  name="catering_event_location" required>
+                                    </div>
+            <?php
+            break;
+            case 13:
+                // echo "Invitations";
+                ?>
+<!-- // Type of Invitation cards required: [ Traditional/ Artsistic/ Boxed/ Luxurious/ Others] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Type of Invitation cards required</p>
+                                        <select name="invitation_type" class="form-control query-form-input" id="invitation-type" required="">
+                                            <option value="">Select</option>
+                                            <option value="Traditional">Traditional</option>
+                                            <option value="Artsistic">Artsistic</option>
+                                            <option value="Boxed">Boxed</option>                                                     
+                                            <option value="Luxurious">Luxurious</option>                                                     
+                                            <option value="Others">Others</option>                                                     
+                                        </select>
+                                    </div>
+<!-- // Minimum Number of cards required: [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Minimum Number of cards required</p>
+                                        <input type="number" id="invitation-number-of-cards" class="form-control query-form-input" autofocus  name="invitation_number_of_cards" required>
+                                    </div>
+<!-- // Per Card Budget range: [Dropdown: Below Rs. 10/ Rs. 10-20/ Rs. 20-50/ Rs. 50-100/ Rs.100-200/ Rs.200 – 500/ Above Rs. 500 -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Per Card Budget range</p>
+                                        <select name="invitation_card_budget" class="form-control query-form-input" id="invitation-card-budget" required="">
+                                            <option value="">Select</option>
+                                            <option value="Below Rs. 10">Below Rs. 10</option>
+                                            <option value="Rs. 10 - 20">Rs. 10 - 20</option>
+                                            <option value="Rs. 20 - 50">Rs. 20 - 50</option>                                                     
+                                            <option value="Rs. 50 - 100">Rs. 50 - 100</option>                                                     
+                                            <option value="Rs. 100 - 200">Rs. 100 - 200</option>                                                     
+                                            <option value="Rs. 200 - 500">Rs. 200 - 500</option>                                                     
+                                            <option value="Above Rs. 500">Above Rs. 500</option>                                                     
+                                        </select>
+                                    </div>
+
+            <?php
+            break;                                        
+            default:
+                // echo "default";
+            break;
+        }
+        ?>
+<!-- // Additional Comments or Questions [Text Area]            -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Additional Comments or Questions</p>
+                                        <textarea id="comment" class="form-control query-form-input" autofocus  name="comment" required></textarea>
+                                    </div>
+        <?php
+        }else{
+            ?>
+            <!-- //default form -->
+<!-- // Name  [Text Entry] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Name</p>
+                                        <input type="text" id="name" class="form-control query-form-input desk-name" autofocus  name="name" required>
+                                    </div>
+<!-- // Phone Number  [Text Entry] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Phone Number</p>
+                                        <input type="text" id="phone-no" class="form-control query-form-input" autofocus  name="phone_no" required>
+                                    </div>
+<!-- // Email Address  [Text Entry] -->
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Email Address</p>
+                                        <input type="email" id="email" class="form-control query-form-input" autofocus  name="email" required>
+                                    </div>
+<!-- // Function date [Date Picker] -->
+                                    <div class="col-12">
+                                        <p class="query-form-label">Function date</p>
+                                        <input type="date" id="function-date" class="form-control query-form-input" autofocus  name="function_date" required>
+                                    </div>
+<!-- // A message box to input the details that customer wants. [Text Area] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Message</p>
-                                        <textarea id="query-form-date" class="form-control query-form-input" autofocus  name="vendor-query-form-message" required></textarea>
+                                        <textarea id="message" class="form-control query-form-input" autofocus  name="message" required></textarea>
                                     </div>
+        <?php
+        }
+                                  ?>
+
                                     <div class="col-12" style="text-align: left;">
                                         <button type="submit" class="plnningModalbtn" name="vendorquerysubmitbtn">Submit</button>
                                     </div>

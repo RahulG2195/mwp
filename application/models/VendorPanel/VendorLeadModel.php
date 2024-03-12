@@ -3,7 +3,8 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class VendorLeadModel extends CI_Model
 {
-  public $table = 'vendor-leads-table';
+  // public $table = 'vendor-leads-table';
+  public $table = 'vendor-query-form-table-new';
   function __construct()
   {
     parent::__construct();
@@ -28,6 +29,7 @@ class VendorLeadModel extends CI_Model
   {
     if (!empty($cond)) {
       $this->db->where($cond);
+    }
       $this->db->select('*');
       $this->db->from($this->table);
       $query = $this->db->get();
@@ -36,7 +38,6 @@ class VendorLeadModel extends CI_Model
         $result = $result[0];
       }
       return $result;
-    }
   }
 
   function InserData($data)
