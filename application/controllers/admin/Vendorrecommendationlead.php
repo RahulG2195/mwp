@@ -21,7 +21,15 @@ class Vendorrecommendationlead extends CI_Controller
             $this->load->view('admin/vendorlead-data/lead-list',$data);
         }
     }
-
+    
+    public function veiwdetail()
+    {
+        $id=$this->uri->segment(4);
+        $data["result"]=$this->VendorRecommendationModel->getdetaildata($id);
+        $this->load->view('admin/vendorlead-data/detail-page',$data);
+    }
+    
+    
     // public function veiwdetail()
     // {
     //    $id=$this->uri->segment(4);

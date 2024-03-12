@@ -63,7 +63,7 @@
                                         <td><?php echo $row["merchant_transaction_id"]; ?></td>
                                         <td><?php echo $row["amount"]; ?></td>
                                         <td><?php echo $row["payment_status"]; ?></td>
-                                        <td><a href="<?php echo base_url() ?>admin/Designdecorlead/veiwdetail/<?php echo $row["design-decor-id"]; ?>" class="btn btn-success"> View details</a></td>
+                                        <td><a href="<?php echo base_url() ?>admin/Vendorrecommendationlead/veiwdetail/<?php echo $row["vendor_reccomend_payment_id"]; ?>" class="btn btn-success"> View details</a></td>
                                     </tr>
                                 <?php   
                                      }
