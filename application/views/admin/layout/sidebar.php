@@ -72,7 +72,7 @@
                      <li class="nav-item">
                          <a href="<?php echo base_url(); ?>admin/VendorLead" class="nav-link">
                              <i class="nav-icon fas fa-file"></i>
-                             <p>Vendor leads </p>
+                             <p>Query Leads</p>
                          </a>
                      </li>
                      <li class="nav-item">

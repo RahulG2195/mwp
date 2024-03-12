@@ -77,14 +77,14 @@
                   
                   </tbody>
                   <tfoot>
-                  <tr>
-                     <th>ID</th>
-                    <th>Category</th>
-                    <th>Name</th>
-                    <th>Is Deleted?</th>
-                    <th>Created Date</th>
-                    <th>Action</th>
-                  </tr>
+                  <!-- <tr> -->
+                     <!-- <th>ID</th> -->
+                    <!-- <th>Category</th> -->
+                    <!-- <th>Name</th> -->
+                    <!-- <th>Is Deleted?</th> -->
+                    <!-- <th>Created Date</th> -->
+                    <!-- <th>Action</th> -->
+                  <!-- </tr> -->
                   </tfoot>
                 </table>
               </div>
