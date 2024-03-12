@@ -109,8 +109,8 @@ class VendorQuery extends CI_Controller {
             $vendorquery=$this->VendorQueryModel->getvendorquerydatanew($insert_id);  
             $vendordata=$this->VendorModel->Get_Vendor_email_name($vendorquery[0]['vendor_id']);
 
-            $this->vendorqueryemailnew($vendorquery[0]);
-            $this->vendorqueryclientemailnew($vendorquery[0], $vendordata);
+            // $this->vendorqueryemailnew($vendorquery[0]);
+            // $this->vendorqueryclientemailnew($vendorquery[0], $vendordata);
         }
         
     }
