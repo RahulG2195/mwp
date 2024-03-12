@@ -32,13 +32,13 @@ if (!function_exists('decimal_to_stars')) {
   }
 }
 
-function Vendor_card($type, $cat_name, $seo_url, $image, $vendor_name, $rating, $review, $price_range, $area, $city)
+function Vendor_card($type, $cat_name, $seo_url, $image, $vendor_name, $rating, $review, $price_range, $area, $city, $tag_name)
 {
  
   $path = FCPATH . 'uploads/vendors/' . $image;  // Use FCPATH to get the absolute server path
 
   $output = '<div class="col-12 col-md-6 col-lg-4 vendor-col my-2">
-                <span class="vendor-tag"><i class="fas fa-heart"></i> Most Popular</span>
+                <span class="vendor-tag"><i class="fas fa-heart"></i> '. $tag_name .'</span>
                 <a href="' . base_url() . 'vendor-detail/' . $type . '/' . $seo_url . '">
                 <div class="card">
                     <div class="view overlay">';
@@ -85,13 +85,13 @@ function Vendor_card($type, $cat_name, $seo_url, $image, $vendor_name, $rating, 
 
 
 // use only for  carousel 
-function Vendor_card_without_col($type, $cat_name, $seo_url, $image, $vendor_name, $rating, $review, $price_range, $area, $city)
+function Vendor_card_without_col($type, $cat_name, $seo_url, $image, $vendor_name, $rating, $review, $price_range, $area, $city, $tag_name)
 {
  
   $path = FCPATH . 'uploads/vendors/' . $image;  // Use FCPATH to get the absolute server path
 
   $output = '<div class="col-12 vendor-col my-2">
-                <span class="vendor-tag"><i class="fas fa-heart"></i> Most Popular</span>
+                <span class="vendor-tag"><i class="fas fa-heart"></i> '. $tag_name .'</span>
                 <a href="' . base_url() . 'vendor-detail/' . $type . '/' . $seo_url . '">
                 <div class="card">
                     <div class="view overlay">';
@@ -362,27 +362,27 @@ function TrustedVendor($trusted_array = array()){
       foreach ($trusted_array as $value) {
         $category = $value['category'];
         if ($category == 1) {
-          $output .= Vendor_card_without_col('ve', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('ve', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         } elseif ($category == 2) {
-          $output .= Vendor_card_without_col('bw', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('bw', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         } elseif ($category == 3) {
-          $output .= Vendor_card_without_col('gw', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('gw', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         } elseif ($category == 4) {
-          $output .= Vendor_card_without_col('ph', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('ph', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         } elseif ($category == 5) {
-          $output .= Vendor_card_without_col('mu', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('mu', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         } elseif ($category == 6) {
-          $output .= Vendor_card_without_col('me', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('me', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         } elseif ($category == 7) {
-          $output .= Vendor_card_without_col('bj', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('bj', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         } elseif ($category == 8) {
-          $output .= Vendor_card_without_col('dc', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('dc', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         } elseif ($category == 9) {
-          $output .= Vendor_card_without_col('gf', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('gf', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         } elseif ($category == 10) {
-          $output .= Vendor_card_without_col('ct', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('ct', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         } elseif ($category == 13) {
-          $output .= Vendor_card_without_col('in', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name']);
+          $output .= Vendor_card_without_col('in', $value['cat_name'], $value['vendor_seo_url'], $value['images'], $value['vendor_name'], $value['rating'], $value['review'], $value['price_range'], $value['area'], $value['city_name'], $value['tag_name']);
         }
       }
     $output .= '</div></div>
