@@ -166,83 +166,6 @@ function Get_Venue() {
   return $query->result_array();
 }
 
-function Fetch_single_data($tab, $id) {
-  if($tab == 'bw'){
-    $this->db->select('bridal_wear.*, default_vendor_inp.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-    $this->db->from('bridal_wear');
-    $this->db->join('default_vendor_inp', 'bridal_wear.vin_id = default_vendor_inp.dv_id', 'left');
-
-}elseif($tab == 'bj'){
-
-  $this->db->select('bridal_jewellery.*, default_vendor_inp.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-  $this->db->from('bridal_jewellery');
-  $this->db->join('default_vendor_inp', 'bridal_jewellery.vin_id = default_vendor_inp.dv_id', 'left');
-
-}elseif($tab == 'ct'){
-
-  $this->db->select('catering.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-  $this->db->from('catering');
-  $this->db->join('default_vendor_inp', 'catering.vin_id = default_vendor_inp.dv_id', 'left');
-
-}elseif($tab == 'dc'){
-
-  $this->db->select('decorator.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-  $this->db->from('decorator');
-  $this->db->join('default_vendor_inp', 'decorator.vin_id = default_vendor_inp.dv_id', 'left');
-
-}elseif($tab == 'gf'){
-
-  $this->db->select('gift.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-  $this->db->from('gift');
-  $this->db->join('default_vendor_inp', 'gift.vin_id = default_vendor_inp.dv_id', 'left');
-
-}elseif($tab == 'gw'){
-  
-  $this->db->select('groom_wear.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-  $this->db->from('groom_wear');
-  $this->db->join('default_vendor_inp', 'groom_wear.vin_id = default_vendor_inp.dv_id', 'left');
-
-}elseif($tab == 'in'){
-
-  $this->db->select('inivitations.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-  $this->db->from('inivitations');
-  $this->db->join('default_vendor_inp', 'inivitations.vin_id = default_vendor_inp.dv_id', 'left');
-
-}elseif($tab == 'mu'){
-
-  $this->db->select('make_up.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-  $this->db->from('make_up');
-  $this->db->join('default_vendor_inp', 'make_up.vin_id = default_vendor_inp.dv_id', 'left');
-
-}elseif($tab == 'me'){
-
-  $this->db->select('mehendi.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-  $this->db->from('mehendi');
-  $this->db->join('default_vendor_inp', 'mehendi.vin_id = default_vendor_inp.dv_id', 'left');
-
-}elseif($tab == 'ph'){
-
-  $this->db->select('photography.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-  $this->db->from('photography');
-  $this->db->join('default_vendor_inp', 'photography.vin_id = default_vendor_inp.dv_id', 'left');
-
-}elseif($tab == 've'){
-
-  $this->db->select('venue.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
-  $this->db->from('venue');
-  $this->db->join('default_vendor_inp', 'venue.vin_id = default_vendor_inp.dv_id', 'left');
-
-}
-
-$this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id ', 'left');
-$this->db->join('master_sub_category', 'default_vendor_inp.sub_category = master_sub_category.sub_category_id', 'left');
-$this->db->join('master_city', 'default_vendor_inp.city	 = master_city.city_id', 'left');
-$this->db->where('dv_id', $id);
-$query = $this->db->get();
-// echo $this->db->last_query();
-return $query->result_array();
-  
-}
   function InserData($data)
   {
     $this->db->insert($this->table, $data);
@@ -273,5 +196,85 @@ return $query->result_array();
     $this->db->from('default_vendor_inp');
     $this->db->where('dv_id', $id);
     return $this->db->get()->row_array();
+  }
+
+    function Fetch_single_data($tab, $id)
+  {
+    if ($tab == 'bw') {
+      $this->db->select('default_vendor_inp.*, bridal_wear.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('bridal_wear', 'default_vendor_inp.vendor_uid = bridal_wear.vin_id', 'left');
+    } elseif ($tab == 'bj') {
+
+      $this->db->select('default_vendor_inp.*, bridal_jewellery.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('bridal_jewellery', 'default_vendor_inp.vendor_uid = bridal_jewellery.vin_id', 'left');
+    } elseif ($tab == 'ct') {
+
+      $this->db->select('default_vendor_inp.*,catering.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('catering', 'default_vendor_inp.vendor_uid = catering.vin_id', 'left');
+    } elseif ($tab == 'dc') {
+
+      $this->db->select('default_vendor_inp.*,decorator.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('decorator', 'default_vendor_inp.vendor_uid = decorator.vin_id', 'left');
+    } elseif ($tab == 'gf') {
+
+      $this->db->select('default_vendor_inp.*,gift.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('gift', 'default_vendor_inp.vendor_uid = gift.vin_id', 'left');
+    } elseif ($tab == 'gw') {
+
+      $this->db->select('default_vendor_inp.*,groom_wear.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('groom_wear', 'default_vendor_inp.vendor_uid = groom_wear.vin_id', 'left');
+    } elseif ($tab == 'in') {
+
+      $this->db->select('default_vendor_inp.*,inivitations.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('inivitations', 'default_vendor_inp.vendor_uid = inivitations.vin_id', 'left');
+    } elseif ($tab == 'mu') {
+
+      $this->db->select('default_vendor_inp.*,make_up.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('make_up', 'default_vendor_inp.vendor_uid = make_up.vin_id', 'left');
+    } elseif ($tab == 'me') {
+
+      $this->db->select('mehendi.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('mehendi', 'default_vendor_inp.vendor_uid = mehendi.vin_id', 'left');
+    } elseif ($tab == 'ph') {
+
+      $this->db->select('default_vendor_inp.*,photography.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('photography', 'default_vendor_inp.vendor_uid = photography.vin_id', 'left');
+    } elseif ($tab == 've') {
+
+      $this->db->select(' default_vendor_inp.*, venue.*, master_category.category_id, master_category.name as cat_name, master_sub_category.sub_category_id, master_sub_category.category_id, master_sub_category.name, master_city.city_id, master_city.name As city_name');
+      $this->db->join('venue', 'default_vendor_inp.vendor_uid = venue.vin_id', 'left');
+    }
+
+    $this->db->from('default_vendor_inp');
+    $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id ', 'left');
+    $this->db->join('master_sub_category', 'default_vendor_inp.sub_category = master_sub_category.sub_category_id', 'left');
+    $this->db->join('master_city', 'default_vendor_inp.city	 = master_city.city_id', 'left');
+    $this->db->where('dv_id', $id);
+    $query = $this->db->get();
+    // echo $this->db->last_query();
+    return $query->result_array();
+  }
+
+  function fetch_vendor_city() {
+    $this->db->select('*');
+    $this->db->from('master_city');
+    $this->db->where('is_deleted !=', 1);
+    $this->db->order_by('name', 'Asc');
+    // $this->db->order_by('city_id','ASC');
+    return $this->db->get()->result_array();
+  }
+
+    function fetch_vendor_categories(){
+    $this->db->select('*');
+    $this->db->from('master_category');
+    $this->db->where('is_deleted !=', 1);
+    return $this->db->get()->result_array();
+  }
+
+    function fetch_vendor_tags(){
+    $this->db->select('*');
+    $this->db->from('master_vendor_tags');
+    // $this->db->where('is_deleted !=', 1);
+    return $this->db->get()->result_array();
   }
 }
