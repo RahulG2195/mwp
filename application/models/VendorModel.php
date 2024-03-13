@@ -323,6 +323,10 @@ class VendorModel extends CI_Model {
       $this->db->insert('default_vendor_inp', $data);
       return $this->db->insert_id();
     }
+    function insert_visit_user($data = array()) {
+      $this->db->insert('vendor-visitor-table', $data);
+      return $this->db->insert_id();
+    }
     function update_vendor($id, $data) {
       // echo $id;exit;
       // pr($data, 'exit');exit;

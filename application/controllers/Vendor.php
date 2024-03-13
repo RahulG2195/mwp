@@ -37,6 +37,22 @@ class Vendor extends CI_Controller {
         if(count($payment_data) > 0){
             $data['is_paid_vendor'] = 1;
         } 
+        //check session and add data in visit/user table 
+        if($this->session->userdata('logged_in')==1){
+            $email = $this->session->userdata('email');
+            $phoneno = $this->session->userdata('phoneno');
+        }else{
+            $email = 'Guest';
+            $phoneno = '';
+        }
+        $insert_data = array(
+            'vendor_id' => $vendor_id,
+            'email_address' => $email,
+            'phone' => $phoneno,
+            'page_name' => $seo,
+            'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
+        );
+        $insert_id = $this->VendorModel->insert_visit_user($insert_data);
         $this->load->view('front/pages/vendor_detail', $data);
     }
 
