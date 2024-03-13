@@ -32,7 +32,7 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                <table id="wedding_leads_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
                                 <thead>
                                 <tr>
                                     <th>Name</th>
@@ -44,6 +44,7 @@
                                     <th>Guest count</th>
                                     <th>Budget range</th>
                                     <th>Comment</th>
+                                    <th>Created date</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -116,6 +117,7 @@
                                     ?>
                                    </td>
                                     <td><?php echo $row["additinalcomment"]; ?></td>
+                                    <td><?php echo $row["created_date"]; ?></td>
                                     <td><a href="<?php echo  base_url() ?>admin/Weddingplanninglead/deletelead/<?php echo $row["wedding-planning-id"]; ?>" class="btn btn-danger"> Delete</a></td>
                                 </tr>
                                 <?php   
@@ -146,6 +148,13 @@
     </div>
 <!-- ./wrapper -->
 <?php $this->load->view('admin/layout/script'); ?>
+<script>
+     $("#wedding_leads_datatable").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[9, 'desc']]
+    }).buttons().container().appendTo('#wedding_leads_datatable_wrapper .col-md-6:eq(0)');
+</script>
                    
             
             

@@ -32,7 +32,7 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                <table id="decor_leads_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
                                 <thead>
                                 <tr>
                                     <th>Name</th>
@@ -42,6 +42,7 @@
                                     <th>Plan price</th>
                                     <th>Transaction id</th>
                                     <th>Payment status</th>
+                                    <th>Created date</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -62,6 +63,9 @@
                                         <td><?php echo $row["merchant_transaction_id"]; ?></td>
                                         <td>
                                         <?php echo $row["payment_status"]; ?>   
+                                        </td>
+                                        <td>
+                                        <?php echo $row["created_date"]; ?>   
                                         </td>
                                         <td><a href="<?php echo base_url() ?>admin/Designdecorlead/veiwdetail/<?php echo $row["design-decor-id"]; ?>" class="btn btn-success"> View details</a></td>
                                     </tr>
@@ -92,6 +96,12 @@
     </div>
 <!-- ./wrapper -->
 <?php $this->load->view('admin/layout/script'); ?>
-                   
+<script>
+     $("#decor_leads_datatable").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[7, 'desc']]
+    }).buttons().container().appendTo('#decor_leads_datatable_wrapper .col-md-6:eq(0)');
+</script>                   
             
             
