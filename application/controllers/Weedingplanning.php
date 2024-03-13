@@ -80,7 +80,9 @@ class Weedingplanning extends CI_Controller {
             'weddinglocation'=>$this->input->post("weddinglocation"),
             'guestcount'=>$this->input->post("guestcount"),
             'budgetrange'=>$this->input->post("budgetrange"),
-            'additinalcomment'=>$this->input->post("additinalcomment"));
+            'additinalcomment'=>$this->input->post("additinalcomment"),
+            'created_date'=> date('Y-m-d H:i:s', strtotime("+0 days"))
+            );
             $result=$this->Weddingplanninglead->InserData($data);
 
             //var_dump($data);exit;

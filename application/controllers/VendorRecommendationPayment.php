@@ -210,7 +210,8 @@ class VendorRecommendationPayment extends CI_Controller {
                      'muacat'=>$getpaymentdata[0]["mua-cat"],
                      'mehendicat'=>$getpaymentdata[0]["mehendi-cat"],
                      'decorcat'=>$getpaymentdata[0]["decor_cat"],
-                     'giftcat'=>$getpaymentdata[0]["gift-cat"]
+                     'giftcat'=>$getpaymentdata[0]["gift-cat"],
+                     'created_date'=> date('Y-m-d H:i:s', strtotime("+0 days"))
                      );       
  
                 $insert =$this->VendorRecommendationModel->addvendor_payment_deatail($vendorData);

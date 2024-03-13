@@ -188,6 +188,7 @@ class DesignDecor extends CI_Controller {
                         'merchant_order_id'=> strip_tags($paymentData["merchantOrderId"]),
                         'short_name'    => strip_tags($paymentData["shortName"]),
                         'decorplanname'=>strip_tags($paymentdatabasic["decorplanname"]),
+                        'created_date'=> date('Y-m-d H:i:s', strtotime("+0 days"))
                         );       
     
             $insert=$this->Designdecor_Model->insert_decorpayment($decorpaymentdata);
