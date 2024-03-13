@@ -72,7 +72,7 @@
                     <td><?php echo !empty($row['name']) ? $row['name'] : 'N/A'; ?> </td>
                     <td><?php echo !empty($row['website']) ? $row['website'] : 'N/A'; ?> </td>
                     <td><?php echo !empty($row['created_on']) ? date('d - M - Y', strtotime($row['created_on'])) : 'N/A'; ?> </td>
-                    <td><?php echo '<a href="'.base_url() . 'Single_data/gw/'.$row['dv_id'].'"><button class="btn btn-primary">View All Data</button></a>' ?> </td>
+                    <td><?php echo '<a href="'.base_url() . 'Single_data/gw/'.$row['dv_id'].'"><button class="btn btn-primary">View & Edit</button></a>' ?> </td>
                     <td><?php
                     if($row['vendor_status'] == 0){
                       echo '<a href="'. base_url() . 'admin/Admin_Vendor/Status_update?tab=groom&status=1&vid='.$row['dv_id'].'"><button class="btn btn-danger">DeActived</button></a>';
