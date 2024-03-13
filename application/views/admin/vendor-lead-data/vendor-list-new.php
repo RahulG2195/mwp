@@ -32,14 +32,15 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                <table id="query_leads_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
                                 <thead>
                                 <tr>
+                                    <th>Vendor name</th>
                                     <th>Category</th>
                                     <th>Name</th>
                                     <th>Phone no</th>
                                     <th>Email</th>
-                                    <th>Date</th>
+                                    <th>Function Date</th>
                                     <th>Created Date</th>
                                     <th>Action</th>
                                 </tr>
@@ -56,6 +57,7 @@
                                         // print_r($result);
                                 ?>
                                 <tr>
+                                    <td><?php echo $row["vendor_name"]; ?></td>
                                     <td><?php echo $row["category_name"]; ?></td>
                                     <td><?php echo $row["name"]; ?></td>
                                     <td><?php echo $row["phone_no"]; ?></td>
@@ -92,6 +94,13 @@
     </div>
 <!-- ./wrapper -->
 <?php $this->load->view('admin/layout/script'); ?>
+<script>
+     $("#query_leads_datatable").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[6, 'desc']]
+    }).buttons().container().appendTo('#query_leads_datatable_wrapper .col-md-6:eq(0)');
+</script>
                    
             
             

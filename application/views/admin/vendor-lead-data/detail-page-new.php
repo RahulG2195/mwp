@@ -48,6 +48,10 @@
                                              ?>
                                                 <!-- // Name  [Text Entry] -->
                                     <tr>
+                                        <td>Vendor name:</td>
+                                        <td><?php echo $result["vendor_name"]; ?></td>
+                                    </tr>            
+                                    <tr>
                                         <td>Category:</td>
                                         <td><?php echo $result["category_name"]; ?></td>
                                     </tr>
@@ -365,6 +369,10 @@
                                     <?php
         }
                                   ?>
+                                     <tr>
+                                        <td>Created date:</td>
+                                        <td><?php echo $result["created_date"]; ?></td>
+                                    </tr>
                                     <?php   
                                         } else {
                                                 echo "No records Found";

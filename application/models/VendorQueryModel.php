@@ -42,9 +42,10 @@ class VendorQueryModel extends CI_Model
 
     public function getvendorquerydatanew($id)
     {
-        $this->db->select('vendor-query-form-table-new.*,master_category.name as category_name');
+        $this->db->select('vendor-query-form-table-new.*,master_category.name as category_name,default_vendor_inp.vendor_name');
         $this->db->from('vendor-query-form-table-new');
         $this->db->join('master_category', 'vendor-query-form-table-new.cat_id = master_category.category_id', 'left');
+        $this->db->join('default_vendor_inp', 'vendor-query-form-table-new.vendor_id = default_vendor_inp.dv_id', 'left');
         $this->db->where('query_id', $id);
         $query = $this->db->get();
         if ( $query->num_rows() > 0 )
@@ -66,9 +67,10 @@ class VendorQueryModel extends CI_Model
 
     public function getvendorqueryalldatanew()
     {
-        $this->db->select('vendor-query-form-table-new.*,master_category.name as category_name');
+        $this->db->select('vendor-query-form-table-new.*,master_category.name as category_name,default_vendor_inp.vendor_name');
         $this->db->from('vendor-query-form-table-new');
         $this->db->join('master_category', 'vendor-query-form-table-new.cat_id = master_category.category_id', 'left');
+        $this->db->join('default_vendor_inp', 'vendor-query-form-table-new.vendor_id = default_vendor_inp.dv_id', 'left');
         $query = $this->db->get();
         if ( $query->num_rows() > 0 )
         {
