@@ -427,6 +427,45 @@ class VendorModel extends CI_Model {
       return $this->db->affected_rows();
     }
 
+    public function getvendorpaymentdata($transactionid)
+    {
+        $this->db->select('*');
+        $this->db->where('merchant_transaction_id',$transactionid);
+        $this->db->from('vendor-payment-table');
+        $query=$this->db->get();
+        
+         if ( $query->num_rows() > 0 )
+        {
+            $row = $query->row_array();
+            return $row;
+        }
+        // echo $this->db->last_query();
+        /*$result=$query->result_array();
+        return $result;*/
+    }
+
+    public function updatepaymentstatus($transactionid,$status)
+    {
+        $this->db->where('merchant_transaction_id', $transactionid);
+        $this->db->update('vendor-payment-table', $status);
+    }
+
+    public function getuserinfo($userid)
+    {
+        $this->db->select('default_vendor_inp.*,master_city.name as city_name,master_category.name AS category_name');
+        $this->db->where('dv_id',$userid);
+        $this->db->from('default_vendor_inp');
+        $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id','left');
+        $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id', 'left');
+        $query=$this->db->get();
+         if ( $query->num_rows() > 0 )
+        {
+            $row = $query->row_array();
+            return $row;
+        }
+       /* $result=$query->result_array();
+        return $result;*/
+    }
 
     function Trusted_Vendor($allData = '', $seo='', $start = 0){
       // echo $seo;

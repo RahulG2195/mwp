@@ -17,3 +17,5 @@ assets/front/image
 
 /application/config/config.php
 /application/config/database.php
+/nbproject/private/
+nbproject/
