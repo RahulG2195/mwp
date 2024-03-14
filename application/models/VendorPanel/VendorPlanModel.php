@@ -23,6 +23,21 @@ class VendorPlanModel extends CI_Model
     $result = $query->result_array();
     return $result;
   }
+  
+  function GetListSuccess($cond = array())
+  {
+
+    if (!empty($cond)) {
+      $this->db->where($cond);
+    }
+
+    $this->db->select('*');
+    $this->db->from($this->table);
+    $this->db->order_by('is_upgrade','DESC');
+    $query = $this->db->get();
+    $result = $query->result_array();
+    return $result;
+  }
 
   function GetData($cond = array())
   {

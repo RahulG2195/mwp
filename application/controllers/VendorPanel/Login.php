@@ -41,10 +41,14 @@ class Login extends CI_Controller
                     $result["user"] = $this->LoginModel->getlogindata($username, $password);
 
                     if (!empty($result)) {
-
+//                        echo "<pre>";
+//                        print_r($result);
+//                        exit;
                         $this->session->set_userdata('user_name', $result["user"]["user_name"]);
                         $this->session->set_userdata('dv_id', $result["user"]["dv_id"]);
 						$this->session->set_userdata('comp_logo', $result["user"]["comp_logo"]);
+						$this->session->set_userdata('vendor_name', $result["user"]["vendor_name"]);
+						$this->session->set_userdata('category_name', $result["user"]["category_name"]);
                         // $this->session->set_userdata('role', $result["user"]["role"]);
 
                         redirect('vendor-dashboard');

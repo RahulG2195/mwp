@@ -23,7 +23,8 @@
   </head>
     <style>
         .login{
-            background-image: url('<?php echo base_url()?>assets/images/login-bg.JPG');
+            /*background-image: url('<?php echo base_url()?>assets/images/login-bg.JPG');*/
+            background-image: url('<?php echo base_url()?>assets/front/image/banner/home_banner_desktop.jpg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -32,10 +33,12 @@
         }
 
         .login_form{
-            background: rgba(255,255,255,0.2);
-            padding: 30px;
-            border-radius: 25px;
-            color: #000;
+            background: rgba(255,255,255,0.7);
+            /*padding: 30px;*/
+            padding: 15px 15px;
+            /*border-radius: 25px;*/
+            /*color: #000;*/
+            color: gray;
         }
         .login_form p, h1, a{
             color: #000;
@@ -58,8 +61,8 @@
 
       <div class="login_wrapper">
         <div class="animate form login_form">
-          <section class="login_content" id="login_form">
-            <form action="<?php echo base_url()?>VendorPanel/Login" method="post">
+            <section class="login_content" id="login_form" style="padding: 0px;">
+                <form action="<?php echo base_url()?>VendorPanel/Login" method="post" style="margin: auto;">
               <h1>Vendor Login</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" name="Username" />
@@ -82,8 +85,8 @@
                 ?>
               </div>
               <div class="mx-auto text-center">
-                <input type="submit" name="login_submit" class="btn btn-primary submit" id="a" value="Log in">
-                <input type="button" name="login_submit" class="btn btn-primary" id="forgot_password" value="Forgot password?">
+                <input type="submit" name="login_submit" class="btn btn-primary submit" id="a" value="Log in" style="background-color: #aa4d4f;border-color: #aa4d4f;">
+                <input type="button" name="login_submit" class="btn btn-primary" id="forgot_password" value="Forgot password?" style="background-color: #aa4d4f;border-color: #aa4d4f;">
               </div>
 
               <div class="clearfix"></div>

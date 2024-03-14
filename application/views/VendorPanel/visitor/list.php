@@ -4,22 +4,22 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
+    <!--<section class="content-header">-->
+      <!--<div class="container-fluid">-->
+        <!--<div class="row mb-2">-->
+          <!--<div class="col-sm-6">-->
             <!--<h1>DataTables</h1>-->
-            <h1>Master</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>vendor-dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Visitor</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
+            <!--<h1>Master</h1>-->
+          <!--</div>-->
+          <!--<div class="col-sm-6">-->
+            <!--<ol class="breadcrumb float-sm-right">-->
+              <!--<li class="breadcrumb-item"><a href="<?php echo base_url(); ?>vendor-dashboard">Home</a></li>-->
+              <!--<li class="breadcrumb-item active">Visitor</li>-->
+            <!--</ol>-->
+          <!--</div>-->
+        <!--</div>-->
+<!--      </div> /.container-fluid -->
+    <!--</section>-->
 
     <!-- Main content -->
     <section class="content">
@@ -32,7 +32,7 @@
             <div class="card">
               <div class="card-header">
                 <!--<h3 class="card-title">DataTable with default features</h3>-->
-                <h3 class="card-title">Visitor Data</h3>
+                <h3 class="card-title">User Visits Data</h3>
                 <!-- <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;float: right;" href="<?php echo $addlink; ?>"><i class="fas fa-plus" style="font-size: 14px;"> Add New</i></a> -->
               </div>
               <!-- /.card-header -->

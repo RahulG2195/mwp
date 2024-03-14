@@ -11,22 +11,22 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
+    <!--<section class="content-header">-->
+      <!--<div class="container-fluid">-->
+        <!--<div class="row mb-2">-->
+          <!--<div class="col-sm-6">-->
             <!--<h1>DataTables</h1>-->
-            <h1>Master</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>vendor-dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Plan</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
+            <!--<h1>Master</h1>-->
+          <!--</div>-->
+          <!--<div class="col-sm-6">-->
+            <!--<ol class="breadcrumb float-sm-right">-->
+              <!--<li class="breadcrumb-item"><a href="<?php echo base_url(); ?>vendor-dashboard">Home</a></li>-->
+              <!--<li class="breadcrumb-item active">Plan</li>-->
+            <!--</ol>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div> /.container-fluid--> 
+    <!--</section>-->
 
     <!-- Main content -->
     <section class="content">
@@ -99,7 +99,7 @@
             <div class="card">
               <div class="card-header">
                 <!--<h3 class="card-title">DataTable with default features</h3>-->
-                <h3 class="card-title">Plan Data (<b style="color:green;">Active</b>) <?php //echo md5($active_plane_id)."".$active_plane_id; ?></h3>
+                <h3 class="card-title">Plan Details<?php //echo md5($active_plane_id)."".$active_plane_id; ?></h3>
                 <!-- <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;float: right;" href="<?php echo $addlink; ?>"><i class="fas fa-plus" style="font-size: 14px;"> Add New</i></a> -->
               </div>
               <!-- /.card-header -->
@@ -112,6 +112,7 @@
                     <th>Plan Name</th>
                     <th>Plan Type</th>
                     <th>Price</th>
+                    <th>Payment Status</th>
                     <th>Created On</th>
 					<th>Exprired On</th>
           <!-- <th>Remaning Days</th> -->
@@ -132,10 +133,15 @@
                           ?>
                   <tr>
                     <td><?php echo $i; ?> </td>
-                    <td><?php echo $row['plan_name']; ?> </td>
+                       <?php if($i==1){ ?>
+                    <td><?php echo "<b>".$row['plan_name']."</b> <b style='color:green;'>(Active)</b>"; ?> </td>
+                        <?php }else{ ?>
+                    <td><?php echo "<b>".$row['plan_name']."</b>"; ?> </td>
+                        <?php } ?>
                     <td><?php echo $active_duration; ?></td>
                     <!-- <td><?php //echo "INR ".$price." (INR ".round($monthly_price)."/mothly)"; ?> </td> -->
-                    <td><?php echo "INR ".$price.'/-'; ?> </td>
+                    <td><?php echo "INR ".$price.''; ?> </td>
+                    <td><?php echo "<span style='padding:3px;color: green;'>".$row['payment_status'].'<span>'; ?> </td>
 					<td><?php 
           if($row['plan_type']=="Free"){
             echo "Year";
@@ -199,13 +205,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="top">
-                    <h1>Plans & Pricing</h1>
-					<?php 
+                <?php 
 					//hide show plans as per logic
 					$express='';
 					$pro='';
 					$elite='';
+					$elite2='';
 			
 					if($active_plane_id == '0'){
 						$express = "shankar";
@@ -216,11 +221,19 @@
 						$express = "shankar";
 						$pro='shankar';
 						$elite='shankar';
-					}
+                                        }else{
+                                            //hide all
+                                                $express = "shankar"; 
+						$pro='shankar';
+						$elite='shankar';
+                                                $elite2='shankar';
+                                        }
           // echo "<pre>";
           // print_r($plans);
           // exit;
 					?>
+                <div class="top <?php echo $elite2; ?>">
+                    <h1>Plans & Pricing</h1>
                     <div class="toggle-btn <?php echo $elite; ?>">
                         <span style="margin: 0.8em;">Annually</span>
                         <label class="switch">
@@ -234,7 +247,7 @@
             </div>
 
             <div class="col-md-12">
-                <div class="snip1255">
+                <div class="snip1255" style="margin:10px 10px 10px 0px;">
                     <div class="plan plan-4 <?php echo $express; ?>">
                         <header>
                             <!-- <p>MWP</p> -->
@@ -296,7 +309,7 @@
                             <li><i class="fa fa-check" aria-hidden="true"></i>  Analytics access</li>
                         </ul>
                     </div>
-                    <div class="plan plan-6">
+                    <div class="plan plan-6 <?php echo $elite2; ?>">
                         <header>
                            <!--  <p>MWP </p> -->
                             <h4 class="plan-title planname1" data-plan2="palette-elite"><?php echo $plans[3]['title']; ?></h4>

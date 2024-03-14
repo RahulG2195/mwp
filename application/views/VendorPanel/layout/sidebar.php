@@ -8,9 +8,9 @@
  
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
      <!-- Brand Logo -->
-     <a href="<?php echo base_url()?>VendorPanel/" target="blank" class="brand-link" style="background-color: #FF5969;height: 55px;">
+     <a href="<?php echo base_url()?>VendorPanel/" target="blank" class="brand-link" style="height: 43px;background-color: #FF5969;">
          <!--<img src="<?php echo base_url(); ?>/assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">-->
-         <img src="<?php echo base_url(); ?>/assets/images/WMP-Launching-page-logo.png" alt="My Wedding Palette" class="brand-image elevation-3" style="opacity: .9;margin-left: 0;margin-right: 0;">
+         <img src="<?php echo base_url(); ?>/assets/images/WMP-Launching-page-logo.png" alt="My Wedding Palette" class="brand-image elevation-0" style="opacity: .9;margin-left: 0;margin-right: 0;background-color: #FF5969;">
          <!--<span class="brand-text font-weight-light">My Wedding Palette</span>-->
      </a>
 

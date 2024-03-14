@@ -12,8 +12,9 @@ class LoginModel extends CI_Model
 
     public function getlogindata($username, $password)
     {
-        $this->db->select('dv_id, vendor_uid, password, user_name, comp_logo');
+        $this->db->select('dv_id, vendor_uid, password, user_name, comp_logo, vendor_name, master_category.name as category_name');
         $this->db->from('default_vendor_inp');
+        $this->db->join('master_category','default_vendor_inp.category=master_category.category_id','left');
         $this->db->where(array('user_name' => $username, 'password' => $password));
 
         $query = $this->db->get();

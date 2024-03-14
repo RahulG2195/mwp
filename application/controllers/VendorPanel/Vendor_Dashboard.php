@@ -112,7 +112,7 @@ class Vendor_Dashboard extends CI_Controller {
         //Plan Type
         $this->load->model('VendorPanel/VendorPlanModel');
 
-        $plan_data = $this->VendorPlanModel->GetList(array('vendor_id'=>$id));
+        $plan_data = $this->VendorPlanModel->GetListSuccess(array('vendor_id'=>$id,'payment_status'=>'PAYMENT_SUCCESS'));
         $vendor_data = $this->VendorPlanModel->GetDataV(array('dv_id'=>$id));
         $data['vendor_data'] = $vendor_data;
         //$plan_data = array(); ///////////??????????///
@@ -133,9 +133,9 @@ class Vendor_Dashboard extends CI_Controller {
                 $data['list'] = $plan_data;
             }
         }
-        // echo "<pre>";
-        // print_r($data);
-        // exit;
+//         echo "<pre>";
+//         print_r($data);
+//         exit;
 
         $this->load->view('VendorPanel/plan/list',$data);
     }

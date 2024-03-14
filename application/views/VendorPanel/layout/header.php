@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body class="hold-transition sidebar-mini">
         <div class="wrapper">
             <!-- Navbar -->
-            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #FF5969;">
                 <!-- Left navbar links -->
                 <!--    <ul class="navbar-nav">
                       <li class="nav-item">
@@ -59,6 +59,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!-- Right navbar links -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Navbar Search -->
+                    <li class="nav-item dropdown">
+                        <span class="nav-link" style="color:#FFF;font-weight:500;">
+                            Category&nbsp;:&nbsp;<?php echo $this->session->userdata('category_name'); ?>&nbsp;&nbsp;&nbsp;&nbsp;Vendor&nbsp;:&nbsp;<?php echo $this->session->userdata('vendor_name'); ?>
+                        </span>  
+                        </li>
                     <!--      <li class="nav-item">
                             <a class="nav-link" data-widget="navbar-search" href="#" role="button">
                               <i class="fas fa-search"></i>
@@ -139,9 +144,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                           </li> -->
                     <!-- Notifications Dropdown Menu -->
-                         <li class="nav-item dropdown">
-                            <a class="nav-link"  href="<?php echo base_url('Vendor-Logout')?>">
-                            Logout
+                    <li class="nav-item dropdown" >
+                            <a class="nav-link"  style="color:#FFF;" href="<?php echo base_url('Vendor-Logout')?>">
+                            <b>Logout</b>
                             </a>
                           </li>
                     <!-- <li class="nav-item">
