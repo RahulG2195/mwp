@@ -73,6 +73,12 @@
                          </a>
                      </li>
                      <li class="nav-item">
+                         <a href="<?php echo base_url().'vendor-dashboard/deals'; ?>" class="nav-link">
+                             <i class="nav-icon fas fa-users"></i>
+                             <p>Deals & Coupon</p>
+                         </a>
+                     </li>
+                     <li class="nav-item">
                          <a href="<?php echo base_url().'vendor-dashboard/plan/'.$id; ?>" class="nav-link">
                              <i class="nav-icon fas fa-shopping-cart"></i>
                              <p>Plan Details</p>

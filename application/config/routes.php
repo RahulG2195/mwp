@@ -101,6 +101,8 @@ $route['vendor-dashboard/plan/(:any)'] = 'VendorPanel/Vendor_Dashboard/plan/$1';
 $route['Vendor-Logout'] = 'VendorPanel/Login/logout';
 $route['Data/(:any)/(:any)'] = 'VendorPanel/Admin_Vendor/Vendor_all_Data/$1/$2';
 $route['Single_data/(:any)/(:any)'] = 'admin/Admin_Vendor/Vendor_all_Data/$1/$2';
+$route['Single_data_deals/(:any)'] = 'admin/Deals_Coupon/Deals_all_Data/$1';
+$route['vendor-dashboard/deals'] = 'VendorPanel/Vendor_Dashboard/deals';
 
 //Main page
 $route['about-my-wedding-palette'] = 'Aboutus/index';
