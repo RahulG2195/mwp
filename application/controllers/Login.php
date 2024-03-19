@@ -78,7 +78,8 @@ class Login extends CI_Controller
                     'phone_number' => $this->input->post("phone_no"),
                     'email_id' => $this->input->post("email_id"),
                     'user_password' => $this->input->post("user_password"),
-                    'user_role' => $this->input->post("user_role")
+                    'user_role' => $this->input->post("user_role"),
+                    'created_date' => DATETIME
                     );
                 $result = $this->LoginModel->InserData($insertdata);
                 $data["user"] = $this->LoginModel->getregisteruserdata($result);
