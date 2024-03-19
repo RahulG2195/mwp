@@ -74,7 +74,7 @@
                      </li>
                      <li class="nav-item">
                          <a href="<?php echo base_url().'vendor-dashboard/deals'; ?>" class="nav-link">
-                             <i class="nav-icon fas fa-users"></i>
+                             <i class="nav-icon fas fa-book"></i>
                              <p>Deals & Coupon</p>
                          </a>
                      </li>
