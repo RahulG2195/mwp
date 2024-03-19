@@ -9,25 +9,25 @@
                <div class="list-group list-group-flush account-settings-links">
                   <a class="list-group-item list-group-item-action active" data-toggle="list" href="#account-general">Profile</a>
                   <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-change-password">Plan Purchase</a>
-                  <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-info">Wishlist</a>
-                  <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-social-links">Checklist</a>
-                  <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-connections">Settings</a>
+                  <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-info">Checklist</a>
+                  <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-social-links">Wishlist</a>
+                  <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-connections">Change Password</a>
                   <!-- <a class="list-group-item list-group-item-action" data-toggle="list" href="#account-notifications">Notifications</a> -->
                </div>
          </div>
          <div class="col-md-9">
+               <?php 
+                    // error display
+                  //   if(!empty($this->session->flashdata('pwd_change'))){
+                  //       echo '<span class="text-sucess">'.$this->session->flashdata('pwd_change').'</span>';
+                  //       $this->session->unset_flashdata('pwd_change');
+                  //   }
+                  //   else{
+                  //        echo " ";
+                  //   }
+                ?>
             <div class="tab-content">
                <div class="tab-pane fade active show" id="account-general">
-                  <!-- <div class="card-body media align-items-center">
-                     <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt class="d-block ui-w-80">
-                        <div class="media-body ml-4">
-                           <label style="color:#dc3545" class="profile-image-label">Upload new photo</label> &nbsp;
-                           <input type="file" class="account-settings-fileinput" name="profile-image">
-                           <button type="button" class="btn btn-default md-btn-flat">Reset</button>
-                           <div class="text-light small mt-1">Allowed JPG, GIF or PNG.</div>
-                        </div>
-                  </div>
-                  <hr class="border-light m-0" style="border-color: #ff142a !important;margin: 9px !important;"> -->
                   <div class="card-body">
                      <div class="form-group">
                         <label class="form-label">First name</label>
@@ -321,7 +321,7 @@
                   </div>
                   <div class="tab-pane fade" id="account-change-password">
                      <!-- Design and decor plan details -->
-                     
+                     <?php// if(!empty()) ?>
                      <div class="card-body pb-2">
                         <section class="h-100 gradient-custom">
                            <div class="container py-5 h-100">
@@ -577,7 +577,8 @@
                                                 </div>
                                                 <div class="d-flex justify-content-between pt-2">
                                                    <p class="text-muted mb-0 detail-label">Category selected :</p>
-                                                   <p class="text-muted mb-0 value-label"><span class="fw-bold me-4"></span><?php if(!empty($recommendplan) )
+                                                   <p class="text-muted mb-0 value-label"><span class="fw-bold me-4"></span>
+                                                   <?php if(!empty($recommendplan) )
                                                       { 
                                                          if($recommendplan[0]["venuecat"]=="viral_venue"){
                                                               echo "MWP Viral Venues" ;
@@ -585,7 +586,8 @@
                                                         
                                                       } ?>
                                                    </p>
-                                                   <p class="text-muted mb-0 value-label"><span class="fw-bold me-4"></span><?php if(!empty($recommendplan) )
+                                                   <p class="text-muted mb-0 value-label"><span class="fw-bold me-4"></span>
+                                                     <?php if(!empty($recommendplan) )
                                                       { 
                                                          if($recommendplan[0]["bridalcat"]=="bridal-boutique"){
                                                               echo "MWP Bridal Boutiques" ;
@@ -619,7 +621,8 @@
                                                    </p>
                                                    <p class="text-muted mb-0 value-label"><span class="fw-bold me-4"></span><?php if(!empty($recommendplan) )
                                                       { 
-                                                         if($recommendplan[0]["mehendicat"]=="mehendi-magic"){
+                                                         if($recommendplan[0]["mehendicat"]=="mehendi-magic")
+                                                         {
                                                               echo "MWP Mehendi Magic" ;
                                                          }
                                                         
@@ -627,7 +630,8 @@
                                                    </p>
                                                    <p class="text-muted mb-0 value-label"><span class="fw-bold me-4"></span><?php if(!empty($recommendplan) )
                                                       { 
-                                                         if($recommendplan[0]["decorcat"]=="decor-delight"){
+                                                         if($recommendplan[0]["decorcat"]=="decor-delight")
+                                                         {
                                                               echo "MWP Decor Delight" ;
                                                          }
                                                         
@@ -635,7 +639,8 @@
                                                    </p>
                                                    <p class="text-muted mb-0 value-label"><span class="fw-bold me-4"></span><?php if(!empty($recommendplan) )
                                                       { 
-                                                         if($recommendplan[0]["giftcat"]=="gift-galore"){
+                                                         if($recommendplan[0]["giftcat"]=="gift-galore")
+                                                         {
                                                               echo "MWP Gifts Galore" ;
                                                          }
                                                         
@@ -659,154 +664,370 @@
                      </div>
                   </div>
                   <div class="tab-pane fade" id="account-info">
-                        <div class="card-body pb-2">
-                           <div class="form-group">
-                              <label class="form-label">Bio</label>
-                              <textarea class="form-control" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc arcu, dignissim sit amet sollicitudin iaculis, vehicula id urna. Sed luctus urna nunc. Donec fermentum, magna sit amet rutrum pretium, turpis dolor molestie diam, ut lacinia diam risus eleifend sapien. Curabitur ac nibh nulla. Maecenas nec augue placerat, viverra tellus non, pulvinar risus.</textarea>
+                     <div class="card-body pb-2">
+                        <section  style="background-color: #ffdceb;">
+                           <div class="container   checklist-container">
+                              <div class="row d-flex  h-100">
+                                 <div class="col col-lg-12 col-xl-6">
+                                    <div class="card rounded-3 checklist-card">
+                                       <div class="card-body p-4">
+                                          <p class="mb-2 my-accnt-wedding-checklist-head"><span class="me-2">Wedding Timeline & Milestones</span> </p>
+                                          <form action="<?php echo base_url() ?>Weddingchecklist/submitchecklist" method="POST" id="weddingchecklist">
+                                             <input type="hidden" name="user_id" value="<?php if(isset($this->session->userdata['logged_in']) || $this->session->userdata['logged_in'] = true){ echo  $this->session->userdata['userid']; }else{ echo "";  } ?>">    
+                                             <ul class="list-group rounded-0">
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="wedding_outfit" id="wedding_outfit" value="<?php if (!empty($checklistdata[0]["wedding_outfit"])) {
+                                                   echo $checklistdata[0]["wedding_outfit"] ; }else{ echo "1";} ?>" <?php if (!empty($checklistdata[0]["wedding_outfit"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="wedding_outfit">Explore and Save Trending Wedding Outfit Ideas</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="wedding_budget" id="wedding_budget" value="<?php if (!empty($checklistdata[0]["wedding_budget"])) {
+                                                   echo $checklistdata[0]["wedding_budget"] ; }else{ echo "2";} ?>" <?php if (!empty($checklistdata[0]["wedding_budget"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="wedding_budget">Establish Your Wedding Budget </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="explore_venue" id="explore_venue" value="<?php if (!empty($checklistdata[0]["explore_venue"])) {
+                                                   echo $checklistdata[0]["explore_venue"] ; }else{ echo "3";} ?>" <?php if (!empty($checklistdata[0]["explore_venue"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="explore_venue">Explore & Visit Venue Options</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="research_planner" id="research_planner" value="<?php if (!empty($checklistdata[0]["research_planner"])) {
+                                                   echo $checklistdata[0]["research_planner"] ; }else{ echo "4";} ?>" <?php if (!empty($checklistdata[0]["research_planner"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="research_planner">Research Wedding Planners</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="create_guest_list" id="create_guest_list" value="<?php if (!empty($checklistdata[0]["create_guest_list"])) {
+                                                   echo $checklistdata[0]["create_guest_list"] ; }else{ echo "5";} ?>" <?php if (!empty($checklistdata[0]["create_guest_list"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="create_guest_list">Create a Tentative Guest List </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="book_dream_venue" id="book_dream_venue" value="<?php if (!empty($checklistdata[0]["book_dream_venue"])) {
+                                                   echo $checklistdata[0]["book_dream_venue"] ; }else{ echo "6";} ?>" <?php if (!empty($checklistdata[0]["book_dream_venue"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="book_dream_venue">Book Your Dream Venues</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="looking_caterers" id="looking_caterers" value="<?php if (!empty($checklistdata[0]["looking_caterers"])) {
+                                                   echo $checklistdata[0]["looking_caterers"] ; }else{ echo "7";} ?>" <?php if (!empty($checklistdata[0]["looking_caterers"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="looking_caterers">Start Looking out for Caterers</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="search_photographer" id="search_photographer" value="<?php if (!empty($checklistdata[0]["search_photographer"])) {
+                                                   echo $checklistdata[0]["search_photographer"] ; }else{ echo "8";} ?>" <?php if (!empty($checklistdata[0]["search_photographer"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="search_photographer">Research and Book Photographer </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="brows_decor_ideas" id="brows_decor_ideas" value="<?php if (!empty($checklistdata[0]["brows_decor_ideas"])) {
+                                                   echo $checklistdata[0]["brows_decor_ideas"] ; }else{ echo "9";} ?>" <?php if (!empty($checklistdata[0]["brows_decor_ideas"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="brows_decor_ideas">Browse and save décor ideas</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="explore_trending_design" id="explore_trending_design" value="<?php if (!empty($checklistdata[0]["explore_trending_design"])) {
+                                                   echo $checklistdata[0]["explore_trending_design"] ; }else{ echo "10";} ?>" <?php if (!empty($checklistdata[0]["explore_trending_design"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="explore_trending_design">Explore trending Make-up and Mehndi artists and designs</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="find_h_destination" id="find_h_destination" value="<?php if (!empty($checklistdata[0]["find_h_destination"])) {
+                                                   echo $checklistdata[0]["find_h_destination"] ; }else{ echo "11";} ?>" <?php if (!empty($checklistdata[0]["find_h_destination"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="find_h_destination">Find out and start shortlisting Honeymoon destinations </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="book_artist" id="book_artist" value="<?php if (!empty($checklistdata[0]["find_h_destination"])) {
+                                                   echo $checklistdata[0]["find_h_destination"] ; }else{ echo "12";} ?>" <?php if (!empty($checklistdata[0]["find_h_destination"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="book_artist">Book the Make-up and Mehndi artist</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="brows_templates" id="brows_templates" value="<?php if (!empty($checklistdata[0]["brows_templates"])) {
+                                                   echo $checklistdata[0]["brows_templates"] ; }else{ echo "13";} ?>" <?php if (!empty($checklistdata[0]["brows_templates"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="brows_templates">Browse Invitation ideas & templates</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="hire_decorator" id="hire_decorator" value="<?php if (!empty($checklistdata[0]["hire_decorator"])) {
+                                                   echo $checklistdata[0]["hire_decorator"] ; }else{ echo "14";} ?>" <?php if (!empty($checklistdata[0]["hire_decorator"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="hire_decorator">Hire a decorator </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="order_ivitation" id="order_ivitation" value="<?php if (!empty($checklistdata[0]["order_ivitation"])) {
+                                                   echo $checklistdata[0]["order_ivitation"] ; }else{ echo "15";} ?>" <?php if (!empty($checklistdata[0]["order_ivitation"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="order_ivitation">Order invitations </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="book_hotels" id="book_hotels" value="<?php if (!empty($checklistdata[0]["book_hotels"])) {
+                                                   echo $checklistdata[0]["book_hotels"] ; }else{ echo "16";} ?>" <?php if (!empty($checklistdata[0]["book_hotels"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="book_hotels">Book flights and hotels for the honeymoon</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="research_bridal_groom_wear" id="research_bridal_groom_wear" value="<?php if (!empty($checklistdata[0]["research_bridal_groom_wear"])) {
+                                                   echo $checklistdata[0]["research_bridal_groom_wear"] ; }else{ echo "17";} ?>" <?php if (!empty($checklistdata[0]["research_bridal_groom_wear"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="research_bridal_groom_wear">Research Bridal and Groom wear stores</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="book_dj" id="book_dj" value="<?php if (!empty($checklistdata[0]["book_dj"])) {
+                                                   echo $checklistdata[0]["book_dj"] ; }else{ echo "18";} ?>" <?php if (!empty($checklistdata[0]["book_dj"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="groom_radio">Book DJ and Choreographer if required </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="order_outfit" id="order_outfit" value="<?php if (!empty($checklistdata[0]["order_outfit"])) {
+                                                   echo $checklistdata[0]["order_outfit"] ; }else{ echo "19";} ?>" <?php if (!empty($checklistdata[0]["order_outfit"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="order_outfit">Finalise and Order outfits along with the accessories</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="explore_latest_design" id="explore_latest_design" value="<?php if (!empty($checklistdata[0]["explore_latest_design"])) {
+                                                   echo $checklistdata[0]["explore_latest_design"] ; }else{ echo "20";} ?>" <?php if (!empty($checklistdata[0]["explore_latest_design"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="explore_latest_design">Explore the latest designs and Buy Jewelry</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="prewedding_shoot" id="prewedding_shoot" value="<?php if (!empty($checklistdata[0]["prewedding_shoot"])) {
+                                                   echo $checklistdata[0]["prewedding_shoot"] ; }else{ echo "21";} ?>" <?php if (!empty($checklistdata[0]["prewedding_shoot"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="prewedding_shoot">Have your pre-wedding shoot</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="send_date_invites" id="send_date_invites" value="<?php if (!empty($checklistdata[0]["send_date_invites"])) {
+                                                   echo $checklistdata[0]["send_date_invites"] ; }else{ echo "22";} ?>" <?php if (!empty($checklistdata[0]["send_date_invites"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="send_date_invites">Send out save the dates Invites</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="brows_song" id="brows_song" value="<?php if (!empty($checklistdata[0]["brows_song"])) {
+                                                   echo $checklistdata[0]["brows_song"] ; }else{ echo "23";} ?>" <?php if (!empty($checklistdata[0]["brows_song"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="brows_song">Browse and Shortlist bridal entry songs and ideas </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="book_priest" id="book_priest" value="<?php if (!empty($checklistdata[0]["book_priest"])) {
+                                                   echo $checklistdata[0]["book_priest"] ; }else{ echo "24";} ?>" <?php if (!empty($checklistdata[0]["book_priest"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="book_priest">Book your priest</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="buy_sweets" id="buy_sweets" value="<?php if (!empty($checklistdata[0]["buy_sweets"])) {
+                                                   echo $checklistdata[0]["buy_sweets"] ; }else{ echo "25";} ?>" <?php if (!empty($checklistdata[0]["buy_sweets"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="buy_sweets">Buy sweets / favors to distribute on Mehndi</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="site_visit" id="site_visit" value="<?php if (!empty($checklistdata[0]["site_visit"])) {
+                                                   echo $checklistdata[0]["site_visit"] ; }else{ echo "26";} ?>" <?php if (!empty($checklistdata[0]["site_visit"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="site_visit">Site visit with the decorator </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="start_dance_practice" id="start_dance_practice" value="<?php if (!empty($checklistdata[0]["start_dance_practice"])) {
+                                                   echo $checklistdata[0]["start_dance_practice"] ; }else{ echo "27";} ?>" <?php if (!empty($checklistdata[0]["start_dance_practice"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="start_dance_practice">Start dance practices</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="distribute_invitation" id="distribute_invitation" value="<?php if (!empty($checklistdata[0]["distribute_invitation"])) {
+                                                   echo $checklistdata[0]["distribute_invitation"] ; }else{ echo "28";} ?>" <?php if (!empty($checklistdata[0]["distribute_invitation"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="distribute_invitation">Start distributing invitations</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="food_taste" id="food_taste" value="<?php if (!empty($checklistdata[0]["food_taste"])) {
+                                                   echo $checklistdata[0]["food_taste"] ; }else{ echo "29";} ?>" <?php if (!empty($checklistdata[0]["food_taste"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="food_taste">Have a food tasting </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="brows_hairstyle" id="brows_hairstyle" value="<?php if (!empty($checklistdata[0]["brows_hairstyle"])) {
+                                                   echo $checklistdata[0]["brows_hairstyle"] ; }else{ echo "30";} ?>" <?php if (!empty($checklistdata[0]["brows_hairstyle"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="brows_hairstyle">Browse hairstyle ideas & Finalize the look with the makeup artist</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="guest_rsvp" id="guest_rsvp" value="<?php if (!empty($checklistdata[0]["guest_rsvp"])) {
+                                                   echo $checklistdata[0]["guest_rsvp"] ; }else{ echo "31";} ?>" <?php if (!empty($checklistdata[0]["guest_rsvp"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="guest_rsvp">Take guest RSVPs for an accurate count</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="find_packer" id="find_packer" value="<?php if (!empty($checklistdata[0]["find_packer"])) {
+                                                   echo $checklistdata[0]["find_packer"] ; }else{ echo "32";} ?>" <?php if (!empty($checklistdata[0]["find_packer"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="find_packer">Find Trousseau Packer </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="arrange_vehicle" id="arrange_vehicle" value="<?php if (!empty($checklistdata[0]["arrange_vehicle"])) {
+                                                   echo $checklistdata[0]["arrange_vehicle"] ; }else{ echo "33";} ?>" <?php if (!empty($checklistdata[0]["arrange_vehicle"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="arrange_vehicle">Arrange Vidai vehicle </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="book_cake" id="book_cake" value="<?php if (!empty($checklistdata[0]["book_cake"])) {
+                                                   echo $checklistdata[0]["book_cake"] ; }else{ echo "34";} ?>" <?php if (!empty($checklistdata[0]["book_cake"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="book_cake">Book the Cake (If Needed)</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="role" id="role" value="<?php if (!empty($checklistdata[0]["role"])) {
+                                                   echo $checklistdata[0]["role"] ; }else{ echo "35";} ?>" <?php if (!empty($checklistdata[0]["role"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="role">Organise logistics and transport for out-of-town guests</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="purchase_alcohol" id="purchase_alcohol" value="<?php if (!empty($checklistdata[0]["purchase_alcohol"])) {
+                                                   echo $checklistdata[0]["purchase_alcohol"] ; }else{ echo "36";} ?>" <?php if (!empty($checklistdata[0]["purchase_alcohol"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="purchase_alcohol">Purchase alcohol if required </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="pre_bridal_skincare" id="pre_bridal_skincare" value="<?php if (!empty($checklistdata[0]["pre_bridal_skincare"])) {
+                                                   echo $checklistdata[0]["pre_bridal_skincare"] ; }else{ echo "37";} ?>" <?php if (!empty($checklistdata[0]["pre_bridal_skincare"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="pre_bridal_skincare">Start your pre-bridal skincare routine</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="buy_makeup" id="buy_makeup" value="<?php if (!empty($checklistdata[0]["buy_makeup"])) {
+                                                   echo $checklistdata[0]["buy_makeup"] ; }else{ echo "38";} ?>" <?php if (!empty($checklistdata[0]["buy_makeup"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="buy_makeup">Buy all essential Makeup trousseau </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="steam_outfit" id="steam_outfit" value="<?php if (!empty($checklistdata[0]["steam_outfit"])) {
+                                                   echo $checklistdata[0]["steam_outfit"] ; }else{ echo "39";} ?>" <?php if (!empty($checklistdata[0]["steam_outfit"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="steam_outfit">Give your Outfits steam iron </label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="pack_honeymoon" id="pack_honeymoon" value="<?php if (!empty($checklistdata[0]["pack_honeymoon"])) {
+                                                   echo $checklistdata[0]["pack_honeymoon"] ; }else{ echo "40";} ?>" <?php if (!empty($checklistdata[0]["pack_honeymoon"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="pack_honeymoon">Pack for your honeymoon</label>
+                                                </li>
+                                                <li class="list-group-item border-0 d-flex align-items-center ps-0">
+                                                   <input class="form-check-input checklist-input" type="checkbox" name="enjoy_function" id="enjoy_function" value="<?php if (!empty($checklistdata[0]["enjoy_function"])) {
+                                                   echo $checklistdata[0]["enjoy_function"] ; }else{ echo "41";} ?>" <?php if (!empty($checklistdata[0]["enjoy_function"])) { echo "checked"; }else{ echo " ";} ?>>
+                                                   <label class="form-check-label strikethrough myaccnt-checklist-li" for="enjoy_function">Start Taking your Beauty sleep & Enjoy the Functions</label>
+                                                </li>
+                                             </ul>
+                                             <div class="divider d-flex align-items-center my-4">
+                                             <input type="submit" name="updatelist" value="Update Checklist" class="update-btn">
+                                             </div>
+                                          </form>
+                                       </div>
+                                 </div>
+                              </div>
                            </div>
-                           <div class="form-group">
-                              <label class="form-label">Birthday</label>
-                              <input type="text" class="form-control" value="May 3, 1995">
                            </div>
-                           <div class="form-group">
-                              <label class="form-label">Country</label>
-                              <select class="custom-select">
-                                 <option>USA</option>
-                                 <option selected>Canada</option>
-                                 <option>UK</option>
-                                 <option>Germany</option>
-                                 <option>France</option>
-                              </select>
-                           </div>
-                        </div>
-                        <hr class="border-light m-0">
-                        <div class="card-body pb-2">
-                           <h6 class="mb-4">Contacts</h6>
-                           <div class="form-group">
-                              <label class="form-label">Phone</label>
-                              <input type="text" class="form-control" value="+0 (123) 456 7891">
-                           </div>
-                           <div class="form-group">
-                              <label class="form-label">Website</label>
-                              <input type="text" class="form-control" value>
-                           </div>
-                        </div>
+                        </section>
+                          
+                           
+                     </div>
+                     <hr class="border-light m-0">
+                        
                   </div>
                   <div class="tab-pane fade" id="account-social-links">
-                        <div class="card-body pb-2">
-                           <div class="form-group">
-                              <label class="form-label">Twitter</label>
-                              <input type="text" class="form-control" value="https://twitter.com/user">
-                           </div>
-                           <div class="form-group">
-                              <label class="form-label">Facebook</label>
-                              <input type="text" class="form-control" value="https://www.facebook.com/user">
-                           </div>
-                           <div class="form-group">
-                              <label class="form-label">Google+</label>
-                              <input type="text" class="form-control" value>
-                           </div>
-                           <div class="form-group">
-                              <label class="form-label">LinkedIn</label>
-                              <input type="text" class="form-control" value>
-                           </div>
-                           <div class="form-group">
-                              <label class="form-label">Instagram</label>
-                              <input type="text" class="form-control" value="https://www.instagram.com/user">
+                     <!-- <div class="card-body pb-2">  -->
+                       
+                     <!-- </div>  -->
+
+                     <section class="h-100 h-custom" style="background-color: #eee;">
+                        <div class="container py-5 h-100">
+                           <div class="row d-flex justify-content-center align-items-center h-100">
+                              <div class="col">
+                              <div class="card">
+                                 <div class="card-body p-4">
+                                    <div class="row">
+                                    <div class="col-lg-12">
+                                    <?php 
+                                       if (!empty($wishlistdata))
+                                       {
+                                          foreach( $wishlistdata as $wishlist)
+                                          {
+                                             $id=$wishlist["vendorseourl"];
+                                             $vendordata=$this->WishlistModel->getwishlistvendordetail($id);
+                                             $category=$vendordata[0]["category"];
+                                    ?>
+                                       <div class="card mb-3">
+                                          <div class="card-body">
+                                             <div class="d-flex justify-content-between">
+                                                <div class="d-flex flex-row align-items-center">
+                                                   <div>
+                                                      <img src="<?php echo base_url() ?>uploads/vendors/<?php echo $vendordata[0]["images"] ?>" class="img-fluid rounded-3" alt="Shopping item" style="width: 160px; border-radius: 6px;">
+                                                   </div>
+                                                   <div class="ms-3 wishlist-vendor-name">
+                                                      <h5><?php echo $vendordata[0]["vendor_name"]; ?></h5>
+                                                         <?php 
+                                                            if($category == 1){  ?>
+                                                               <p class="card-title" style="white-space: normal;color: #ff142a;">Venue</p>
+                                                         <?php }elseif($category == 2){  ?>
+                                                            <p class="card-title" style="white-space: normal;color: #ff142a;">Bridal Wear</p>
+                                                         <?php }elseif($category == 3){?>
+                                                               <p class="card-title" style="white-space: normal;color: #ff142a;">Groom Wear</p>
+                                                         <?php }elseif($category == 4){ ?>
+                                                               <p class="card-title" style="white-space: normal;color: #ff142a;">Photography</p>
+                                                         <?php }elseif($category == 5){ ?>
+                                                               <p class="card-title" style="white-space: normal;color: #ff142a;">Makeup Artist</p>
+                                                         <?php }elseif($category == 6){ ?>
+                                                               <p class="card-title" style="white-space: normal;color: #ff142a;">Mehendi Artist</p>
+                                                         <? }elseif($category == 7){ ?>
+                                                               <p class="card-title" style="white-space: normal;color: #ff142a;">Bridal Jwellery</p>
+                                                         <?php }elseif($category == 8){ ?>
+                                                               <p class="card-title" style="white-space: normal;color: #ff142a;">Decoration</p>
+                                                         <?php }elseif($category == 9){ ?>
+                                                               <p class="card-title" style="white-space: normal;color: #ff142a;">Gifts</p>
+                                                         <?php  }elseif($category == 10){ ?>
+                                                               <p class="card-title" style="white-space: normal;color: #ff142a;">Catering</p>
+                                                         <?php }elseif($category == 13){ ?>
+                                                               <p class="card-title" style="white-space: normal;color: #ff142a;">Invitation</p>
+                                                         <?php }
+                                                         ?>
+                                                   </div>
+                                                </div>
+                                                <div class="d-flex flex-row align-items-center">
+                                                   <!-- <div>
+                                                      <h5 class="mb-0"><i class="fas fa-location"></i>
+                                                         <?php echo $vendordata[0]["area"]." ".$vendordata[0]["city_name"] ; ?>
+                                                      </h5>
+                                                   </div> -->
+                                                   <div>
+                                                         <?php 
+                                                            if($vendordata[0]["category"] == 1){ ?>
+                                                               <a href="<?php echo base_url() ?>vendor-detail/ve/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                         <?php  }elseif($vendordata[0]["category"] == 2){ ?>
+                                                               <a href="<?php echo base_url() ?>vendor-detail/bw/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                         <?php }elseif($vendordata[0]["category"] == 3){ ?>
+                                                               <a href="<?php echo base_url() ?>vendor-detail/gw/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                         <?php }elseif($vendordata[0]["category"] == 4){ ?>
+                                                               <a href="<?php echo base_url() ?>vendor-detail/ph/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                         <?php }elseif($vendordata[0]["category"] == 5){ ?>
+                                                               <a href="<?php echo base_url() ?>vendor-detail/mu/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                               
+                                                         <?php }elseif($vendordata[0]["category"] == 6){ ?>
+                                                               <a href="<?php echo base_url() ?>vendor-detail/mu/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                         <?php }elseif($vendordata[0]["category"] == 7){ ?>
+                                                               <a href="<?php echo base_url() ?>vendor-detail/bj/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                               
+                                                         <?php }elseif($vendordata[0]["category"] == 8){ ?>
+                                                               <a href="<?php echo base_url() ?>vendor-detail/dc/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                         <?php }elseif($vendordata[0]["category"] == 9){ ?>
+                                                               <a href="<?php echo base_url() ?>vendor-detail/dc/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                         <?php }elseif($vendordata[0]["category"] == 10){ ?>
+                                                               <a href="<?php echo base_url() ?>vendor-detail/ct/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                         <?php }elseif($vendordata[0]["category"] == 13){ ?>
+                                                            <a href="<?php echo base_url() ?>vendor-detail/in/<?php echo $vendordata[0]["vendor_seo_url"] ?>" class="btn btn-primary wishlist-view-detail">View detail</a>
+                                                         <?php }
+                                                         ?>
+                                                
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    <?php    
+                                          }
+                                       }
+                                    ?>
+
+                                    </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              </div>
                            </div>
                         </div>
+                     </section>
+                  </div>
+                  <div class="tab-pane fade" id="account-connections">
+                     <div class="card-body">
+                        <form action="<?php echo base_url() ?>myaccount/changepassword" method="POST">
+                           <input type="hidden" name="userid" value="<?php echo  $this->session->userdata('userid'); ?>">
+                           <!-- <div class="form-group">
+                              <input type="text" class="form-control" name="old-password" placeholder="Enter old password" require>
+                           </div> -->
+                           <div class="form-group">
+                              <input type="text" class="form-control" name="new-password" placeholder="Enter new password" require>
+                           </div>
+                           <div class="form-group">
+                              <button  class="btn-password-submit">Submit</button>
+                              <input type="submit" name="submit" value="Submit" class="btn-password-submit">
+                           </div>
+                        </form>
                      </div>
-                     <div class="tab-pane fade" id="account-connections">
-                        <div class="card-body">
-                           <button type="button" class="btn btn-twitter">Connect to <strong>Twitter</strong></button>
-                        </div>
-                        <hr class="border-light m-0">
-                        <div class="card-body">
-                           <h5 class="mb-2">
-                              <a href="javascript:void(0)" class="float-right text-muted text-tiny"><i class="ion ion-md-close"></i> Remove</a>
-                              <i class="ion ion-logo-google text-google"></i>
-                              You are connected to Google:
-                           </h5>
-                           <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="620c0f031a15070e0e220f030b0e4c010d0f">[email&#160;protected]</a>
-                        </div>
-                        <hr class="border-light m-0">
-                        <div class="card-body">
-                           <button type="button" class="btn btn-facebook">Connect to <strong>Facebook</strong></button>
-                        </div>
-                        <hr class="border-light m-0">
-                        <div class="card-body">
-                           <button type="button" class="btn btn-instagram">Connect to <strong>Instagram</strong></button>
-                        </div>
-                     </div>
-                     <div class="tab-pane fade" id="account-notifications">
-                        <div class="card-body pb-2">
-                           <h6 class="mb-4">Activity</h6>
-                           <div class="form-group">
-                              <label class="switcher">
-                              <input type="checkbox" class="switcher-input" checked>
-                              <span class="switcher-indicator">
-                              <span class="switcher-yes"></span>
-                              <span class="switcher-no"></span>
-                              </span>
-                              <span class="switcher-label">Email me when someone comments on my article</span>
-                              </label>
-                           </div>
-                           <div class="form-group">
-                              <label class="switcher">
-                              <input type="checkbox" class="switcher-input" checked>
-                              <span class="switcher-indicator">
-                              <span class="switcher-yes"></span>
-                              <span class="switcher-no"></span>
-                              </span>
-                              <span class="switcher-label">Email me when someone answers on my forum thread</span>
-                              </label>
-                           </div>
-                           <div class="form-group">
-                              <label class="switcher">
-                              <input type="checkbox" class="switcher-input">
-                              <span class="switcher-indicator">
-                              <span class="switcher-yes"></span>
-                              <span class="switcher-no"></span>
-                              </span>
-                              <span class="switcher-label">Email me when someone follows me</span>
-                              </label>
-                           </div>
-                        </div>
-                        <hr class="border-light m-0">
-                        <div class="card-body pb-2">
-                           <h6 class="mb-4">Application</h6>
-                           <div class="form-group">
-                              <label class="switcher">
-                              <input type="checkbox" class="switcher-input" checked>
-                              <span class="switcher-indicator">
-                              <span class="switcher-yes"></span>
-                              <span class="switcher-no"></span>
-                              </span>
-                              <span class="switcher-label">News and announcements</span>
-                              </label>
-                           </div>
-                           <div class="form-group">
-                              <label class="switcher">
-                              <input type="checkbox" class="switcher-input">
-                              <span class="switcher-indicator">
-                              <span class="switcher-yes"></span>
-                              <span class="switcher-no"></span>
-                              </span>
-                              <span class="switcher-label">Weekly product updates</span>
-                              </label>
-                           </div>
-                           <div class="form-group">
-                              <label class="switcher">
-                              <input type="checkbox" class="switcher-input" checked>
-                              <span class="switcher-indicator">
-                              <span class="switcher-yes"></span>
-                              <span class="switcher-no"></span>
-                              </span>
-                              <span class="switcher-label">Weekly blog digest</span>
-                              </label>
-                           </div>
-                        </div>
-                     </div>
+                     <hr class="border-light m-0">
+                  </div>
+                  
                </div>
             </div>
                
