@@ -9,12 +9,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Add Deals & Coupons</h1>
+                    <h1>Edit Deals & Coupons</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin/index">Home</a></li>
-                        <li class="breadcrumb-item active">Add Deals & Coupons</li>
+                        <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin/Admindashboard">Home</a></li>
+                        <li class="breadcrumb-item active">Edit Deals & Coupons</li>
                     </ol>
                 </div>
             </div>
