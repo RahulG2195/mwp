@@ -49,7 +49,7 @@
                     <th>Sub Catgory</th>
                     <th>Website</th>
                     <th>Created Date</th>
-                    <th>view all</th>
+                    <th>Vendor</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -72,7 +72,11 @@
                     <td><?php echo !empty($row['name']) ? $row['name'] : 'N/A'; ?> </td>
                     <td><?php echo !empty($row['website']) ? $row['website'] : 'N/A'; ?> </td>
                     <td><?php echo !empty($row['created_on']) ? date('d - M - Y', strtotime($row['created_on'])) : 'N/A'; ?> </td>
-                    <td><?php echo '<a href="'.base_url() . 'Single_data/ve/'.$row['dv_id'].'"><button class="btn btn-primary">View & Edit</button></a>' ?> </td>
+                    <td>
+                        <?php echo '<a href="'.base_url() . 'Single_data/ve/'.$row['dv_id'].'"><button class="btn btn-primary">View & Edit</button></a>' ?> 
+                        &nbsp;&nbsp;&nbsp;
+                        <?php echo '<a href="'.base_url() . 'Single_data_deals/'.$row['dv_id'].'"><button class="btn btn-primary">Deals & Coupon</button></a>' ?>
+                    </td>
                     <td><?php
                     if($row['vendor_status'] == 0){
                       echo '<a href="'. base_url() . 'admin/Admin_Vendor/Status_update?tab=venue&status=1&vid='.$row['dv_id'].'"><button class="btn btn-danger">DeActived</button></a>';
