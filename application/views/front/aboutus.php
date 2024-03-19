@@ -185,12 +185,14 @@
 			</div>
 			<div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-6  expert_cont">
 				<div class="wedding-expert-content">
-					<h6>Want Some Advice?</h6>
-					<h3 class="wedding-expert-head">Contact a <span style="color: #FF142A;">Wedding Expert</span> For Free</h3>
-					<h3 class="wedding-expert-call">+91-7977965178</h3>
-					<div class="wedding-expert-btn">
+					<h6>Still confused about your wedding need?</h6>
+					<h3 class="wedding-expert-head">Get on a free consultation call with our</h3>
+					<h3 class="wedding-expert-head"><span style="color:#FF142A!important">expert wedding planners</span></h3>
+					<h3 class="wedding-expert-call"><span >+91-7977965178</span></h3>
+					
+				</div>
+				<div class="wedding-expert-btn">
 						<a href="https://api.whatsapp.com/send?phone=917977965178&text=How%20can%20I%20help%20you?" target="_blank">Chat With Us</a>
-					</div>
 				</div>
 			</div>
 		</div>

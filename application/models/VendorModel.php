@@ -46,6 +46,8 @@ class VendorModel extends CI_Model {
           $this->db->limit(3);
         }
         $this->db->order_by('rating', 'DESC');
+        // $this->db->order_by('review', 'DESC');
+        // $this->db->order_by('price_range', 'Asc');
         $query = $this->db->get()->result_array();
         // return ($query);
         // echo $this->db->last_query(); 
@@ -128,6 +130,10 @@ class VendorModel extends CI_Model {
         $this->db->join('master_city', 'default_vendor_inp.city	 = master_city.city_id', 'left');
         $this->db->join('master_vendor_tags', 'default_vendor_inp.tag_id = master_vendor_tags.tag_id', 'left');
         $this->db->where('vendor_seo_url', $seo);
+
+        $this->db->order_by('rating', 'DESC');
+        $this->db->order_by('review', 'DESC');
+        $this->db->order_by('price_range', 'Asc');
         
         $result = $this->db->get()->result_array();
         // echo $this->db->last_query();
@@ -178,7 +184,10 @@ class VendorModel extends CI_Model {
               $this->db->where(array('category' => $categories[0], 'price_range' => $price_range[0], 'master_city.name', $city_name));
             }
           $this->db->limit(10);
-          $this->db->order_by('rating','DESC');
+          $this->db->order_by('rating', 'DESC');
+          $this->db->order_by('review', 'DESC');
+          $this->db->order_by('price_range', 'Asc');
+
           $result = $this->db->get();
           // echo $this->db->last_query();
           $result = $result->result_array();
@@ -298,6 +307,8 @@ class VendorModel extends CI_Model {
         //   $this->db->limit(3);
         // }
         $this->db->order_by('rating', 'DESC');
+        $this->db->order_by('review', 'DESC');
+        $this->db->order_by('price_range', 'Asc');
         $query = $this->db->get()->result_array();
         
         return array(
