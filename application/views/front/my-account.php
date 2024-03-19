@@ -64,8 +64,7 @@
                      </div>
                      <div class="form-group">
                         <label class="form-label">Wedding start date </label>
-                        <?php //if(!empty($result[0]["wedding_start_date"])){ echo $result[0]["wedding_start_date"]; }else{ echo ""; } ?>
-                              <!-- <input type="text" value="Company Ltd."> -->
+                       
                         <input type="text" name="wedding_start_date" class="form-control my_date_picker" id="" value="<?php if(!empty($result[0]["wedding_start_date"])){ echo $result[0]["wedding_start_date"]; }else{ echo ""; } ?>">
                      </div>
                      <div class="form-group">
@@ -321,7 +320,7 @@
                   </div>
                   <div class="tab-pane fade" id="account-change-password">
                      <!-- Design and decor plan details -->
-                     <?php// if(!empty()) ?>
+                     
                      <div class="card-body pb-2">
                         <section class="h-100 gradient-custom">
                            <div class="container py-5 h-100">
