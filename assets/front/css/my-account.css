@@ -3,172 +3,229 @@
          margin-top:20px;
          } */
          .ui-w-80 {
-         width: 100px !important;
-         height: auto;
-         }
-         .btn-default {
-         border-color: rgba(24,28,33,0.1);
-         background: rgba(0,0,0,0);
-         color: #4E5155;
-         margin-top: 38px;
-         margin-left: 1px;
-         }
-         label.btn {
-         margin-bottom: 0;
-         }
-         .btn-outline-primary {
-         border-color: #26B4FF;
-         background: transparent;
-         color: #26B4FF;
-         }
-         .btn {
-         cursor: pointer;
-         }
-         .text-light {
-         color: #babbbc !important;
-         }
-         .btn-facebook {
-         border-color: rgba(0,0,0,0);
-         background: #3B5998;
-         color: #fff;
-         }
-         .btn-instagram {
-         border-color: rgba(0,0,0,0);
-         background: #000;
-         color: #fff;
-         }
-         .card {
-         background-clip: padding-box;
-         box-shadow: 0 1px 4px rgba(24,28,33,0.012);
-         }
-         .row-bordered {
-         overflow: hidden;
-         }
-         .account-settings-fileinput {
-            position: absolute;
-            visibility: visible;
-            width: 220px;
-            height: 34px;
-            opacity: 9;
-         }
-         .account-settings-links .list-group-item.active {
-         font-weight: bold !important;
-         }
-         html:not(.dark-style) .account-settings-links .list-group-item.active {
-         background: transparent !important;
-         }
-         .account-settings-multiselect ~ .select2-container {
-         width: 100% !important;
-         }
-         .light-style .account-settings-links .list-group-item {
-         padding: 0.85rem 1.5rem;
-         border-color: rgba(24, 28, 33, 0.03) !important;
-         }
-         .light-style .account-settings-links .list-group-item.active {
-         color: #4e5155 !important;
-         }
-         .material-style .account-settings-links .list-group-item {
-         padding: 0.85rem 1.5rem;
-         border-color: rgba(24, 28, 33, 0.03) !important;
-         }
-         .material-style .account-settings-links .list-group-item.active {
-         color: #4e5155 !important;
-         }
-         .dark-style .account-settings-links .list-group-item {
-         padding: 0.85rem 1.5rem;
-         border-color: rgba(255, 255, 255, 0.03) !important;
-         }
-         .dark-style .account-settings-links .list-group-item.active {
-         color: #fff !important;
-         }
-         .light-style .account-settings-links .list-group-item.active {
-         color: #fff !important;
-         }
-         .light-style .account-settings-links .list-group-item {
-         padding: 0.85rem 1.5rem;
-         border-color: rgba(24,28,33,0.03) !important;
-         color:#fff;
-         }
-         .list-group-item-action:hover{
-            z-index: 1;
+            width: 100px !important;
+            height: auto;
+            }
+            .btn-default {
+            border-color: rgba(24,28,33,0.1);
+            background: rgba(0,0,0,0);
+            color: #4E5155;
+            margin-top: 38px;
+            margin-left: 1px;
+            }
+            label.btn {
+            margin-bottom: 0;
+            }
+            .btn-outline-primary {
+            border-color: #26B4FF;
+            background: transparent;
+            color: #26B4FF;
+            }
+            .btn {
+            cursor: pointer;
+            }
+            .text-light {
+            color: #babbbc !important;
+            }
+            .btn-facebook {
+            border-color: rgba(0,0,0,0);
+            background: #3B5998;
             color: #fff;
-            text-decoration: none;
-            background-color: #fff;
-         }
-
-         .profile-container{
-            margin-bottom: 30px;
-         }
-
-         .profile-btn{
-            margin-top: -40px;
-            margin-left: 20px;
-         }
-
-
-         .list-group-item{
-            background: none!important;
-         }
-
-
-         .profile-image-label{
-            margin-left: 10px !important;
-            margin-bottom: 8px !important;
-         }
-
-         .radio_sec {
+            }
+            .btn-instagram {
+            border-color: rgba(0,0,0,0);
+            background: #000;
+            color: #fff;
+            }
+            .card {
+            background-clip: padding-box;
+            box-shadow: 0 1px 4px rgba(24,28,33,0.012);
+            }
+            .row-bordered {
+            overflow: hidden;
+            }
+            .account-settings-fileinput {
+               position: absolute;
+               visibility: visible;
+               width: 220px;
+               height: 34px;
+               opacity: 9;
+            }
+            .account-settings-links .list-group-item.active {
+            font-weight: bold !important;
+            }
+            html:not(.dark-style) .account-settings-links .list-group-item.active {
+            background: transparent !important;
+            }
+            .account-settings-multiselect ~ .select2-container {
+            width: 100% !important;
+            }
+            .light-style .account-settings-links .list-group-item {
+            padding: 0.85rem 1.5rem;
+            border-color: rgba(24, 28, 33, 0.03) !important;
+            }
+            .light-style .account-settings-links .list-group-item.active {
+            color: #4e5155 !important;
+            }
+            .material-style .account-settings-links .list-group-item {
+            padding: 0.85rem 1.5rem;
+            border-color: rgba(24, 28, 33, 0.03) !important;
+            }
+            .material-style .account-settings-links .list-group-item.active {
+            color: #4e5155 !important;
+            }
+            .dark-style .account-settings-links .list-group-item {
+            padding: 0.85rem 1.5rem;
+            border-color: rgba(255, 255, 255, 0.03) !important;
+            }
+            .dark-style .account-settings-links .list-group-item.active {
+            color: #fff !important;
+            }
+            .light-style .account-settings-links .list-group-item.active {
+            color: #fff !important;
+            }
+            .light-style .account-settings-links .list-group-item {
+            padding: 0.85rem 1.5rem;
+            border-color: rgba(24,28,33,0.03) !important;
+            color:#fff;
+            }
+            .list-group-item-action:hover{
+               z-index: 1;
+               color: #fff;
+               text-decoration: none;
+               background-color: #fff;
+            }
+   
+            .profile-container{
+               margin-bottom: 30px;
+            }
+   
+            .profile-btn{
+               margin-top: -40px;
+               margin-left: 20px;
+            }
+   
+   
+            .list-group-item{
+               background: none!important;
+            }
+   
+   
+            .profile-image-label{
+               margin-left: 10px !important;
+               margin-bottom: 8px !important;
+            }
+   
+            .radio_sec {
+               display: flex;
+           }
+   
+           .card label {
+            font-weight: 600;
+            margin: 0;
+            /* padding: 10px 0 0px 0; */
+            font-size: 15px;
             display: flex;
+            gap: 10px;
+            align-items: center;
         }
-
-        .card label {
-         font-weight: 600;
-         margin: 0;
-         /* padding: 10px 0 0px 0; */
-         font-size: 15px;
-         display: flex;
-         gap: 10px;
-         align-items: center;
-     }
-
-     .preferedlabel{
-         margin-left: 22px!important;
-     }
-
-
-     .gradient-custom {
-      /* fallback for old browsers */
-      background: #ffdceb;
-      
-      /* Chrome 10-25, Safari 5.1-6 */
-      /* background: -webkit-linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1)); */
-      
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      /* background: linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1)) */
-      }
-
-
-      .payment-label{
-         margin-top: -20px;
-      }
-
-      .detail-label{
-         padding-left: 15px;
-      }
-
-      .value-label{
-         padding-right: 15px;
-      }
-
-      .btn-footer{
-         text-align: center;
-      }
-
-      .other-detail-card{
-         margin-left: -20px;
-         margin-right: -25px;
-      }
-      
-      .form-check {
-    color: #AA4D4F;
-    padding: 6px 20px;
-}
+   
+        .preferedlabel{
+            margin-left: 22px!important;
+        }
+   
+   
+        .gradient-custom {
+         /* fallback for old browsers */
+         background: #ffdceb;
+         
+         /* Chrome 10-25, Safari 5.1-6 */
+         /* background: -webkit-linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1)); */
+         
+         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         /* background: linear-gradient(to top left, rgba(205, 156, 242, 1), rgba(246, 243, 255, 1)) */
+         }
+   
+   
+         .payment-label{
+            margin-top: -20px;
+         }
+   
+         .detail-label{
+            padding-left: 15px;
+         }
+   
+         .value-label{
+            padding-right: 15px;
+         }
+   
+         .btn-footer{
+            text-align: center;
+         }
+   
+         .other-detail-card{
+            margin-left: -20px;
+            margin-right: -25px;
+         }
+   
+   .divider:after,
+   .divider:before {
+     content: "";
+     flex: 1;
+     height: 1px;
+     background: #eee;
+   }
+   
+   
+   .checklist-card{
+      width: 730px;
+   }
+   
+   .checklist-container{
+      padding-top: 1rem !important;
+   }
+   
+   .update-btn{
+       background-color: #ff142a;
+       border: none;
+       padding: 15px;
+       border-radius: 8px;
+       color: #fff;
+   }
+   
+   .my-accnt-wedding-checklist-head{
+      text-align: center;
+      font-size: 29px;
+      font-weight: 500;
+      color: #ff142a;
+   }
+   
+   .myaccnt-checklist-li{
+      margin-top:13px !important;
+   }
+   
+   /* #account-social-links{
+      display: inline-flex!important;
+   } */
+   
+   .wishlist-view-detail{
+      background-color: #ff142a;
+       border: none;
+   }
+   
+   .wishlist-li{
+      display: inline-flex;
+   }
+   
+   .wishlist-vendor-name{
+      margin-left: 20px;
+   }
+   
+   .btn-password-submit{
+      background-color: #ff142a;
+      border: none;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      width: 15%;
+   }
