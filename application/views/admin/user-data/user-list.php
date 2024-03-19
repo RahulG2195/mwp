@@ -32,13 +32,14 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                <table id="register_user_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
                                 <thead>
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Phone no</th>
                                     <th>User role</th>
+                                    <th>Created Date</th>
                                     <th>View detail</th>
                                 </tr>
                                 </thead>
@@ -55,6 +56,7 @@
                                     <td><?php echo $row["email_id"]; ?></td>
                                     <td><?php echo $row["phone_number"]; ?></td>
                                     <td><?php echo $row["user_role"]; ?></td>
+                                    <td><?php echo $row["created_date"]; ?></td>
                                     <td><a href="<?php echo base_url() ?>admin/Userdata" class="btn btn-success">View detail</a></td>
                                 </tr>
                                 <?php   
@@ -85,6 +87,13 @@
     </div>
 <!-- ./wrapper -->
 <?php $this->load->view('admin/layout/script'); ?>
+<script>
+     $("#register_user_datatable").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[4, 'asc']]
+    }).buttons().container().appendTo('#register_user_datatable_wrapper .col-md-6:eq(0)');
+</script>
                    
             
             
