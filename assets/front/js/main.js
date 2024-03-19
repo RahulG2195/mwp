@@ -221,7 +221,44 @@ $(document).ready(function () {
       },
     },
   });
+  
+  // VERSION 2 FOR CATEGORY SLIDER
+  $("#categorySliderCarousel2").owlCarousel({
+    loop: true,
+    margin: 20,
+    responsiveClass: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+//      280: {
+//        items: 2,
+//      },
+//      550: {
+//        items: 3,
+//      },
+//      768: {
+//        items: 4,
+//      },
+//      991: {
+//        items: 5,
+//      },
+//      1200: {
+//        items: 6,
+//      },
+//      1440: {
+//        items: 7,
+//      },
+    },
+  });
+  
 });
+
+
 
 /*Customer logo*/
 
