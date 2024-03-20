@@ -1413,4 +1413,24 @@ $(window).scroll(function(){
   }
 });
 
+document.querySelector('.wishlist-vendor').addEventListener('click', (e) => {
+  var vendorseourl =document.getElementById('wishlist-value').value ; 
 
+  $.ajax({
+      type: 'POST',
+      url: 'http://localhost/mwp-phase2/Wishlist/submitwishlist', // Adjust the URL based on your CI configuration
+      data: {vendorseourl: vendorseourl},
+      success: function(response) {
+        //alert(response);
+          if (response.isSubmit == "true") {
+                  alert("Vendor is wishlisted");
+            
+          } else {
+            alert("something went wrong");
+          }
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        return console.log('AJAX Error:', textStatus, errorThrown);
+      }
+    });
+  });

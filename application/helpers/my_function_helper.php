@@ -184,6 +184,9 @@ function Vendor_card_without_col($type, $cat_name, $seo_url, $image, $vendor_nam
                     <a href="' . base_url() . 'vendor-detail/' . $type . '/' . $seo_url . '" class="white-text d-flex justify-content-end view-category">
                         <span class="fa-solid fa-caret-right" style="color:#FD4251; margin-top: 3px;margin-right: 5px"></span> View
                     </a>
+                    <a href="javascript:void(0);"  id="wishlist-value" class="white-text d-flex justify-content-end view-category view-category-wishlist wishlistlogin" style="color: #ff142a !important;" onclick="wishlistfunctionality('. $id .');">
+                      <i class="fas fa-heart" style="margin-top: 5px;"></i>
+                    </a>
                     </div>
                 </div>
                 </a>

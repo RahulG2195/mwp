@@ -95,6 +95,21 @@ $category = $single_data[0]['category'];
                 </div>
                 <div class="vendor-detail-heading">
                     <h1><?php echo isset($single_data[0]['vendor_name']) ? $single_data[0]['vendor_name'] : '' ?></h1>
+                    <?php 
+                         if(!isset($this->session->userdata['logged_in']) || $this->session->userdata['logged_in'] != true) 
+                          {  ?>
+                            <a href="javascript:void(0);" data-toggle="modal" data-target="#Loginmodel" class="white-text d-flex justify-content-end view-category view-category-wishlist" style="color: #ff142a !important;margin-top: -30px;">
+                                <i class="fas fa-heart" style="margin-top: 5px;"></i>
+                            </a>
+                         <?php }
+                          else
+                          {  ?>
+                            <input type="hidden" value="<?php echo $single_data[0]['vendor_seo_url']; ?>" name="vendor_seo_url" id="wishlist-value">
+                            <a href="javascript:void(0);"   class="white-text d-flex justify-content-end view-category wishlist-vendor view-category-wishlist" style="color: #ff142a !important;margin-top: -30px;">
+                                <i class="fas fa-heart" style="margin-top: 5px;"></i>
+                            </a>
+                        <?php 
+                          } ?>
 
                     <p><?php echo isset($single_data[0]['address']) ? $single_data[0]['address'] : '' ?></p>
                     <hr>

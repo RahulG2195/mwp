@@ -1300,3 +1300,24 @@ $url = $vendor_name . '-in-' . $this->session->userdata('selectedCity');
         }
 });
 </script>
+<script>
+function wishlistfunctionality(id) {
+    $.ajax({
+      type: 'POST',
+      url: 'http://localhost/mwp-phase2/Wishlist/addwishlist', // Adjust the URL based on your CI configuration
+      data: {id: id},
+      success: function(response) {
+        //.alert(response);
+          if (response.isSubmit == "true") {
+                  alert("vendor wishlisted sucessfully");
+            
+          } else {
+            alert("vendor not wishlisted sucessfully");
+          }
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        return console.log('AJAX Error:', textStatus, errorThrown);
+      }
+    });
+}
+</script>
