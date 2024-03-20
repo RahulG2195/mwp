@@ -69,6 +69,8 @@ $route['vendor-detail'] = 'Vendor/Vender_Detail';
 $route['vendor-detail/(:any)/(:any)'] = 'Vendor/Vender_Detail/$1/$2';
 $route['Single-Vendor/(:any)'] = 'Vendor/Get_vendor_By_Cat/$1';
 $route['(:any)-in-(:any)'] = 'Filter/index';
+$route['vendor-deals'] = 'Home/index1';
+$route['deals/(:any)-in-(:any)'] = 'Filter/index1';
 $route['Citys/(:any)'] = 'Vendor/Get_City_vendor/$1';
 
 $route['bridal-makeup'] = 'Vendor/Bridal_Makeup';

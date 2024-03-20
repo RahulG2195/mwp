@@ -94,7 +94,7 @@ class Vendor extends CI_Controller {
         $start = $this->input->post('start');
 
         $data['vendors'] = $this->VendorModel->Get_Vendor_By_Cat_Model($vendor_seo, (int) $start);
-
+       
         $output = '';
         foreach ($data['vendors']['result'] as $value) {
             $category = $value['category'];

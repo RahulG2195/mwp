@@ -541,6 +541,65 @@ class VendorModel extends CI_Model {
         
     }
     
+    function Vendor_Deals($allData = '', $seo='', $start = 0){
+      // echo $seo;
+      $this->db->select('default_vendor_inp.*,vendor-deals.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url');
+      $this->db->from('vendor-deals');
+//      $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
+      $this->db->join('default_vendor_inp', 'vendor-deals.vendor_id = default_vendor_inp.dv_id', 'left');
+      $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id', 'left');
+//      $this->db->join('master_vendor_tags', 'default_vendor_inp.tag_id = master_vendor_tags.tag_id', 'left');
+//      $this->db->where(array('default_vendor_inp.vendor_status' => 1, 'default_vendor_inp.trusted_vendor' => 1, 'rating' => 5));
+//      if(!empty($this->session->userdata('selectedCity')) && $this->session->userdata('selectedCity')){
+//        $city_name = $this->session->userdata('selectedCity');
+//        $this->db->where('master_city.name', $city_name);
+//      }
+
+      if(!empty($seo) && $seo !== ''){
+        $this->db->where('master_category.cat_seo_url', $seo);
+      }
+
+//      $this->db->order_by('rating', 'DESC');
+        $this->db->where('vendor-deals.is_active', '1');
+        $count_query = $this->db->get();
+
+        // display trusted vendor
+        $this->db->select('default_vendor_inp.*,vendor-deals.*,  master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url');
+        $this->db->from('vendor-deals');
+//        $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
+        $this->db->join('default_vendor_inp', 'vendor-deals.vendor_id = default_vendor_inp.dv_id', 'left');
+        $this->db->join('master_category', 'default_vendor_inp.category = master_category.category_id', 'left');
+//        $this->db->join('master_vendor_tags', 'default_vendor_inp.tag_id = master_vendor_tags.tag_id', 'left');
+//        $this->db->where(array('default_vendor_inp.vendor_status' => 1, 'default_vendor_inp.trusted_vendor' => 1, 'rating' => 5));
+//        if(!empty($this->session->userdata('selectedCity')) && $this->session->userdata('selectedCity')){
+//          $city_name = $this->session->userdata('selectedCity');
+//          $this->db->where('master_city.name', $city_name);
+//        }
+
+        if(!empty($seo) && $seo !== ''){
+          // echo $seo . '--';
+          $this->db->where('master_category.cat_seo_url', $seo);
+        }
+
+        if($allData == 'limit'){
+          $this->db->limit(24, $start);
+        }elseif($allData !== 'all-data'){
+          $this->db->limit(30);
+        }
+//        $this->db->order_by('rating', 'DESC');
+        $this->db->where('vendor-deals.is_active', '1');
+        $query = $this->db->get();
+        // if($_SERVER['REMOTE_ADDR'] == '60.254.0.49'){
+        // echo $this->db->last_query();
+            
+        // }
+        return array(
+          'category_count' => $count_query->num_rows(),
+          'result' => $query->result_array(),
+      );
+        
+    }
+    
     public function Get_Vendor_cat(){
         $this->db->where('is_deleted', '0');
       $query = $this->db->get('master_category');

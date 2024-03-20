@@ -9,16 +9,16 @@
 <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/front/css/responsive.css"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<section class="service_banner banner-secion-common" id="service_banner" style="background-image: url('<?php echo base_url() ?>assets/front/image/hero-banner/MWP-Vendor-listing-page-hero-banner.jpg' )">
+<section class="service_banner banner-secion-common d-none" id="service_banner" style="background-image: url('<?php echo base_url() ?>assets/front/image/hero-banner/MWP-Vendor-listing-page-hero-banner.jpg' )">
     <div class="overlay1"></div>
 
     <div class="container-fluid filter_div">
         <?php
         $get = $this->input->get();
-        $vendor_show = explode('-in-', $this->uri->segment(1));
+        $vendor_show = explode('-in-', $this->uri->segment(2));
         $vendor_name = $vendor_show[0];
         $city_name = $vendor_show[1];
-
+//        echo "vendor_name ".$vendor_name;
         if(isset($get['price_detail'])){
             $prie_ranges = implode(',', $get['price_detail']);
         }else{
@@ -28,7 +28,7 @@
         $sort =  isset($get['sort']) ? $get['sort'] : 'Sort';
         $vendor_exp = isset($get['vendor_exp']) ? $get['vendor_exp'][0] . '...' : 'Experience';
         
-        if ($vendor_name == 'Venues') {
+        if ($vendor_name == 'destination-wedding-venues') {
             $event_spaces = isset($get['event_spaces']) ? $get['event_spaces'][0] . '...' : 'Type of Venue';
             $price_plate = isset($get['price_plate']) ? $get['price_plate'][0] . '...' : 'Per Plate budget';
             echo '<div class="filter_button showPopup">
@@ -49,7 +49,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Bridal-Wear') {
+        } elseif ($vendor_name == 'bridal-wear-vendors') {
             $prod_type = isset($get['prod_type']) ? $get['prod_type'][0] . '...' : 'Dress Type';
             echo '<div class="filter_button showPopup">
                     <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -66,7 +66,7 @@
                 <div class="filter_button showPopup">
                     <p>'. $sort . ' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Groom-Wear') {
+        } elseif ($vendor_name == 'groom-wear-vendors') {
             $prod_type = isset($get['prod_type']) ? $get['prod_type'][0] . '...' : 'Dress Type';
             echo '<div class="filter_button showPopup">
             <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -83,7 +83,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Photographers') {
+        } elseif ($vendor_name == 'wedding-photographers-near-me') {
             $ppackage_range2 = isset($get['ppackage_range2']) ? $get['ppackage_range2'][0] . '...' : 'Per day budget';
             echo '<div class="filter_button showPopup">
             <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -103,7 +103,7 @@
             <div class="filter_button showPopup">
                 <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
             </div>';
-        } elseif ($vendor_name == 'Make-Up-Artists') {
+        } elseif ($vendor_name == 'make-up-artists-near-me') {
             $make_techs = isset($get['make_techs']) ? $get['make_techs'][0] . '...' : 'Make Up Types';
             $make_feature = isset($get['make_feature']) ? $get['make_feature'][0] . '...' : 'Service Location';
             echo '<div class="filter_button showPopup">
@@ -124,7 +124,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Mehendi-Artists') {
+        } elseif ($vendor_name == 'mehendi-artists-near-me') {
             $max_people = isset($get['max_people']) ? $get['max_people'][0] . '...' : 'Guest count to be attended';
             echo '<div class="filter_button showPopup">
                 <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -144,7 +144,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Bridal-Jewellery') {
+        } elseif ($vendor_name == 'bridal-jewellery') {
             $jew_type = isset($get['jew_type']) ? $get['jew_type'][0] . '...' : 'Jewellery Type';
             echo '<div class="filter_button showPopup">
                 <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -161,7 +161,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>>';
-        } elseif ($vendor_name == 'Decoration') {
+        } elseif ($vendor_name == 'wedding-decoration') {
             echo '<div class="filter_button showPopup">
             <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
             </div>
@@ -174,7 +174,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Gifts') {
+        } elseif ($vendor_name == 'wedding-gifts') {
             $gift_types = isset($get['gift_types']) ? $get['gift_types'][0] . '...' : 'Gift Type ';
             $moq_ranger = isset($get['moq_ranger']) ? $get['moq_ranger'][0] . '...' : 'Minimum Order Quantit';
             echo '<div class="filter_button showPopup">
@@ -195,7 +195,7 @@
                 <div class="filter_button showPopup">
                     <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
                 </div>';
-        } elseif ($vendor_name == 'Catering') {
+        } elseif ($vendor_name == 'caterers-for-wedding') {
             $menu_opt = isset($get['menu_opt']) ? $get['menu_opt'][0] . '...' : 'Food Options';
             echo '<div class="filter_button showPopup">
             <p>' . str_replace('-', ' ', $vendor_name) . ' <i class="fa fa-sort-desc"></i></p>
@@ -212,7 +212,7 @@
             <div class="filter_button showPopup">
                 <p>'.$sort.' <i class="fa fa-sort-desc"></i></p>
             </div>';
-        } elseif ($vendor_name == 'Invitations') {
+        } elseif ($vendor_name == 'wedding-invitations-vendor-near-me') {
             $type_avail = isset($get['type_avail']) ? $get['type_avail'][0] . '...' : 'Product Types';
             $paper_style_avail = isset($get['paper_style_avail']) ? $get['paper_style_avail'][0] . '...' : 'Paper Styles';
             echo '<div class="filter_button showPopup">
@@ -241,12 +241,12 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb" style="background:none;">
         <li class="breadcrumb-item"><a href="<?php echo base_url() ?>" style="color: #FD152A;">Home</a></li>
-        <li class="breadcrumb-item"><a href="<?php echo  base_url() ?>vendor/vendorlisting" style="color: #4D4D4D;">Vendor Listing</a></li>
+        <li class="breadcrumb-item"><a href="<?php echo  base_url() ?>vendor-deals" style="color: #4D4D4D;">Vendor Deals</a></li>
         <li class="breadcrumb-item active" aria-current="page" style="color: #4D4D4D;"><?php echo $filter_data['result'][0]['cat_name'] ?></li>
     </ol>
 </nav>
 <?php
-$url = $this->uri->segment(1);
+$url = $this->uri->segment(2);
 $output = explode('-in-', $url);
 $url_vendor = $output[0];
 $url_city = urldecode($output[1]);
@@ -288,11 +288,11 @@ $get = $this->input->get();
             </select>
         </div>
         <hr>
-        <form action="<?php echo base_url() . $url ?>" method="get" id="filter_form">
+        <form action="<?php echo base_url() . $url ?>" method="get" id="filter_form" c>
             <div class="filter_list">
                 <div class="row">
                     <?php
-                    if ($vendor_name == 'Venues') {
+                    if ($vendor_name == 'destination-wedding-venues') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -370,7 +370,7 @@ $get = $this->input->get();
                         </div>
 
                     <?php
-                    } elseif ($vendor_name == 'Bridal-Wear') {
+                    } elseif ($vendor_name == 'bridal-wear-vendors') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -961,6 +961,7 @@ $get = $this->input->get();
                 <div class="vendor-catalogue-heading">
                 <!-- (<?php //echo isset($filter_data['category_count']) ? $filter_data['category_count'] : 0 ?>) -->
                     <h2><?php echo $url_vendor . ' In ' . $url_city  ?> (<?php echo isset($filter_data['category_count']) ? $filter_data['category_count'] : 0 ?>):</h2>
+                </br>
                 </div>
             </div>
         </div>
@@ -1089,7 +1090,7 @@ $get = $this->input->get();
         var city = document.getElementById('filter_city1').value;
         // var radioValue = document.querySelector('input[name="radio"]:checked').value;
 
-        var url = '<?php echo base_url() ?>' + vendor + '-in-' + city;
+        var url = '<?php echo base_url().'deals/' ?>' + vendor + '-in-' + city;
         window.location.href = url;
     }
 
@@ -1102,7 +1103,7 @@ $get = $this->input->get();
 </script>
 <script>
     var load_flag = 0;
-    var para = '<?php echo $this->uri->segment(1)?>';
+    var para = '<?php echo $this->uri->segment(2)?>';
     var loadInProgress = false;
     const url = window.location.href;
     let urlOutput =''
@@ -1127,7 +1128,7 @@ $get = $this->input->get();
 	function LoadMoreDataFilters(start){
 
         $.ajax({
-          url: '<?php echo base_url()?>Filter/Load_more_filter_data',
+          url: '<?php echo base_url()?>Filter/Load_more_filter_data1',
           type: 'post',
           data: {start: load_flag, url: para, parameters : urlOutput},
           success: function(result){
