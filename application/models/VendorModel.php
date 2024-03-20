@@ -78,7 +78,7 @@ class VendorModel extends CI_Model {
         
         }elseif($tab == 'dc'){
         
-          $this->db->select('decorator.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_nam, master_vendor_tags.tag_id, master_vendor_tags.tag_namee');
+          $this->db->select('decorator.*, default_vendor_inp.*,master_category.category_id, master_category.name as cat_name, master_city.city_id, master_city.name As city_nam, master_vendor_tags.tag_id, master_vendor_tags.tag_name');
           $this->db->from('decorator');
           $this->db->join('default_vendor_inp', 'decorator.vin_id = default_vendor_inp.vendor_uid', 'left');
         
@@ -197,6 +197,14 @@ class VendorModel extends CI_Model {
         );
         
       }
+    }
+    
+    function fetch_vendor_deals($vendor_id){
+      $this->db->select('*');
+      $this->db->from('vendor-deals');
+      $this->db->where('vendor_id', $vendor_id);
+      $this->db->where('is_active', 1);
+      return $this->db->get()->result_array();
     }
 
     function Get_Vendor_By_Cat_Model($vendor_seo, $start = 0) {

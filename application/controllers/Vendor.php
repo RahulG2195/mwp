@@ -32,7 +32,11 @@ class Vendor extends CI_Controller {
         // $data['single_data'][0]['category']=13; //temp shankar
         // $vendor_id = '28922'; //90 //temp 
         $vendor_id = $data['single_data'][0]['dv_id'];
+        $data['deals_data'] = $this->VendorModel->fetch_vendor_deals($vendor_id);
         $payment_data = $this->VendorModel->Get_Vendor_payment($vendor_id);
+//        echo "<pre>";
+//        print_r($data);
+//        exit;
         $data['is_paid_vendor'] = 0;
         if(count($payment_data) > 0){
             $data['is_paid_vendor'] = 1;
