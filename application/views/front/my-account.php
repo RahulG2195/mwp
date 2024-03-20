@@ -1020,7 +1020,7 @@
                               <input type="text" class="form-control" name="new-password" placeholder="Enter new password" require>
                            </div>
                            <div class="form-group">
-                              <button  class="btn-password-submit">Submit</button>
+                              <!-- <button  class="btn-password-submit">Submit</button> -->
                               <input type="submit" name="submit" value="Submit" class="btn-password-submit">
                            </div>
                         </form>
