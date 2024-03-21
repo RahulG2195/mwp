@@ -84,6 +84,8 @@
                              <p>Plan Details</p>
                          </a>
                      </li>
+                     <div class="user-panel  pb-3 mb-3 d-flex">
+                     </div>
                      <li class="nav-item">
                          <a href="<?php echo base_url(); ?>VendorPanel/Login/update_password_page" class="nav-link">
                              <i class="nav-icon fas fa-columns"></i>

@@ -80,12 +80,13 @@ class VendorDealsModel extends CI_Model
     }
   }
   
-//  public function Get_vendor_visitor_detail($id) {
-//    $this->db->select('COUNT(*) AS `visitor`, vendor_id');
-//    $this->db->from($this->table);
-//    $this->db->where('vendor_id', $id);
-//    $this->db->group_by('vendor_id');
-//    return $this->db->get()->row_array();
-//  }
+public function Get_vendor_deal_detail($id) {
+    $this->db->select('COUNT(*) AS `deal`, vendor_id');
+    $this->db->from($this->table);
+    $this->db->where('vendor_id', $id);
+    $this->db->where('is_active', '1');
+    $this->db->group_by('vendor_id');
+    return $this->db->get()->row_array();
+  }
 
 }
