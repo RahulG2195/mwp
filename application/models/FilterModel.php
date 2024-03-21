@@ -31,7 +31,7 @@ class FilterModel extends CI_Model
         if (!empty($dataArray)) {
 
             // count vendor after filter 
-            if ($vendor == 'Venues') {
+            if ($vendor == 'destination-wedding-venues') {
 
                 $this->db->select('default_vendor_inp.*,  venue.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
@@ -61,7 +61,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
                
-            } elseif ($vendor == 'Bridal-Wear') {
+            } elseif ($vendor == 'bridal-wear-vendors') {
 
                 $this->db->select('default_vendor_inp.*,  bridal_wear.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
@@ -79,7 +79,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
 
-            } elseif ($vendor == 'Groom-Wear') {
+            } elseif ($vendor == 'groom-wear-vendors') {
                 $this->db->select('default_vendor_inp.*,  groom_wear.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -98,7 +98,7 @@ class FilterModel extends CI_Model
                 }
 
                 
-            } elseif ($vendor == 'Photographers') {
+            } elseif ($vendor == 'wedding-photographers-near-me') {
                 $this->db->select('default_vendor_inp.*,  photography.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -123,7 +123,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
 
-            } elseif ($vendor == 'Make-Up-Artists') {
+            } elseif ($vendor == 'make-up-artists-near-me') {
 
                 $this->db->select('default_vendor_inp.*,  make_up.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
@@ -153,7 +153,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
                 
-            } elseif ($vendor == 'Mehendi-Artists') {
+            } elseif ($vendor == 'mehendi-artists-near-me') {
 
                 $this->db->select('default_vendor_inp.*,  mehendi.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
@@ -184,7 +184,7 @@ class FilterModel extends CI_Model
                 }
 
 
-            } elseif ($vendor == 'Bridal-Jewellery') {
+            } elseif ($vendor == 'bridal-jewellery') {
                 $this->db->select('default_vendor_inp.*,  bridal_jewellery.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -202,7 +202,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
 
-            } elseif ($vendor == 'Decoration') {
+            } elseif ($vendor == 'wedding-decoration') {
                 $this->db->select('default_vendor_inp.*,  decorator.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -217,7 +217,7 @@ class FilterModel extends CI_Model
                     }
                     $this->db->group_end(); // End the group for OR conditions  
                 }
-            } elseif ($vendor == 'Gifts') {
+            } elseif ($vendor == 'wedding-gifts') {
                 $this->db->select('default_vendor_inp.*,  gift.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -251,7 +251,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
                
-            } elseif ($vendor == 'Catering') {
+            } elseif ($vendor == 'caterers-for-wedding') {
                 $this->db->select('default_vendor_inp.*,  catering.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -269,7 +269,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
 
-            } elseif ($vendor == 'Invitations') {
+            } elseif ($vendor == 'wedding-invitations-vendor-near-me') {
                 $this->db->select('default_vendor_inp.*, inivitations.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -296,7 +296,7 @@ class FilterModel extends CI_Model
                 }
 
             }
-            if ($vendor !== 'Decoration') {
+            if ($vendor !== 'wedding-decoration') {
                 if (!empty($dataArray['price_detail'])) {
                     $this->db->group_start(); // Start a group for OR conditions
                     foreach ($dataArray['price_detail'] as $price_detail) {
@@ -328,7 +328,7 @@ class FilterModel extends CI_Model
 
 
             // filter data query 
-            if ($vendor == 'Venues') {
+            if ($vendor == 'destination-wedding-venues') {
 
                 $this->db->select('default_vendor_inp.*,  venue.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
@@ -358,7 +358,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
                
-            } elseif ($vendor == 'Bridal-Wear') {
+            } elseif ($vendor == 'bridal-wear-vendors') {
 
                 $this->db->select('default_vendor_inp.*,  bridal_wear.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
@@ -376,7 +376,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
 
-            } elseif ($vendor == 'Groom-Wear') {
+            } elseif ($vendor == 'groom-wear-vendors') {
                 $this->db->select('default_vendor_inp.*,  groom_wear.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -395,7 +395,7 @@ class FilterModel extends CI_Model
                 }
 
                 
-            } elseif ($vendor == 'Photographers') {
+            } elseif ($vendor == 'wedding-photographers-near-me') {
                 $this->db->select('default_vendor_inp.*,  photography.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -420,7 +420,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
 
-            } elseif ($vendor == 'Make-Up-Artists') {
+            } elseif ($vendor == 'make-up-artists-near-me') {
 
                 $this->db->select('default_vendor_inp.*,  make_up.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
@@ -450,7 +450,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
                 
-            } elseif ($vendor == 'Mehendi-Artists') {
+            } elseif ($vendor == 'mehendi-artists-near-me') {
 
                 $this->db->select('default_vendor_inp.*,  mehendi.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
@@ -481,7 +481,7 @@ class FilterModel extends CI_Model
                 }
 
 
-            } elseif ($vendor == 'Bridal-Jewellery') {
+            } elseif ($vendor == 'bridal-jewellery') {
                 $this->db->select('default_vendor_inp.*,  bridal_jewellery.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -499,7 +499,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
 
-            } elseif ($vendor == 'Decoration') {
+            } elseif ($vendor == 'wedding-decoration') {
                 $this->db->select('default_vendor_inp.*,  decorator.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -514,7 +514,7 @@ class FilterModel extends CI_Model
                     }
                     $this->db->group_end(); // End the group for OR conditions  
                 }
-            } elseif ($vendor == 'Gifts') {
+            } elseif ($vendor == 'wedding-gifts') {
                 $this->db->select('default_vendor_inp.*,  gift.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -548,7 +548,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
                
-            } elseif ($vendor == 'Catering') {
+            } elseif ($vendor == 'caterers-for-wedding') {
                 $this->db->select('default_vendor_inp.*,  catering.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -566,7 +566,7 @@ class FilterModel extends CI_Model
                     $this->db->group_end(); // End the group for OR conditions  
                 }
 
-            } elseif ($vendor == 'Invitations') {
+            } elseif ($vendor == 'wedding-invitations-vendor-near-me') {
                 $this->db->select('default_vendor_inp.*, inivitations.*, master_category.category_id, master_category.name AS cat_name, master_category.cat_seo_url, master_city.city_id, master_city.name AS city_name, master_vendor_tags.tag_name');
                 $this->db->from('default_vendor_inp');
                 $this->db->join('master_city', 'default_vendor_inp.city = master_city.city_id', 'left');
@@ -594,7 +594,7 @@ class FilterModel extends CI_Model
 
             }
 
-            if ($vendor !== 'Decoration') {
+            if ($vendor !== 'wedding-decoration') {
                 if (!empty($dataArray['price_detail'])) {
                     $this->db->group_start(); // Start a group for OR conditions
                     foreach ($dataArray['price_detail'] as $price_detail) {

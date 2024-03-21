@@ -410,7 +410,7 @@ $get = $this->input->get();
                         </div>
 
                     <?php
-                    } elseif ($vendor_name == 'Groom-Wear') {
+                    } elseif ($vendor_name == 'groom-wear-vendors') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -460,7 +460,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Photographers') {
+                    } elseif ($vendor_name == 'wedding-photographers-near-me') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -542,7 +542,7 @@ $get = $this->input->get();
                         </div>
 
                     <?php
-                    } elseif ($vendor_name == 'Make-Up-Artists') {
+                    } elseif ($vendor_name == 'make-up-artists-near-me') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -595,7 +595,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Mehendi-Artists') {
+                    } elseif ($vendor_name == 'mehendi-artists-near-me') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -675,7 +675,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Bridal-Jewellery') {
+                    } elseif ($vendor_name == 'bridal-jewellery') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -715,7 +715,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Decoration') {
+                    } elseif ($vendor_name == 'wedding-decoration') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -737,7 +737,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Gifts') {
+                    } elseif ($vendor_name == 'wedding-gifts') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -798,7 +798,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Catering') {
+                    } elseif ($vendor_name == 'caterers-for-wedding') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -843,7 +843,7 @@ $get = $this->input->get();
                             </div>
                         </div>
                     <?php
-                    } elseif ($vendor_name == 'Invitations') {
+                    } elseif ($vendor_name == 'wedding-invitations-vendor-near-me') {
                     ?>
                         <div class="col-lg">
                             <div class="first_filter">
@@ -901,7 +901,7 @@ $get = $this->input->get();
                     <?php
                     }
 
-                    if ($vendor_name !== 'Decoration') {
+                    if ($vendor_name !== 'wedding-decoration') {
                     ?>
 
                         <div class="col-lg">
