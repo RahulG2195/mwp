@@ -33,7 +33,7 @@
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
-                                <table id="example1" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                <table id="query_leads_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
                                 <thead>
                                 <tr>
                                     <th>Name</th>
@@ -91,3 +91,10 @@
     </div>
 
     <?php $this->load->view('VendorPanel/layout/script'); ?>
+<script>
+     $("#query_leads_datatable").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[4, 'desc']]
+    }).buttons().container().appendTo('#query_leads_datatable_wrapper .col-md-6:eq(0)');
+</script>

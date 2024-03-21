@@ -37,7 +37,7 @@
               <!-- /.card-header -->
               <div class="card-body"> 
 			  <!-- for working below table use id example1-->
-                <table id="example1" class="table table-bordered table-striped">
+                <table id="vendor_deals_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
                   <thead>
                   <tr>
                     <th>ID</th>
@@ -130,3 +130,10 @@
     </div>
 
     <?php $this->load->view('VendorPanel/layout/script'); ?>
+<script>
+     $("#vendor_deals_datatable").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[9, 'desc']]
+    }).buttons().container().appendTo('#vendor_deals_datatable_wrapper .col-md-6:eq(0)');
+</script>
