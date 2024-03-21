@@ -113,6 +113,7 @@
                     <th>Plan Type</th>
                     <th>Price</th>
                     <th>Payment Status</th>
+                    <th>Transaction Id</th>
                     <th>Created On</th>
 					<th>Exprired On</th>
           <!-- <th>Remaning Days</th> -->
@@ -142,6 +143,7 @@
                     <!-- <td><?php //echo "INR ".$price." (INR ".round($monthly_price)."/mothly)"; ?> </td> -->
                     <td><?php echo "INR ".$price.''; ?> </td>
                     <td><?php echo "<span style='padding:3px;color: green;'>".$row['payment_status'].'<span>'; ?> </td>
+                    <td><?php echo "<span>".$row['merchant_transaction_id'].'<span>'; ?> </td>
 					<td><?php 
           if($row['plan_type']=="Free"){
             echo "Year";
