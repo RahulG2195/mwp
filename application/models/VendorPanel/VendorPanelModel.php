@@ -303,4 +303,15 @@ class VendorPanelModel extends CI_Model
     // $this->db->order_by('city_id','ASC');
     return $this->db->get()->result_array();
   }
+  
+  function fetch_vendor_notification($id) {
+    $this->db->select('count(notification_id) AS count, notification_type');
+    $this->db->from('vendor_notification');
+    $this->db->where('vendor_id', $id);
+    $this->db->where('is_new', 1);
+    $this->db->where('is_read', 0);
+    $this->db->group_by('notification_type');
+    // $this->db->order_by('city_id','ASC');
+    return $this->db->get()->result_array();
+  }
 }
