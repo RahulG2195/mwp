@@ -2500,26 +2500,17 @@ $category = $single_data[0]['category'];
           <!--<button style="margin-top:-35px;" onclick="copyToClipboardWithJavascript()"><h4><?php echo $deals_data[0]['custom_text']; ?></h4></button>-->
                         <div class="body" style="margin-top:20px;">
       <div class="inner-body d-flex flex-nowrap owl-carousel" id="categorySliderCarousel2">
-
                             <?php
                             // image slider 
                             if (!empty($deals_data[0]['image'])) {
-//                                echo "shankar";
-//                                exit;
-                            
-
 //                                $image = explode(',', $single_data[0]['images']);
                                 $image = $deals_data;
                                 $count_img = count($image);
-                                
                                 $i = 1;
                                 foreach ($image as $img) {
-                                    // echo $img;exit;
                                 $path = FCPATH . 'uploads/deals/' . $img['image']; 
-//<!--//                                echo "sdsd ".DATETIME;-->
                                     if (file_exists($path)) { ?>
-                                        <?php if($img['start_date'] < DATETIME && $img['end_date'] > DATETIME){ ?>
-                                           
+                                        <?php if($img['start_date'] < DATETIME && $img['end_date'] > DATETIME){ ?>               
           <!--<a href="<?php echo base_url() ?>Single-Deal-Details/<?php $img['deal_id']; ?>" class="box d-flex flex-column align-items-center justify-content-center">-->
           <a style="pointer-events: none;color:#000000" href="void(0)" class="box d-flex flex-column align-items-center justify-content-center">
                                             <div style="margin-top:0px;padding-top:15px;"><h4><?php echo $img['title'].' | <span style="border: 1px dashed lightgray;padding: 5px;background-color: ghostwhite;">'.$img['coupon_code'].'</span> | '.$img['discount_value']; ?></h4></div>
@@ -2547,56 +2538,6 @@ $category = $single_data[0]['category'];
                             }
 
                             ?>
-        
-                        
-                        
-                        
-                        
-                    <!--<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">-->
-                        <!--<span class="vbadge"><i class="fa fa-heart-o"></i> <?php //echo $single_data[0]['tag_name']; ?></span>-->
-                        <!--<div class="carousel-inner">-->
-                            <?php
-                            
-                            // image slider 
-//                            if (!empty($deals_data[0]['image'])) {
-//                                echo "shankar";
-//                                exit;
-                            
-
-//                                $image = explode(',', $single_data[0]['images']);
-//                                $image = $deals_data;
-//                                $count_img = count($image);
-
-//                                $i = 1;
-//                                foreach ($image as $img) {
-                                    // echo $img;exit;
-//                                $path = FCPATH . 'uploads/deals/' . $img['image']; 
-//                                    if (file_exists($path)) {
-//                                        echo '<div class="carousel-item ' . ($i == 1 ? 'active' : '') . '">
-//                                        <img class="img-fluid vf_img w-100" src="' . base_url() . 'uploads/deals/' . $img['image'] . '" class="img-fluid Card image cap">
-//                                    </div>';
-//                                    } else {
-//                                        echo '<div class="carousel-item ' . ($i == 1 ? 'active' : '') . '">
-//                                        <img class="img-fluid vf_img w-100" src="' . base_url() . 'uploads/deals/MWP NA.png" class="img-fluid Card image cap">
-//                                    </div>';
-//                                    }
-//                                    $i++;
-//                                }
-//                            } else {
-//                                echo '<img class="img-fluid vf_img w-100" src="' . base_url() . 'uploads/MWP NA.png" class="img-fluid Card image cap">';
-//                            }
-
-                            ?>
-                        </div>
-                    </div>
-                    <!-- <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a> -->
                 </div>
                         <?php } ?>
                 
