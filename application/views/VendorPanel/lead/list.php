@@ -36,6 +36,7 @@
                                 <table id="query_leads_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
                                 <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th>Name</th>
                                     <th>Phone no</th>
                                     <th>Email</th>
@@ -55,6 +56,7 @@
                                         // print_r($result);
                                 ?>
                                 <tr>
+                                    <td><?php echo $row["query_id"]; ?></td>
                                     <td><?php echo $row["name"]; ?></td>
                                     <td><?php echo $row["phone_no"]; ?></td>
                                     <td><?php echo $row["email"]; ?></td>
@@ -95,6 +97,6 @@
      $("#query_leads_datatable").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
-      "order": [[4, 'desc']]
+      "order": [[5, 'desc']]
     }).buttons().container().appendTo('#query_leads_datatable_wrapper .col-md-6:eq(0)');
 </script>

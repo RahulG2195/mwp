@@ -67,7 +67,7 @@
                      <!-- <li class="nav-header">DATA</li>    -->
                      <!-- <li class="nav-header">SETTING</li> -->
                      <li class="nav-item">
-                         <a href="<?php echo base_url().'vendor-dashboard/visitor/'.$id; ?>" class="nav-link">
+                         <a href="<?php echo base_url().'vendor-dashboard/visitor'; ?>" class="nav-link">
                              <i class="nav-icon fas fa-users"></i>
                              <p>User Visits</p>
                          </a>
