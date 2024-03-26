@@ -346,6 +346,18 @@ class VendorModel extends CI_Model {
       $this->db->insert('vendor-visitor-table', $data);
       return $this->db->insert_id();
     }
+    
+    function InserDataNotification($data){
+      $this->db->insert('vendor_notification',$data);
+      $id=$this->db->insert_id();
+      return $id;
+    }
+    function InserDataNotificationAdmin($data){
+      $this->db->insert('admin_notification',$data);
+      $id=$this->db->insert_id();
+      return $id;
+    }
+    
     function update_vendor($id, $data) {
       // echo $id;exit;
       // pr($data, 'exit');exit;
