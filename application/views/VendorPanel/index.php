@@ -26,44 +26,51 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
       <div class="container-fluid">
         <h5 class="mb-2">Notification</h5>
         <div class="row">
-          <div class="col-md-3 col-sm-6 col-12">
+            
+            <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_leads_notification/0'; ?>">-->
+                <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(0)">
             <div class="info-box">
               <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">New Query Leads</span>
-                <span class="info-box-number">N/A</span>
+                <span class="info-box-number" id="new_leads">N/A</span>
               </div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
           </div>
+             <!--</a>-->
           <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-12">
+          <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_visit_notification/1'; ?>">-->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(1)">
             <div class="info-box">
               <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">New User Visits</span>
-                <span class="info-box-number">N/A</span>
+                <span class="info-box-number" id="new_visit">N/A</span>
               </div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
           </div>
+           <!--</a>-->   
           <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-12">
+          <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_deals_notification/2'; ?>">-->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(2)">
             <div class="info-box">
               <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">New Deals & Coupons</span>
-                <span class="info-box-number">N/A</span>
+                <span class="info-box-number" id="new_deals">N/A</span>
               </div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
           </div>
+           <!--</a>-->   
           <!-- /.col -->
           <div class="col-md-3 col-sm-6 col-12">
             <div class="info-box">
@@ -192,7 +199,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                 <i class="ion ion-person-add"></i>
               </div>
               <?php  //if($visitor_details['visitor'] != '0'){ ?>
-              <a href="<?php echo base_url() .'vendor-dashboard/visitor/' . $visitor_details['vendor_id']; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="<?php echo base_url() .'vendor-dashboard/visitor'; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
               <?php //} ?>
             </div>
           </div>
@@ -755,3 +762,67 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
 </div>
 <!-- ./wrapper -->
 <?php $this->load->view('VendorPanel/layout/script'); ?>
+<script>
+  $(function () {        
+
+        var count = 0;
+        LoadMoreData();
+        // Set up the interval to call the function every 60 seconds (1000 milliseconds = 1 second)
+        setInterval(LoadMoreData, 15000); 
+        
+//       =========================================== For vendor ======================================================
+    function LoadMoreData(){
+        var vendor_id = '<?php echo $this->session->userdata('dv_id') ?>';
+        if(count <= 10){
+            console.log('count '+count);
+//       alert(vendor_id)
+      $.ajax({
+        type: "POST",
+        url: '<?php echo base_url(); ?>VendorPanel/Vendor_Notification_Api/get_notification_count',
+        data: 'vendor_id=' + vendor_id,
+        dataType: 'json',
+        success: function(response){
+//          console.log('result received '+result);
+//          var result2 = JSON.parse(result)
+//          console.log('result2 received '+response);
+          if(response.status == true) {
+              var data = response.data;
+//              console.log('data received '+data);
+              if (($.trim(data) != null) && ($.trim(data) != 'null') && ($.isPlainObject(data) != true) && (data.length > 0)) {
+                  var i = 1;
+                    $.each(data, function (key, val) {
+//                        console.log('key '+key+' notification_type '+val.notification_type+' count '+val.count);
+//                        new_leads new_visit new_deals
+                        if(val.notification_type == '0'){
+                            $('#new_leads').html(val.count);
+                        }else if(val.notification_type == '1'){
+                            $('#new_visit').html(val.count);
+                        }else if(val.notification_type == '2'){
+                            $('#new_deals').html(val.count);
+                        }
+                    });
+            }
+          } else {
+//              alert();
+//              // No more data, you may want to disable further scrolling or show a message
+              console.log('No more data');
+              return false;
+          }
+      }
+
+    })
+    count++;
+  }
+        
+        }
+  })
+  function update_notification(type){
+        if(type==0){
+            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_leads_notification/0'; ?>";
+        }else if(type==1){
+            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_visit_notification/1'; ?>";
+        }else if(type==2){
+            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_deals_notification/2'; ?>";
+        }    
+  }
+</script>    

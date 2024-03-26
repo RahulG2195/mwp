@@ -103,6 +103,18 @@ class VendorQuery extends CI_Controller {
          $insert_data['created_date']=date('Y-m-d H:i:s', strtotime("+0 days"));
 
         $insert_id=$this->VendorQueryModel->InserDataNew($insert_data);
+        //insert vendor notification
+        $insert_data2 = array(
+            'vendor_id' => $this->input->post("vendor_id"),
+            'notification_type' => '0',
+            'custom_id' => $insert_id,
+            'is_new' => '1',
+            'is_read' => '0',
+            'created_date' => date('Y-m-d H:i:s', strtotime("+0 days"))
+        );
+        $this->VendorQueryModel->InserDataNotification($insert_data2);
+        //insert admin notification
+        $this->VendorQueryModel->InserDataNotificationAdmin($insert_data2);
         // $insert_id=1; //temp
 
         if ($insert_id) {  

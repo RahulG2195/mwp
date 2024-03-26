@@ -45,6 +45,18 @@ class VendorDealsModel extends CI_Model
     $id = $this->db->insert_id();
     return $id;
   }
+  
+  function InserDataNotification($data){
+      $this->db->insert('vendor_notification',$data);
+      $id=$this->db->insert_id();
+      return $id;
+    }
+    
+    function InserDataNotificationAdmin($data){
+      $this->db->insert('admin_notification',$data);
+      $id=$this->db->insert_id();
+      return $id;
+    }
 
   function UpdateData($cond = array(), $data)
   {

@@ -49,6 +49,18 @@ public function index()
             $data["vendoreditrequest"]=$this->DashboardModel->vendoreditrequestdata();
             // echo "<pre>";
             // print_r($data["vendor_new_count"]);
+            $data["venue_count"]='0';
+            $data["birdal_count"]='0';
+            $data["groom_count"]='0';
+            $data["photography_count"]='0';
+            $data["makeup_count"]='0';
+            $data["mehendiartist_count"]='0';
+            $data["bridaljwellery_count"]='0';
+            $data["decoration_count"]='0';
+            $data["gift_count"]='0';
+            $data["catering_count"]='0';
+            $data["inivitations_count"]='0';
+            
             foreach($data["vendor_new_count"] as $row){
                 // echo 'category '.$row['category'];
                 if($row['category']=='1'){

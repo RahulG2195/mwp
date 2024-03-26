@@ -221,8 +221,22 @@ class Vendor_Dashboard extends CI_Controller {
 
             $data = $this->security->xss_clean($data);
             $this->load->model('VendorPanel/VendorDealsModel');
-            $id = $this->VendorDealsModel->InserData($data);
-            if ($id) {
+            $insert_id = $this->VendorDealsModel->InserData($data);
+            
+            //insert vendor notification
+            $insert_data2 = array(
+                'vendor_id' => $this->input->post("vendor_id"),
+                'notification_type' => '2',
+                'custom_id' => $insert_id,
+                'is_new' => '1',
+                'is_read' => '0',
+                'created_date' => date('Y-m-d H:i:s', strtotime("+0 days"))
+            );
+            $this->VendorDealsModel->InserDataNotification($insert_data2);
+            //insert admin notification
+            $this->VendorDealsModel->InserDataNotificationAdmin($insert_data2);
+            
+            if ($insert_id) {
                 $this->session->set_flashdata('succ_msg', ADDMSG);
             } else {
                 $this->session->set_flashdata('err_msg', ADDMSG);

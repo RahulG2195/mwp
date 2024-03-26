@@ -73,7 +73,7 @@
       <a href="<?php echo base_url() ?>contactus">Contact</a>
    </li>
    
-   <li class="d-none">
+   <li>
       <a href="<?php echo base_url() ?>vendor-deals">Deals & Coupons </a>
    </li>
 </ul>

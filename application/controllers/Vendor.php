@@ -57,6 +57,18 @@ class Vendor extends CI_Controller {
             'created_date' => strip_tags(date('Y-m-d H:i:s', strtotime("+0 days")))
         );
         $insert_id = $this->VendorModel->insert_visit_user($insert_data);
+        //insert vendor notification
+        $insert_data2 = array(
+            'vendor_id' => $vendor_id,
+            'notification_type' => '1',
+            'custom_id' => $insert_id,
+            'is_new' => '1',
+            'is_read' => '0',
+            'created_date' => date('Y-m-d H:i:s', strtotime("+0 days"))
+        );
+        $this->VendorModel->InserDataNotification($insert_data2);
+        //insert admin notification
+        $this->VendorModel->InserDataNotificationAdmin($insert_data2);
         $this->load->view('front/pages/vendor_detail', $data);
     }
 

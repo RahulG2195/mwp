@@ -18,9 +18,9 @@ class Vendor_Notification_Api extends CI_Controller {
             $this->load->model('VendorPanel/VendorPanelModel');
             $notification_data2 = $this->VendorPanelModel->fetch_vendor_notification($dv_id);
             $notification_data = array(
-                '0' => array('count' => '0', 'notification_type' => '0'),
-                '1' => array('count' => '0', 'notification_type' => '1'),
-                '2' => array('count' => '0', 'notification_type' => '2')
+                '0' => array('count' => '0', 'notification_type' => '0'), //lead
+                '1' => array('count' => '0', 'notification_type' => '1'), //visit
+                '2' => array('count' => '0', 'notification_type' => '2') //deals
             );
             // check record not empty
             if (!empty($notification_data2)) {
@@ -41,5 +41,43 @@ class Vendor_Notification_Api extends CI_Controller {
 //        exit;
         echo json_encode($response);
     }
+    
+    public function update_leads_notification($notification_type) {
+        $id = $this->session->userdata('dv_id');
+        //update table
+        $this->load->model('VendorPanel/VendorPanelModel');
+        $data = array(
+            'is_new'=> 0,
+            'is_read'=> 1
+        );
+        $this->VendorPanelModel->update_vendor_notification($id,$notification_type,$data);
+        //redirect to datatable
+        redirect(base_url() .'vendor-dashboard/lead');
+    }
+    public function update_visit_notification($notification_type) {
+        $id = $this->session->userdata('dv_id');
+        //update table
+        $this->load->model('VendorPanel/VendorPanelModel');
+        $data = array(
+            'is_new'=> 0,
+            'is_read'=> 1
+        );
+        $this->VendorPanelModel->update_vendor_notification($id,$notification_type,$data);
+        //redirect to datatable
+        redirect(base_url() .'vendor-dashboard/visitor');
+    }
+    public function update_deals_notification($notification_type) {
+        $id = $this->session->userdata('dv_id');
+        //update table
+        $this->load->model('VendorPanel/VendorPanelModel');
+        $data = array(
+            'is_new'=> 0,
+            'is_read'=> 1
+        );
+        $this->VendorPanelModel->update_vendor_notification($id,$notification_type,$data);
+        //redirect to datatable
+        redirect(base_url() .'vendor-dashboard/deals');
+    }
+  
     
 }
