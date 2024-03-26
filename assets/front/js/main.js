@@ -1011,7 +1011,7 @@ $(".logindesign").on("click", function () {
 jQuery("#loginform").submit(function (evt) {
   var form = $("#loginform");
   var url = form.attr("action");
-  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [1] + '/';
+  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [0] + '';
 
   $.ajax({
      type: "POST",
@@ -1273,7 +1273,7 @@ document.querySelector('#userEmail').addEventListener('focusout', (e) => {
   // alert(userEmail)
   const userError = document.querySelector('.userEmailerr');
   const loginBtn = document.querySelector('#loginBtn');
-  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [1] + '/';
+  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [0] + '';
   //alert(base_url);
   userError.innerHTML = '';
   userInput.style.borderColor =  '';
@@ -1314,7 +1314,8 @@ document.querySelector('#passwordlogin').addEventListener('focusout', (e) => {
   // alert(pwdEmail)
   const pwdError = document.querySelector('.pwdEmailerr');
   const loginBtn = document.querySelector('#loginBtn');
-  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [1] + '/';
+  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [0] + '';
+  //alert(base_url);
   pwdError.innerHTML = '';
   pwdInput.style.borderColor =  '';
   if(pwdEmail.length > 3){
@@ -1354,7 +1355,7 @@ document.querySelector('#createregsisteremailid').addEventListener('focusout', (
   userEmail = e.target.value;
   const userError = document.querySelector('#userNameErrorMsg');
   const loginBtn = document.querySelector('#create_ac');
-  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [1] + '/';
+ var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [0] + '';
   userError.innerHTML = '';
   userInput.style.borderColor =  '';
   if(userEmail.length > 3){
@@ -1417,7 +1418,7 @@ $(window).scroll(function(){
 
 document.querySelector('.wishlist-vendor').addEventListener('click', (e) => {
   var vendorseourl =document.getElementById('wishlist-value').value ; 
-  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [1] + '/';
+  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [0] + '';
   $.ajax({
       type: 'POST',
       //url: '<?php echo base_url(); ?>/Wishlist/submitwishlist', // Adjust the URL based on your CI configuration
