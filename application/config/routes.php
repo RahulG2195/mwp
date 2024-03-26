@@ -69,6 +69,8 @@ $route['vendor-detail'] = 'Vendor/Vender_Detail';
 $route['vendor-detail/(:any)/(:any)'] = 'Vendor/Vender_Detail/$1/$2';
 $route['Single-Vendor/(:any)'] = 'Vendor/Get_vendor_By_Cat/$1';
 $route['(:any)-in-(:any)'] = 'Filter/index';
+$route['vendor-deals'] = 'Home/index1';
+$route['deals/(:any)-in-(:any)'] = 'Filter/index1';
 $route['Citys/(:any)'] = 'Vendor/Get_City_vendor/$1';
 
 $route['bridal-makeup'] = 'Vendor/Bridal_Makeup';
@@ -96,7 +98,7 @@ $route['vendor-dashboard'] = 'VendorPanel/Vendor_Dashboard';
 //$route['vendor-dashboard/lead/(:any)'] = 'VendorPanel/Vendor_Dashboard/lead/$1';
 $route['vendor-dashboard/lead'] = 'VendorPanel/Vendor_Dashboard/lead';
 $route['vendor-dashboard/lead/details/(:any)'] = 'VendorPanel/Vendor_Dashboard/veiwdetail/$1';
-$route['vendor-dashboard/visitor/(:any)'] = 'VendorPanel/Vendor_Dashboard/visitor/$1';
+$route['vendor-dashboard/visitor'] = 'VendorPanel/Vendor_Dashboard/visitor/$1';
 $route['vendor-dashboard/plan/(:any)'] = 'VendorPanel/Vendor_Dashboard/plan/$1';
 $route['Vendor-Logout'] = 'VendorPanel/Login/logout';
 $route['Data/(:any)/(:any)'] = 'VendorPanel/Admin_Vendor/Vendor_all_Data/$1/$2';

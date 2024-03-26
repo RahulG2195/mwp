@@ -21,7 +21,13 @@ class Vendor_Dashboard extends CI_Controller {
         $id = $this->session->userdata('dv_id');
             //Total Leads
             $this->load->model('VendorPanel/VendorLeadModel');
-            $data['lead_details'] = $this->VendorLeadModel->Get_vendor_lead_detail($id);       
+            $lead_data = $this->VendorLeadModel->Get_vendor_lead_detail($id);       
+             $data['lead_details'] = array('vendor_id' => $id,
+                                    'lead' => '0'
+            );
+             if(!empty($lead_data)){
+                $data['lead_details'] = $lead_data;
+            }
             //Total Users
             $this->load->model('VendorPanel/VendorUserModel');
             // $id = 3072; //temp
@@ -32,6 +38,18 @@ class Vendor_Dashboard extends CI_Controller {
             if(!empty($visitor_data)){
                 $data['visitor_details'] = $visitor_data;
             }
+            
+            //Total Users
+            $this->load->model('VendorPanel/VendorDealsModel');
+            // $id = 3072; //temp
+            $deal_data = $this->VendorDealsModel->Get_vendor_deal_detail($id);
+             $data['deal_details'] = array('vendor_id' => $id,
+                                    'deal' => '0'
+            );
+            if(!empty($deal_data)){
+                $data['deal_details'] = $deal_data;
+            }
+            
             //Plan Type
             $this->load->model('VendorPanel/VendorPlanModel');
             // $id = 18899; //temp
@@ -53,7 +71,9 @@ class Vendor_Dashboard extends CI_Controller {
                 $data['plan_details'] = $plan_data;
             }
         }
-      
+//        echo "<pre>";
+//        print_r($data);
+//        exit;
         $this->load->view('VendorPanel/index',$data);
     }
 
@@ -201,8 +221,22 @@ class Vendor_Dashboard extends CI_Controller {
 
             $data = $this->security->xss_clean($data);
             $this->load->model('VendorPanel/VendorDealsModel');
-            $id = $this->VendorDealsModel->InserData($data);
-            if ($id) {
+            $insert_id = $this->VendorDealsModel->InserData($data);
+            
+            //insert vendor notification
+            $insert_data2 = array(
+                'vendor_id' => $this->input->post("vendor_id"),
+                'notification_type' => '2',
+                'custom_id' => $insert_id,
+                'is_new' => '1',
+                'is_read' => '0',
+                'created_date' => date('Y-m-d H:i:s', strtotime("+0 days"))
+            );
+            $this->VendorDealsModel->InserDataNotification($insert_data2);
+            //insert admin notification
+            $this->VendorDealsModel->InserDataNotificationAdmin($insert_data2);
+            
+            if ($insert_id) {
                 $this->session->set_flashdata('succ_msg', ADDMSG);
             } else {
                 $this->session->set_flashdata('err_msg', ADDMSG);

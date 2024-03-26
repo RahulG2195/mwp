@@ -22,6 +22,246 @@
     </div>
     <!-- /.content-header -->
 
+        <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <h5 class="mb-2">Notification</h5>
+        <div class="row d-none">
+            
+            <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_leads_notification/0'; ?>">-->
+                <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(0)">
+            <div class="info-box">
+              <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">New Query Leads</span>
+                <span class="info-box-number" id="new_leads">N/A</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+             <!--</a>-->
+          <!-- /.col -->
+          <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_visit_notification/1'; ?>">-->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(1)">
+            <div class="info-box">
+              <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">New User Visits</span>
+                <span class="info-box-number" id="new_visit">N/A</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+           <!--</a>-->   
+          <!-- /.col -->
+          <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_deals_notification/2'; ?>">-->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(2)">
+            <div class="info-box">
+              <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">New Deals & Coupons</span>
+                <span class="info-box-number" id="new_deals">N/A</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+           <!--</a>-->   
+          <!-- /.col -->
+          <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box">
+              <span class="info-box-icon bg-danger"><i class="far fa-star"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">N/A</span>
+                <span class="info-box-number">N/A</span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+        <!-- =========================================================== -->
+        <!--<h5 class="mb-2">Info Box With Custom Shadows <small><i>Using Bootstrap's Shadow Utility</i></small></h5>-->
+        <div class="row d-none">
+            
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(0)">
+            <div class="info-box shadow-none">
+              <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Vendor Edit Request</span>
+                <span class="info-box-number" id="vendor_edit"><?php echo count($vendoreditrequest); ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(1)">
+            <div class="info-box shadow-sm">
+              <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Bridal Wear</span>
+                <span class="info-box-number" id="bridal_wear"><?php echo $birdal_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(2)">
+            <div class="info-box shadow">
+              <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Bridal Jewellery</span>
+                <span class="info-box-number" id="bridal_jewellery"><?php echo $bridaljwellery_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(3)">
+            <div class="info-box shadow-lg">
+              <span class="info-box-icon bg-danger"><i class="far fa-star"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Catering</span>
+                <span class="info-box-number" id="catering"><?php echo $catering_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(4)">
+            <div class="info-box shadow-none">
+              <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Decoration</span>
+                <span class="info-box-number" id="decoration"><?php echo $decoration_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(5)">
+            <div class="info-box shadow-sm">
+              <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Gifts</span>
+                <span class="info-box-number" id="gifts"><?php echo $gift_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(6)">
+            <div class="info-box shadow">
+              <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Groom Wear</span>
+                <span class="info-box-number" id="groom_wear"><?php echo $groom_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(7)">
+            <div class="info-box shadow-lg">
+              <span class="info-box-icon bg-danger"><i class="far fa-star"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Invitations</span>
+                <span class="info-box-number" id="invitations"><?php echo $inivitations_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(8)">
+            <div class="info-box shadow-none">
+              <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Make Up Artists</span>
+                <span class="info-box-number" id="make_up_artists"><?php echo $makeup_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(9)">
+            <div class="info-box shadow-sm">
+              <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Mehendi Artists</span>
+                <span class="info-box-number" id="mehendi_artists"><?php echo $mehendiartist_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(10)">
+            <div class="info-box shadow">
+              <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Photographers</span>
+                <span class="info-box-number" id="photographers"><?php echo $photography_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification2(11)">
+            <div class="info-box shadow-lg">
+              <span class="info-box-icon bg-danger"><i class="far fa-star"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Venues</span>
+                <span class="info-box-number" id="venues"><?php echo $venue_count; ?></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          
+          
+          
+        </div>
+        <!-- /.row -->
+      </div>
+        <!--</div>-->
+  </section>
+    
+    
+    
     <!-- Main content -->
     <section class="content">
 
@@ -71,17 +311,17 @@
                   <?php } ?>
 
                     <?php 
-                    $birdal_count=0;
+                    $birdal_cnt=0;
                     if(!empty($birdal_count))
                   {
-                        $birdal_count=$birdal_count;
+                        $birdal_cnt=$birdal_count;
                     ?>
                   <li>
                     <!-- todo text -->
                   <a href="<?php echo base_url(); ?>admin/admindashboard/new/Bridal_Wear" class="small-box-footer">
                     <span class="text">Bridal Wear</span>
                     <!-- Emphasis label -->
-                    <small class="badge badge-info"><i class="far fa-clock"></i> <?php echo $birdal_count; ?> new</small>
+                    <small class="badge badge-info"><i class="far fa-clock"></i> <?php echo $birdal_cnt; ?> new</small>
                     <!-- General tools such as edit or delete-->
                   </a>
                   <a href="<?php echo base_url(); ?>admin/admindashboard/new/Bridal_Wear" class="small-box-footer">
@@ -417,7 +657,7 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
 
-
+        <h5 class="mb-2">Al Data</h5>
         <!-- Vendor data -->
         <div class="row">
           <div class="col">
@@ -1390,3 +1630,115 @@
 </div>
 <!-- ./wrapper -->
 <?php $this->load->view('admin/layout/script'); ?>
+<script>
+  $(function () {        
+
+        var count = 0;
+        LoadMoreData();
+        // Set up the interval to call the function every 60 seconds (1000 milliseconds = 1 second)
+        setInterval(LoadMoreData, 15000); 
+        
+//       =========================================== For vendor ======================================================
+    function LoadMoreData(){
+//        var vendor_id = '<?php //echo $this->session->userdata('dv_id') ?>';
+        var vendor_id = '0';
+        if(count <= 10){
+            console.log('count '+count);
+//       alert(vendor_id)
+      $.ajax({
+        type: "POST",
+        url: '<?php echo base_url(); ?>admin/Admin_Notification_Api/get_notification_count',
+        data: 'vendor_id=' + vendor_id,
+        dataType: 'json',
+        success: function(response){
+//          console.log('result received '+result);
+//          var result2 = JSON.parse(result)
+//          console.log('result2 received '+response);
+          if(response.status == true) {
+              var data = response.data;
+              var data2 = response.data2;
+//              console.log('data received '+data2);
+              if (($.trim(data) != null) && ($.trim(data) != 'null') && ($.isPlainObject(data) != true) && (data.length > 0)) {
+                  var i = 1;
+                    $.each(data, function (key, val) {
+//                        console.log('key '+key+' notification_type '+val.notification_type+' count '+val.count);
+//                        new_leads new_visit new_deals
+                        if(val.notification_type == '0'){
+                            $('#new_leads').html(val.count);
+                        }else if(val.notification_type == '1'){
+                            $('#new_visit').html(val.count);
+                        }else if(val.notification_type == '2'){
+                            $('#new_deals').html(val.count);
+                        }
+                    });
+            }
+            if (($.trim(data2) != null) && ($.trim(data2) != 'null') && ($.isPlainObject(data2) != true) && (data2.length > 0)) {
+                  var i = 1;
+                    $.each(data2, function (key, val) {
+//                        console.log('key '+key+' category '+val+' count '+val.venue_count);
+                            $('#vendor_edit').html(val.vendor_edit_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#venues').html(val.venue_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#bridal_wear').html(val.birdal_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#groom_wear').html(val.groom_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#photographers').html(val.photography_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#make_up_artists').html(val.makeup_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#mehendi_artists').html(val.mehendiartist_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#bridal_jewellery').html(val.bridaljwellery_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#decoration').html(val.decoration_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#gifts').html(val.gift_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#catering').html(val.catering_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                            $('#invitations').html(val.inivitations_count+'<span style="color:red;"> &nbsp;&nbsp;new<span>');
+                    });
+            }
+          } else {
+//              alert();
+//              // No more data, you may want to disable further scrolling or show a message
+              console.log('No more data');
+              return false;
+          }
+      }
+
+    })
+    count++;
+  }
+        
+        }
+  })
+  function update_notification(type){
+        if(type==0){
+            window.location.href = "<?php echo base_url() .'admin/Admin_Notification_Api/update_leads_notification/0'; ?>";
+        }else if(type==1){
+            window.location.href = "<?php echo base_url() .'admin/Admin_Notification_Api/update_visit_notification/1'; ?>";
+        }else if(type==2){
+            window.location.href = "<?php echo base_url() .'admin/Admin_Notification_Api/update_deals_notification/2'; ?>";
+        }    
+  }
+  function update_notification2(type){
+        if(type==0){
+            window.location.href = "<?php echo base_url() .'admin/Vendor_edit_request'; ?>";
+        }else if(type==1){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/Bridal_Wear'; ?>";
+        }else if(type==2){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/Jewellery'; ?>";
+        }else if(type==3){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/Catering'; ?>";
+        }else if(type==4){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/Decoration'; ?>";
+        }else if(type==5){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/Gift'; ?>";
+        }else if(type==6){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/Groom_wear'; ?>";
+        }else if(type==7){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/Inivitation'; ?>";
+        }else if(type==8){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/MakeUp'; ?>";
+        }else if(type==9){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/Mehendi'; ?>";
+        }else if(type==10){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/Photography'; ?>";
+        }else if(type==11){
+            window.location.href = "<?php echo base_url() .'admin/admindashboard/new/Venue'; ?>";
+        }
+        
+  }
+</script>

@@ -72,6 +72,10 @@
     <li>
       <a href="<?php echo base_url() ?>contactus">Contact</a>
    </li>
+   
+   <li>
+      <a href="<?php echo base_url() ?>vendor-deals">Deals & Coupons </a>
+   </li>
 </ul>
 </div>
 </div>

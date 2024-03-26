@@ -83,6 +83,61 @@ function Vendor_card($type, $cat_name, $seo_url, $image, $vendor_name, $rating, 
   return $output;
 }
 
+function Vendor_card_deals($type, $cat_name, $seo_url, $image, $vendor_name, $rating, $review, $price_range, $area)
+{
+ 
+  $path = FCPATH . 'uploads/deals/' . $image;  // Use FCPATH to get the absolute server path
+//              <span class="vendor-tag"><i class="fas fa-heart"></i> '. '' .'</span>
+  $output = '<div class="col-12 col-md-6 col-lg-4 vendor-col my-2">
+  
+                <a href="' . base_url() . 'vendor-detail/' . $type . '/' . $seo_url . '">
+                <div class="card">
+                    <div class="view overlay">';
+
+  if (file_exists($path)) {
+    $output .= '<img class="card-img-top" src="' . base_url() . 'uploads/deals/' . $image . '" class="img-fluid Card image cap">';
+  } else {
+    $output .= '<img class="card-img-top" src="' . base_url() . 'uploads/vendors/MWP NA.png" class="img-fluid Card image cap">';
+  }
+
+  $output .= '<a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                    </div>
+                    <div class="card-body elegant-color white-text rounded-bottom">
+                    <span class="text-muted category-text">' . $cat_name . '</span>
+                    <h4 class="card-title font-weight-bold" title="' . $vendor_name . '">' . $vendor_name . '</h4>
+                    <hr class="hr-light">
+                    <p class="mb-2"><b>Description : </b>
+                      ' . $rating . '
+                    </p>
+                    <p class="mb-2"><b>Coupon Code : </b>
+                      <span style="border: 1px dashed lightgray;padding: 5px;background-color: ghostwhite;">' . $review . '<span>
+                    </p>
+                    <p class="card-text money-symbol"> <b></b><b>';
+//  if (isset($price_range)) {
+//    if ($price_range == '₹') {
+//      $output .=  $price_range . '(Budget friendly)';
+//    } elseif ($price_range == '₹₹') {
+//      $output .=  $price_range . '(Value for money)';
+//    } elseif ($price_range == '₹₹₹') {
+      $output .=  'Discount Value : '.$price_range . '';
+//    }
+//  }
+//       <p class="lead"><strong><i class="fas fa-location"></i>' . $area . ', ' . '' . '</strong></p>
+  $output .= '</b> </p>
+                   
+                    <!-- Link -->
+                    <a href="' . base_url() . 'vendor-detail/' . $type . '/' . $seo_url . '" class="white-text d-flex justify-content-end view-category">
+                        <span class="fa-solid fa-caret-right" style="color:#FD4251; margin-top: 3px;margin-right: 5px"></span> View
+                    </a>
+                    </div>
+                </div>
+                </a>
+            </div>';
+  return $output;
+}
+
 
 // use only for  carousel 
 function Vendor_card_without_col($type, $cat_name, $seo_url, $image, $vendor_name, $rating, $review, $price_range, $area, $city, $tag_name)
@@ -131,6 +186,62 @@ function Vendor_card_without_col($type, $cat_name, $seo_url, $image, $vendor_nam
                     </a>
                     <a href="javascript:void(0);"  id="wishlist-value" class="white-text d-flex justify-content-end view-category view-category-wishlist wishlistlogin" style="color: #ff142a !important;" onclick="wishlistfunctionality('. $id .');">
                       <i class="fas fa-heart" style="margin-top: 5px;"></i>
+                    </a>
+                    </div>
+                </div>
+                </a>
+            </div>';
+  return $output;
+}
+// use only for  carousel 
+function Vendor_card_without_col_deals($type, $cat_name, $seo_url, $image, $vendor_name, $rating, $review, $price_range, $area)
+{
+ 
+  $path = FCPATH . 'uploads/deals/' . $image;  // Use FCPATH to get the absolute server path
+//  <span class="vendor-tag"><i class="fas fa-heart"></i> '. 'test' .'</span>
+  $output = '<div class="col-12 vendor-col my-2">
+                
+                <a href="' . base_url() . 'vendor-detail/' . $type . '/' . $seo_url . '">
+                <div class="card">
+                    <div class="view overlay">';
+
+  if (file_exists($path)) {
+    $output .= '<img class="card-img-top" src="' . base_url() . 'uploads/deals/' . $image . '" class="img-fluid Card image cap">';
+  } else {
+    $output .= '<img class="card-img-top" src="' . base_url() . 'uploads/vendors/MWP NA.png" class="img-fluid Card image cap">';
+  }
+
+  $output .= '<a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                    </div>
+                    <div class="card-body elegant-color white-text rounded-bottom">
+                    <span class="text-muted category-text">' . $cat_name . '</span>
+                    <h4 class="card-title font-weight-bold" title="' . $vendor_name . '">' . $vendor_name . '</h4>
+                    <hr class="hr-light">
+                    <p class="mb-2"><b>Description </b>
+                      ' . $rating . '
+                    </p>
+                    <p class="mb-2"><b>Coupon Code </b>
+                      ' . $review . '
+                    </p>
+                    <p class="card-text money-symbol"> <b></b><b>';
+//  if (isset($price_range)) {
+//    if ($price_range == '₹') {
+//      $output .=  $price_range . '(Budget friendly)';
+//    } elseif ($price_range == '₹₹') {
+//      $output .=  $price_range . '(Value for money)';
+//    } elseif ($price_range == '₹₹₹') {
+//      $output .=  $price_range . '(Exclusive / Premium)';
+      $output .=  'Discount Value '.$price_range . '';
+//    }
+//  }
+//      <p class="lead"><strong><i class="fas fa-location"></i>' . $area . ' ' . '' . '</strong></p>
+  $output .= '</b> </p>
+                    
+                    <!-- Link -->
+                    <a href="' . base_url() . 'vendor-detail/' . $type . '/' . $seo_url . '" class="white-text d-flex justify-content-end view-category">
+                        <span class="fa-solid fa-caret-right" style="color:#FD4251; margin-top: 3px;margin-right: 5px"></span> View
                     </a>
                     </div>
                 </div>
@@ -397,6 +508,61 @@ function TrustedVendor($trusted_array = array()){
 
   </div>
 </div>';
+
+  return $output;
+}
+
+function VendorDeals($trusted_array = array()){
+//    <div class="vendor-btn-col desktop_area">
+//        <a href="'. base_url() .'Trusted-Vendor" class="vendor-btn btn-number-one">View All</a>
+//      </div>
+//  $output = '<div class="container">
+//  <div class="row">
+//    <div class="header d-flex flex-nowrap justify-content-between align-items-center col-12">
+//      <div>
+//        <div class="vendor-main-text">
+//          <h2 class="wow fadeInUp animated" style="visibility: visible;-webkit-animation-duration: 2s; -moz-animation-duration: 2s; animation-duration: 2s;">Vendor <span style="color:#FF142A; ">Deals</span></h2>
+//        </div>
+//      </div>
+//      
+//    </div>
+//    <div class="body d-flex flex-wrap justify-content-center w-100">
+//    <div class="owl-carousel vendor_slider">';
+      foreach ($trusted_array as $value) {
+        $category = $value['category'];
+        if ($category == 1) {
+          $output .= Vendor_card_deals('ve', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        } elseif ($category == 2) {
+          $output .= Vendor_card_deals('bw', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        } elseif ($category == 3) {
+          $output .= Vendor_card_deals('gw', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        } elseif ($category == 4) {
+          $output .= Vendor_card_deals('ph', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        } elseif ($category == 5) {
+          $output .= Vendor_card_deals('mu', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        } elseif ($category == 6) {
+          $output .= Vendor_card_deals('me', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        } elseif ($category == 7) {
+          $output .= Vendor_card_deals('bj', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        } elseif ($category == 8) {
+          $output .= Vendor_card_deals('dc', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        } elseif ($category == 9) {
+          $output .= Vendor_card_deals('gf', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        } elseif ($category == 10) {
+          $output .= Vendor_card_deals('ct', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        } elseif ($category == 13) {
+          $output .= Vendor_card_deals('in', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
+        }
+      }
+//    $output .= '</div></div>
+//    <div class="footer flex-column justify-content-center align-items-center w-100">
+//      <div class="col-12 vendor-btn-col">
+//        <a href="'. base_url() .'Trusted-Vendor" class="vendor-btn second-btn">View All</a>
+//      </div>
+//    </div>
+//
+//  </div>
+//</div>';
 
   return $output;
 }

@@ -25,8 +25,18 @@ class VendorQueryModel extends CI_Model
       $id=$this->db->insert_id();
       return $id;
     }
+    
+    function InserDataNotification($data){
+      $this->db->insert('vendor_notification',$data);
+      $id=$this->db->insert_id();
+      return $id;
+    }
+    function InserDataNotificationAdmin($data){
+      $this->db->insert('admin_notification',$data);
+      $id=$this->db->insert_id();
+      return $id;
+    }
 
-   
     public function getvendorquerydata($id)
     {
         $this->db->select('*');

@@ -9,16 +9,16 @@
 <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/front/css/responsive.css"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<section class="service_banner banner-secion-common" id="service_banner" style="background-image: url('<?php echo base_url() ?>assets/front/image/hero-banner/MWP-Vendor-listing-page-hero-banner.jpg' )">
+<section class="service_banner banner-secion-common d-none" id="service_banner" style="background-image: url('<?php echo base_url() ?>assets/front/image/hero-banner/MWP-Vendor-listing-page-hero-banner.jpg' )">
     <div class="overlay1"></div>
 
     <div class="container-fluid filter_div">
         <?php
         $get = $this->input->get();
-        $vendor_show = explode('-in-', $this->uri->segment(1));
+        $vendor_show = explode('-in-', $this->uri->segment(2));
         $vendor_name = $vendor_show[0];
         $city_name = $vendor_show[1];
-
+//        echo "vendor_name ".$vendor_name;
         if(isset($get['price_detail'])){
             $prie_ranges = implode(',', $get['price_detail']);
         }else{
@@ -241,12 +241,12 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb" style="background:none;">
         <li class="breadcrumb-item"><a href="<?php echo base_url() ?>" style="color: #FD152A;">Home</a></li>
-        <li class="breadcrumb-item"><a href="<?php echo  base_url() ?>vendor/vendorlisting" style="color: #4D4D4D;">Vendor Listing</a></li>
+        <li class="breadcrumb-item"><a href="<?php echo  base_url() ?>vendor-deals" style="color: #4D4D4D;">Vendor Deals</a></li>
         <li class="breadcrumb-item active" aria-current="page" style="color: #4D4D4D;"><?php echo $filter_data['result'][0]['cat_name'] ?></li>
     </ol>
 </nav>
 <?php
-$url = $this->uri->segment(1);
+$url = $this->uri->segment(2);
 $output = explode('-in-', $url);
 $url_vendor = $output[0];
 $url_city = urldecode($output[1]);
@@ -288,7 +288,7 @@ $get = $this->input->get();
             </select>
         </div>
         <hr>
-        <form action="<?php echo base_url() . $url ?>" method="get" id="filter_form">
+        <form action="<?php echo base_url() . $url ?>" method="get" id="filter_form" c>
             <div class="filter_list">
                 <div class="row">
                     <?php
@@ -961,6 +961,7 @@ $get = $this->input->get();
                 <div class="vendor-catalogue-heading">
                 <!-- (<?php //echo isset($filter_data['category_count']) ? $filter_data['category_count'] : 0 ?>) -->
                     <h2><?php echo $url_vendor . ' In ' . $url_city  ?> (<?php echo isset($filter_data['category_count']) ? $filter_data['category_count'] : 0 ?>):</h2>
+                </br>
                 </div>
             </div>
         </div>
@@ -1089,7 +1090,7 @@ $get = $this->input->get();
         var city = document.getElementById('filter_city1').value;
         // var radioValue = document.querySelector('input[name="radio"]:checked').value;
 
-        var url = '<?php echo base_url() ?>' + vendor + '-in-' + city;
+        var url = '<?php echo base_url().'deals/' ?>' + vendor + '-in-' + city;
         window.location.href = url;
     }
 
@@ -1102,7 +1103,7 @@ $get = $this->input->get();
 </script>
 <script>
     var load_flag = 0;
-    var para = '<?php echo $this->uri->segment(1)?>';
+    var para = '<?php echo $this->uri->segment(2)?>';
     var loadInProgress = false;
     const url = window.location.href;
     let urlOutput =''
@@ -1127,7 +1128,7 @@ $get = $this->input->get();
 	function LoadMoreDataFilters(start){
 
         $.ajax({
-          url: '<?php echo base_url()?>Filter/Load_more_filter_data',
+          url: '<?php echo base_url()?>Filter/Load_more_filter_data1',
           type: 'post',
           data: {start: load_flag, url: para, parameters : urlOutput},
           success: function(result){

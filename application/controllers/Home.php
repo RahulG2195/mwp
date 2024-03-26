@@ -19,5 +19,18 @@ class Home extends CI_Controller {
         $data['trusted_vendor'] = $this->VendorModel->Trusted_Vendor();
         $this->load->view('front/index', $data);
     }
+    
+    public function index1()
+    {   
+//        $data["blog"]=$this->BlogModel->getblogdata();
+//        $data["blogcategory"]=$this->BlogModel->getblogcategory();
+        $data['category'] = $this->CategoryModel->GetList();
+        $data['city'] = $this->CityModel->GetList();
+        $data['vendor_deals'] = $this->VendorModel->Vendor_Deals();
+//        echo "<pre>";
+//        print_r($data);
+//        exit;
+        $this->load->view('front/index_1', $data);
+    }
 
 }
