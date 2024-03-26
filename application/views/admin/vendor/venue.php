@@ -35,7 +35,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table id="venue_table" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th>Sr No</th>
@@ -127,3 +127,10 @@
 </div>
 <!-- ./wrapper -->
 <?php $this->load->view('admin/layout/script'); ?>
+<script>
+     $("#venue_table").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[0, 'desc']]
+    }).buttons().container().appendTo('#venue_table_wrapper .col-md-6:eq(0)');
+</script>
