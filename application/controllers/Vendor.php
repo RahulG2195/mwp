@@ -10,6 +10,7 @@ class Vendor extends CI_Controller {
         $this->load->model('admin/SubCategoryModel');
         $this->load->model('admin/CityModel');
         $this->load->model('VendorModel');
+        $this->load->model('ReviewModel');
         // $this->load->helper('my_function');
     }
    
@@ -29,9 +30,11 @@ class Vendor extends CI_Controller {
     public function Vender_Detail($tab, $seo) {
         $data['single_data'] = $this->VendorModel->get_Single_vendor($tab, $seo);
         $data['similar_data'] = $this->VendorModel->Similar_Data($seo);
+        
         // $data['single_data'][0]['category']=13; //temp shankar
         // $vendor_id = '28922'; //90 //temp 
         $vendor_id = $data['single_data'][0]['dv_id'];
+        $data['reviewdata']   =$this->ReviewModel->getvendorreview($vendor_id);
         $data['deals_data'] = $this->VendorModel->fetch_vendor_deals($vendor_id);
         $payment_data = $this->VendorModel->Get_Vendor_payment($vendor_id);
 //        echo "<pre>";

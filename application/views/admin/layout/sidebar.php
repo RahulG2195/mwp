@@ -81,6 +81,12 @@
                              <p>Vendor Data</p>
                          </a>
                      </li>
+                     <li class="nav-item">
+                         <a href="<?php echo base_url(); ?>admin/Vendor_review/" class="nav-link">
+                             <i class="nav-icon fas fa-file"></i>
+                             <p>Vendor Review</p>
+                         </a>
+                     </li>
                      
                      <!--active-->
                      <!-- <li class="nav-header">MASTER Data</li> -->

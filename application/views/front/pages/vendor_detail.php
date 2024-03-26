@@ -94,7 +94,7 @@ $category = $single_data[0]['category'];
                         </a> -->
                 </div>
                 <div class="vendor-detail-heading">
-                    <h1><?php echo isset($single_data[0]['vendor_name']) ? $single_data[0]['vendor_name'] : '' ?></h1>
+                    <h1 style="width: 82%;"><?php echo isset($single_data[0]['vendor_name']) ? $single_data[0]['vendor_name'] : '' ?></h1>
                     <?php 
                          if(!isset($this->session->userdata['logged_in']) || $this->session->userdata['logged_in'] != true) 
                           {  ?>
@@ -1799,7 +1799,6 @@ $category = $single_data[0]['category'];
             </div>
             <div class="col-lg-5 right_col desktop_area">
                 <div class="vendor_price price_sec_desk">
-                    
                     <p class="badge text-white <?php //echo ($single_data[0]['claim'] == 'Unclaimed') ? 'badge-danger' : 'badge-success' 
                                                 ?>"><?php // echo $single_data[0]['claim'] 
                                                     ?></p>
@@ -1923,7 +1922,13 @@ $category = $single_data[0]['category'];
                     <?php //} ?>
                     <div class="vendor_share">
                         <button><i class="fa-solid fa-share" style="font-size: 14px"></i> Share</button>
-                        <button><i class="fa-solid fa-star" style="font-size: 14px"></i> Write Review</button>
+                         <?php if(!isset($this->session->userdata['logged_in']) || $this->session->userdata['logged_in'] != true)
+                                { ?>
+                                  <button data-toggle="modal" data-target="#myModal"><i class="fa-solid fa-star" style="font-size: 14px"></i> Write Review</button>
+                            <?php }
+                            else{ ?>
+                                   <button class="sendreview"><i class="fa-solid fa-star" style="font-size: 14px"></i> Write Review</button>
+                         <?php   } ?>
                     </div>
                     <div class="vendor_cview d-md-flex">
                         <!-- <i class="fa-brands fa-whatsapp" style="font-size: 18px"></i>  -->
@@ -1958,35 +1963,35 @@ $category = $single_data[0]['category'];
                                   <input type="hidden" id="vendor_id" class="form-control query-form-input desk-name" autofocus  name="vendor_id" value="<?php echo $single_data[0]['dv_id']; ?>">
                                   <?php 
                                         //check is paid
-        if($is_paid_vendor){
-            //common fields 
-            ?>
-<!-- // Name  [Text Entry] -->
+                                     if($is_paid_vendor){
+                                    //common fields 
+                                    ?>
+                                    <!-- // Name  [Text Entry] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Name</p>
                                         <input type="text" id="name" class="form-control query-form-input desk-name" autofocus  name="name" required>
                                     </div>
-<!-- // Phone Number  [Text Entry] -->
+                                    <!-- // Phone Number  [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Phone Number</p>
                                         <input type="text" id="phone-no" class="form-control query-form-input" autofocus  name="phone_no" required>
                                     </div>
-<!-- // Email Address  [Text Entry] -->
+                                    <!-- // Email Address  [Text Entry] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Email Address</p>
                                         <input type="email" id="email" class="form-control query-form-input" autofocus  name="email" required>
                                     </div>
-<!-- // Function date [Date Picker] -->
+                                    <!-- // Function date [Date Picker] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Function date</p>
                                         <input type="date" id="function-date" class="form-control query-form-input" autofocus  name="function_date" required>
                                     </div>
-<?php
-            switch ($single_data[0]['category']) {
-            case 1:
-                // echo "Venues";
-                ?>
-<!-- // Type of Venue Space required: [Dropdown: Indoor / Outdoor / Both] -->
+                                     <?php
+                                            switch ($single_data[0]['category']) {
+                                            case 1:
+                                                // echo "Venues";
+                                                ?>
+                                        <!-- // Type of Venue Space required: [Dropdown: Indoor / Outdoor / Both] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Type of Venue Space required</p>
                                         <select name="venue_type" class="form-control query-form-input" id="venue-type" required="">
@@ -1996,12 +2001,12 @@ $category = $single_data[0]['category'];
                                             <option value="Both">Both</option>                  
                                         </select>
                                     </div>
-<!-- // Approximate Guest Count: [Number Entry] -->
+                                    <!-- // Approximate Guest Count: [Number Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Approximate Guest Count</p>
                                         <input type="number" id="venue-guest-count" class="form-control query-form-input" autofocus  name="venue_guest_count" required>
                                     </div>
-<!-- // Budget Range for Venue: [Dropdown: Below 1 Lakh, 1-2 Lakhs, 2-5 Lakhs, 5-10 Lakhs, Above 10 lakhs] -->
+                                     <!-- // Budget Range for Venue: [Dropdown: Below 1 Lakh, 1-2 Lakhs, 2-5 Lakhs, 5-10 Lakhs, Above 10 lakhs] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Budget Range for Venue</p>
                                         <select name="venue_budget_range" class="form-control query-form-input" id="venue-budget-range" required="">
@@ -2013,12 +2018,12 @@ $category = $single_data[0]['category'];
                                             <option value="Above 10 lakhs">Above 10 lakhs</option>                  
                                         </select>
                                     </div>
-            <?php     
-            break;
-            case 2:
-                // echo "Bridal Wear";
-                ?>
-<!-- // Preferred Outfit Style: [Dropdown: Traditional / Contemporary / Fusion/ Designer] -->
+                                    <?php     
+                                    break;
+                                    case 2:
+                                        // echo "Bridal Wear";
+                                        ?>
+                                     <!-- // Preferred Outfit Style: [Dropdown: Traditional / Contemporary / Fusion/ Designer] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Preferred Outfit Style</p>
                                         <select name="bridal_outfit_style" class="form-control query-form-input" id="bridal-outfit-style" required="">
@@ -2029,7 +2034,7 @@ $category = $single_data[0]['category'];
                                             <option value="Designer">Designer</option>                                    
                                         </select>
                                     </div>
-<!-- // Budget Range for Bridal Wear: [Dropdown: Below 5000 / 5000 – 10,000 /10,000-25,000/25,000-50,000/ 50,000- 1 lakh/ Above 1 Lakh] -->
+                                    <!-- // Budget Range for Bridal Wear: [Dropdown: Below 5000 / 5000 – 10,000 /10,000-25,000/25,000-50,000/ 50,000- 1 lakh/ Above 1 Lakh] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Budget Range for Bridal Wear</p>
                                         <select name="bridal_budget_range" class="form-control query-form-input" id="bridal-budget-range" required="">
@@ -2042,12 +2047,12 @@ $category = $single_data[0]['category'];
                                             <option value="Above 1 Lakh">Above 1 Lakh</option>                                    
                                         </select>
                                     </div>
-            <?php
-            break;
-            case 3:
-                // echo "Groom Wear";
-                ?>
-<!-- // Preferred Outfit Style: [Dropdown: Traditional / Western / Indo-Western] -->
+                                    <?php
+                                    break;
+                                    case 3:
+                                        // echo "Groom Wear";
+                                        ?>
+                                    <!-- // Preferred Outfit Style: [Dropdown: Traditional / Western / Indo-Western] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Preferred Outfit Style</p>
                                         <select name="groom_outfit_style" class="form-control query-form-input" id="groom-outfit-style" required="">
@@ -2057,7 +2062,7 @@ $category = $single_data[0]['category'];
                                             <option value="Indo-Western">Indo-Western</option>                                                      
                                         </select>
                                     </div>
-<!-- // Budget Range for Groom Wear: [Dropdown: Below 50,000 / 5,000 - 10,000 /10,000-25,000/ 25,000 – 50,000/ Above 50,000] -->
+                                     <!-- // Budget Range for Groom Wear: [Dropdown: Below 50,000 / 5,000 - 10,000 /10,000-25,000/ 25,000 – 50,000/ Above 50,000] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Budget Range for Groom Wear</p>
                                         <select name="groom_budget_range" class="form-control query-form-input" id="groom-budget-range" required="">
@@ -2069,12 +2074,12 @@ $category = $single_data[0]['category'];
                                             <option value="Above 50,000">Above 50,000</option>                                    
                                         </select>
                                     </div>
-            <?php
-            break;
-            case 4:
-                // echo "Photographers";
-                ?>
-<!-- // Type of Event Coverage Needed: [Checkbox: Wedding Ceremony / Pre-Wedding Shoot / Reception / Full Wedding Package] -->
+                                <?php
+                                break;
+                                case 4:
+                                    // echo "Photographers";
+                                    ?>
+                                    <!-- // Type of Event Coverage Needed: [Checkbox: Wedding Ceremony / Pre-Wedding Shoot / Reception / Full Wedding Package] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Type of Event Coverage Needed</p>
                                         <div class="row py-3">
@@ -2092,7 +2097,7 @@ $category = $single_data[0]['category'];
                                             </div>
                                         </div>
                                     </div>
-<!-- // Per day Budget Range for Photography Services: [Dropdown: Below 50,000 / 50,000 - 1,00,000 / Above 1,00,000] -->
+                                     <!-- // Per day Budget Range for Photography Services: [Dropdown: Below 50,000 / 50,000 - 1,00,000 / Above 1,00,000] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Per day Budget Range for Photography Services</p>
                                         <select name="photo_day_budget" class="form-control query-form-input" id="photo-day-budget" required="">
@@ -2102,22 +2107,22 @@ $category = $single_data[0]['category'];
                                             <option value="Above 1 Lakh">Above 1 Lakh</option>                                                     
                                         </select>
                                     </div>
-<!-- // Expected Number of Guests: [Text Entry] -->
+                                    <!-- // Expected Number of Guests: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Expected Number of Guests</p>
                                         <input type="number" id="phpto-number-of-guest" class="form-control query-form-input" autofocus  name="phpto_number_of_guest" required>
                                     </div>
-<!-- // Location of Event: [Text Entry] -->
+                                     <!-- // Location of Event: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Location of Event</p>
                                         <input type="text" id="photo-event-location" class="form-control query-form-input" autofocus  name="photo_event_location" required>
                                     </div>
-            <?php
-            break;
-            case 5:
-                // echo "Make Up Artists";
-                ?>
-<!-- // Type of Makeup Services Needed: [Checkbox: Bridal Makeup / Party Makeup / Engagement Makeup / Other] -->
+                                    <?php
+                                    break;
+                                    case 5:
+                                        // echo "Make Up Artists";
+                                        ?>
+                                    <!-- // Type of Makeup Services Needed: [Checkbox: Bridal Makeup / Party Makeup / Engagement Makeup / Other] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Type of Makeup Services Needed</p>
                                         <div class="row py-3">
@@ -2135,12 +2140,12 @@ $category = $single_data[0]['category'];
                                             </div>
                                         </div>
                                     </div>
-<!-- // Number of People Requiring Makeup: [Text Entry] -->
+                                      <!-- // Number of People Requiring Makeup: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Number of People Requiring Makeup</p>
                                         <input type="number" id="make-up-people-requiring" class="form-control query-form-input" autofocus  name="make_up_people_requiring" required>
                                     </div>
-<!-- // Budget Range for Bridal Makeup Services: [Dropdown: Below 5,000 / 5,000 - 10,000 /10,000-20,000/ Above 20,000] -->
+                                      <!-- // Budget Range for Bridal Makeup Services: [Dropdown: Below 5,000 / 5,000 - 10,000 /10,000-20,000/ Above 20,000] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Budget Range for Bridal Makeup Services</p>
                                         <select name="make_up_budget_range" class="form-control query-form-input" id="make-up-budget-range" required="">
@@ -2151,7 +2156,7 @@ $category = $single_data[0]['category'];
                                             <option value="Above 20,000">Above 20,000</option>                                                     
                                         </select>
                                     </div>
-<!-- // Brands or Products Requested: [Dropdown: International/ Indian/ Local/ Mix of all] -->
+                                     <!-- // Brands or Products Requested: [Dropdown: International/ Indian/ Local/ Mix of all] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Brands or Products Requested</p>
                                         <select name="make_up_brands" class="form-control query-form-dropdown" id="make-up-brands" required="">
@@ -2162,22 +2167,22 @@ $category = $single_data[0]['category'];
                                             <option value="Mix of all">Mix of all</option>                                                     
                                         </select>
                                     </div>
-<!-- // Location for Makeup Session: [Text Entry] -->
+                                    <!-- // Location for Makeup Session: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Location for Makeup Session</p>
                                         <input type="text" id="make-up-session-location" class="form-control query-form-input" autofocus  name="make_up_session_location" required>
                                     </div>
-            <?php
-            break;
-            case 6:
-                // echo "Mehendi Artists";
-                ?>
-<!-- // Number of People Getting Mehendi Applied: [Text Entry] -->
+                                    <?php
+                                    break;
+                                    case 6:
+                                        // echo "Mehendi Artists";
+                                        ?>
+                                    <!-- // Number of People Getting Mehendi Applied: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Number of People Getting Mehendi Applied</p>
                                         <input type="number" id="mehendi-no-of-people" class="form-control query-form-input" autofocus  name="mehendi_no_of_people" required>
                                     </div>
-<!-- // Budget Range for Mehendi Services: [Dropdown: Below 10,000 / 10,000 - 20,000 / Above 20,000] -->
+                                    <!-- // Budget Range for Mehendi Services: [Dropdown: Below 10,000 / 10,000 - 20,000 / Above 20,000] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Budget Range for Mehendi Services</p>
                                         <select name="mehendi_budget_range" class="form-control query-form-input" id="mehendi-budget-range" required="">
@@ -2187,7 +2192,7 @@ $category = $single_data[0]['category'];
                                             <option value="Above 20,000">Above 20,000</option>                                                     
                                         </select>
                                     </div>
-<!-- // Preferred Mehendi Application Style: [Checkbox: Traditional / Arabic / Bridal / Intricate Designs / Minimalist Designs / Other] -->
+                                      <!-- // Preferred Mehendi Application Style: [Checkbox: Traditional / Arabic / Bridal / Intricate Designs / Minimalist Designs / Other] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Preferred Mehendi Application Style</p>
                                         <div class="row py-3">
@@ -2211,17 +2216,17 @@ $category = $single_data[0]['category'];
                                             </div>
                                         </div>
                                     </div>
-<!-- // Location for Mehendi Application: [Text Entry] -->
+                                    <!-- // Location for Mehendi Application: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Location for Mehendi Application</p>
                                         <input type="text" id="mehendi-location" class="form-control query-form-input" autofocus  name="mehendi_location" required>
                                     </div>
-            <?php
-            break;
-            case 7:
-                // echo "Bridal Jewellery";
-                ?>
-<!-- // Type of Jewellery Needed: [Checkbox: Bridal Necklace / Earrings / Maang Tikka /Bridal Accessories / Others] -->
+                                    <?php
+                                    break;
+                                    case 7:
+                                        // echo "Bridal Jewellery";
+                                        ?>
+                                    <!-- // Type of Jewellery Needed: [Checkbox: Bridal Necklace / Earrings / Maang Tikka /Bridal Accessories / Others] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Type of Jewellery Needed</p>
                                         <div class="row py-3">
@@ -2242,7 +2247,7 @@ $category = $single_data[0]['category'];
                                             </div>
                                         </div>
                                     </div>
-<!-- // Budget Range for Jewelry: [Dropdown: Below 30,000 / 30,000 - 50,000 / 50,000- 1 lakh/ 1 lakh – 2 lakh/ Above 2 Lakhs] -->
+                                     <!-- // Budget Range for Jewelry: [Dropdown: Below 30,000 / 30,000 - 50,000 / 50,000- 1 lakh/ 1 lakh – 2 lakh/ Above 2 Lakhs] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Budget Range for Jewelry</p>
                                         <select name="jewellery_budget_range" class="form-control query-form-input" id="jewellery-budget-range" required="">
@@ -2255,12 +2260,12 @@ $category = $single_data[0]['category'];
                                         </select>
                                     </div>
 
-            <?php
-            break;
-            case 8:
-                // echo "Decoration";
-                ?>
-<!-- // Type of Decoration Services Needed: [Checkbox: Mandap Decoration / Stage Decoration / Venue Entrance / Full Event decoration/ Others] -->
+                                    <?php
+                                    break;
+                                    case 8:
+                                        // echo "Decoration";
+                                        ?>
+                                    <!-- // Type of Decoration Services Needed: [Checkbox: Mandap Decoration / Stage Decoration / Venue Entrance / Full Event decoration/ Others] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Type of Decoration Services Needed</p>
                                         <div class="row py-3">
@@ -2281,12 +2286,12 @@ $category = $single_data[0]['category'];
                                             </div>
                                         </div>
                                     </div>
-<!-- // Estimated Guest Count: [Text Entry] -->
+                                    <!-- // Estimated Guest Count: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Estimated Guest Count</p>
                                         <input type="number" id="decoration-guest-count" class="form-control query-form-input" autofocus  name="decoration_guest_count" required>
                                     </div>
-<!-- // Budget Range for Decoration:[Dropdown: Below 50,000 / 50,000 - 1,00,000 / 1-2 Lakhs/ 2-5 lakhs/ Above 5 lakhs] -->
+                                     <!-- // Budget Range for Decoration:[Dropdown: Below 50,000 / 50,000 - 1,00,000 / 1-2 Lakhs/ 2-5 lakhs/ Above 5 lakhs] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Budget Range for Decoration</p>
                                         <select name="decoration_budget_range" class="form-control query-form-input" id="decoration-budget-range" required="">
@@ -2298,7 +2303,7 @@ $category = $single_data[0]['category'];
                                             <option value="Above 5 lakhs">Above 5 lakhs</option>                                                     
                                         </select>
                                     </div>
-<!-- // Preferred Style of Decoration: [Dropdown: Traditional / Contemporary / Fusion / Customised/ Other] -->
+                                    <!-- // Preferred Style of Decoration: [Dropdown: Traditional / Contemporary / Fusion / Customised/ Other] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Preferred Style of Decoration</p>
                                         <select name="decoration_style" class="form-control query-form-input" id="decoration-style" required="">
@@ -2310,17 +2315,17 @@ $category = $single_data[0]['category'];
                                             <option value="Other">Other</option>                                                     
                                         </select>
                                     </div>
-<!-- // Venue Address for Decoration Setup: [Text Entry] -->
+                                    <!-- // Venue Address for Decoration Setup: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Venue Address for Decoration Setup</p>
                                         <input type="text" id="decoration-address" class="form-control query-form-input" autofocus  name="decoration_address" required>
-                                    </div>
-            <?php
-            break;
-            case 9:
-                // echo "Gifts";
-                ?>
-<!-- // Type of Gift/favours required [Edible/Non-Edible/Both] -->
+                                                            </div>
+                                    <?php
+                                    break;
+                                    case 9:
+                                        // echo "Gifts";
+                                        ?>
+                                    <!-- // Type of Gift/favours required [Edible/Non-Edible/Both] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Type of Gift/favours required</p>
                                         <select name="gift_type" class="form-control query-form-input" id="gift-type" required="">
@@ -2330,12 +2335,12 @@ $category = $single_data[0]['category'];
                                             <option value="Both">Both</option>                                                     
                                         </select>
                                     </div>
-<!-- // Minimum number of Gifts required: [Text entry] -->
+                                     <!-- // Minimum number of Gifts required: [Text entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Minimum number of Gifts required</p>
                                         <input type="number" id="gift-number-of" class="form-control query-form-input" autofocus  name="gift_number_of" required>
                                     </div>
-<!-- // Per Gift range: [Dropdown: Below Rs. 100/ Rs. 100-250/ Rs. 250-500/ Rs. 500-1000/ Above Rs. 1000 -->
+                                     <!-- // Per Gift range: [Dropdown: Below Rs. 100/ Rs. 100-250/ Rs. 250-500/ Rs. 500-1000/ Above Rs. 1000 -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Per Gift range</p>
                                         <select name="gift_price_range" class="form-control query-form-input" id="gift-price-range" required="">
@@ -2347,22 +2352,22 @@ $category = $single_data[0]['category'];
                                             <option value="Above Rs. 1000">Above Rs. 1000</option>                                                     
                                         </select>
                                     </div>
-            <?php
-            break;
-            case 10:
-                // echo "Catering";
-                ?>
-<!-- // Number of People to be served: [Text Entry] -->
+                                    <?php
+                                    break;
+                                    case 10:
+                                        // echo "Catering";
+                                        ?>
+                                    <!-- // Number of People to be served: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Number of People to be served</p>
                                         <input type="number" id="catering-no-of-people" class="form-control query-form-input" autofocus  name="catering_no_of_people" required>
                                     </div>
-<!-- // Total number of functions: [Text entry] -->
+                                    <!-- // Total number of functions: [Text entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Total number of functions</p>
                                         <input type="number" id="catering-no-of-function" class="form-control query-form-input" autofocus  name="catering_no_of_function" required>
                                     </div>
-<!-- // Per Plate budget for reception: [Dropdown: Less than 250/ 250-500/ 500-750/750-1000/ 1000-1500/ 1500-2000/ above 2000] -->
+                                    <!-- // Per Plate budget for reception: [Dropdown: Less than 250/ 250-500/ 500-750/750-1000/ 1000-1500/ 1500-2000/ above 2000] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Per Plate budget for reception</p>
                                         <select name="catering_per_plate_budget" class="form-control query-form-input" id="catering-per-plate-budget" required="">
@@ -2376,7 +2381,7 @@ $category = $single_data[0]['category'];
                                             <option value="Above Rs. 2000">Above Rs. 2000</option>                                                     
                                         </select>
                                     </div>     
-<!-- // Preferred food type: [Dropdown: Veg/ Non-veg/ Both] -->
+                                     <!-- // Preferred food type: [Dropdown: Veg/ Non-veg/ Both] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Preferred food type</p>
                                         <select name="catering_food_type" class="form-control query-form-input" id="catering-food-type" required="">
@@ -2386,17 +2391,17 @@ $category = $single_data[0]['category'];
                                             <option value="Both">Both</option>                                                     
                                         </select>
                                     </div>
-<!-- // Location of event: [Text Entry] -->
+                                    <!-- // Location of event: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Location of event</p>
                                         <input type="text" id="catering-event-location" class="form-control query-form-input" autofocus  name="catering_event_location" required>
                                     </div>
-            <?php
-            break;
-            case 13:
-                // echo "Invitations";
-                ?>
-<!-- // Type of Invitation cards required: [ Traditional/ Artsistic/ Boxed/ Luxurious/ Others] -->
+                                    <?php
+                                    break;
+                                    case 13:
+                                        // echo "Invitations";
+                                        ?>
+                                    <!-- // Type of Invitation cards required: [ Traditional/ Artsistic/ Boxed/ Luxurious/ Others] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Type of Invitation cards required</p>
                                         <select name="invitation_type" class="form-control query-form-input" id="invitation-type" required="">
@@ -2408,12 +2413,12 @@ $category = $single_data[0]['category'];
                                             <option value="Others">Others</option>                                                     
                                         </select>
                                     </div>
-<!-- // Minimum Number of cards required: [Text Entry] -->
+                                     <!-- // Minimum Number of cards required: [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Minimum Number of cards required</p>
                                         <input type="number" id="invitation-number-of-cards" class="form-control query-form-input" autofocus  name="invitation_number_of_cards" required>
                                     </div>
-<!-- // Per Card Budget range: [Dropdown: Below Rs. 10/ Rs. 10-20/ Rs. 20-50/ Rs. 50-100/ Rs.100-200/ Rs.200 – 500/ Above Rs. 500 -->
+                                    <!-- // Per Card Budget range: [Dropdown: Below Rs. 10/ Rs. 10-20/ Rs. 20-50/ Rs. 50-100/ Rs.100-200/ Rs.200 – 500/ Above Rs. 500 -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Per Card Budget range</p>
                                         <select name="invitation_card_budget" class="form-control query-form-input" id="invitation-card-budget" required="">
@@ -2428,49 +2433,49 @@ $category = $single_data[0]['category'];
                                         </select>
                                     </div>
 
-            <?php
-            break;                                        
-            default:
-                // echo "default";
-            break;
-        }
-        ?>
-<!-- // Additional Comments or Questions [Text Area]            -->
+                                    <?php
+                                        break;                                        
+                                        default:
+                                            // echo "default";
+                                        break;
+                                    }
+                                    ?>
+                                    <!-- // Additional Comments or Questions [Text Area]            -->
                                     <div class="col-12">
                                         <p class="query-form-label">Additional Comments or Questions</p>
                                         <textarea id="comment" class="form-control query-form-input" autofocus  name="comment" required></textarea>
                                     </div>
-        <?php
-        }else{
-            ?>
-            <!-- //default form -->
-<!-- // Name  [Text Entry] -->
+                                    <?php
+                                    }else{
+                                        ?>
+                                        <!-- //default form -->
+                                        <!-- // Name  [Text Entry] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Name</p>
                                         <input type="text" id="name" class="form-control query-form-input desk-name" autofocus  name="name" required>
                                     </div>
-<!-- // Phone Number  [Text Entry] -->
+                                     <!-- // Phone Number  [Text Entry] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Phone Number</p>
                                         <input type="text" id="phone-no" class="form-control query-form-input" autofocus  name="phone_no" required>
                                     </div>
-<!-- // Email Address  [Text Entry] -->
+                                     <!-- // Email Address  [Text Entry] -->
                                     <div class="col-md-12">
                                         <p class="query-form-label">Email Address</p>
                                         <input type="email" id="email" class="form-control query-form-input" autofocus  name="email" required>
                                     </div>
-<!-- // Function date [Date Picker] -->
+                                    <!-- // Function date [Date Picker] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Function date</p>
                                         <input type="date" id="function-date" class="form-control query-form-input" autofocus  name="function_date" required>
                                     </div>
-<!-- // A message box to input the details that customer wants. [Text Area] -->
+                                    <!-- // A message box to input the details that customer wants. [Text Area] -->
                                     <div class="col-12">
                                         <p class="query-form-label">Message</p>
                                         <textarea id="message" class="form-control query-form-input" autofocus  name="message" required></textarea>
                                     </div>
-        <?php
-        }
+                                        <?php
+                                        }
                                   ?>
 
                                     <div class="col-12" style="text-align: left;">
@@ -2480,6 +2485,175 @@ $category = $single_data[0]['category'];
                             </div>
                         </form>
                     </div>
+
+                    <div class="review-form-section1" style="display: none; margin-top:22px;" id="review-form">
+                        <!-- <form name="reviewdetail" method="POST" action="<?php echo base_url() ?>VendorReview/addreview"> -->
+                            <div class="container">
+                                <div class="row">
+                                    <input type="hidden" name="userid" value="<?php echo $this->session->userdata('userid'); ?>" id="review-user-id">
+                                    <input type="hidden" name="vendorid" value="<?php echo $single_data[0]['dv_id']; ?>" id="review-vendor-id">
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Name</p>
+                                        <input type="text" id="review-user-name"  class="form-control query-form-input desk-name" autofocus  name="review-form-name" value="<?php echo $this->session->userdata('firstname')." ".$this->session->userdata('lastname'); ?>" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="query-form-label">Phone Number</p>
+                                        <input type="text" id="review-phone-no" class="form-control query-form-input" autofocus  name="vendor-form-phone-no" value="<?php echo $this->session->userdata('phoneno'); ?>" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p class="query-form-label">Email Address</p>
+                                        <input type="text" id="review-email-id" class="form-control query-form-input" autofocus  name="query-form-email" value="<?php echo $this->session->userdata('email'); ?>" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="query-form-label">Subject</p>
+                                        <input type="text" id="review-subject" class="form-control query-form-input" autofocus  name="query-form-date" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="query-form-label">Comment</p>
+                                        <textarea  id="review-comment" class="form-control query-form-input" autofocus  name="query-form-date" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <h6 class="query-form-label">Rating</h6>
+                                        <fieldset class="rating">
+                                            <input type="radio" id="star5" name="rating" value="5">
+                                            <label class="full" for="star5"></label>
+
+                                            <input type="radio" id="star4half" name="rating" value="4.5">
+                                            <label class="half" for="star4half"></label>
+                                            
+                                            <input type="radio" id="star4" name="rating" value="4">
+                                            <label class="full" for="star4"></label>
+                                            
+                                            <input type="radio" id="star3half" name="rating" value="3.5">
+                                            <label class="half" for="star3half"></label>
+                                            
+                                            <input type="radio" id="star3" name="rating" value="3">
+                                            <label class="full" for="star3"></label>
+
+                                            <input type="radio" id="star2half" name="rating" value="2.5">
+                                            <label class="half" for="star2half"></label>
+                                            
+                                            <input type="radio" id="star2" name="rating" value="2">
+                                            <label class="full" for="star2"></label>
+
+                                            <input type="radio" id="star1half" name="rating" value="1.5">
+                                            <label class="half" for="star1half"></label>
+
+                                            <input type="radio" id="star1" name="rating" value="1">
+                                            <label class="full" for="star1"></label>
+
+                                            <input type="radio" id="starhalf" name="rating" value="0.5">
+                                            <label class="half" for="starhalf"></label>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="hidden" id="review-vendor-name" class="form-control query-form-input" name="vendor-name" value="<?php echo isset($single_data[0]['vendor_name']) ? $single_data[0]['vendor_name'] : '' ?>">
+                                    </div>
+                                   
+                                    <div class="col-12" style="text-align: left;">
+                                        <button  class="plnningModalbtn" id="vreviewsubmit">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- </form> -->
+                    </div>
+
+
+                </div>
+                <!-- Review section -->
+                <div class="row">
+                    <div class="review-section">
+                        <div class="review-heading"><h3>Latest Reviews</h3></div>
+                        <hr/>
+                        <div class="review-block">
+
+                            <?php if(!empty($reviewdata)){ 
+                                foreach($reviewdata as $review){
+                                    $reviewid=$review["review_id"];
+                                    $vendorid=$review["vendor_review_id"];
+                                    $data=$this->ReviewModel->getrating($vendorid);
+
+
+                                    $stars = '';
+                                    $fullStars =floor($data[0]["average_rating"]);
+                                    $halfStar = round($data[0]["average_rating"] - $fullStars, 1) > 0 ? 1 : 0;
+
+
+                                                                    // Full stars
+                                    for ($i = 0; $i < $fullStars; $i++) {
+                                        $stars .= '<i class="fa fa-star rating_star checked"></i> ';
+                                    }
+
+                                    // Half star
+                                    if ($halfStar) {
+                                        $stars .= '<i class="fa fa-star-half-o checked" aria-hidden="true"></i>';
+                                    }
+
+                                    // Empty stars
+                                    $emptyStars = 5 - $fullStars - $halfStar;
+                                    for ($i = 0; $i < $emptyStars; $i++) {
+                                        $stars .= '<i class="fa fa-star-half-o checked" aria-hidden="true"></i> ';
+                                    }
+
+                                    //var_dump($data);
+                                    //echo $vendorid;
+                            ?>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="<?php echo base_url() ?>assets/front/image/user.png" class="img-rounded">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <div class="review-block-name"><h6><?php echo $review["name"]; ?></h6></div>
+                                        <!-- <div class="review-block-date"><?php echo $review["created_date"]; ?></div> -->
+                                        <div class="review-block-rate">
+                                            <?php echo $stars; ?>
+                                        <!-- <fieldset class="fetchedrating">
+                                            <input type="radio" id="star5" class="radio-custom" name="rating" value="5"  <?php echo ( floatval($data[0]["average_rating"]) >= 5)?'checked="checked"':''; ?>>
+                                            <label class="full" for="star5"></label>
+
+                                            <input type="radio" id="star4half" class="radio-custom" name="rating" value="4.5" <?php echo ( floatval($data[0]["average_rating"]) >= 4.5)?'checked="checked"':''; ?>>
+                                            <label class="half" for="star4half"></label>
+                                            
+                                            <input type="radio" id="star4" name="rating" class="radio-custom" value="4" <?php echo (floatval($data[0]["average_rating"]) >= 4)?'checked="checked"':''; ?>>
+                                            <label class="full" for="star4"></label>
+                                            
+                                            <input type="radio" id="star3half" name="rating" class="radio-custom" value="3.5" <?php echo ( floatval($data[0]["average_rating"]) >= 3.5)?'checked="checked"':''; ?>>
+                                            <label class="half" for="star3half"></label>
+                                            
+                                            <input type="radio" id="star3" name="rating" class="radio-custom" value="3" <?php echo ( floatval($data[0]["average_rating"]) >= 3)?'checked="checked"':''; ?>>
+                                            <label class="full" for="star3"></label>
+
+                                            <input type="radio" id="star2half" name="rating" class="radio-custom" value="2.5" <?php echo ( floatval($data[0]["average_rating"]) >= 2.5)?'checked="checked"':''; ?>>
+                                            <label class="half" for="star2half"></label>
+                                            
+                                            <input type="radio" id="star2" name="rating" class="radio-custom" value="2" <?php echo ( floatval($data[0]["average_rating"]) >= 2)?'checked="checked"':''; ?>>
+                                            <label class="full" for="star2"></label>
+
+                                            <input type="radio" id="star1half" name="rating" class="radio-custom" value="1.5" <?php echo ( floatval($data[0]["average_rating"]) >= 1.5)?'checked="checked"':''; ?>>
+                                            <label class="half" for="star1half"></label>
+
+                                            <input type="radio" id="star1" name="rating" class="radio-custom" value="1" <?php echo ( floatval($data[0]["average_rating"]) >= 1)?'checked="checked"':''; ?>>
+                                            <label class="full" for="star1"></label>
+
+                                            <input type="radio" id="starhalf" name="rating" 
+                                             value="0.5" <?php echo ( floatval($data[0]["average_rating"]) >= 0.5)?'checked="checked"':''; ?>>
+                                            <label class="half" for="starhalf"></label>
+                                        </fieldset> -->
+                                        </div>
+                                        <div class="review-block-title"><?php echo $review["subject"]; ?></div>
+                                        <div class="review-block-description"><?php echo $review["review_comment"]; ?></div>
+                                    </div>
+                                </div>
+                            <hr/>
+                            <?php
+                             }  
+                            }
+                             ?>
+                            
+                            
+                        </div>
+                    </div>
+		        </div>
                 <!--</div>-->
             <!--</div>-->
             
@@ -2657,32 +2831,52 @@ function setFocusToTextBox(){
     document.getElementById("weddingplanningfname").focus();
 }
 setFocusToTextBox();
-// document.addEventListener("DOMContentLoaded", function() {
-//   var rightColumn = document.querySelector('.right_col');
-//   var leftColumn = document.querySelector('.left_col');
+</script>
+<script type="text/javascript"> 
+//   $(document).ready(function() {
+//     $("#vreviewsubmit").on("click", function() {
 
-//   window.addEventListener('scroll', function() {
-//     var leftColumnHeight = leftColumn.offsetHeight;
-//     var scrollTop = window.scrollY;
-
-//     if (scrollTop < leftColumnHeight) {
-//       rightColumn.style.position = 'sticky';
-//       rightColumn.style.top = '0';
-//     } else {
-//       rightColumn.style.position = 'static';
-//     }
-//   });
+//         $(this).find("input[type=radio]:checked").each(function() {
+//             //$( this ).addClass( "foo" );
+//             alert("hi");
+//       });
+          
+           
+//     } );
 // });
 
+
+$(document).ready(function() {
+        $('#vreviewsubmit').on('click', function() {
+            var vendorid = $('#review-vendor-id').val();
+            var userid=$('#review-user-id').val();
+            var username= $('#review-user-name').val();
+            var phoneno=$('#review-phone-no').val();
+            var subject=$('#review-subject').val();
+            var email=$('#review-email-id').val();
+            var comment=$('#review-comment').val();
+            var vname=$('#review-vendor-name').val();
+            var rating = $('input[name=rating]:checked').val();
+            $.ajax({
+                url: '<?php echo base_url("VendorReview/vendorreviewsubmit"); ?>',
+                type: 'POST',
+                dataType: 'json',
+                data: { vendorid: vendorid, userid: userid, username:username,phoneno:phoneno,subject:subject,email:email,rating:rating,comment:comment,vname:vname},
+                success: function(response) {
+
+                   // alert(response);
+                    // Handle success response
+                    alert(response.message+' Thanks for submitting review with' +rating+' star rating');
+                    window.location.reload();
+                },
+                error: function(xhr, status, error) {
+                    // Handle error
+                    alert('Error: ' + xhr.responseText);
+                }
+            });
+        });
+    });
 </script>
-<script>
-function copyToClipboardWithJavascript() {
-////    alert();
-//  /* Get the text field */
-//  var copyText = document.getElementById("theList");
-//  /* Select the text field */
-//  copyText.select();
-//  /* Copy the text inside the text field */
-//  document.execCommand("copy");
-//}
+	
 </script>
+

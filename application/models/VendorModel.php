@@ -564,6 +564,7 @@ class VendorModel extends CI_Model
     // echo $this->db->last_query();
 
     // }
+
     return array(
       'category_count' => $count_query->num_rows(),
       'result' => $query->result_array(),
@@ -664,4 +665,10 @@ class VendorModel extends CI_Model
   //    $this->db->update('default_vendor_inp', array('password' => $pass));
   //    return true;
   // }
+  public function showallvendordata()
+  {
+    $query = $this->db->get('default_vendor_inp');
+    return $query->result_array();
+  }
 }
+

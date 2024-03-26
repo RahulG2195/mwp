@@ -477,6 +477,47 @@
     display: block;
 }
 
+.review-section{
+  margin-top:50px;
+}
+.review-block{
+	/* background-color:#FAFAFA;
+	border:1px solid #EFEFEF; */
+	padding:15px;
+	border-radius:3px;
+	margin-bottom:15px;
+  margin-top: 10px; 
+}
+.review-block-name{
+	font-size:12px;
+	margin:10px 0;
+}
+.review-block-date{
+	font-size:12px;
+}
+.review-block-rate{
+	font-size:13px;
+	margin-bottom:15px;
+}
+.review-block-title{
+	font-size:15px;
+	font-weight:700;
+	margin-bottom:10px;
+  font-family: "Montserrat", sans-serif;
+}
+.review-block-description{
+	font-size:14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.review-heading h3{
+  text-align: center;
+  color: #fd4251;
+  font-weight: 700;
+  font-size: 34px;
+  font-family: "Montserrat", sans-serif;
+}
 @media (min-width: 992px) and (max-width: 1200px) {
     .mobile_area {
         display: none;

@@ -1011,10 +1011,11 @@ $(".logindesign").on("click", function () {
 jQuery("#loginform").submit(function (evt) {
   var form = $("#loginform");
   var url = form.attr("action");
+  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [1] + '/';
 
   $.ajax({
      type: "POST",
-     url: 'https://myweddingpalette.com/Login',
+     url: base_url+'Login',
      data: form.serialize(),
      success: function (response) {
         if (response !== '') {
@@ -1272,13 +1273,14 @@ document.querySelector('#userEmail').addEventListener('focusout', (e) => {
   // alert(userEmail)
   const userError = document.querySelector('.userEmailerr');
   const loginBtn = document.querySelector('#loginBtn');
-
+  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [1] + '/';
+  //alert(base_url);
   userError.innerHTML = '';
   userInput.style.borderColor =  '';
   if(userEmail.length > 3){
     $.ajax({
       type: 'POST',
-      url: 'https://myweddingpalette.com/Login/UserEmailValid', // Adjust the URL based on your CI configuration
+      url: base_url+'Login/UserEmailValid', // Adjust the URL based on your CI configuration
       data: {username: userEmail},
       success: function(response) {
         
@@ -1312,13 +1314,13 @@ document.querySelector('#passwordlogin').addEventListener('focusout', (e) => {
   // alert(pwdEmail)
   const pwdError = document.querySelector('.pwdEmailerr');
   const loginBtn = document.querySelector('#loginBtn');
-
+  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [1] + '/';
   pwdError.innerHTML = '';
   pwdInput.style.borderColor =  '';
   if(pwdEmail.length > 3){
   $.ajax({
     type: 'POST',
-    url: 'https://myweddingpalette.com/Login/pwdEmailValid', // Adjust the URL based on your CI configuration
+    url: base_url+'Login/pwdEmailValid', // Adjust the URL based on your CI configuration
     data: {pwdname: pwdEmail},
     success: function(response) {
       
@@ -1352,13 +1354,13 @@ document.querySelector('#createregsisteremailid').addEventListener('focusout', (
   userEmail = e.target.value;
   const userError = document.querySelector('#userNameErrorMsg');
   const loginBtn = document.querySelector('#create_ac');
-  var BASE_URL = 'https://myweddingpalette.com/';
+  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [1] + '/';
   userError.innerHTML = '';
   userInput.style.borderColor =  '';
   if(userEmail.length > 3){
     $.ajax({
       type: 'POST',
-      url: BASE_URL + "Login/checkemail", // Adjust the URL based on your CI configuration
+      url: base_url + "Login/checkemail", // Adjust the URL based on your CI configuration
       data: {username: userEmail},
       success: function(response) {
         
@@ -1415,12 +1417,13 @@ $(window).scroll(function(){
 
 document.querySelector('.wishlist-vendor').addEventListener('click', (e) => {
   var vendorseourl =document.getElementById('wishlist-value').value ; 
-
+  var base_url =  window.location.origin + '/' + window.location.pathname.split ('/') [1] + '/';
   $.ajax({
       type: 'POST',
-      url: 'http://localhost/mwp-phase2/Wishlist/submitwishlist', // Adjust the URL based on your CI configuration
-      data: {vendorseourl: vendorseourl},
-      success: function(response) {
+      //url: '<?php echo base_url(); ?>/Wishlist/submitwishlist', // Adjust the URL based on your CI configuration
+       url:base_url+'Wishlist/submitwishlist',
+       data: {vendorseourl: vendorseourl},
+       success: function(response) {
         //alert(response);
           if (response.isSubmit == "true") {
                   alert("Vendor is wishlisted");
@@ -1434,3 +1437,15 @@ document.querySelector('.wishlist-vendor').addEventListener('click', (e) => {
       }
     });
   });
+
+
+  $(document).ready(function() {
+    // Hide the form initially
+    $(".review-form-section1").hide();
+
+    // Toggle the form visibility on button click
+    $(".sendreview").click(function() {
+       $(".review-form-section1").toggle();
+    });
+});
+
