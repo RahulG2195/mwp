@@ -1633,6 +1633,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Latest 5 Register Users</h3>
+                <a class="btn btn-info" style="height: auto;margin: auto;padding: 5px 5px;float: right;" href="<?php echo base_url() .'admin/Userdata'; ?>"><i class="fas fa-plus+" style="font-size: 14px;"> View All</i></a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -1693,6 +1694,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Latest 5 Vendors</h3>
+                <a class="btn btn-info" style="height: auto;margin: auto;padding: 5px 5px;float: right;" href="<?php echo base_url() .'admin/VendorListing/getallvendordata'; ?>"><i class="fas fa-plus+" style="font-size: 14px;"> View All</i></a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
