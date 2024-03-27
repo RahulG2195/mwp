@@ -38,8 +38,17 @@ class Vendor_Dashboard extends CI_Controller {
             if(!empty($visitor_data)){
                 $data['visitor_details'] = $visitor_data;
             }
-            
-            //Total Users
+            //Total review
+            $this->load->model('VendorPanel/ReviewModel');
+            // $id = 3072; //temp
+            $review_data = $this->ReviewModel->Get_vendor_deal_detail($id);
+             $data['review_details'] = array('vendor_id' => $id,
+                                    'review' => '0'
+            );
+            if(!empty($review_data)){
+                $data['review_details'] = $review_data;
+            }
+            //Total deals
             $this->load->model('VendorPanel/VendorDealsModel');
             // $id = 3072; //temp
             $deal_data = $this->VendorDealsModel->Get_vendor_deal_detail($id);

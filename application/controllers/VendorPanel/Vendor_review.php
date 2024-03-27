@@ -7,25 +7,28 @@ class Vendor_review extends CI_Controller
     {
         parent::__construct();
        // $this->load->model('LoginModel');
-        $this->load->model('ReviewModel');
+        $this->load->model('VendorPanel/ReviewModel');
         
     }
     public function index()
     {
-        if (!$this->session->userdata('admin_id')) {
-            redirect('admin/AdminLogin');
+        if (!$this->session->userdata('dv_id')) {
+            redirect('VendorPanel/Login');
         }
         else{
-            $data["result"]=$this->ReviewModel->getreviewdata();
+            $vendor_id = $this->session->userdata('dv_id');
+//            $vendor_id = '1446';
+            
+            $data["result"]=$this->ReviewModel->getreviewdata($vendor_id);
             //var_dump($data);exit;
-            $this->load->view('admin/vendor-review/review-list',$data);
+            $this->load->view('VendorPanel/review/review-list',$data);
         }
     }
 
     public function givereply()
     {
         $id=$this->uri->segment(4);
-        $this->load->view('admin/vendor-review/review-list',$data);
+        $this->load->view('VendorPanel/review/review-list',$data);
 
        
     }

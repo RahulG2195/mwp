@@ -1,24 +1,24 @@
-<?php $this->load->view('admin/layout/header'); ?>
-<?php $this->load->view('admin/layout/sidebar'); ?>
+<?php $this->load->view('VendorPanel/layout/header'); ?>
+<?php $this->load->view('VendorPanel/layout/sidebar'); ?>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <div class="content-header">
-            <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                <h1 class="m-0">Review Data</h1>
-                </div><!-- /.col -->
+        <!--<div class="content-header">-->
+            <!--<div class="container-fluid">-->
+            <!--<div class="row mb-2">-->
+                <!--<div class="col-sm-6">-->
+                <!--<h1 class="m-0">Review Data</h1>-->
+                <!--</div> /.col -->
                 <!-- <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>admin/index">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?php //echo base_url(); ?>admin/index">Home</a></li>
                     <li class="breadcrumb-item active">Vendor Dashboard</li>
                 </ol>
                 </div> -->
                 <!-- /.col -->
-            </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
+            <!--</div> /.row -->
+            <!--</div> /.container-fluid -->
+        <!--</div>-->
         <!-- /.content-header -->
            
                <!-- Main content -->
@@ -120,10 +120,10 @@
         </section>
                <!-- /.content -->
     </div>
-<?php $this->load->view('admin/layout/footer'); ?>
+         <?php $this->load->view('VendorPanel/layout/footer'); ?>
     </div>
-<!-- ./wrapper -->
-<?php $this->load->view('admin/layout/script'); ?>
+
+    <?php $this->load->view('VendorPanel/layout/script'); ?>
 <script>
      $("#decor_leads_datatable").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
@@ -139,7 +139,7 @@
 
     // Toggle the form visibility on button click
     $(".replybtn").click(function() {
-        alert("hi");
+//        alert("hi");
        $("#replyreview").toggle();
     });
 });

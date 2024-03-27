@@ -47,10 +47,11 @@ class ReviewModel extends CI_Model
         }
     }
 
-    public function getreviewdata()
+    public function getreviewdata($vendor_id)
     {
         $this->db->select('*');
         $this->db->from('review_table');
+        $this->db->where('vendor_review_id',$vendor_id);
         $query = $this->db->get();
         if( $query->num_rows() > 0)
         {
@@ -59,5 +60,13 @@ class ReviewModel extends CI_Model
         }
     }
 
+    public function Get_vendor_deal_detail($id) {
+    $this->db->select('COUNT(*) AS `review`, vendor_review_id as vendor_id');
+    $this->db->from('review_table');
+    $this->db->where('vendor_review_id', $id);
+//    $this->db->where('is_active', '1');
+    $this->db->group_by('vendor_review_id');
+    return $this->db->get()->row_array();
+  }
 
 }

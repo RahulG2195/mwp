@@ -155,7 +155,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
         <!-- Small boxes (Stat box) -->
         <h5 class="mb-2">All Data Count</h5>
         <div class="row">
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-4 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
@@ -187,7 +187,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
             <!--</div>-->
           <!--</div>-->
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-4 col-6">
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
@@ -203,9 +203,26 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
               <?php //} ?>
             </div>
           </div>
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-4 col-6">
             <!-- small box -->
             <div class="small-box bg-warning">
+              <div class="inner">
+                <h4><b><?php echo $review_details['review']; ?></b></h4>
+                </br>
+                <p>Total User Review</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <?php  //if($plan_details['plan_name'] != 'Free'){ ?>
+               <a href="<?php echo base_url() .'vendor-review'; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <?php //} ?>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
               <div class="inner">
                 <h4><b><?php echo $deal_details['deal']; ?></b></h4>
                 </br>
@@ -220,9 +237,9 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+           <div class="col-lg-4 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-info">
               <div class="inner">
                 <h4 style="font-size:1.5rem;"><?php echo $plan_details['plan_name'];
                 //  ".$plan_details['plan_type'].""; 
