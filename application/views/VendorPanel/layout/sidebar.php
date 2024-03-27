@@ -73,6 +73,12 @@
                          </a>
                      </li>
                      <li class="nav-item">
+                         <a href="<?php echo base_url().'vendor-review'; ?>" class="nav-link">
+                             <i class="nav-icon fas fa-ellipsis-h"></i>
+                             <p>User Review</p>
+                         </a>
+                     </li>
+                     <li class="nav-item">
                          <a href="<?php echo base_url().'vendor-dashboard/deals'; ?>" class="nav-link">
                              <i class="nav-icon fas fa-book"></i>
                              <p>Deals & Coupon</p>
