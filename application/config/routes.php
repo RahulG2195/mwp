@@ -95,6 +95,7 @@ $route['registration/thankyou'] = 'thankyou';
 // vendor panel 
 $route['Vendor-Login'] = 'VendorPanel/Login';
 $route['vendor-dashboard'] = 'VendorPanel/Vendor_Dashboard';
+$route['vendor-review'] = 'VendorPanel/Vendor_review';
 //$route['vendor-dashboard/lead/(:any)'] = 'VendorPanel/Vendor_Dashboard/lead/$1';
 $route['vendor-dashboard/lead'] = 'VendorPanel/Vendor_Dashboard/lead';
 $route['vendor-dashboard/lead/details/(:any)'] = 'VendorPanel/Vendor_Dashboard/veiwdetail/$1';
