@@ -20,7 +20,8 @@ class Vendor_Notification_Api extends CI_Controller {
             $notification_data = array(
                 '0' => array('count' => '0', 'notification_type' => '0'), //lead
                 '1' => array('count' => '0', 'notification_type' => '1'), //visit
-                '2' => array('count' => '0', 'notification_type' => '2') //deals
+                '2' => array('count' => '0', 'notification_type' => '2'), //deals
+                '3' => array('count' => '0', 'notification_type' => '3') //review
             );
             // check record not empty
             if (!empty($notification_data2)) {
@@ -31,6 +32,8 @@ class Vendor_Notification_Api extends CI_Controller {
                         $notification_data[1]['count'] = $notification['count'];
                     } elseif ($notification['notification_type'] == '2') {
                         $notification_data[2]['count'] = $notification['count'];
+                    } elseif ($notification['notification_type'] == '3') {
+                        $notification_data[3]['count'] = $notification['count'];
                     }
                 }
             }
@@ -77,6 +80,19 @@ class Vendor_Notification_Api extends CI_Controller {
         $this->VendorPanelModel->update_vendor_notification($id,$notification_type,$data);
         //redirect to datatable
         redirect(base_url() .'vendor-dashboard/deals');
+    }
+    
+    public function update_review_notification($notification_type) {
+        $id = $this->session->userdata('dv_id');
+        //update table
+        $this->load->model('VendorPanel/VendorPanelModel');
+        $data = array(
+            'is_new'=> 0,
+            'is_read'=> 1
+        );
+        $this->VendorPanelModel->update_vendor_notification($id,$notification_type,$data);
+        //redirect to datatable
+        redirect(base_url() .'user-review');
     }
   
     

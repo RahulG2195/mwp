@@ -47,8 +47,14 @@ public function index()
 
             $data["vendor_new_count"]=$this->DashboardModel->getvendornewcountgroupby();
             $data["vendoreditrequest"]=$this->DashboardModel->vendoreditrequestdata();
-            // echo "<pre>";
-            // print_r($data["vendor_new_count"]);
+            
+            $data["register_data"]=$this->DashboardModel->getRegisterUserData();
+            $data["vendor_data"]=$this->DashboardModel->getVendorData();
+            
+//             echo "<pre>";
+//             print_r($data["register_data"]);
+//             print_r($data["vendor_data"]);
+//             exit;
             $data["venue_count"]='0';
             $data["birdal_count"]='0';
             $data["groom_count"]='0';

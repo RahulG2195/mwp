@@ -1,26 +1,43 @@
 <?php $this->load->view('VendorPanel/layout/header');
 $this->load->view('VendorPanel/layout/sidebar'); ?>
-
+<?php 
+    // helper for vendor id 
+    $tab = Get_Vendor_detail();
+	// echo $tab . '===';
+    $id = $this->session->userdata('dv_id');
+    
+?>
+<style>
+    .card-img-back{
+        position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 60px;
+    }
+    .noti-img-back{
+    width: 50px;
+    }
+</style>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Vendor Dashboard</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="<?php echo base_url(); ?>vendor-dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Vendor Dashboard</li>
-            </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
+    <!--<div class="content-header">-->
+      <!--<div class="container-fluid">-->
+        <!--<div class="row mb-2">-->
+          <!--<div class="col-sm-6">-->
+            <!--<h1 class="m-0">Vendor Dashboard</h1>-->
+          <!--</div> /.col -->
+          <!--<div class="col-sm-6">-->
+            <!--<ol class="breadcrumb float-sm-right">-->
+              <!--<li class="breadcrumb-item"><a href="<?php echo base_url(); ?>vendor-dashboard">Home</a></li>-->
+              <!--<li class="breadcrumb-item active">Vendor Dashboard</li>-->
+            <!--</ol>-->
+          <!--</div> /.col -->
+        <!--</div> /.row -->
+      <!--</div> /.container-fluid -->
+    <!--</div>-->
     <!-- /.content-header -->
-
+    </br>
         <!-- Main content -->
     <section class="content d-none">
       <div class="container-fluid">
@@ -30,11 +47,14 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
             <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_leads_notification/0'; ?>">-->
                 <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(0)">
             <div class="info-box">
-              <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
+              <span class="info-box-icon bg-danger">
+                  <!--<i class="far fa-envelope"></i>-->
+                  <img class="noti-img-back" src="<?php echo base_url().'assets/vendor-icons/Query.png'; ?>" alt="...">
+              </span>
 
               <div class="info-box-content">
-                <span class="info-box-text">New Query Leads</span>
-                <span class="info-box-number" id="new_leads">N/A</span>
+                <span class="info-box-text">Query Leads</span>
+                <span class="info-box-number" id="new_leads">0<span style="color:red;"> &nbsp;&nbsp;New<span></span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -45,45 +65,54 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
           <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_visit_notification/1'; ?>">-->
           <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(1)">
             <div class="info-box">
-              <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
+              <span class="info-box-icon bg-info">
+                  <!--<i class="far fa-flag"></i>-->
+              <img class="noti-img-back" src="<?php echo base_url().'assets/vendor-icons/User-leads.png'; ?>" alt="...">
+              </span>
 
               <div class="info-box-content">
-                <span class="info-box-text">New User Visits</span>
-                <span class="info-box-number" id="new_visit">N/A</span>
+                <span class="info-box-text">User Visits</span>
+                <span class="info-box-number" id="new_visit">0<span style="color:red;"> &nbsp;&nbsp;New<span></span>
               </div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
           </div>
            <!--</a>-->   
+           <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(3)">
+            <div class="info-box">
+              <span class="info-box-icon bg-success">
+                  <!--<i class="far fa-star"></i>-->
+              <img class="noti-img-back" src="<?php echo base_url().'assets/vendor-icons/User-review.png'; ?>" alt="...">
+              </span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">User Review</span>
+                <span class="info-box-number" id="new_review">0<span style="color:red;"> &nbsp;&nbsp;New<span></span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
           <!-- /.col -->
           <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_deals_notification/2'; ?>">-->
           <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(2)">
             <div class="info-box">
-              <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
+              <span class="info-box-icon bg-danger">
+                  <!--<i class="far fa-copy"></i>-->
+              <img class="noti-img-back" src="<?php echo base_url().'assets/vendor-icons/Deal.png'; ?>" alt="...">
+              </span>
 
               <div class="info-box-content">
-                <span class="info-box-text">New Deals & Coupons</span>
-                <span class="info-box-number" id="new_deals">N/A</span>
+                <span class="info-box-text">Deals & Coupons</span>
+                <span class="info-box-number" id="new_deals">0<span style="color:red;"> &nbsp;&nbsp;New<span></span>
               </div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
           </div>
            <!--</a>-->   
-          <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box">
-              <span class="info-box-icon bg-danger"><i class="far fa-star"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">N/A</span>
-                <span class="info-box-number">N/A</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
           <!-- /.col -->
         </div>
         <!-- /.row -->
@@ -150,11 +179,29 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
   </section>
     
     <!-- Main content -->
+    <!--</br>-->
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <h5 class="mb-2">All Data Count</h5>
         <div class="row">
+            <div class="col-lg-4 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+              <div class="inner">
+                <h4><b><?php echo $this->session->userdata('user_name') ?></b></h4>
+                </br>
+                <p>View Profile</p>
+              </div>
+              <div class="icon">
+                <!--<i class="ion ion-chatbox"></i>-->
+                <img class="card-img-back" src="<?php echo base_url().'assets/vendor-icons/Profile.png'; ?>" alt="...">
+              </div>
+              <?php // if($lead_details['lead'] != '0'){ ?>
+              <a href="<?php echo base_url() .'Data/' . $tab . '/' . $id; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+             <?php //} ?>
+            </div>
+          </div>
           <div class="col-lg-4 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
@@ -164,7 +211,8 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                 <p>Total Query Leads</p>
               </div>
               <div class="icon">
-                <i class="ion ion-chatbox"></i>
+                <!--<i class="ion ion-chatbox"></i>-->
+                <img class="card-img-back" src="<?php echo base_url().'assets/vendor-icons/Query.png'; ?>" alt="...">
               </div>
               <?php // if($lead_details['lead'] != '0'){ ?>
               <a href="<?php echo base_url() .'vendor-dashboard/lead'; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
@@ -196,7 +244,8 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                 <p>Total User Visits</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <!--<i class="ion ion-person-add"></i>-->
+                  <img class="card-img-back" src="<?php echo base_url().'assets/vendor-icons/User-leads.png'; ?>" alt="...">
               </div>
               <?php  //if($visitor_details['visitor'] != '0'){ ?>
               <a href="<?php echo base_url() .'vendor-dashboard/visitor'; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
@@ -205,31 +254,33 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
           </div>
           <div class="col-lg-4 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-danger">
               <div class="inner">
                 <h4><b><?php echo $review_details['review']; ?></b></h4>
                 </br>
                 <p>Total User Review</p>
               </div>
               <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <!--<i class="ion ion-stats-bars"></i>-->
+                  <img class="card-img-back" src="<?php echo base_url().'assets/vendor-icons/User-review.png'; ?>" alt="...">
               </div>
               <?php  //if($plan_details['plan_name'] != 'Free'){ ?>
-               <a href="<?php echo base_url() .'vendor-review'; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+               <a href="<?php echo base_url() .'user-review'; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             <?php //} ?>
             </div>
           </div>
           <!-- ./col -->
           <div class="col-lg-4 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-info">
               <div class="inner">
                 <h4><b><?php echo $deal_details['deal']; ?></b></h4>
                 </br>
                 <p>Total Deals & Coupons</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <!--<i class="ion ion-pie-graph"></i>-->
+                  <img class="card-img-back" src="<?php echo base_url().'assets/vendor-icons/Deal.png'; ?>" alt="...">
               </div>
               <?php  //if($visitor_details['visitor'] != '0'){ ?>
               <a href="<?php echo base_url() .'vendor-dashboard/deals'; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
@@ -239,7 +290,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
           <!-- ./col -->
            <div class="col-lg-4 col-6">
             <!-- small box -->
-            <div class="small-box bg-info">
+            <div class="small-box bg-success">
               <div class="inner">
                 <h4 style="font-size:1.5rem;"><?php echo $plan_details['plan_name'];
                 //  ".$plan_details['plan_type'].""; 
@@ -248,10 +299,11 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                 <p>Active Plan Details</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <!--<i class="ion ion-bag"></i>-->
+                  <img class="card-img-back" src="<?php echo base_url().'assets/vendor-icons/Plan-Details.png'; ?>" alt="...">
               </div>
               <?php  //if($plan_details['plan_name'] != 'Free'){ ?>
-               <a href="<?php echo base_url() .'vendor-dashboard/plan/' . $plan_details['vendor_id']; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+               <a href="<?php echo base_url() .'vendor-dashboard/plan'; ?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             <?php //} ?>
             </div>
           </div>
@@ -811,11 +863,13 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
 //                        console.log('key '+key+' notification_type '+val.notification_type+' count '+val.count);
 //                        new_leads new_visit new_deals
                         if(val.notification_type == '0'){
-                            $('#new_leads').html(val.count);
+                            $('#new_leads').html(val.count+'<span style="color:red;"> &nbsp;&nbsp;New<span>');
                         }else if(val.notification_type == '1'){
-                            $('#new_visit').html(val.count);
+                            $('#new_visit').html(val.count+'<span style="color:red;"> &nbsp;&nbsp;New<span>');
                         }else if(val.notification_type == '2'){
-                            $('#new_deals').html(val.count);
+                            $('#new_deals').html(val.count+'<span style="color:red;"> &nbsp;&nbsp;New<span>');
+                        }else if(val.notification_type == '3'){
+                            $('#new_review').html(val.count+'<span style="color:red;"> &nbsp;&nbsp;New<span>');
                         }
                     });
             }
@@ -832,14 +886,17 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
   }
         
         }
-  })
+  });
   function update_notification(type){
-        if(type==0){
-            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_leads_notification/0'; ?>";
-        }else if(type==1){
-            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_visit_notification/1'; ?>";
-        }else if(type==2){
-            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_deals_notification/2'; ?>";
-        }    
+  alert('hi');
+//        if(type==0){
+//            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_leads_notification/0'; ?>";
+//        }else if(type==1){
+//            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_visit_notification/1'; ?>";
+//        }else if(type==2){
+//            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_deals_notification/2'; ?>";
+//        }else if(type==3){
+//            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_review_notification/3'; ?>";
+//        }    
   }
 </script>    

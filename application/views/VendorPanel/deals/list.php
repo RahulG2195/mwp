@@ -32,7 +32,7 @@
               <div class="card-header">
                 <!--<h3 class="card-title">DataTable with default features</h3>-->
                 <h3 class="card-title">Deals & Coupon Data<?php //echo md5($active_plane_id)."".$active_plane_id; ?></h3>
-                 <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;float: right;" href="<?php echo $addlink; ?>"><i class="fas fa-plus" style="font-size: 14px;"> Add New</i></a> 
+                 <a class="btn btn-info" style="height: auto;margin: auto;padding: 5px 5px;float: right;" href="<?php echo $addlink; ?>"><i class="fas fa-plus" style="font-size: 14px;"> Add New</i></a> 
               </div>
               <!-- /.card-header -->
               <div class="card-body"> 
@@ -77,7 +77,7 @@
                     </td>
                     <td><?php echo date("d M Y - h:i A", strtotime($row['created_date'])); ?> </td>
                       <td>
-                        <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;" href="<?php echo $editlink.'/'.$row['deal_id']; ?>"><i class="fas fa-edit" style="font-size: 14px;">edit</i></a>
+                        <a class="btn btn-success" style="height: auto;margin: auto;padding: 5px 5px;" href="<?php echo $editlink.'/'.$row['deal_id']; ?>"><i class="fas fa-edit" style="font-size: 14px;">Edit</i></a></br></br>
                         <?php if($row['is_active']=='0'){ ?>
                             <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;" href="<?php echo $activelink.'/'.$row['deal_id']; ?>"><i class="fas fa-add" style="font-size: 14px;"> Active</i></a>
                             <?php }else{ ?>

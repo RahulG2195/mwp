@@ -165,5 +165,26 @@ class DashboardModel extends CI_Model
         $id=$this->db->affected_rows();
         return $id;
     }
+    
+    public function getRegisterUserData()
+    {
+//        $this->db->where('edit_request', 1);
+        $this->db->order_by('login_id', 'DESC');
+        $this->db->limit(5);
+        $query = $this->db->get('login-table');
+        return $query->result_array();   
+    }
+    public function getVendorData()
+    {
+//        $this->db->where('edit_request', 1);
+        
+        $this->db->select('default_vendor_inp.*,master_category.name as category_name');
+        $this->db->from('default_vendor_inp');
+        $this->db->join('master_category','default_vendor_inp.category = master_category.category_id', 'left');
+        $this->db->order_by('dv_id', 'DESC');
+        $this->db->limit(5);
+        $query = $this->db->get();
+        return $query->result_array();   
+    }
 
 }

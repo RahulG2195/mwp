@@ -21,7 +21,8 @@ class Admin_Notification_Api extends CI_Controller {
                 '0' => array('count' => '0', 'notification_type' => '0'), //lead
                 '1' => array('count' => '0', 'notification_type' => '1'), //visit
                 '2' => array('count' => '0', 'notification_type' => '2'), //deals
-                '3' => array('count' => '0', 'notification_type' => '3') //new registration
+                '3' => array('count' => '0', 'notification_type' => '3'), //review
+                '4' => array('count' => '0', 'notification_type' => '4') //new registration
             );
             // check record not empty
             if (!empty($notification_data2)) {
@@ -34,6 +35,8 @@ class Admin_Notification_Api extends CI_Controller {
                         $notification_data[2]['count'] = $notification['count'];
                     } elseif ($notification['notification_type'] == '3') {
                         $notification_data[3]['count'] = $notification['count'];
+                    } elseif ($notification['notification_type'] == '4') {
+                        $notification_data[4]['count'] = $notification['count'];
                     }
                 }
             }
@@ -124,6 +127,30 @@ class Admin_Notification_Api extends CI_Controller {
         $this->AdminPanelModel->update_vendor_notification($notification_type,$data);
         //redirect to datatable
         redirect(base_url() .'vendor-dashboard/deals');
+    }
+    public function update_review_notification($notification_type) {
+//        $id = $this->session->userdata('dv_id');
+        //update table
+        $this->load->model('admin/AdminPanelModel');
+        $data = array(
+            'is_new'=> 0,
+            'is_read'=> 1
+        );
+        $this->AdminPanelModel->update_vendor_notification($notification_type,$data);
+        //redirect to datatable
+        redirect(base_url() .'admin/Vendor_review');
+    }
+    public function update_registration_notification($notification_type) {
+//        $id = $this->session->userdata('dv_id');
+        //update table
+        $this->load->model('admin/AdminPanelModel');
+        $data = array(
+            'is_new'=> 0,
+            'is_read'=> 1
+        );
+        $this->AdminPanelModel->update_vendor_notification($notification_type,$data);
+        //redirect to datatable
+        redirect(base_url() .'admin/Userdata');
     }
     
 }

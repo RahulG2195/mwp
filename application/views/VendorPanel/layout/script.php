@@ -326,6 +326,35 @@ $(document).ready(function () {
       theme: "monokai"
     });*/
   })
+    $(function () {
+        
+//      alert();
+   // Get all the navigation items
+    var navItems = document.querySelectorAll('#nav-sidebar li');
+//    console.log('navItems '+navItems.length);
+    var value = localStorage.getItem('nav-active');
+        console.log('navItems '+value);
+//        if(i==value){
+            var element = document.getElementById(value);
+            element.classList.add('nav-active');
+//        }
+    // Loop through each navigation item and attach click event listener
+    for (var i = 0; i < navItems.length; i++) {
+//        alert();
+        navItems[i].addEventListener('click', function() {
+            // Remove 'active' class from all navigation items
+            for (var j = 0; j < navItems.length; j++) {
+                navItems[j].classList.remove('nav-active');
+            }
+            
+            // Add 'active' class to the clicked navigation item
+            var id  = this.id;
+            console.log('navItems '+id);
+            localStorage.setItem('nav-active', id);
+            this.classList.add('nav-active');
+        });
+    }
+    });
 </script>
 </body>
 </html>

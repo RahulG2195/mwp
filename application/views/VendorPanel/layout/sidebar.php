@@ -5,7 +5,14 @@
     $id = $this->session->userdata('dv_id');
     
 ?>
- 
+<style>
+     ul.nav-sidebar li img{
+    width: 25px;
+}
+.nav-active{
+    background-color: #494e53;
+}
+</style>
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
      <!-- Brand Logo -->
      <a href="<?php echo base_url()?>VendorPanel/" target="blank" class="brand-link" style="height: 43px;background-color: #FF5969;">
@@ -44,61 +51,68 @@
 
          <!-- Sidebar Menu -->
              <nav class="mt-2">
-                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                     <li class="nav-item">
+                 <ul id="nav-sidebar" class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                     <li id="0" class="nav-item">
                          <a href="<?php echo base_url(); ?>vendor-dashboard" class="nav-link">
-                             <i class="nav-icon fas fa-tachometer-alt"></i>
-                             <p>Dashboard</p>
+                             <!--<i class="nav-icon fas fa-tachometer-alt"></i>-->
+                             <img src="<?php echo base_url().'assets/vendor-icons/Dashboard.png'; ?>" alt="...">
+                             <p>&nbsp;&nbsp;&nbsp;&nbsp;Dashboard</p>
                          </a>
                      </li>
-                     <li class="nav-item">
+                     <li id="1" class="nav-item">
                          <a href="<?php echo base_url() .'Data/' . $tab . '/' . $id; ?>" class="nav-link">
-                             <i class="nav-icon fas fa-edit"></i>
-                             <p>Profile Data</p>
+                             <!--<i class="nav-icon fas fa-edit"></i>-->
+                             <img src="<?php echo base_url().'assets/vendor-icons/Profile.png'; ?>" alt="...">
+                             <p>&nbsp;&nbsp;&nbsp;&nbsp;Profile Data</p>
                          </a>
                      </li>
-                     <li class="nav-item">
+                     <li id="2" class="nav-item">
                          <!-- <a href="<?php echo base_url().'vendor-dashboard/lead/'.$id; ?>" class="nav-link"> -->
                          <a href="<?php echo base_url().'vendor-dashboard/lead'; ?>" class="nav-link">
-                             <i class="nav-icon fas fa-envelope"></i>
-                             <p>Query Leads</p>
+                             <!--<i class="nav-icon fas fa-envelope"></i>-->
+                             <img src="<?php echo base_url().'assets/vendor-icons/Query.png'; ?>" alt="...">
+                             <p>&nbsp;&nbsp;&nbsp;&nbsp;Query Leads</p>
                          </a>
                      </li>
                      <!-- <li class="nav-header">DATA</li>    -->
                      <!-- <li class="nav-header">SETTING</li> -->
-                     <li class="nav-item">
+                     <li id="3" class="nav-item">
                          <a href="<?php echo base_url().'vendor-dashboard/visitor'; ?>" class="nav-link">
-                             <i class="nav-icon fas fa-users"></i>
-                             <p>User Visits</p>
+                             <!--<i class="nav-icon fas fa-users"></i>-->
+                             <img src="<?php echo base_url().'assets/vendor-icons/User-leads.png'; ?>" alt="...">
+                             <p>&nbsp;&nbsp;&nbsp;&nbsp;User Visits</p>
                          </a>
                      </li>
-                     <li class="nav-item">
-                         <a href="<?php echo base_url().'vendor-review'; ?>" class="nav-link">
-                             <i class="nav-icon fas fa-ellipsis-h"></i>
-                             <p>User Review</p>
+                     <li id="4" class="nav-item">
+                         <a href="<?php echo base_url().'user-review'; ?>" class="nav-link">
+                             <!--<i class="nav-icon fas fa-ellipsis-h"></i>-->
+                             <img src="<?php echo base_url().'assets/vendor-icons/User-review.png'; ?>" alt="...">
+                             <p>&nbsp;&nbsp;&nbsp;&nbsp;User Review</p>
                          </a>
                      </li>
-                     <li class="nav-item">
+                     <li id="5" class="nav-item">
                          <a href="<?php echo base_url().'vendor-dashboard/deals'; ?>" class="nav-link">
-                             <i class="nav-icon fas fa-book"></i>
-                             <p>Deals & Coupon</p>
+                             <!--<i class="nav-icon fas fa-book"></i>-->
+                             <img src="<?php echo base_url().'assets/vendor-icons/Deal.png'; ?>" alt="...">
+                             <p>&nbsp;&nbsp;&nbsp;&nbsp;Deals & Coupon</p>
                          </a>
                      </li>
-                     <li class="nav-item">
-                         <a href="<?php echo base_url().'vendor-dashboard/plan/'.$id; ?>" class="nav-link">
-                             <i class="nav-icon fas fa-shopping-cart"></i>
-                             <p>Plan Details</p>
+                     <li id="6" class="nav-item">
+                         <a href="<?php echo base_url().'vendor-dashboard/plan'; ?>" class="nav-link">
+                             <!--<i class="nav-icon fas fa-shopping-cart"></i>-->
+                             <img src="<?php echo base_url().'assets/vendor-icons/Plan-Details.png'; ?>" alt="...">
+                             <p>&nbsp;&nbsp;&nbsp;&nbsp;Plan Details</p>
                          </a>
                      </li>
                      <div class="user-panel  pb-3 mb-3 d-flex">
                      </div>
-                     <li class="nav-item">
+                     <li id="7"class="nav-item">
                          <a href="<?php echo base_url(); ?>VendorPanel/Login/update_password_page" class="nav-link">
                              <i class="nav-icon fas fa-columns"></i>
                              <p>Change Password</p>
                          </a>
                      </li>
-                     <li class="nav-item">
+                     <li id="8" class="nav-item">
                          <a href="<?php echo base_url(); ?>Vendor-Logout" class="nav-link">
                              <i class="nav-icon fas fa-arrow-circle-right"></i>
                              <p>Logout</p>

@@ -95,12 +95,13 @@ $route['registration/thankyou'] = 'thankyou';
 // vendor panel 
 $route['Vendor-Login'] = 'VendorPanel/Login';
 $route['vendor-dashboard'] = 'VendorPanel/Vendor_Dashboard';
-$route['vendor-review'] = 'VendorPanel/Vendor_review';
+$route['user-review'] = 'VendorPanel/Vendor_review';
 //$route['vendor-dashboard/lead/(:any)'] = 'VendorPanel/Vendor_Dashboard/lead/$1';
 $route['vendor-dashboard/lead'] = 'VendorPanel/Vendor_Dashboard/lead';
 $route['vendor-dashboard/lead/details/(:any)'] = 'VendorPanel/Vendor_Dashboard/veiwdetail/$1';
-$route['vendor-dashboard/visitor'] = 'VendorPanel/Vendor_Dashboard/visitor/$1';
-$route['vendor-dashboard/plan/(:any)'] = 'VendorPanel/Vendor_Dashboard/plan/$1';
+$route['vendor-dashboard/visitor'] = 'VendorPanel/Vendor_Dashboard/visitor';
+//$route['vendor-dashboard/plan/(:any)'] = 'VendorPanel/Vendor_Dashboard/plan/$1';
+$route['vendor-dashboard/plan'] = 'VendorPanel/Vendor_Dashboard/plan';
 $route['Vendor-Logout'] = 'VendorPanel/Login/logout';
 $route['Data/(:any)/(:any)'] = 'VendorPanel/Admin_Vendor/Vendor_all_Data/$1/$2';
 $route['Single_data/(:any)/(:any)'] = 'admin/Admin_Vendor/Vendor_all_Data/$1/$2';

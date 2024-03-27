@@ -73,13 +73,13 @@
           </div>
            <!--</a>-->   
           <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-12">
+          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(3)">
             <div class="info-box">
               <span class="info-box-icon bg-danger"><i class="far fa-star"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">N/A</span>
-                <span class="info-box-number">N/A</span>
+                <span class="info-box-text">New User Review</span>
+                <span class="info-box-number" id="new_review">N/A</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -1625,6 +1625,140 @@
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+    
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Latest 5 Register Users</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                   <table id="user_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Phone no</th>
+                                    <th>Created date</th>
+                                    <!--<th>Action</th>-->
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php 
+                                  if(!empty($register_data))
+                                  { 
+                                      $i=1;
+                                    foreach($register_data as $row)
+                                    {  
+
+
+                                ?>
+                                    <tr>
+                                        <td><?php echo $i; ?></td>
+                                        <td><?php echo $row["first_name"]; ?></td>
+                                        <td><?php echo $row["last_name"]; ?></td>
+                                        <td><?php echo $row["email_id"]; ?></td>
+                                        <td><?php echo $row["phone_number"]; ?></td>
+                                        <td><?php echo $row["created_date"]; ?></td>
+                                    </tr>
+                                <?php   
+                                $i++;
+                                     }
+                                  }
+                                  else{
+                                        echo "No records Found";
+                                  }
+                                ?>
+                               
+                                
+                                </tbody>
+                                
+                                </table>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    
+        <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Latest 5 Vendors</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                  <table id="vendor_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Category</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <!--<th>Role</th>-->
+                                    <!--<th>Access Level</th>-->
+                                    <!--<th>Is Deleted</th>-->
+                                    <th>Is Active</th>
+                                    <!--<th>Last Login</th>-->
+                                    <th>Created date</th>
+                                    <!--<th>Action</th>-->
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php 
+                                  if(!empty($vendor_data))
+                                  { 
+                                      $i=1;
+                                    foreach($vendor_data as $row)
+                                    {  
+
+
+                                ?>
+                                    <tr>
+                                        <td><?php echo $i; ?></td>
+                                        <td><?php echo $row["category_name"]; ?></td>
+                                        <td><?php echo $row["vendor_name"]; ?></td>
+                                        <td><?php echo $row["vendor_email"]; ?></td>
+                                        <td><?php echo $row["phone_no"]; ?></td>
+                                        <td><?php 
+                                        if($row["vendor_status"]==1){
+                                            echo "YES";
+                                        }else{
+                                            echo "NO";
+                                        }
+                                        ?></td>
+                                        <td><?php echo $row["created_on"]; ?></td>
+                                    </tr>
+                                <?php   
+                                $i++;
+                                     }
+                                  }
+                                  else{
+                                        echo "No records Found";
+                                  }
+                                ?>
+                               
+                                
+                                </tbody>
+                                
+                                </table>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    
   </div>
 <?php $this->load->view('admin/layout/footer'); ?>
 </div>
@@ -1669,6 +1803,10 @@
                             $('#new_visit').html(val.count);
                         }else if(val.notification_type == '2'){
                             $('#new_deals').html(val.count);
+                        }else if(val.notification_type == '3'){
+                            $('#new_review').html(val.count);
+                        }else if(val.notification_type == '4'){
+                            $('#new_registration').html(val.count);
                         }
                     });
             }
@@ -1711,6 +1849,10 @@
             window.location.href = "<?php echo base_url() .'admin/Admin_Notification_Api/update_visit_notification/1'; ?>";
         }else if(type==2){
             window.location.href = "<?php echo base_url() .'admin/Admin_Notification_Api/update_deals_notification/2'; ?>";
+        }else if(type==3){
+            window.location.href = "<?php echo base_url() .'admin/Admin_Notification_Api/update_review_notification/3'; ?>";
+        }else if(type==4){
+            window.location.href = "<?php echo base_url() .'admin/Admin_Notification_Api/update_registration_notification/4'; ?>";
         }    
   }
   function update_notification2(type){
@@ -1741,4 +1883,18 @@
         }
         
   }
+</script>
+<script>
+     $("#user_datatable").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+//      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[5, 'desc']]
+    }).buttons().container().appendTo('#user_datatable_wrapper .col-md-6:eq(0)');
+</script>
+<script>
+     $("#vendor_datatable").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+//      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[6, 'desc']]
+    }).buttons().container().appendTo('#vendor_datatable_wrapper .col-md-6:eq(0)');
 </script>
