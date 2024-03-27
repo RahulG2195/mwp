@@ -10,12 +10,12 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
 <style>
     .card-img-back{
         position: absolute;
-    top: 15px;
+    top: 25px;
     right: 10px;
-    width: 60px;
+    width: 50px;
     }
     .noti-img-back{
-    width: 50px;
+    width: 45px;
     }
 </style>
   <!-- Content Wrapper. Contains page content -->
