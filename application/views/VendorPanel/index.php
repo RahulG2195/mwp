@@ -39,7 +39,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
     <!-- /.content-header -->
     </br>
         <!-- Main content -->
-    <section class="content">
+    <section class="content d-none">
       <div class="container-fluid">
         <h5 class="mb-2">Notification</h5>
         <div class="row">  
