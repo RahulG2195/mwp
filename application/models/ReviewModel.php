@@ -58,6 +58,17 @@ class ReviewModel extends CI_Model
             return $row;
         }
     }
+    
+    function InserDataNotification($data){
+      $this->db->insert('vendor_notification',$data);
+      $id=$this->db->insert_id();
+      return $id;
+    }
+    function InserDataNotificationAdmin($data){
+      $this->db->insert('admin_notification',$data);
+      $id=$this->db->insert_id();
+      return $id;
+    }
 
 
 }
