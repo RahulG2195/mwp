@@ -41,7 +41,7 @@ class Vendor_Dashboard extends CI_Controller {
             //Total review
             $this->load->model('VendorPanel/ReviewModel');
             // $id = 3072; //temp
-            $review_data = $this->ReviewModel->Get_vendor_deal_detail($id);
+            $review_data = $this->ReviewModel->Get_vendor_review_detail($id);
              $data['review_details'] = array('vendor_id' => $id,
                                     'review' => '0'
             );
@@ -80,8 +80,13 @@ class Vendor_Dashboard extends CI_Controller {
                 $data['plan_details'] = $plan_data;
             }
         }
+        //fetch latest 5 leads
+        $data['leads_data'] = $this->VendorLeadModel->Get_vendor_leads_data($id);
+        //fetch latest 5 review
+        $data['reviews_data'] = $this->ReviewModel->Get_vendor_reviews_data($id);
 //        echo "<pre>";
-//        print_r($data);
+//        print_r($data['leads_data']);
+//        print_r($data['reviews_data']);
 //        exit;
         $this->load->view('VendorPanel/index',$data);
     }

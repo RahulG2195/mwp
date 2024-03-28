@@ -227,6 +227,143 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
         </div>
         <!-- /.row -->
         
+            <section class="content d-none">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Latest 5 Query Leads</h3>
+                <a class="btn btn-info" style="height: auto;margin: auto;padding: 5px 5px;float: right;" href="<?php echo base_url() .'vendor-dashboard/lead'; ?>"><i class="fas fa-plus+" style="font-size: 14px;"> View All</i></a>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                   <table id="user_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <!--<th>Last Name</th>-->
+                                    <th>Email</th>
+                                    <th>Phone no</th>
+                                    <th>Function date</th>
+                                    <th>Comment</th>
+                                    <th>Message</th>
+                                    <th>Created date</th>
+                                    <!--<th>Action</th>-->
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php 
+                                  if(!empty($leads_data))
+                                  { 
+                                      $i=1;
+                                    foreach($leads_data as $row)
+                                    {  
+
+
+                                ?>
+                                    <tr>
+                                        <td><?php echo $i; ?></td>
+                                        <td><?php echo $row["name"]; ?></td>
+                                        <td><?php echo $row["email"]; ?></td>
+                                        <td><?php echo $row["phone_no"]; ?></td>
+                                        <td><?php echo $row["function_date"]; ?></td>
+                                        <td><?php echo $row["comment"]; ?></td>
+                                        <td><?php echo $row["message"]; ?></td>
+                                        <td><?php echo $row["created_date"]; ?></td>
+                                    </tr>
+                                <?php   
+                                $i++;
+                                     }
+                                  }
+                                  else{
+                                        echo "No records Found";
+                                  }
+                                ?>
+                               
+                                
+                                </tbody>
+                                
+                                </table>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    
+        <section class="content d-none">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Latest 5 User Review</h3>
+                <a class="btn btn-info" style="height: auto;margin: auto;padding: 5px 5px;float: right;" href="<?php echo base_url() .'user-review'; ?>"><i class="fas fa-plus+" style="font-size: 14px;"> View All</i></a>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                  <table id="vendor_datatable" class="table table-bordered table-striped dataTable dtr-inline collapsed">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <!--<th>Category</th>-->
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <!--<th>Role</th>-->
+                                    <!--<th>Access Level</th>-->
+                                    <!--<th>Is Deleted</th>-->
+                                    <th>Subject</th>
+                                    <th>Review Comment</th>
+                                    <th>Rating</th>
+                                    <!--<th>Last Login</th>-->
+                                    <th>Created date</th>
+                                    <!--<th>Action</th>-->
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                <?php 
+                                  if(!empty($reviews_data))
+                                  { 
+                                      $i=1;
+                                    foreach($reviews_data as $row)
+                                    {  
+
+
+                                ?>
+                                    <tr>
+                                        <td><?php echo $i; ?></td>
+                                        <td><?php echo $row["name"]; ?></td>
+                                        <td><?php echo $row["email_id"]; ?></td>
+                                        <td><?php echo $row["phone_no"]; ?></td>
+                                        <td><?php echo $row["subject"]; ?></td>
+                                        <td><?php echo $row["review_comment"]; ?></td>
+                                        <td><?php echo $row["rating"]; ?></td>
+                                        <td><?php echo $row["created_date"]; ?></td>
+                                    </tr>
+                                <?php   
+                                $i++;
+                                     }
+                                  }
+                                  else{
+                                        echo "No records Found";
+                                  }
+                                ?>
+                               
+                                
+                                </tbody>
+                                
+                                </table>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+        
         <!-- Main row -->
         <div class="row d-none">
           <!-- Left col -->
@@ -808,3 +945,17 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
         }    
   }
 </script>    
+<script>
+     $("#user_datatable").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+//      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[7, 'desc']]
+    }).buttons().container().appendTo('#user_datatable_wrapper .col-md-6:eq(0)');
+</script>
+<script>
+     $("#vendor_datatable").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+//      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
+      "order": [[7, 'desc']]
+    }).buttons().container().appendTo('#vendor_datatable_wrapper .col-md-6:eq(0)');
+</script>

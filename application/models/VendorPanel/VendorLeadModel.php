@@ -72,5 +72,14 @@ class VendorLeadModel extends CI_Model
     $this->db->group_by('vendor_id');
     return $this->db->get()->row_array();
   }
+  
+  public function Get_vendor_leads_data($id) {
+    $this->db->select('*');
+    $this->db->from($this->table);
+    $this->db->where('vendor_id', $id);
+    $this->db->order_by('query_id','DESC');
+    $this->db->limit(5);
+    return $this->db->get()->result_array();
+  }
 
 }

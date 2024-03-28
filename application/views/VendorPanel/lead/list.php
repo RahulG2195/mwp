@@ -40,7 +40,7 @@
                                     <th>Name</th>
                                     <th>Phone no</th>
                                     <th>Email</th>
-                                    <th>Date</th>
+                                    <th>Function Date</th>
                                     <th>Created Date</th>
                                     <th>Action</th>
                                 </tr>
