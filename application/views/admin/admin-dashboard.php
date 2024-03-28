@@ -1888,14 +1888,14 @@
 </script>
 <script>
      $("#user_datatable").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "responsive": true, "lengthChange": false, "autoWidth": false,searching: false,
 //      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
       "order": [[5, 'desc']]
     }).buttons().container().appendTo('#user_datatable_wrapper .col-md-6:eq(0)');
 </script>
 <script>
      $("#vendor_datatable").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "responsive": true, "lengthChange": false, "autoWidth": false,searching: false,
 //      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"],
       "order": [[6, 'desc']]
     }).buttons().container().appendTo('#vendor_datatable_wrapper .col-md-6:eq(0)');
