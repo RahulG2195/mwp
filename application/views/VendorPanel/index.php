@@ -39,19 +39,16 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
     <!-- /.content-header -->
     </br>
         <!-- Main content -->
-    <section class="content d-none">
+    <section class="content">
       <div class="container-fluid">
         <h5 class="mb-2">Notification</h5>
-        <div class="row">
-            
-            <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_leads_notification/0'; ?>">-->
-                <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(0)">
+        <div class="row">  
+          <div style="cursor:pointer;" class="col-md-3 col-sm-6 col-12" onclick="update_notification(0)">
             <div class="info-box">
-              <span class="info-box-icon bg-danger">
+              <span class="info-box-icon bg-info">
                   <!--<i class="far fa-envelope"></i>-->
                   <img class="noti-img-back" src="<?php echo base_url().'assets/vendor-icons/Query.png'; ?>" alt="...">
               </span>
-
               <div class="info-box-content">
                 <span class="info-box-text">Query Leads</span>
                 <span class="info-box-number" id="new_leads">0<span style="color:red;"> &nbsp;&nbsp;New<span></span>
@@ -60,16 +57,13 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
             </div>
             <!-- /.info-box -->
           </div>
-             <!--</a>-->
           <!-- /.col -->
-          <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_visit_notification/1'; ?>">-->
-          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(1)">
+          <div style="cursor:pointer;" class="col-md-3 col-sm-6 col-12" onclick="update_notification(1)">
             <div class="info-box">
-              <span class="info-box-icon bg-info">
+              <span class="info-box-icon bg-success">
                   <!--<i class="far fa-flag"></i>-->
               <img class="noti-img-back" src="<?php echo base_url().'assets/vendor-icons/User-leads.png'; ?>" alt="...">
               </span>
-
               <div class="info-box-content">
                 <span class="info-box-text">User Visits</span>
                 <span class="info-box-number" id="new_visit">0<span style="color:red;"> &nbsp;&nbsp;New<span></span>
@@ -78,14 +72,13 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
             </div>
             <!-- /.info-box -->
           </div>
-           <!--</a>-->   
-           <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(3)">
+         <!-- /.col -->
+           <div style="cursor:pointer;" class="col-md-3 col-sm-6 col-12" onclick="update_notification(3)">
             <div class="info-box">
-              <span class="info-box-icon bg-success">
+              <span class="info-box-icon bg-danger">
                   <!--<i class="far fa-star"></i>-->
               <img class="noti-img-back" src="<?php echo base_url().'assets/vendor-icons/User-review.png'; ?>" alt="...">
               </span>
-
               <div class="info-box-content">
                 <span class="info-box-text">User Review</span>
                 <span class="info-box-number" id="new_review">0<span style="color:red;"> &nbsp;&nbsp;New<span></span>
@@ -95,15 +88,12 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
             <!-- /.info-box -->
           </div>
           <!-- /.col -->
-          <!-- /.col -->
-          <!--<a href="<?php echo base_url() .'Vendor_Notification_Api/update_deals_notification/2'; ?>">-->
-          <div class="col-md-3 col-sm-6 col-12" onclick="update_notification(2)">
+          <div style="cursor:pointer;" class="col-md-3 col-sm-6 col-12" onclick="update_notification(2)">
             <div class="info-box">
-              <span class="info-box-icon bg-danger">
+              <span class="info-box-icon bg-info">
                   <!--<i class="far fa-copy"></i>-->
               <img class="noti-img-back" src="<?php echo base_url().'assets/vendor-icons/Deal.png'; ?>" alt="...">
               </span>
-
               <div class="info-box-content">
                 <span class="info-box-text">Deals & Coupons</span>
                 <span class="info-box-number" id="new_deals">0<span style="color:red;"> &nbsp;&nbsp;New<span></span>
@@ -111,66 +101,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
-          </div>
-           <!--</a>-->   
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-
-        <!-- =========================================================== -->
-        <!--<h5 class="mb-2">Info Box With Custom Shadows <small><i>Using Bootstrap's Shadow Utility</i></small></h5>-->
-        <div class="row d-none">
-          <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box shadow-none">
-              <span class="info-box-icon bg-info"><i class="far fa-envelope"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Shadows</span>
-                <span class="info-box-number">None</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box shadow-sm">
-              <span class="info-box-icon bg-success"><i class="far fa-flag"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Shadows</span>
-                <span class="info-box-number">Small</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box shadow">
-              <span class="info-box-icon bg-warning"><i class="far fa-copy"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Shadows</span>
-                <span class="info-box-number">Regular</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-3 col-sm-6 col-12">
-            <div class="info-box shadow-lg">
-              <span class="info-box-icon bg-danger"><i class="far fa-star"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text">Shadows</span>
-                <span class="info-box-number">Large</span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
+          </div>  
           <!-- /.col -->
         </div>
         <!-- /.row -->
@@ -219,21 +150,6 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
              <?php //} ?>
             </div>
           </div>
-          <!-- ./col -->
-          <!--<div class="col-lg-3 col-6">-->
-            <!-- small box -->
-            <!--<div class="small-box bg-success">-->
-              <!--<div class="inner">-->
-                <!--<h3>53</h3>-->
-
-                <!--<p>Total Booking</p>-->
-              <!--</div>-->
-              <!--<div class="icon">-->
-                <!--<i class="ion ion-stats-bars"></i>-->
-              <!--</div>-->
-              <!--<a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>-->
-            <!--</div>-->
-          <!--</div>-->
           <!-- ./col -->
           <div class="col-lg-4 col-6">
             <!-- small box -->
@@ -310,6 +226,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
           <!-- ./col -->
         </div>
         <!-- /.row -->
+        
         <!-- Main row -->
         <div class="row d-none">
           <!-- Left col -->
@@ -376,7 +293,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                       <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="<?php echo base_url(); ?>/assets/dist/img/user1-128x128.jpg" alt="message user image">
+                    <!--<img class="direct-chat-img" src="<?php //echo base_url(); ?>/assets/dist/img/user1-128x128.jpg" alt="message user image">-->
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       Is this template really for free? That's unbelievable!
@@ -392,7 +309,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                       <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="<?php echo base_url(); ?>/assets/dist/img/user3-128x128.jpg" alt="message user image">
+                    <!--<img class="direct-chat-img" src="<?php //echo base_url(); ?>/assets/dist/img/user3-128x128.jpg" alt="message user image">-->
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       You better believe it!
@@ -408,7 +325,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                       <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="<?php echo base_url(); ?>/assets/dist/img/user1-128x128.jpg" alt="message user image">
+                    <!--<img class="direct-chat-img" src="<?php //echo base_url(); ?>/assets/dist/img/user1-128x128.jpg" alt="message user image">-->
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       Working with AdminLTE on a great new app! Wanna join?
@@ -424,7 +341,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                       <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="<?php echo base_url(); ?>/assets/dist/img/user3-128x128.jpg" alt="message user image">
+                    <!--<img class="direct-chat-img" src="<?php //echo base_url(); ?>/assets/dist/img/user3-128x128.jpg" alt="message user image">-->
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
                       I would love to.
@@ -441,7 +358,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                   <ul class="contacts-list">
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="<?php echo base_url(); ?>/assets/dist/img/user1-128x128.jpg" alt="User Avatar">
+                        <!--<img class="contacts-list-img" src="<?php //echo base_url(); ?>/assets/dist/img/user1-128x128.jpg" alt="User Avatar">-->
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -456,7 +373,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                     <!-- End Contact Item -->
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="<?php echo base_url(); ?>/assets/dist/img/user7-128x128.jpg" alt="User Avatar">
+                        <!--<img class="contacts-list-img" src="<?php //echo base_url(); ?>/assets/dist/img/user7-128x128.jpg" alt="User Avatar">-->
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -471,7 +388,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                     <!-- End Contact Item -->
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="<?php echo base_url(); ?>/assets/dist/img/user3-128x128.jpg" alt="User Avatar">
+                        <!--<img class="contacts-list-img" src="<?php //echo base_url(); ?>/assets/dist/img/user3-128x128.jpg" alt="User Avatar">-->
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -486,7 +403,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                     <!-- End Contact Item -->
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="<?php echo base_url(); ?>/assets/dist/img/user5-128x128.jpg" alt="User Avatar">
+                        <!--<img class="contacts-list-img" src="<?php //echo base_url(); ?>/assets/dist/img/user5-128x128.jpg" alt="User Avatar">-->
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -501,7 +418,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                     <!-- End Contact Item -->
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="<?php echo base_url(); ?>/assets/dist/img/user6-128x128.jpg" alt="User Avatar">
+                        <!--<img class="contacts-list-img" src="<?php //echo base_url(); ?>/assets/dist/img/user6-128x128.jpg" alt="User Avatar">-->
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -516,7 +433,7 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
                     <!-- End Contact Item -->
                     <li>
                       <a href="#">
-                        <img class="contacts-list-img" src="<?php echo base_url(); ?>/assets/dist/img/user8-128x128.jpg" alt="User Avatar">
+                        <!--<img class="contacts-list-img" src="<?php //echo base_url(); ?>/assets/dist/img/user8-128x128.jpg" alt="User Avatar">-->
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
@@ -833,35 +750,27 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
 <?php $this->load->view('VendorPanel/layout/script'); ?>
 <script>
   $(function () {        
-
         var count = 0;
         LoadMoreData();
         // Set up the interval to call the function every 60 seconds (1000 milliseconds = 1 second)
         setInterval(LoadMoreData, 15000); 
-        
 //       =========================================== For vendor ======================================================
     function LoadMoreData(){
         var vendor_id = '<?php echo $this->session->userdata('dv_id') ?>';
         if(count <= 10){
-            console.log('count '+count);
-//       alert(vendor_id)
+//      console.log('count '+count);
       $.ajax({
         type: "POST",
         url: '<?php echo base_url(); ?>VendorPanel/Vendor_Notification_Api/get_notification_count',
         data: 'vendor_id=' + vendor_id,
         dataType: 'json',
         success: function(response){
-//          console.log('result received '+result);
-//          var result2 = JSON.parse(result)
-//          console.log('result2 received '+response);
           if(response.status == true) {
               var data = response.data;
 //              console.log('data received '+data);
               if (($.trim(data) != null) && ($.trim(data) != 'null') && ($.isPlainObject(data) != true) && (data.length > 0)) {
-                  var i = 1;
                     $.each(data, function (key, val) {
-//                        console.log('key '+key+' notification_type '+val.notification_type+' count '+val.count);
-//                        new_leads new_visit new_deals
+//                        new_leads new_visit new_deals new_review
                         if(val.notification_type == '0'){
                             $('#new_leads').html(val.count+'<span style="color:red;"> &nbsp;&nbsp;New<span>');
                         }else if(val.notification_type == '1'){
@@ -884,19 +793,18 @@ $this->load->view('VendorPanel/layout/sidebar'); ?>
     })
     count++;
   }
-        
         }
   });
   function update_notification(type){
-  alert('hi');
-//        if(type==0){
-//            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_leads_notification/0'; ?>";
-//        }else if(type==1){
-//            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_visit_notification/1'; ?>";
-//        }else if(type==2){
-//            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_deals_notification/2'; ?>";
-//        }else if(type==3){
-//            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_review_notification/3'; ?>";
-//        }    
+//        alert('hi');
+        if(type==0){
+            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_leads_notification/0'; ?>";
+        }else if(type==1){
+            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_visit_notification/1'; ?>";
+        }else if(type==2){
+            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_deals_notification/2'; ?>";
+        }else if(type==3){
+            window.location.href = "<?php echo base_url() .'VendorPanel/Vendor_Notification_Api/update_review_notification/3'; ?>";
+        }    
   }
 </script>    
