@@ -2562,7 +2562,10 @@ $category = $single_data[0]['category'];
                     <!--deals & offers-->
                                 <!--<div class="col-lg-5 right_col desktop_area">-->
                 <!--<div class="vendor_price price_sec_desk">-->
-                <?php if (!empty($deals_data[0]['image'])) { ?>
+                <?php
+                
+//                if (!empty($deals_data[0]['image'])) {
+                if (!empty($deals_data[0]['image'])) { ?>
                         <!--deals & coupon-->
                         <div class="vendor_img mt-10" style="margin-top:25px;">
                             <div class="price_drop_down">
@@ -2616,10 +2619,9 @@ $category = $single_data[0]['category'];
 
                             ?>
                 </div>
-                        <?php } ?>
-                
                 </div>          
             </div>
+                                                <?php } ?>
                     <!--deals & offers-->
                     
                 </div>

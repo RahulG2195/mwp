@@ -385,6 +385,7 @@ class Filter extends CI_Controller {
 //        exit;
         $output = '';
         foreach ($data['filter_data']['result'] as $value) {
+            if($value['start_date'] < DATETIME && $value['end_date'] > DATETIME){
             $category = $value['category'];
 
             if($category == 1){
@@ -410,7 +411,7 @@ class Filter extends CI_Controller {
             }elseif($category == 13){
                  $output .= Vendor_card_deals('in', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
             }
-
+        }
         }
         echo $output;
     }

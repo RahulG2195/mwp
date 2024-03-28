@@ -529,6 +529,7 @@ function VendorDeals($trusted_array = array()){
 //    <div class="body d-flex flex-wrap justify-content-center w-100">
 //    <div class="owl-carousel vendor_slider">';
       foreach ($trusted_array as $value) {
+          if($value['start_date'] < DATETIME && $value['end_date'] > DATETIME){
         $category = $value['category'];
         if ($category == 1) {
           $output .= Vendor_card_deals('ve', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
@@ -553,7 +554,8 @@ function VendorDeals($trusted_array = array()){
         } elseif ($category == 13) {
           $output .= Vendor_card_deals('in', $value['title'], $value['vendor_seo_url'], $value['image'], $value['vendor_name'], $value['description'], $value['coupon_code'], $value['discount_value'], $value['custom_text']);
         }
-      }
+          }
+    }
 //    $output .= '</div></div>
 //    <div class="footer flex-column justify-content-center align-items-center w-100">
 //      <div class="col-12 vendor-btn-col">
