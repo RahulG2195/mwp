@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="<?php echo base_url() . 'assets/front/css/style.css' ?>">
 <link rel="stylesheet" href="<?php echo base_url() . 'assets/front/css/version_2/price.css' ?>">
 			  <style>
-				.shankar{
+				.hide_plan{
 					display:none;
 				}
 			  </style>
@@ -215,20 +215,20 @@
 					$elite2='';
 			
 					if($active_plane_id == '0'){
-						$express = "shankar";
+						$express = "hide_plan";
 					}else if($active_plane_id == '1'){
-						$express = "shankar";
-						$pro='shankar';
+						$express = "hide_plan";
+						$pro='hide_plan';
 					}else if($active_plane_id == '2'){
-						$express = "shankar";
-						$pro='shankar';
-						$elite='shankar';
+						$express = "hide_plan";
+						$pro='hide_plan';
+						$elite='hide_plan';
                                         }else{
                                             //hide all
-                                                $express = "shankar"; 
-						$pro='shankar';
-						$elite='shankar';
-                                                $elite2='shankar';
+                                                $express = "hide_plan"; 
+						$pro='hide_plan';
+						$elite='hide_plan';
+                                                $elite2='hide_plan';
                                         }
           // echo "<pre>";
           // print_r($plans);
