@@ -77,7 +77,7 @@
                     </td>
                     <td><?php echo date("d M Y - h:i A", strtotime($row['created_date'])); ?> </td>
                       <td>
-                        <a class="btn btn-success" style="height: auto;margin: auto;padding: 5px 5px;" href="<?php echo $editlink.'/'.$row['deal_id']; ?>"><i class="fas fa-edit" style="font-size: 14px;">Edit</i></a></br></br>
+                        <a class="btn btn-success" style="height: auto;margin: auto;padding: 5px 5px;" href="<?php echo $editlink.'/'.$row['deal_id']; ?>"><i class="fas fa-add" style="font-size: 14px;">Edit</i></a></br></br>
                         <?php if($row['is_active']=='0'){ ?>
                             <a class="btn btn-app" style="height: auto;margin: auto;padding: 5px 5px;" href="<?php echo $activelink.'/'.$row['deal_id']; ?>"><i class="fas fa-add" style="font-size: 14px;"> Active</i></a>
                             <?php }else{ ?>
